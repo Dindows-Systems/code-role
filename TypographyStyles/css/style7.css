@@ -1,0 +1,132 @@
+body{ background-image: url(../images/strange_bullseyes.jpg); }
+
+.cs-text {
+	font-size: 50px;
+	text-transform: uppercase;
+	margin: 80px auto 0 auto;
+	width: 580px;
+	height: 100px;
+	padding-left: 20px;
+	font-family: 'McLaren', Arial;
+	font-weight: 400;
+	position: relative;
+}
+
+/* Micro clearfix hack by Nicolas Gallagher http://nicolasgallagher.com/micro-clearfix-hack/ */
+.cs-text:before,
+.cs-text:after {
+	content: " ";
+    display: table;
+}
+
+.cs-text:after {
+	clear: both;
+}
+/* end clearfix hack */
+
+.cs-text span {
+	cursor: default;
+	display: block;
+	float: left;
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+	line-height: 100px;
+	text-align: center;
+	margin: 0 0 0 -20px;
+	color: rgba(255,255,255,0.95);
+	text-shadow: 0 -1px 1px rgba(0,0,0,0.1);
+	-webkit-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	-ms-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+}
+
+.cs-text span:nth-child(odd) {
+	background: rgba(118,176,204, 0.8) url(../images/noise.png); 
+}
+
+.cs-text span:nth-child(even) {
+	background: rgba(58,126,162, 0.8) url(../images/noise.png); 
+}
+
+.cs-text span:nth-child(1) {
+	-webkit-transform: translate(300%) translate(-60px);
+	-moz-transform: translate(300%) translate(-60px);
+	-o-transform: translate(300%) translate(-60px);
+	-ms-transform: translate(300%) translate(-60px);
+	transform: translate(300%) translate(-60px);
+}
+
+.cs-text span:nth-child(2) {
+	-webkit-transform: translate(200%) translate(-40px);
+	-moz-transform: translate(200%) translate(-40px);
+	-o-transform: translate(200%) translate(-40px);
+	-ms-transform: translate(200%) translate(-40px);
+	transform: translate(200%) translate(-40px);
+}
+
+.cs-text span:nth-child(3) {
+	-webkit-transform: translate(100%) translate(-20px);
+	-moz-transform: translate(100%) translate(-20px);
+	-o-transform: translate(100%) translate(-20px);
+	-ms-transform: translate(100%) translate(-20px);
+	transform: translate(100%) translate(-20px);
+}
+
+.cs-text span:nth-child(5) {
+	-webkit-transform: translate(-100%) translate(20px);
+	-moz-transform: translate(-100%) translate(20px);
+	-o-transform: translate(-100%) translate(20px);
+	-ms-transform: translate(-100%) translate(20px);
+	transform: translate(-100%) translate(20px);
+}
+
+.cs-text span:nth-child(6) {
+	-webkit-transform: translate(-200%) translate(40px);
+	-moz-transform: translate(-200%) translate(40px);
+	-o-transform: translate(-200%) translate(40px);
+	-ms-transform: translate(-200%) translate(40px);
+	transform: translate(-200%) translate(40px);
+}
+
+.cs-text span:nth-child(7) {
+	-webkit-transform: translate(-300%) translate(60px);
+	-moz-transform: translate(-300%) translate(60px);
+	-o-transform: translate(-300%) translate(60px);
+	-ms-transform: translate(-300%) translate(60px);
+	transform: translate(-300%) translate(60px);
+}
+
+.cs-text span:not(:last-child) {
+	opacity: 0;
+	pointer-events: none;
+}
+
+.cs-text span:last-child{
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin-left: -50px;
+	z-index: 100;
+	background: url(../images/codrops_logo.jpg) no-repeat center center;
+}
+
+.cs-text:hover span:not(:last-child){
+	-webkit-transform: translate(0%);
+	-moz-transform: translate(0%);
+	-o-transform: translate(0%);
+	-ms-transform: translate(0%);
+	transform: translate(0%);
+	opacity: 1;
+}
+
+.cs-text:hover span:last-child {
+	opacity: 0;
+	-webkit-transform: scale(1.4);
+	-moz-transform: scale(1.4);
+	-o-transform: scale(1.4);
+	-ms-transform: scale(1.4);
+	transform: scale(1.4);
+}

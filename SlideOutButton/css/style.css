@@ -1,0 +1,87 @@
+.button_wrap{
+    position:relative;
+    width:225px;
+    height:36px;
+    overflow:hidden;
+    font-weight:bold;
+    font-size:11px;
+    margin:10px;
+}
+.button_aLeft{
+    width:70px;
+    height:36px;
+    -moz-border-radius:20px;
+	-webkit-border-radius:20px;
+    background-color:#093d6f;
+    color:#fff;
+    top:0px;
+    right:0px;
+    position:absolute;
+    line-height:36px;
+    text-align:left;
+}
+.button_aLeft span{
+    display:none;
+    padding-left:20px;
+}
+.button_bLeft{
+    width:64px;
+    height:30px;
+    background-color:#fff;
+    -moz-border-radius:20px;
+	-webkit-border-radius:20px;
+    color:#000;
+    position:absolute;
+    top:3px;
+    right:3px;
+    text-transform:uppercase;
+    line-height:30px;
+    text-align:center;
+    cursor:pointer;
+}
+.button_bLeft span{
+    color:#008ddd;
+}
+.button_aRight{
+    width:70px;
+    height:36px;
+    -moz-border-radius:20px;
+	-webkit-border-radius:20px;
+    background-color:#093d6f;
+    color:#fff;
+    top:0px;
+    left:0px;
+    position:absolute;
+    line-height:36px;
+    text-align:right;
+}
+.button_aRight span{
+    display:none;
+    padding-right:20px;
+}
+.button_bRight{
+    width:64px;
+    height:30px;
+    background-color:#fff;
+    -moz-border-radius:20px;
+	-webkit-border-radius:20px;
+    color:#000;
+    position:absolute;
+    top:3px;
+    left:3px;
+    text-transform:uppercase;
+    line-height:30px;
+    text-align:center;
+    cursor:pointer;
+}
+.button_bRight span{
+    color:#008ddd;
+}
+.button_c{
+    background-color:#008ddd;
+    color:#fff;
+    text-transform:uppercase;
+}
+.button_c span{
+    color:#093d6f;
+}

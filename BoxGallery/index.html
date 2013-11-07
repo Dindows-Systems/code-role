@@ -1,0 +1,386 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>Black and White Box Gallery with jQuery</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="description" content="Black and White Box Gallery with jQuery" />
+        <meta name="keywords" content="jquery, image gallery, boxes, background image, photos, bw, black and white"/>
+		<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+		<script src="js/cufon-yui.js" type="text/javascript"></script>
+		<script src="js/Museo_Slab_500.font.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			Cufon.replace('h1',{ textShadow: '1px 1px #fff'});
+			Cufon.replace('h2',{ textShadow: '1px 1px #fff'});
+			Cufon.replace('.footer a', { textShadow : '1px 1px 1px #fff', hover : 'true'});
+			Cufon.replace('ul.xg_menu li a span');
+		</script>
+    </head>
+    <body>
+		<div class="wrapper">
+			<h1>Black and White Box Gallery with jQuery</h1>
+			
+			<!-- BW Box Gallery -->
+			<div id="xg_container" class="xg_container">
+				<!-- 
+				The BW images that are shown in the beginning when hovering 
+				First one is shown by default
+				-->
+				<div class="xg_bgimages">
+					<img src="images/album1/bw/1.jpg" alt="" style="display:block;"/>
+					<img src="images/album2/bw/1.jpg" alt=""/>
+					<img src="images/album3/bw/1.jpg" alt=""/>
+					<img src="images/album4/bw/1.jpg" alt=""/>
+					<img src="images/album5/bw/1.jpg" alt=""/>
+					<img src="images/album6/bw/1.jpg" alt=""/>
+					<img src="images/album7/bw/1.jpg" alt=""/>
+					<img src="images/album8/bw/1.jpg" alt=""/>
+					<img src="images/album9/bw/1.jpg" alt=""/>
+				</div>
+				<!-- The grid. Change the rel attribute to the color you want to animate to-->
+				<ul class="xg_menu">
+					<li><a href="#" rel="#00BFFF"><span>Accessories</span></a></li>
+					<li><a href="#" rel="#ADFF2F"><span>Dresses</span></a></li>
+					<li><a href="#" rel="#9932CC"><span>Blazers & Jackets</span></a></li>
+					<li><a href="#" rel="#FF1493"><span>Intimate Apparel</span></a></li>
+					<li><a href="#" rel="#FF4500"><span>Jeans</span></a></li>
+					<li><a href="#" rel="#EE82EE"><span>Swimwear</span></a></li>
+					<li><a href="#" rel="#4169E1"><span>Shirts & Blouses</span></a></li>
+					<li><a href="#" rel="#FFD700"><span>Skirts</span></a></li>
+					<li><a href="#" rel="#DC143C"><span>Activewear</span></a></li>
+				</ul>
+				<div class="xg_back"></div>
+				<div class="xg_preview">
+					<div class="xg_nav">
+						<a id="xg_prev_image" href="#" class="xg_prev_image"></a>
+						<a id="xg_next_image" href="#" class="xg_next_image"></a>
+					</div>
+					<div class="xg_loader"></div>
+					<!-- The albums with all the BW images inside -->
+					<div class="xg_album">
+						<img src="images/album1/1.jpg" alt="images/album1/bw/1.jpg"/>
+						<img src="images/album1/2.jpg" alt="images/album1/bw/2.jpg"/>
+						<img src="images/album1/3.jpg" alt="images/album1/bw/3.jpg"/>
+					</div>
+					<div class="xg_album">
+						<img src="images/album2/1.jpg" alt="images/album2/bw/1.jpg"/>
+						<img src="images/album2/2.jpg" alt="images/album2/bw/2.jpg"/>
+						<img src="images/album2/3.jpg" alt="images/album2/bw/3.jpg"/>
+					</div>
+					<div class="xg_album">
+						<img src="images/album3/1.jpg" alt="images/album3/bw/1.jpg"/>
+						<img src="images/album3/2.jpg" alt="images/album3/bw/2.jpg"/>
+						<img src="images/album3/3.jpg" alt="images/album3/bw/3.jpg"/>
+					</div>
+					<div class="xg_album">
+						<img src="images/album4/1.jpg" alt="images/album4/bw/1.jpg"/>
+						<img src="images/album4/2.jpg" alt="images/album4/bw/2.jpg"/>
+						<img src="images/album4/3.jpg" alt="images/album4/bw/3.jpg"/>
+					</div>
+					<div class="xg_album">
+						<img src="images/album5/1.jpg" alt="images/album5/bw/1.jpg"/>
+						<img src="images/album5/2.jpg" alt="images/album5/bw/2.jpg"/>
+						<img src="images/album5/3.jpg" alt="images/album5/bw/3.jpg"/>
+					</div>
+					<div class="xg_album">
+						<img src="images/album6/1.jpg" alt="images/album6/bw/1.jpg"/>
+						<img src="images/album6/2.jpg" alt="images/album6/bw/2.jpg"/>
+						<img src="images/album6/3.jpg" alt="images/album6/bw/3.jpg"/>
+					</div>
+					<div class="xg_album">
+						<img src="images/album7/1.jpg" alt="images/album7/bw/1.jpg"/>
+						<img src="images/album7/2.jpg" alt="images/album7/bw/2.jpg"/>
+						<img src="images/album7/3.jpg" alt="images/album7/bw/3.jpg"/>
+					</div>
+					<div class="xg_album">
+						<img src="images/album8/1.jpg" alt="images/album8/bw/1.jpg"/>
+						<img src="images/album8/2.jpg" alt="images/album8/bw/2.jpg"/>
+						<img src="images/album8/3.jpg" alt="images/album8/bw/3.jpg"/>
+					</div>
+					<div class="xg_album">
+						<img src="images/album9/1.jpg" alt="images/album9/bw/1.jpg"/>
+						<img src="images/album9/2.jpg" alt="images/album9/bw/2.jpg"/>
+						<img src="images/album9/3.jpg" alt="images/album9/bw/3.jpg"/>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer">
+			<a href="http://tympanus.net/codrops/2011/01/12/bw-box-gallery/">back to the Codrops article</a>
+			<a target="_blank" href="http://www.flickr.com/photos/markjsebastian/">Breathtaking Photography by Mark Sebastian</a>
+		</div>
+
+		<!-- The JavaScript -->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+		<script type="text/javascript" src="js/jquery.color.js"></script>
+		<script type="text/javascript">
+			/*
+			the images preload plugin
+			*/
+			(function($) {
+				$.fn.preload = function(options) {
+					var opts 	= $.extend({}, $.fn.preload.defaults, options);
+					o			= $.meta ? $.extend({}, opts, this.data()) : opts;
+					var c		= this.length,
+						l		= 0;
+					return this.each(function() {
+						var $i	= $(this);
+						$('<img/>').load(function(i){
+							++l;
+							if(l == c) o.onComplete();
+						}).attr('src',$i.attr('src'));	
+					});
+				};
+				$.fn.preload.defaults = {
+					onComplete	: function(){return false;}
+				};
+			})(jQuery);
+		</script>
+        <script type="text/javascript">
+			$(function() {
+				/*some caching elems*/
+				var $xg_container	= $('#xg_container'),
+					$xg_menu		= $xg_container.children('.xg_menu'),
+					$xg_preview		= $xg_container.children('.xg_preview'),
+					$xg_back		= $xg_container.children('.xg_back'),
+					$xg_next_image	= $('#xg_next_image'),
+					$xg_prev_image	= $('#xg_prev_image'),
+					//current is the position of the selected item
+					current			= 0,
+					//for the timeout function
+					t,
+					$menu_links		= $xg_menu.find('a'),
+					$bg_images		= $xg_container.children('.xg_bgimages').children(),
+					//all images in the preview container
+					$preview_images = $xg_preview.find('img');
+				
+				/*check if you are using a browser*/	
+				var ie 				= false;
+				if ($.browser.msie) {
+					ie = true;//you are not!Anyway let's give it a try
+				}
+				
+				/*first preload images in the menu*/
+				$bg_images.preload({
+					onComplete	: function(){
+						//init events
+						initEventHandlers();
+					}
+				});
+				//preload black&white images
+				$preview_images.each(function(i){
+					var src = $(this).attr('alt');
+					$('<img/>').attr('src',src);
+				});
+				
+				function initEventHandlers(){
+					
+					$menu_links.bind('mouseenter',function(e){
+						var $link = $(this);
+					
+						//if animation return
+						if($xg_menu.is(':animated')) 
+							return false;
+							
+						//animate the color of the span
+						$link.find('span')
+							 .stop()
+							 .animate({ 
+								backgroundColor: $link.attr('rel') 
+							 }, 1000);
+						
+						var $item	= $link.parent(),
+							pos		= $item.index();
+						clearTimeout(t);
+						//change the menu image
+						//the setTimeout is used to prevent
+						//the image to change when the user moves the mouse 
+						//very quickly through the images
+						t = setTimeout(function(){
+							changeBgImage(pos);
+						},150);
+					}).bind('mouseleave',function(e){
+						clearTimeout(t);
+						var $link = $(this);
+						//reset background color
+						$link.find('span')
+							 .stop()
+							 .animate({ 
+								backgroundColor: '#FFFFFF' 
+							 }, 1000);
+					}).bind('click',function(e){
+						clearTimeout(t);
+						//if animation return
+						if($xg_menu.is(':animated')) 
+							return false;
+						//get the current album	
+						var $album 			= $xg_preview.find('.xg_album')
+														 .eq(current),
+							$current_image;
+						
+						//current image for this album
+						var current_idx		= $album.data('current');
+						if(current_idx)
+							$current_image 	= $album.children('img')
+													.eq(current_idx);
+						else{
+							$current_image 	= $album.children('img:first');
+							$album.data('current',0)
+						}	
+						
+						//reset the left value and show the image
+						$current_image.css('left','0px')
+									  .show();
+						
+						//hide the menu
+						if(ie)
+							$xg_menu.hide();
+						else	
+							$xg_menu.fadeOut(500);
+						
+						//the bg image of the menu
+						var	$bg_image	= $bg_images.eq(current);
+						
+						//animate the opacity of the bg image to 0,
+						//and hide it
+						$bg_image.stop()
+						         .animate({
+									'opacity':0
+								 },1000,function(){$(this).hide();});
+						//animate the opacity of the current image to 1
+						//first reset the opacity to 0
+						$current_image.css('opacity','0')
+									  .stop()
+									  .animate({'opacity':1},1000,function(){
+											//check if we show the next and previous 
+											//navigation buttons
+											if($current_image.index() > 0)
+												$xg_prev_image.show();
+											if($current_image.nextAll().length > 0)
+												$xg_next_image.show();	
+											
+											//clicking the next button,
+											//shows the next image. The image is animated 
+											//from right to left with an easing effect
+											//also, the current image gets hidden
+											$xg_next_image.unbind('click')
+														  .bind('click',function(e){
+															if($current_image.nextAll().length == 1)
+																$xg_next_image.hide();
+															$xg_prev_image.show();
+																
+															var $next_image = $current_image.next();
+															//if no animations and elem exists
+															if($next_image.length && !$next_image.is(':animated')){
+																$next_image.show()
+																		   .stop()
+																		   .animate({
+																				left : '0px'
+																		   },800,'easeInOutExpo',function(){
+																				$current_image.hide();
+																				$current_image	= $next_image;
+																				$album.data('current',$next_image.index());
+																		   });
+															}
+															e.preventDefault();		
+														  });
+											//clicking the prev button,
+											//shows the prev image. The current image is animated 
+											//from left to right with an easing effect
+											//also, the slided image gets hidden			  
+											$xg_prev_image.unbind('click')
+														  .bind('click',function(e){
+															if($current_image.nextAll().length == 0)
+																$xg_next_image.show();
+															if($current_image.index() == 1)
+																$xg_prev_image.hide();
+																
+															var $prev_image = $current_image.prev();
+															//if no animations and elem exists
+															if($prev_image.length && !$current_image.is(':animated')){
+																$prev_image.css('left','0px').show();
+																$current_image.stop()
+																			  .animate({
+																				left : '800px'
+																			  },800,'easeInOutExpo',function(){
+																				$current_image.hide();
+																				$current_image	= $prev_image;
+																				$album.data('current',$prev_image.index());		
+																			  });
+															}
+															e.preventDefault();		
+														  });
+														  
+											//when clicking on the back button,
+											//hide the navigation buttons,
+											//show the menu,
+											//show the menu image and hide the current image
+											$xg_back.show()
+													  .unbind('click')
+													  .bind('click',function(){
+															//if animations return
+															if($current_image.is(':animated')|| 
+															   $current_image.next().is(':animated'))
+																return false;
+															
+															$xg_back.hide();
+															$xg_next_image.hide();
+															$xg_prev_image.hide();
+															var	$bg_image	= $bg_images.eq(current);
+															$bg_image.attr('src', $current_image.attr('alt'));
+															if(ie)
+																$xg_menu.show()
+															else
+																$xg_menu.fadeIn(500);
+															$bg_image.show()
+																	 .stop()
+																	 .animate({'opacity':0.3},1000);
+															$current_image.stop()
+															              .animate({'opacity':0},1000,function(){
+																$(this).hide();
+															});
+													  });		
+											
+									  });
+									  
+						e.preventDefault();
+					});	
+				}
+								
+				/*
+				changes the menu image 
+				*/		
+				function changeBgImage(pos){
+					if(pos == current) 
+						return false;
+					//hide the current
+					$bg_images.eq(current)
+							  .css({
+									'z-index'	: '1'
+							  })
+							  .stop()
+							  .animate({
+									'opacity'	: '0'
+							  },600);
+					//show the new one
+					$bg_images.eq(pos)
+							  .css({
+									'opacity' 	: '0',
+									'z-index'	: '999'
+							  })
+							  .show()
+							  .stop()
+							  .animate({
+									'opacity'	: '0.3'
+							  },600);
+					
+					//set new current
+					current = pos;		  
+				}
+
+			});
+        </script>
+    </body>
+</html>

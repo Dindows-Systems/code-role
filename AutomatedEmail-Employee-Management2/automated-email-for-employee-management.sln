@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "automated-email-for-employee-management", "automated-email-for-employee-management\automated-email-for-employee-management.csproj", "{CD8C1989-AD50-4E65-B501-8FCB4FC93448}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "automail", "automail\automail.vdproj", "{6E88D954-E9C0-4848-BAB7-6F6AFBD602DF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CD8C1989-AD50-4E65-B501-8FCB4FC93448}.Debug|x86.ActiveCfg = Debug|x86
+		{CD8C1989-AD50-4E65-B501-8FCB4FC93448}.Debug|x86.Build.0 = Debug|x86
+		{CD8C1989-AD50-4E65-B501-8FCB4FC93448}.Release|x86.ActiveCfg = Release|x86
+		{CD8C1989-AD50-4E65-B501-8FCB4FC93448}.Release|x86.Build.0 = Release|x86
+		{6E88D954-E9C0-4848-BAB7-6F6AFBD602DF}.Debug|x86.ActiveCfg = Debug
+		{6E88D954-E9C0-4848-BAB7-6F6AFBD602DF}.Release|x86.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

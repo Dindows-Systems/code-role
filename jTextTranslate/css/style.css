@@ -1,0 +1,50 @@
+a.jtt-translate-icon{
+    height:16px;
+    width:16px;
+    background:transparent url(../images/translate.png) no-repeat top left;
+    float:left;
+    cursor:pointer;
+    margin:4px;
+    opacity:0.6;
+}
+a.jtt-translate-icon:hover{
+    opacity:1.0;
+}
+.jtt-overlay{
+    background:transparent url(../images/overlay.png) repeat top left;
+    position:fixed;
+    top:0px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    z-index:10;
+}
+.jtt-box{
+    position:fixed;
+    top:80px;
+    left:25%;
+    right:25%;
+    background-color:#fff;
+    z-index:11;
+    padding:20px;
+    border:2px solid #ccc;
+    -moz-border-radius: 20px;
+    -webkit-border-radius:20px;
+    -khtml-border-radius:20px;
+    -moz-box-shadow: 0 1px 3px #333;
+    -webkit-box-shadow: 0 1px 3px #333;
+}
+a.jtt-boxclose{
+    float:right;
+    width:26px;
+    height:26px;
+    background:transparent url(../images/cancel.png) repeat top left;
+    margin-top:-30px;
+    margin-right:-30px;
+    cursor:pointer;
+}
+.jtt-boxtext{
+    height:200px;
+    overflow:auto;
+    padding:0px 10px 0px 10px;
+}

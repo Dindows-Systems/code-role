@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Circular Discography Template with jQuery</title>
+        <meta name="description" content="Circular Discography Template with jQuery" />
+        <meta name="keywords" content="jquery, html5, audio, css3, template, band, music, player, album, discography, website"/>
+		<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
+        <link rel="stylesheet" href="css/style.css" type="text/css"  />
+		<link rel="stylesheet" href="css/jplayer.codrops.css" type="text/css" />
+		<link type="text/css" href="css/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+		<link href='http://fonts.googleapis.com/css?family=Terminal+Dosis+Light' rel='stylesheet' type='text/css' />
+    </head>
+    <body>
+		<div class="cd_wrapper">
+			<div id="cd_background" class="cd_background">
+				<div class="cd_overlay"></div>
+				<div class="cd_loading"></div>
+			</div>
+			<h1 class="cd_title">BCO<span>Beach Chill Out</span></h1>
+			
+			<div id="jquery_jplayer" class="jp-jplayer"></div>
+			<div id="jp-audio" class="jp-audio">
+				<div class="jp-type-playlist">
+					<div id="jp_interface" class="jp-interface">
+									<ul class="jp-controls">
+							<li><a href="#" class="jp-play" tabindex="1">play</a></li>
+							<li><a href="#" class="jp-pause" tabindex="1">pause</a></li>
+							<li><a href="#" class="jp-stop" tabindex="1">stop</a></li>
+							<li><a href="#" class="jp-mute" tabindex="1">mute</a></li>
+							<li><a href="#" class="jp-unmute" tabindex="1">unmute</a></li>
+							<li><a href="#" class="jp-previous" tabindex="1">previous</a></li>
+							<li><a href="#" class="jp-next" tabindex="1">next</a></li>
+									</ul>
+									<div class="jp-progress">
+							<div class="jp-seek-bar">
+								<div class="jp-play-bar"></div>
+										</div>
+									</div>
+						<div class="jp-volume-bar">
+							<div class="jp-volume-bar-value"></div>
+									</div>
+						<div class="jp-current-time"></div>
+						<div class="jp-duration"></div>
+								</div>
+					<div id="jp_playlist" class="jp-playlist">
+									<ul>
+							<!-- The method Playlist.displayPlaylist() uses this unordered list -->
+							<li></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+			<div id="cd_container" class="cd_container">
+				<div class="cd_album cd_album_1" data-bgimg="images/1.jpg">
+					<h1>Beach Chill Out Vol. 1</h1>
+					<a href="#" class="cd_back">&laquo; Go back</a>
+					<div class="cd_content">
+						<div class="cd_playlist">
+							<ul>
+								<li data-mp3="songs/ramblinglibrarian_-_Our_Resolve.mp3" data-oga="songs/ramblinglibrarian_-_Our_Resolve.ogg">Our Resolve</li>
+								<li data-mp3="songs/ramblinglibrarian_-_Our_Resolve.mp3" data-oga="songs/ramblinglibrarian_-_Our_Resolve.ogg">Our Resolve</li>
+								<li data-mp3="songs/ramblinglibrarian_-_Our_Resolve.mp3" data-oga="songs/ramblinglibrarian_-_Our_Resolve.ogg">Our Resolve</li>
+							</ul>
+						</div>
+						<div class="cd_content_inner">
+							<p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+							<p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine.</p>
+						</div>
+					</div>
+				</div>
+				<div class="cd_album cd_album_2" data-bgimg="images/2.jpg">
+					<h1>Beach Chill Out Vol. 2</h1>
+					<a href="#" class="cd_back">&laquo; Go back</a>
+					<div class="cd_content">
+						<div class="cd_playlist">
+							<ul>
+								<li data-mp3="songs/ramblinglibrarian_-_Our_Resolve.mp3" data-oga="songs/ramblinglibrarian_-_Our_Resolve.ogg">Our Resolve</li>
+								<li data-mp3="songs/ramblinglibrarian_-_Our_Resolve.mp3" data-oga="songs/ramblinglibrarian_-_Our_Resolve.ogg">Our Resolve</li>
+							</ul>
+						</div>
+						<div class="cd_content_inner">
+							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+							<p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+							<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+						</div>
+					</div>
+				</div>
+				<div class="cd_album cd_album_3" data-bgimg="images/3.jpg">
+					<h1>Beach Chill Out Vol. 3</h1>
+					<a href="#" class="cd_back">&laquo; Go back</a>
+					<div class="cd_content">
+						<div class="cd_playlist">
+							<ul>
+								<li data-mp3="songs/ramblinglibrarian_-_Our_Resolve.mp3" data-oga="songs/ramblinglibrarian_-_Our_Resolve.ogg">Our Resolve</li>
+								<li data-mp3="songs/ramblinglibrarian_-_Our_Resolve.mp3" data-oga="songs/ramblinglibrarian_-_Our_Resolve.ogg">Our Resolve</li>
+								<li data-mp3="songs/ramblinglibrarian_-_Our_Resolve.mp3" data-oga="songs/ramblinglibrarian_-_Our_Resolve.ogg">Our Resolve</li>
+								<li data-mp3="songs/ramblinglibrarian_-_Our_Resolve.mp3" data-oga="songs/ramblinglibrarian_-_Our_Resolve.ogg">Our Resolve</li>
+							</ul>
+						</div>
+						<div class="cd_content_inner">
+							<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane.</p>
+							<p>Pityful a rethoric question ran over her cheek, then she continued her way. On her way she met a copy.</p>	
+						</div>
+					</div>
+				</div>
+				<div class="cd_album cd_album_4" data-bgimg="images/4.jpg">
+					<h1>Beach Chill Out Vol. 4</h1>
+					<a href="#" class="cd_back">&laquo; Go back</a>
+					<div class="cd_content">
+						<div class="cd_playlist">
+							<ul>
+								<li data-mp3="songs/ramblinglibrarian_-_Our_Resolve.mp3" data-oga="songs/ramblinglibrarian_-_Our_Resolve.ogg">Our Resolve</li>
+								<li data-mp3="songs/ramblinglibrarian_-_Our_Resolve.mp3" data-oga="songs/ramblinglibrarian_-_Our_Resolve.ogg">Our Resolve</li>
+								<li data-mp3="songs/ramblinglibrarian_-_Our_Resolve.mp3" data-oga="songs/ramblinglibrarian_-_Our_Resolve.ogg">Our Resolve</li>
+							</ul>
+						</div>
+						<div class="cd_content_inner">
+							<p>It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer.</p>
+							<p>Gregor then turned to look out the window at the dull weather. Drops of rain could be heard hitting the pane, which made him feel quite sad.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="cd_navigation" class="cd_navigation">
+				<a href="#" class="cd_prev">Previous</a>
+				<a href="#" class="cd_next">Next</a>
+			</div>
+			<div class="cd_footer">
+				<a class="cd_left" href="http://tympanus.net/Tutorials/MovingBoxesContent/"><span>&laquo; Previous Demo:</span> Moving Boxes Content with jQuery</a>
+				<a href="http://www.flickr.com/photos/notsogoodphotography/" target="_blank">Photos by Ibrahim Iujaz</a>
+				<a href="http://tympanus.net/codrops/2011/04/11/circular-discography-template/">back to the Codrops tutorial</a>
+			</div>
+		</div>
+		<!-- jQuery -->
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.5.2.min.js"></script>
+		<!-- the mousewheel plugin - optional to provide mousewheel support -->
+		<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+		<!-- the jScrollPane script -->
+		<script type="text/javascript" src="js/jquery.jscrollpane.min.js"></script>
+		<!-- the transform plugin -->
+		<script type="text/javascript" src="js/jquery.transform-0.9.3.min_.js"></script>
+		<!-- the jPlayer plugin -->
+		<script type="text/javascript" src="js/jPlayer/jquery.jplayer.min.js"></script>
+		<!-- the playlist script (jPlayer demo code with some few changes) -->
+		<script type="text/javascript" src="js/playlist.js"></script>
+		<!-- the main script -->
+		<script type="text/javascript" src="js/jquery.template.js"></script>
+    </body>
+</html>

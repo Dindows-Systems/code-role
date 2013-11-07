@@ -1,0 +1,277 @@
+/*
+===================================================================== 
+DEMO 3
+=====================================================================
+*/
+
+.pojoro {
+	background: rgba( 255, 255, 255, 1);
+	background: -webkit-radial-gradient(ellipse at center, rgba(255,255,255,1) 40%,rgba(51,51,51,1) 100%);
+	background: -moz-radial-gradient(ellipse at center, rgba(255,255,255,1) 40%,rgba(51,51,51,1) 100%);
+	background: -ms-radial-gradient(ellipse at center, rgba(255,255,255,1) 40%,rgba(51,51,51,1) 100%);
+	background: radial-gradient(ellipse at center, rgba(255,255,255,1) 40%,rgba(51,51,51,1) 100%);
+	border-radius: 100%;
+	box-shadow: 0 0 0 0.2em rgb(146,89,149), 0 0 0.1em 0.55em rgb(176,89,179), inset 0 0.2em 0 0 rgb(136,79,139);
+	color: rgba( 40, 40, 40, 0.8);
+	line-height: 1.1em;
+	padding-left: 0.18em;
+	cursor: pointer;
+	position: relative;
+	margin: 5em auto 0 auto;
+	width: 1em; height: 1em;
+	-webkit-transform-origin: center;
+	   -moz-transform-origin: center;
+	    -ms-transform-origin: center;
+	        transform-origin: center;
+	-webkit-font-smoothing: antialiased;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
+	-webkit-transition: all 0.8s ease-in-out;
+	   -moz-transition: all 0.8s ease-in-out;
+	        transition: all 0.8s ease-in-out;
+	-webkit-animation: eye 2.2s ease-in-out infinite, body 1.15s 1.8s linear infinite;
+	   -moz-animation: eye 2.2s ease-in-out infinite, body 1.15s 1.8s linear infinite;
+	    -ms-animation: eye 2.2s ease-in-out infinite, body 1.15s 1.8s linear infinite;
+	        animation: eye 2.2s ease-in-out infinite, body 1.15s 1.8s linear infinite; 
+} 
+
+.pojoro:hover {
+	-webkit-transform: scaleY(0.9) scaleX(0.95) translateY(-3em) translateZ(0);
+	   -moz-transform: scaleY(0.9) scaleX(0.95) translateZ(0);
+	    -ms-transform: scaleY(0.9) scaleX(0.95) translateY(-3em) translateZ(0);
+	        transform: scaleY(0.9) scaleX(0.95) translateZ(0);
+}
+
+.pojoro:before,
+.pojoro:after {
+	background: rgba(0,0,0,0);
+	border-radius: 100%;
+	content: "";
+	display: none;
+	position: absolute;
+	width: 1em; height: 0.1em;
+	-webkit-filter: blur(1px);
+	-webkit-transition: all 0.2s;
+	   -moz-transition: all 0.2s;
+	        transition: all 0.2s;
+	-webkit-animation-duration: 0.2s;
+	   -moz-animation-duration: 0.2s;
+	    -ms-animation-duration: 0.2s;
+	        animation-duration: 0.2s;
+	-webkit-animation-iteration-count: infinite;
+	   -moz-animation-iteration-count: infinite;
+	    -ms-animation-iteration-count: infinite;
+	        animation-iteration-count: infinite;
+	-webkit-animation-timing-function: ease-in-out;
+	   -moz-animation-timing-function: ease-in-out;
+	    -ms-animation-timing-function: ease-in-out;
+	        animation-timing-function: ease-in-out;
+}
+
+.pojoro:before {
+	top: 25%; left: 1.45em;
+	margin-left: -1em;
+	-webkit-transform-origin: left;
+	   -moz-transform-origin: left;
+	    -ms-transform-origin: left;
+	        transform-origin: left;
+	-webkit-transform: rotate(-60deg);
+	   -moz-transform: rotate(-60deg);
+	    -ms-transform: rotate(-60deg);
+	        transform: rotate(-60deg);
+	-webkit-animation-name: wings;
+	   -moz-animation-name: wings;
+	    -ms-animation-name: wings;
+	        animation-name: wings;
+}
+
+.pojoro:after {
+	top: 25%; left: -2.2em;
+	margin-left: 1em;
+	-webkit-transform-origin: right;
+	   -moz-transform-origin: right;
+	    -ms-transform-origin: right;
+	        transform-origin: right;
+	-webkit-transform: rotate(60deg);
+	   -moz-transform: rotate(60deg);
+	    -ms-transform: rotate(60deg);
+	        transform: rotate(60deg);
+	-webkit-animation-name: wings2;
+	   -moz-animation-name: wings2;
+	    -ms-animation-name: wings2;
+	        animation-name: wings2;
+}
+
+.pojoro:hover:before,
+.pojoro:hover:after {
+	background: rgba(100,100,100,0.8);
+	display: block;
+	margin-left: 0em;
+	width: 2em; height: 0.3em;
+}
+
+@-webkit-keyframes eye {
+	5%, 10% {
+		line-height: 1.2em;
+		padding-left: 0em;
+	}
+	15%, 20% {
+		line-height: 1.15em;
+		padding-left: 0.4em;
+	}
+	25% {
+		box-shadow: 0 0 0 0.2em rgb(146,89,149), 0 0 0.1em 0.55em rgb(166,89,169), inset 0 1em 0 0 rgb(136,79,139);
+	}
+	23%, 27% {
+		box-shadow: 0 0 0 0.2em rgb(146,89,149), 0 0 0.1em 0.55em rgb(166,89,169), inset 0 0.2em 0 0 rgb(136,79,139);
+	}
+}
+
+@-moz-keyframes eye {
+	5%, 10% {
+		line-height: 1.2em;
+		padding-left: 0em;
+	}
+	15%, 20% {
+		line-height: 1.15em;
+		padding-left: 0.4em;
+	}
+	25% {
+		box-shadow: 0 0 0 0.2em rgb(146,89,149), 0 0 0.1em 0.55em rgb(166,89,169), inset 0 1em 0 0 rgb(136,79,139);
+	}
+	23%, 27% {
+		box-shadow: 0 0 0 0.2em rgb(146,89,149), 0 0 0.1em 0.55em rgb(166,89,169), inset 0 0.2em 0 0 rgb(136,79,139);
+	}
+}
+
+@-ms-keyframes eye {
+	5%, 10% {
+		line-height: 1.2em;
+		padding-left: 0em;
+	}
+	15%, 20% {
+		line-height: 1.15em;
+		padding-left: 0.4em;
+	}
+	25% {
+		box-shadow: 0 0 0 0.2em rgb(146,89,149), 0 0 0.1em 0.55em rgb(166,89,169), inset 0 1em 0 0 rgb(136,79,139);
+	}
+	23%, 27% {
+		box-shadow: 0 0 0 0.2em rgb(146,89,149), 0 0 0.1em 0.55em rgb(166,89,169), inset 0 0.2em 0 0 rgb(136,79,139);
+	}
+}
+
+@keyframes eye {
+	5%, 10% {
+		line-height: 1.2em;
+		padding-left: 0em;
+	}
+	15%, 20% {
+		line-height: 1.15em;
+		padding-left: 0.4em;
+	}
+	25% {
+		box-shadow: 0 0 0 0.2em rgb(146,89,149), 0 0 0.1em 0.55em rgb(166,89,169), inset 0 1em 0 0 rgb(136,79,139);
+	}
+	23%, 27% {
+		box-shadow: 0 0 0 0.2em rgb(146,89,149), 0 0 0.1em 0.55em rgb(166,89,169), inset 0 0.2em 0 0 rgb(136,79,139);
+	}
+}
+
+@-webkit-keyframes body {
+	50% {
+		width: 1.4em; height: 1.4em;
+	} 
+}
+
+@-moz-keyframes body {
+	50% {
+		width: 1.4em; height: 1.4em;
+	} 
+}
+
+@-ms-keyframes body {
+	50% {
+		width: 1.4em; height: 1.4em;
+	} 
+}
+
+@keyframes body {
+	50% {
+		width: 1.4em; height: 1.4em;
+	} 
+}
+
+@-webkit-keyframes wings {
+	50% {
+		-webkit-transform: rotate(65deg);
+		   -moz-transform: rotate(65deg);
+		    -ms-transform: rotate(65deg);
+		        transform: rotate(65deg);
+	}
+}
+
+@-moz-keyframes wings {
+	50% {
+		-webkit-transform: rotate(65deg);
+		   -moz-transform: rotate(65deg);
+		    -ms-transform: rotate(65deg);
+		        transform: rotate(65deg);
+	}
+}
+
+@-ms-keyframes wings {
+	50% {
+		-webkit-transform: rotate(65deg);
+		   -moz-transform: rotate(65deg);
+		    -ms-transform: rotate(65deg);
+		        transform: rotate(65deg);
+	}
+}
+
+@keyframes wings {
+	50% {
+		-webkit-transform: rotate(65deg);
+		   -moz-transform: rotate(65deg);
+		    -ms-transform: rotate(65deg);
+		        transform: rotate(65deg);
+	}
+}
+
+@-webkit-keyframes wings2 {
+	50% {
+		-webkit-transform:rotate(-65deg);
+		   -moz-transform:rotate(-65deg);
+		    -ms-transform:rotate(-65deg);
+		        transform:rotate(-65deg);
+	}
+}
+
+@-moz-keyframes wings2 {
+	50% {
+		-webkit-transform: rotate(-65deg);
+		   -moz-transform: rotate(-65deg);
+		    -ms-transform: rotate(-65deg);
+		        transform: rotate(-65deg);
+	}
+}
+
+@-ms-keyframes wings2 {
+	50% {
+		-webkit-transform: rotate(-65deg);
+		   -moz-transform: rotate(-65deg);
+		    -ms-transform: rotate(-65deg);
+		        transform: rotate(-65deg);
+	}
+}
+
+@keyframes wings2 {
+	50% {
+		-webkit-transform: rotate(-65deg);
+		   -moz-transform: rotate(-65deg);
+		    -ms-transform: rotate(-65deg);
+		        transform: rotate(-65deg);
+	}
+}

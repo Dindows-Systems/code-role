@@ -1,0 +1,66 @@
+body {
+	background: #000 url(../images/type.jpg);
+}
+
+.container > header h1,
+.container > header h2 {
+	color: #222;
+	text-shadow: 0 1px 1px rgba(255,255,255,0.3);
+}
+
+.cs-text {
+	width: 100%;
+	text-align: center;
+	margin-top: 80px;
+}
+
+.cs-text span { 
+	font-family: 'Cantata One', 'Trebuchet MS', sans-serif;
+	font-size: 180px;
+	line-height: 150px;
+	font-weight: 400;
+	color: rgba(255,255,255,0.3);
+	display: inline-block;
+	text-transform: uppercase;
+	text-shadow: 15px 15px 0 rgba(0,0,0,0.2);
+	cursor: default;
+	pointer-events: none;
+}
+
+.cs-text span:nth-child(2n) {
+	-webkit-transform: rotate(-6deg);
+	-moz-transform: rotate(-6deg);
+	-o-transform: rotate(-6deg);
+	-ms-transform: rotate(-6deg);
+	transform: rotate(-6deg);
+	color: rgba(255,255,255,0.4); ;
+}
+
+.cs-text span:nth-child(3n) {
+	-webkit-transform: translateY(20px);
+	-moz-transform: translateY(20px);
+	-o-transform: translateY(20px);
+	-ms-transform: translateY(20px);
+	transform: translateY(20px);
+}
+
+.cs-text span:nth-child(4n) {
+	color: rgba(255,255,255,0.2);
+}
+
+.cs-text span:nth-child(3n+3) {
+	-webkit-transform: scale(1.4) rotate(5deg);
+	-moz-transform: scale(1.4) rotate(5deg);
+	-o-transform: scale(1.4) rotate(5deg);
+	-ms-transform: scale(1.4) rotate(5deg);
+	transform: scale(1.4) rotate(5deg);
+}
+
+.cs-text span:nth-child(7n) {
+	font-size: 110px;
+}
+
+.cs-text span:nth-child(12n) {
+	font-size: 200px;
+}
+

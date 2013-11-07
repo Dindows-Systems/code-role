@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Photo Effects with jQuery</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="description" content="Photo Effects with jQuery" />
+        <meta name="keywords" content="jquery, css, sprites, photo" />
+        <link rel="stylesheet" href="css/style.css" type="text/css" media="screen"/>
+    </head>
+    <body>
+        <div class="header"></div>
+        <div class="content">
+            <div class="photo1 pht"><p style="display:none;"></p></div>
+            <div class="photo2 pht"><p style="display:none;"></p></div>
+            <div class="photo3 pht"><p style="display:none;"></p></div>
+            <p class="link"><a href="http://www.freedigitalphotos.net/images/view_photog.php?photogid=987">Image: graur razvan ionut / FreeDigitalPhotos.net</a></p>
+            <p class="link"><a href="http://www.freedigitalphotos.net/images/view_photog.php?photogid=789">Image: Dynamite Imagery / FreeDigitalPhotos.net</a></p>
+            <p class="link"><a href="http://www.freedigitalphotos.net/images/view_photog.php?photogid=735">Image: Bob Lowe / FreeDigitalPhotos.net</a></p>
+        </div>
+        <div class="footer">
+            <a href="" class="back">Back to Codrops</a>
+        </div>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script>	
+		<script>	
+			$(function() { 
+				$('.pht').hover(
+					function() {
+						var $this = $(this);
+						$this.find('p').stop(true,true).fadeIn('fast');
+					}, 
+					function() {
+						var $this = $(this);
+						$this.find('p').stop(true,true).fadeOut('fast');
+					}
+				);
+			});
+		</script>	
+    </body>
+</html>

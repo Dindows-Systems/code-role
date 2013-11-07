@@ -1,0 +1,245 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="description" content="" />
+        <meta name="keywords" content=""/>
+		<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
+        <link rel="stylesheet" href="css/style.css" type="text/css" media="screen"/>
+		<script src="js/cufon-yui.js" type="text/javascript"></script>
+		<script src="js/Aller.font.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			Cufon.replace('ul.oe_menu div a',{hover: true});
+			Cufon.replace('h1,h2,.oe_heading');
+		</script>
+        <style type="text/css">
+			span.reference{
+				position:fixed;
+				left:0px;
+				bottom:0px;
+				background:#000;
+				width:100%;
+				font-size:10px;
+				line-height:20px;
+				text-align:right;
+				height:20px;
+				-moz-box-shadow:-1px 0px 10px #000;
+				-webkit-box-shadow:-1px 0px 10px #000;
+				box-shadow:-1px 0px 10px #000;
+			}
+			span.reference a{
+				color:#aaa;
+				text-transform:uppercase;
+				text-decoration:none;
+				margin-right:10px;
+				
+			}
+			span.reference a:hover{
+				color:#ddd;
+			}
+			.bg_img img{
+				width:100%;
+				position:fixed;
+				top:0px;
+				left:0px;
+				z-index:-1;
+			}
+			h1{
+				font-size:75px;
+				text-align:right;
+				position:absolute;
+				right:40px;
+				top:20px;
+				font-weight:normal;
+				/*text-shadow:  0 0 3px #0096ff, 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #0096ff, 0 0 70px #0096ff, 0 0 80px #0096ff, 0 0 100px #0096ff, 0 0 150px #0096ff;
+			*/}
+			h1 span{
+				display:block;
+				font-size:15px;
+				font-weight:bold;
+			}
+			h2{
+				position:absolute;
+				top:220px;
+				left:50px;
+				font-size:40px;
+				font-weight:normal;
+				/*text-shadow:  0 0 3px #f6ff00, 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #f6ff00, 0 0 70px #f6ff00, 0 0 80px #f6ff00, 0 0 100px #f6ff00, 0 0 150px #f6ff00;
+*/}
+		</style>
+    </head>
+
+    <body>
+		<div class="bg_img"><img src="images/1.jpg" alt="background" /></div>
+		<h1>Duke Fashion<span>Overlay Effect Menu with jQuery</span></h1>
+		<h2>Welcome to the world of fashion</h2>
+
+		<div class="oe_wrapper">
+			<div id="oe_overlay" class="oe_overlay"></div>
+			<ul id="oe_menu" class="oe_menu">
+				<li><a href="">Collections</a>
+					<div>
+						<ul>
+							<li class="oe_heading">Summer 2011</li>
+							<li><a href="#">Milano</a></li>
+							<li><a href="#">Paris</a></li>
+							<li><a href="#">Special Events</a></li>
+							<li><a href="#">Runway Show</a></li>
+							<li><a href="#">Overview</a></li>
+						</ul>
+						<ul>
+							<li class="oe_heading">Winter 2010</li>
+							<li><a href="#">Milano</a></li>
+							<li><a href="#">New York</a></li>
+							<li><a href="#">Behind the scenes</a></li>
+							<li><a href="#">Interview</a></li>
+							<li><a href="#">Photos</a></li>
+							<li><a href="#">Download</a></li>
+						</ul>
+						<ul>
+							<li class="oe_heading">Categories</li>
+							<li><a href="#">Casual</a></li>
+							<li><a href="#">Business</a></li>
+							<li><a href="#">Underwear</a></li>
+							<li><a href="#">Nature Pure</a></li>
+							<li><a href="#">Swimwear</a></li>
+							<li><a href="#">Evening</a></li>
+						</ul>
+					</div>
+				</li>
+				<li><a href="">Projects</a>
+					<div style="left:-111px;"><!-- -112px -->
+						<ul>
+							<li class="oe_heading">Fashion Shows</li>
+							<li><a href="#">Milano</a></li>
+							<li><a href="#">Paris</a></li>
+							<li><a href="#">Berlin</a></li>
+							<li><a href="#">New York</a></li>
+							<li><a href="#">London</a></li>
+						</ul>
+						<ul>
+							<li class="oe_heading">Events</li>
+							<li><a href="#">Fashion Party 2011</a></li>
+							<li><a href="#">Evening specials</a></li>
+							<li><a href="#">Fashion Day Milano</a></li>
+							<li><a href="#">Model Workshops</a></li>
+						</ul>
+						<ul>
+							<li class="oe_heading">Media</li>
+							<li><a href="#">Wallpapers</a></li>
+							<li><a href="#">Downloads</a></li>
+							<li><a href="#">Images</a></li>
+							<li><a href="#">Contest 2011</a></li>
+							<li><a href="#">Fashion Mania</a></li>
+							<li><a href="#">Green Earth Day</a></li>
+						</ul>
+					</div>
+				</li>
+				<li><a href="">Fragrances</a>
+					<div style="left:-223px;">
+						<ul class="oe_full">
+							<li class="oe_heading">Fashion Fragrances</li>
+							<li><a href="#">Deálure</a></li>
+							<li><a href="#">Violet Woman</a></li>
+							<li><a href="#">Deep Blue for Men</a></li>
+							<li><a href="#">New York, New York</a></li>
+							<li><a href="#">Illusion</a></li>
+						</ul>
+					</div>
+				</li>
+				<li><a href="">Events</a>
+					<div style="left:-335px;">
+						<ul>
+							<li class="oe_heading">Shows 2010</li>
+							<li><a href="#">Milano</a></li>
+							<li><a href="#">Paris</a></li>
+							<li><a href="#">Berlin</a></li>
+							<li><a href="#">New York</a></li>
+							<li><a href="#">London</a></li>
+						</ul>
+						<ul>
+							<li class="oe_heading">Shows 2011</li>
+							<li><a href="#">Milano</a></li>
+							<li><a href="#">Paris</a></li>
+							<li><a href="#">Berlin</a></li>
+							<li><a href="#">New York</a></li>
+							<li><a href="#">London</a></li>
+						</ul>
+						<ul>
+							<li class="oe_heading">Special Events</li>
+							<li><a href="#">Fashion Party 2011</a></li>
+							<li><a href="#">Fashion Countdown Party 2010</a></li>
+							<li><a href="#">Fashion Day Milano</a></li>
+							<li><a href="#">Model Workshops</a></li>
+						</ul>
+					</div>
+				</li>
+				<li><a href="">Stores</a>
+					<div style="left:-447px;">
+						<ul>
+							<li class="oe_heading">Europe</li>
+							<li><a href="#">Milano</a></li>
+							<li><a href="#">Paris</a></li>
+							<li><a href="#">Berlin</a></li>
+							<li><a href="#">London</a></li>
+						</ul>
+						<ul>
+							<li class="oe_heading">Asia</li>
+							<li><a href="#">Hong Kong</a></li>
+							<li><a href="#">Tokio</a></li>
+							<li><a href="#">New Delhi</a></li>
+							<li><a href="#">Beijing</a></li>
+						</ul>
+						<ul>
+							<li class="oe_heading">United States</li>
+							<li><a href="#">New York</a></li>
+							<li><a href="#">Los Angeles</a></li>
+							<li><a href="#">Seattle</a></li>
+							<li><a href="#">Miami</a></li>
+						</ul>
+					</div>
+				</li>
+			</ul>	
+		</div>
+        <div>
+            <span class="reference">
+                <a href="http://tympanus.net/codrops/2010/11/25/overlay-effect-menu/">back to the Codrops tutorial</a>
+				<a href="http://www.flickr.com/photos/duke9042004/" target="_blank">Background image by Duke Photo</a>
+            </span>
+		</div>
+
+        <!-- The JavaScript -->
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(function() {
+				var $oe_menu		= $('#oe_menu');
+				var $oe_menu_items	= $oe_menu.children('li');
+				var $oe_overlay		= $('#oe_overlay');
+
+                $oe_menu_items.bind('mouseenter',function(){
+					var $this = $(this);
+					$this.addClass('slided selected');
+					$this.children('div').css('z-index','9999').stop(true,true).slideDown(200,function(){
+						$oe_menu_items.not('.slided').children('div').hide();
+						$this.removeClass('slided');
+					});
+				}).bind('mouseleave',function(){
+					var $this = $(this);
+					$this.removeClass('selected').children('div').css('z-index','1');
+				});
+
+				$oe_menu.bind('mouseenter',function(){
+					var $this = $(this);
+					$oe_overlay.stop(true,true).fadeTo(200, 0.6);
+					$this.addClass('hovered');
+				}).bind('mouseleave',function(){
+					var $this = $(this);
+					$this.removeClass('hovered');
+					$oe_overlay.stop(true,true).fadeTo(200, 0);
+					$oe_menu_items.children('div').hide();
+				})
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>Latest Tweets Tooltip with jQuery</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="description" content="Latest Tweets Tooltip with jQuery" />
+        <meta name="keywords" content="latest tweets, twitter, api, jquery, tooltip, twitter search"/>
+		<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
+        <link rel="stylesheet" href="css/style.css" type="text/css" media="screen"/>
+		<link type="text/css" href="css/jquery.ui.theme.css" rel="stylesheet" />
+        <link type="text/css" href="css/jquery.ui.core.css" rel="stylesheet" />
+        <link type="text/css" href="css/jquery.ui.resizable.css" rel="stylesheet" />
+        <style>
+            *{
+                margin:0;
+                padding:0;
+            }
+            body{
+                font-family:Arial, Helvetica, sans-serif;
+                background:#666 url(stripes.gif) repeat top left;
+            }
+            #content{
+                background-color:#333;
+                width:960px;
+                padding:40px 40px 80px 40px;
+                margin:0 auto 40px auto;
+            }
+            .head, .meta a{
+                font-family:Helvetica,Arial,Verdana;
+                text-transform:uppercase;
+                font-weight:bold;
+                font-size:12px;
+                letter-spacing:3px;
+                color:#ccc;
+                padding-bottom:10px;
+                margin-bottom:10px;
+				text-shadow:1px 1px 1px #000;
+				text-decoration: none;
+            }
+			.line{
+				background-color:#444;
+				border-bottom:1px solid #222;
+				height:1px;
+				margin:0px 0px 15px 0px;
+			}
+            #content h1{
+                color:#fff;
+                font-weight:normal;
+                font-size:56px;
+				text-shadow:1px 1px 1px #000;
+            }
+            .subline{
+                font-size:22px;
+                margin:20px 0px;
+                color:#999;
+				text-shadow:1px 1px 1px #000;
+            }
+			.meta{
+				text-align:right;
+			}
+
+			.meta a:hover{
+				color:#aaa;
+
+			}
+            .article p{
+                margin:20px;
+                line-height:26px;
+                text-align:justify;
+				color:#ddd;
+				float:left;
+				width:280px;
+				text-shadow:1px 1px 1px #000;
+            }
+			.article a{
+				color:#aaa;
+				text-transform: uppercase;
+				text-decoration: none;
+				font-weight: bold;
+			}
+			.article a:hover{
+				color:#0968A0;
+			}
+			.clr{
+				clear:both;
+			}
+
+			.search_results {
+				width: 300px;
+				position:absolute;
+				display:none;
+			}
+		</style>
+    </head>
+
+    <body>
+		<div id="content">
+            <span class="scroll"></span>
+            <p class="head">Codrops Demo</p>
+			<div class="line"></div>
+            <h1>Latest Tweets Tooltip with jQuery</h1>
+            <p class="subline">Click on the Twitter Icon to show the latest tweets about a word or phrase</p>
+			<div class="line"></div>
+            <p class="meta"><a href="http://tympanus.net/codrops/2010/07/20/latest-tweets-tooltip/">Back to the Codrops Tutorial</a></p>
+            <div id="article" class="article">
+				<p>It is well known that Mr. Darwin's theory on the
+					<span class="twitter_search">Origin of Species</span> has been
+					accepted in <span class="twitter_search">Germany</span> more widely, with more absolute faith, and with more
+					vehement enthusiasm, than in the country of its birth. In Germany, more
+					conspicuously than elsewhere, it has itself become the subject of
+					developments as strange and as aberrant as any which it assumes in the
+					history of Organic Life. The most extravagant conclusions have been drawn
+					from it - invading every branch of human thought, in <span class="twitter_search">Science</span>, in Philosophy,
+					and in <span class="twitter_search">Religion</span>. These conclusions have been preached, too, with a
+					dogmatism as angry and as intolerant as any of the old theologies.
+					It is
+					the fate of every idea which is new and fruitful, that it is ridden to the
+					death by excited novices. We can not be surprised if this fate has
+					overtaken the idea that all existing animal forms have had their ancestry
+					in other forms which exist no longer, and have been derived from these by
+					ordinary generation through countless stages of descent. Although this is
+					an idea which, whether true or not, is entirely subordinate to the larger
+					idea of <span class="twitter_search">creation</span>, it usurps in many minds the character of a substitute.
+					This is natural enough.
+				</p>
+				<p>The theory, or at least the language, of
+					<span class="twitter_search">Evolutionists</span>, puts forward a visible order of phenomena as a complete and
+					all-sufficient account of its own origin and cause. However unsatisfactory
+					this may be to the higher faculties of the mind, it is eminently {6}
+					satisfactory to those other faculties which are lower in the scale. It
+					dismisses as needless, or it postpones indefinitely, all thought of the
+					agencies which are ultimate and unseen. Just as in the physical world, some
+					trivial object which is very near us may shut out the whole of a wide
+					horizon, so in the intellectual world, some coarse mechanical conception
+					may shut out all the kingdom of Nature and the glory of it.
+
+				Two great subjects of investigation lie before us. The first is to
+					ascertain how far the <span class="twitter_search">Theory of Evolution</span>
+						represents an universal fact, or
+					only one very partial and fragmentary aspect of a great variety of facts
+					connected with the origin and development of Organic Life. The second and
+					by far the most important inquiry, is to estimate aright, or as nearly as
+					we can, the relative place and importance of these facts in the Philosophy
+					of Nature.
+				</p>
+				<p>Subjects of investigation so rich and manifold as these may well attract
+					all the most varied gifts of the <span class="twitter_search">human mind</span>. This they have already done,
+					and there is every indication that they will continue to do so for
+					generations yet to be. Already an immense literature is devoted to them;
+					and every fresh effort of observation and of reasoning seems to open out
+					new and fruitful avenues of thought. The work which is here introduced to
+					the English reader contains an excellent review of this literature, so far
+					as it is represented in the English and German languages. Knowing the
+					author personally, as I have done for many years, I recognize with pleasure
+					in his work all the carefulness of inquiry, and all the conscientiousness
+					of reasoning, which belong to a singularly candid and patient mind.
+				</p>
+				<div class="clr"></div>
+				
+            </div>
+        </div>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="jquery.twitterpopup.js"></script>
+		<script type="text/javascript" src="jquery.twitter.search.js"></script>
+		<script>
+			$(function() {
+				$('#article').find('.twitter_search').twitterpopup();
+			});
+		</script>
+    </body>
+</html>

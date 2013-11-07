@@ -1,0 +1,59 @@
+ul.ts_container{
+	list-style:none;
+	margin:0;
+	padding:0;
+	width:476px;/*dot width times number of dots*/
+	position:absolute;
+	height:17px;
+	top:20px;
+	left:50%;
+	margin-left:-238px;
+}
+ul.ts_container li{
+	float:left;
+}
+ul.ts_container li a{
+	display:block;
+	text-indent:-9000px;
+	width:11px;
+	height:11px;
+	outline:none;
+	padding:0px 3px;
+	background:transparent url(../images/sliderIcons/dot.png) no-repeat top center;
+}
+ul.ts_container li a:hover,
+ul.ts_container li.selected a{
+	background-position:50% -11px;
+}
+ul.ts_container li.ts_thumbnails{
+	display:none;
+	position:absolute;
+}
+ul.ts_container li.ts_thumbnails span{
+	background:transparent url(../images/sliderIcons/triangle.png) no-repeat top center;
+	width:15px;
+	height:6px;
+	position:absolute;
+}
+.ts_preview_wrapper{
+	border:5px solid #fff;
+	overflow:hidden;
+	position:relative;
+	-moz-box-shadow:0px 0px 5px #999;
+	-webkit-box-shadow:0px 0px 5px #999;
+	box-shadow:0px 0px 5px #999;
+}
+ul.ts_preview{
+	position:absolute;
+	left:0px;
+	top:0px;
+	margin:0;
+	padding:0;
+	list-style-type:none;
+}
+ul.ts_preview li{
+	float:left;
+}
+ul.ts_preview li img{
+	display:block;
+}

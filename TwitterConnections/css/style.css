@@ -1,0 +1,94 @@
+.jf-container{
+    width:220px;
+    height:275px;
+    border:1px solid #ddd;
+    -moz-border-radius: 20px;
+    -webkit-border-radius:20px;
+    -khtml-border-radius:20px;
+    padding:10px;
+    background-color:#fff;
+}
+.jf-container h5{
+    color:#888;
+    font-weight:100;
+    margin:0px 0px 5px 0px;
+    border-bottom:1px solid #f8f8f8;
+    padding-bottom:4px;
+	height:15px;
+}
+.jf-container h5 span.username{
+	float:left;
+	}
+.jf-container h5 span.refresh{
+    background:transparent url(../images/refresh.png) no-repeat top left;
+    height:16px;
+    width:16px;
+    float:right;
+    cursor:pointer;
+    margin:0px 3px 0px 0px;
+	padding:0px;
+	line-height:16px;
+}
+.jf-grid{
+    float:left;
+    clear:both;
+    width:100%;
+    height:230px;
+
+}
+.jf-grid a{
+    width:44px;
+    height:44px;
+    float:left;
+}
+.jf-grid a img{
+    padding:2px;
+    background-color:#f0f0f0;
+    border:1px solid #ccc;
+}
+.jf-grid .load{
+    background: transparent url(../images/ajax-loader.gif) no-repeat top left;
+    margin-left:73px;
+    height:11px;
+    width:16px;
+    float:left;
+    margin:10px 0px 0px 100px;
+}
+.jf-nav .left, .jf-nav .right{
+    margin:5px 5px 0px 0px;
+    width:7px;
+    height:10px;
+    float:right;
+    cursor:pointer;
+}
+.jf-nav .left{
+    background: transparent url(../images/left.png) no-repeat top left;
+}
+.jf-nav .right{
+    background: transparent url(../images/right.png) no-repeat top left;
+}
+.jf-tooltip{
+	font-size:11px;
+}
+.jf-tooltip label{
+	float:left;
+	clear:left;
+	font-weight:bold;
+}
+.jf-tooltip span{
+	float:right;
+	clear:right;
+}
+.jf-more {
+	width:100%;
+	text-align:center;
+	margin-top:40px;
+}
+.jf-more  a{
+	color:#888;
+	float:none;
+	font-size:11px;
+}
+.jf-more  a:hover{
+	text-decoration:none;
+}

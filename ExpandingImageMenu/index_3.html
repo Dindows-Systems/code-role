@@ -1,0 +1,318 @@
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>Expanding Image Menu with jQuery</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="description" content="Expanding Image Menu with jQuery" />
+        <meta name="keywords" content="menu, navigation, expanding, image, jquery, bw, slide out, hover, animate"/>
+		<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css' />
+		<link href='http://fonts.googleapis.com/css?family=Raleway:100' rel='stylesheet' type='text/css' />
+    </head>
+    <body>
+		<div class="container">
+			<div class="header">
+				<a class="left" href="http://tympanus.net/Tutorials/AnimatedContentMenu/"><<< Previous Demo: Animated Content Menu with jQuery</a>
+				<a class="back" href="http://tympanus.net/codrops/2011/03/16/expanding-image-menu/">>>> back to the Codrops tutorial </a>
+			</div>
+			<div class="content">
+				<h1>Expanding Image Menu with jQuery</h1>
+				<h3>feat. Automatic Redial <a href="http://www.flickr.com/people/robnas/" target="_blank">by Robert Bejil Photography</a></h3>
+				<ul id="trigger_list" class="trigger_list">
+					<li>Trigger the opening:</li>
+					<li><a href="#">Gary</a></li>
+					<li><a href="#">David</a></li>
+					<li><a href="#">Andrew</a></li>
+					<li><a href="#">Sean</a></li>
+					<li><a href="#">Marc</a></li>
+					<li><a href="#">Matt</a></li>
+				</ul>
+				<div id="ei_menu" class="ei_menu">
+					<ul>
+						<li>
+							<a href="#" class="pos1">
+								<span class="ei_preview"></span>
+								<span class="ei_image"></span>
+							</a>
+							<div class="ei_descr">
+								<h2>Gary</h2>
+								<h3>Vocals</h3>
+								<p>
+								A wonderful serenity has taken possession of my
+								entire soul, like these sweet mornings of
+								spring which I enjoy with my whole heart.
+								</p>
+								<p>
+								I am alone, and feel the charm of existence in
+								this spot, which was created for the bliss of
+								souls like mine.
+								</p>
+							</div>
+						</li>
+						<li>
+							<a href="#" class="pos2">
+								<span class="ei_preview"></span>
+								<span class="ei_image"></span>
+							</a>
+							<div class="ei_descr">
+								<h2>David</h2>
+								<h3>Guitar</h3>
+								<p>
+								A wonderful serenity has taken possession of my
+								entire soul, like these sweet mornings of
+								spring which I enjoy with my whole heart.
+								</p>
+								<p>
+								I am alone, and feel the charm of existence in
+								this spot, which was created for the bliss of
+								souls like mine.
+								</p>
+							</div>
+
+						</li>
+						<li>
+							<a href="#" class="pos3">
+								<span class="ei_preview"></span>
+								<span class="ei_image"></span>
+							</a>
+							<div class="ei_descr">
+								<h2>Andrew</h2>
+								<h3>Bass</h3>
+								<p>
+								A wonderful serenity has taken possession of my
+								entire soul, like these sweet mornings of
+								spring which I enjoy with my whole heart.
+								</p>
+								<p>
+								I am alone, and feel the charm of existence in
+								this spot, which was created for the bliss of
+								souls like mine.
+								</p>
+							</div>
+						</li>
+						<li>
+							<a href="#" class="pos4">
+								<span class="ei_preview"></span>
+								<span class="ei_image"></span>
+							</a>
+							<div class="ei_descr">
+								<h2>Sean</h2>
+								<h3>Drums</h3>
+								<p>
+								A wonderful serenity has taken possession of my
+								entire soul, like these sweet mornings of
+								spring which I enjoy with my whole heart.
+								</p>
+								<p>
+								I am alone, and feel the charm of existence in
+								this spot, which was created for the bliss of
+								souls like mine.
+								</p>
+							</div>
+						</li>
+						<li>
+							<a href="#" class="pos5">
+								<span class="ei_preview"></span>
+								<span class="ei_image"></span>
+							</a>
+							<div class="ei_descr">
+								<h2>Marc</h2>
+								<h3>Guitar</h3>
+								<p>
+								A wonderful serenity has taken possession of my
+								entire soul, like these sweet mornings of
+								spring which I enjoy with my whole heart.
+								</p>
+								<p>
+								I am alone, and feel the charm of existence in
+								this spot, which was created for the bliss of
+								souls like mine.
+								</p>
+							</div>
+						</li>
+						<li>
+							<a href="#" class="pos6">
+								<span class="ei_preview"></span>
+								<span class="ei_image"></span>
+							</a>
+							<div class="ei_descr">
+								<h2>Matt</h2>
+								<h3>Guitar</h3>
+								<p>
+								A wonderful serenity has taken possession of my
+								entire soul, like these sweet mornings of
+								spring which I enjoy with my whole heart.
+								</p>
+								<p>
+								I am alone, and feel the charm of existence in
+								this spot, which was created for the bliss of
+								souls like mine.
+								</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer">
+				Tutorials and Demos by Codrops 
+				<a href="http://tympanus.net/codrops/">Home</a>|
+				<a href="http://twitter.com/codrops">Twitter</a>|
+				<a href="http://www.facebook.com/pages/Codrops/159107397912">Facebook</a>|
+				<a href="http://feeds.feedburner.com/codrops">RSS</a>|
+				<a href="http://www.flickr.com/photos/robnas/" target="_blank">Images by Robert Bejil</a> from the
+				<a href="http://www.flickr.com/photos/robnas/sets/72157623610556961/" target="_blank"><strong>Automatic Redial 2010 Promo</strong> Set</a>
+			</div>
+		</div>
+		<!-- The JavaScript -->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+        <script type="text/javascript">
+			$(function() {
+				var $menu				= $('#ei_menu > ul'),
+					$menuItems			= $menu.children('li'),
+					$menuItemsImgWrapper= $menuItems.children('a'),
+					$menuItemsPreview	= $menuItemsImgWrapper.children('.ei_preview'),
+					totalMenuItems		= $menuItems.length,
+				
+					ExpandingMenu 	= (function(){
+						/*
+							@current
+							set it to the index of the element you want to be opened by default,
+							or -1 if you want the menu to be closed initially
+						 */
+						var current				= -1,
+						/*
+							@anim
+							if we want the default opened item to animate initialy set this to true
+						 */
+						anim				= true,
+						/*
+							checks if the current value is valid -
+							between 0 and the number of items
+						 */
+						validCurrent		= function() {
+							return (current >= 0 && current < totalMenuItems);
+						},
+						init				= function() {
+								/* show default item if current is set to a valid index */
+							if(validCurrent())
+								configureMenu();
+
+							initEventsHandler();
+						},
+						configureMenu		= function() {
+								/* get the item for the current */
+							var $item	= $menuItems.eq(current);
+								/* if anim is true slide out the item */
+							if(anim)
+								slideOutItem($item, true, 900, 'easeInQuint');
+							else{
+									/* if not just show it */
+								$item.css({width : '400px'})
+								.find('.ei_image')
+								.css({left:'0px', opacity:1});
+
+									/* decrease the opacity of the others */
+									$menuItems.not($item)
+											  .children('.ei_preview')
+											  .css({opacity:0.2});
+							}
+						},
+						initEventsHandler	= function() {
+								/*
+								when we click an item the following can happen:
+								1) The item is already opened - close it!
+								2) The item is closed - open it! (if another one is opened, close it!)
+								*/
+							$menuItemsImgWrapper.bind('click.ExpandingMenu', function(e) {
+								var $this 	= $(this).parent(),
+								idx		= $this.index();
+
+								if(current === idx) {
+									slideOutItem($menuItems.eq(current), false, 1500, 'easeOutQuint', true);
+									current = -1;
+								}
+								else{
+									if(validCurrent() && current !== idx)
+											slideOutItem($menuItems.eq(current), false, 250, 'jswing');
+
+									current	= idx;
+										slideOutItem($this, true, 250, 'jswing');
+								}
+								return false;
+							});
+						},
+							/* if you want to trigger the action to open a specific item */
+							openItem			= function(idx) {
+								$menuItemsImgWrapper.eq(idx).click();
+							},
+							/*
+							opens or closes an item
+							note that "mLeave" is just true when all the items close,
+							in which case we want that all of them get opacity 1 again.
+							"dir" tells us if we are opening or closing an item (true | false)
+							*/
+						slideOutItem		= function($item, dir, speed, easing, mLeave) {
+							var $ei_image	= $item.find('.ei_image'),
+
+							itemParam	= (dir) ? {width : '400px'} : {width : '75px'},
+							imageParam	= (dir) ? {left : '0px'} : {left : '75px'};
+
+								/*
+								if opening, we animate the opacity of all the elements to 0.1.
+								this is to give focus on the opened item..
+								*/
+							if(dir)
+							/*
+									alternative:
+									$menuItemsPreview.not($menuItemsPreview.eq(current))
+													 .stop()
+													 .animate({opacity:0.1}, 500);
+							 */
+								$menuItemsPreview.stop()
+							.animate({opacity:0.1}, 1000);
+							else if(mLeave)
+								$menuItemsPreview.stop()
+							.animate({opacity:1}, 1500);
+
+								/* the <li> expands or collapses */
+							$item.stop().animate(itemParam, speed, easing);
+								/* the image (color) slides in or out */
+							$ei_image.stop().animate(imageParam, speed, easing, function() {
+									/*
+									if opening, we animate the opacity to 1,
+									otherwise we reset it.
+									*/
+								if(dir)
+									$ei_image.animate({opacity:1}, 2000);
+								else
+									$ei_image.css('opacity', 0.2);
+							});
+						};
+
+						return {
+							init 		: init,
+							openItem	: openItem
+						};
+					})();
+					
+				/*
+				call the init method of ExpandingMenu
+				*/
+				ExpandingMenu.init();
+
+				/*
+				if later on you want to open / close a specific item you could do it like so:
+				ExpandingMenu.openItem(3); // toggles item 3 (zero-based indexing)
+				*/
+
+				$('#trigger_list').find('li > a').bind('click', function(e) {
+					ExpandingMenu.openItem($(this).parent().index()-1);
+					return false;
+				});
+
+			});
+        </script>
+    </body>
+</html>

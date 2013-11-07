@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>Pause and Play</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8"/>
+    </head>
+    <style>
+        body{          
+            font-family:Arial;
+			background:#fff url(title.png) no-repeat top left;
+        }
+		a.button{
+			padding: 5px 10px 6px;
+			color: #fff;
+			font-weight:bold;
+			background-color:#999;
+			text-decoration: none;
+			-moz-border-radius: 5px;
+			-webkit-border-radius: 5px;
+			-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+			-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+			text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+			border-bottom: 1px solid rgba(0,0,0,0.25);
+			float:right;
+			cursor: pointer;
+		}
+		a.button:hover{
+			background-color: #111; color: #fff; 
+        }
+        a.back{
+            width:167px;
+            height:39px;
+            position:absolute;
+            bottom:15px;
+            left:15px;
+			background:#fff url(back.png) no-repeat top left;
+           
+        }
+    </style>
+    <body>
+		<a id="playbutton" class="button">Pause / Play</a>
+        <div id="player" class="player">
+			<img id="play" src="images/play.png" width="100" height="100" style="display:none;"/>
+			<img id="pause" src="images/pause.png" width="100" height="100" style="display:none;"/>
+		</div>
+
+        <div class="info">
+            <a class="back" href="http://tympanus.net"></a>           
+        </div>
+
+        <script type="text/javascript" src="jquery-1.3.2.js"></script>
+        <script type="text/javascript">
+            $(function() {
+				$(document).keypress(function(e){
+					if ((e.which && e.which == 32) || (e.keyCode && e.keyCode == 32)) {  
+						togglePlay();			
+						return false;  
+					} else {  
+						return true;  
+					}  
+				});
+				$('#playbutton').click(function(){
+					togglePlay();
+					return false;
+				});
+				
+				function togglePlay(){
+					var $elem = $('#player').children(':first');
+						$elem.stop()
+							 .show()
+							 .animate({'marginTop':'-175px','marginLeft':'-175px','width':'350px','height':'350px','opacity':'0'},function(){
+								$(this).css({'width':'100px','height':'100px','margin-left':'-50px','margin-top':'-50px','opacity':'1','display':'none'});
+							 });	
+						$elem.parent().append($elem);
+				}
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,300 @@
+/* CSS Document */
+body{
+	padding:0; margin:0 0 26px 0; background-color:#F1E9D6; color:#453A1E; font-family: Arial, Helvetica, sans-serif;
+}
+div, p, ul, li, form, h2, img, textarea, h3, li{
+	padding:0; margin:0;
+	}
+ul{
+	list-style-type:none;
+	}
+.blank{
+	font-size:0; clear:both; line-height:0;
+	}
+/*---------------main body------------*/
+#mainBody{
+	width:733px; margin:0 auto; font-size:0;
+	}
+/*---------------------------left side--------------*/
+#leftPan{
+	width:542px; background:url(images/header_pic.jpg) no-repeat 0 0; padding:25px 0 0 0; font-size:0; float:left;
+	}
+/*----------------member login---------*/
+#member{
+	width:352px; margin:0; background-color:#FFFFFF; color:#000000; padding:0; font-size:0;
+	}
+#member p{
+	background:url(images/form_top.gif) no-repeat left top #FDFDFE; color:#313131; height:14px; width:352px; display:block;
+	}
+#member p.buttom{
+	background:url(images/form_buttom.gif) no-repeat left bottom #FDFDFE; color:#313131; height:14px; width:352px; display:block;
+	}
+#member form{
+	width:323px; border-left:#C5B692 1px solid; border-right:#C5B692 1px solid; padding:0px 0 0 27px; font-size:0; height:84px;
+	margin:0;
+	}
+#member form h2{
+	background:url(images/member_icon.gif) no-repeat 0 4px #FDFDFE; font:normal 18px/16px Arial, Helvetica, sans-serif; 
+	color:#704F01; padding:0 0 0 19px; width:150px; display:block; height:22px; margin:0; text-indent:0px;
+	}
+#member form label{
+	font-size:10px; line-height:14px; color:#313131; text-transform:uppercase; background-color:#FDFDFE; display:block; 
+	float:left; padding:0 96px 0 0
+	}
+#member form label.re{
+	font-size:10px; line-height:14px; color:#313131; text-transform:uppercase; background-color:#FDFDFE; display:block; 
+	float:left; padding:2px 0 0 0; margin:5px 0 0 0;
+	}
+#member form input{
+	background:url(images/input_box.gif) no-repeat 0 0 #E9DFC6; color:#000000; border:none; float:left; height:22px; 
+	padding:0 1px 0 1px; display:block; width:140px; margin:4px 16px 0 0;
+	}
+#member form input.checkbox{
+	 width:10px; height:10px; margin:9px 5px 0 0; padding:0 0 0 0; float:left;
+	}
+#member form input.login{
+	background:url(images/login_bu.gif) no-repeat 0 0; float:left; margin:7px 0 0 107px; width:37px; height:10px;
+	cursor:pointer; border:none; font-size:0; 
+	}
+/*--------------------company name---------------*/
+#leftPan h2{
+	display:block; margin:222px 0 0 197px; padding:0; height:54px; background:url(images/braking.gif) no-repeat 0 0;
+	text-indent:-2000px; width:150px; font-size:0;
+	}
+#contact{
+	margin:29px 0 26px 0; width:352px; float:left; font-size:0; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	background-color:#FAF8F2; color:#313131;
+	}
+#contact p{
+	background:url(images/contact-top.gif) no-repeat 0 0; width:352px; height:14px;
+	}
+#contact p.bu{
+	background:url(images/contact-button.gif) no-repeat 0 0; width:352px; height:14px;
+	}
+#contact form {
+	margin:0 0 0 0; height:315px; width:318px; border-left:#CBBD9A 1px solid; border-right:#CBBD9A 1px solid; 
+	padding:11px 0 0 32px; font-size:0;
+		}
+#contact form h2{
+	background:url(images/contact_icon.gif) no-repeat 0 6px #FAF8F2; font:normal 24px/29px Arial, Helvetica, sans-serif; 
+	padding:0 0 0 24px;	margin:0 0 11px 0; height:29px; width:191px; display:block; text-indent:0px; color:#765914;
+	} 
+#contact form label{
+	font-size:11px; text-transform:uppercase; line-height:14px; font-weight:bold; float:left; margin:5px 15px 0 0; padding:0 0 0 0;
+	display:block; width:73px;
+	}
+#contact form input{
+	background:url(images/contact_input.gif) no-repeat 0 0 #E9DFC6 ; padding:1px; display:block; width:189px; height:22px;
+	border:none; float:left; margin:0 0 12px 0; color:#000000;
+	}
+#contact form label.comment{
+	background:url(images/comm.gif) no-repeat 2px 3px; margin:0; padding:0 0 0 17px; font-size:11px; 
+	text-transform:uppercase; line-height:14px; font-weight:bold; float:left; width:61px;
+	}
+#contact form textarea{
+	background:url(images/text_area.gif) no-repeat 0 0 #E9DFC6; width:191px; height:83px; border:none; color:#000000;
+	margin:0 0 0 10px; float:left;
+	}
+#contact form input.submit{
+	background:url(images/submit.gif) no-repeat 0 0; width:90px; height:10px; border:none; cursor:pointer; 
+	 margin:13px 0 0 0; font-size:0; padding:0 0px 0 0; float:right;
+	}
+/*----------------archives-------------*/
+#leftA{
+	width:166px; margin:29px 0 0 24px; padding:0; float:left; background:url(images/archivTable_bg.gif) repeat-y 0 0;
+	}
+#arch{	
+	width:154px; background:url(images/archive_bg.gif) repeat-y 0 0; margin:0px 0 20px 0px; float:left; display:block; font-size:0;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	}
+#arch span{
+	background:url(images/archive.gif) no-repeat left top; width:154px; height:13px; display:block;
+	}
+#arch p{
+	background:url(images/archive_buttom.gif) no-repeat left bottom; width:154px; height:13px; display:block; font-size:0;
+	}
+#arch h2{
+	color:#704F01; font-size:22px; line-height:22px; display:block; margin:0 0 0 32px; background-color:#E1D3B1;
+	padding:0; background-image:none; height:26px; width:83px; text-indent:0px; font-family:Arial, Helvetica, sans-serif;
+	}
+#arch h3{
+	 color:#2B2517; text-transform:uppercase; margin: 0 0 5px 32px; width:83px; display:block;  background-color:#E1D3B1;
+	 font-size:10px; line-height:17px; font-weight:bold; padding:0; 
+	}
+#arch ul{
+	margin:0; display:block; padding:0;
+	}
+#arch ul li{
+	background:url(images/achive_arrow.gif) no-repeat 0 8px #E1D3B1; border-bottom: 1px dashed #948258; padding:0 0 0 10px;
+	margin: 0 0 0 33px;  color:#2F2712; width:83px; height:17px; display:block;
+	}
+#arch ul li.nobor{
+	background:url(images/achive_arrow.gif) no-repeat 0 8px #E1D3B1; border-bottom: none; padding:0 0 0 10px;
+	margin: 0 0px 8px 33px;  color:#2F2712; width:83px; height:17px; display:block;
+	}
+#arch ul li a{
+	color:#2F2712; background-color:#E1D3B1; font-size:12px; line-height:17px; text-decoration:none; display:block;
+	}
+#arch ul li a:hover{
+	color:#2F2712; background-color:#D1C097;
+	}
+/*---------------------------------right side---------------*/
+#rightPan{
+	width:191px; float:left;  margin:39px 0 0 0; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:0;
+	position:relative;
+	}
+#rightsude{
+	width:191px; background:url(images/leftform_up.gif) no-repeat left top #FDFDFE;  margin:0 0 0 0; 
+	color:#313131; height:12px; padding:12px 0 0 0; font-size:0; font-family:Arial, Helvetica, sans-serif;
+	position:absolute; left:0; top:0;
+	}
+#rightsude span{
+	background:url(images/leftform_down.gif) no-repeat left bottom #FDFDFE; color:#313131; width:191px; height:12px;
+	display:block; padding:0; margin:0;
+	}
+#rightsude form{
+	width:189px; border-left:1px solid #C5B692; border-right:1px solid #C5B692; background-color:#FDFDFE; color:#313131;
+	height:85px;
+	}
+#rightsude form h2{
+	background:url(images/rightSide_icon.gif) no-repeat 0 0 #FDFDFE; color:#704F01; font-size:18px; line-height:16px;
+	height:22px; padding:0 0 0 16px; margin:0 0 0 27px; display:block;
+	}
+#rightsude form label{
+	font-size:10px; margin:0 0 0 27px; line-height:14px; text-transform:uppercase; display:block;
+	}
+#rightsude form label.sea{
+	font-size:10px; margin:3px 0 0 5px; line-height:14px; text-transform:uppercase; float:left; display:block;
+	}
+#rightsude form input{
+	background:url(images/search_input.gif) no-repeat 0 0 #E9DFC6; color:#000000; margin:8px 0 0 27px; width:133px; height:22px;
+	border:none; padding:0 1px;
+	}
+#rightsude form input.checkbox1{
+	 width:10px; height:10px; margin:5px 0px 0 27px; padding:0 0 0 0; float:left;
+	}
+#rightsude form input.go{
+	background:url(images/go.gif) no-repeat 0 0; float:left; margin:5px 0 0 6px; width:21px; height:10px;
+	cursor:pointer; border:none; font-size:0; 
+	}/*---------------------right side navigation---------------**/
+#rightPan1{
+	width:191px;  margin:0 0 0 0; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:0;
+	height:200px;  position:absolute; left:0; top:139px;
+	}
+#rightPan1 ul{
+	width:122px; display:block; margin:0px 0 28px 0; 
+	}
+#rightPan1 ul li{
+	background:url(images/right_arrow.gif) repeat-x left bottom; height:22px; font-size:0; display:block;
+	}
+#rightPan1 ul li.no{
+	background:none; height:22px; font-size:0; display:block;
+	}
+#rightPan1 ul li a{
+	background:url(images/navi_arerow.gif) no-repeat 0 0 #F1E9D6; color:#765914; font-weight:bold; font-size:12px;
+	line-height:21px; padding:0 0 0 10px; display:block; text-decoration:none; height:21px;
+	}
+#rightPan1 ul li a:hover{
+	background:url(images/navi_arerow_h.gif) no-repeat 0 0 ; padding:0 0 0 10px;
+	}
+#rightPan1 ul li a.show{
+	background:url(images/navi_arerow_h.gif) no-repeat 0 0 #F1E9D6; color:#765914; font-weight:bold; font-size:12px;
+	line-height:21px;	padding:0 0 0 10px; height:21px;  display:block; text-decoration:none;
+	}
+#rightPan1 ul li a.show:hover{
+	background:url(images/navi_arerow_h.gif) no-repeat 0 0 ; padding:0 0 0 10px;
+	}
+#rightPan1 h2{
+	font:normal 24px/22px Arial, Helvetica, sans-serif; color:#765914; display:block; width:170px; text-indent:0;
+	height:52px; background-color:#F1E9D6; margin:0 0 22px 0; 
+	}
+#rightPan1 h2 span{
+	color:#281D00; background-color:#F1E9D6;
+	}
+#rightPan1 p{
+	width:190px; color:#453A1E; font-size:12px; line-height:16px; display:block; margin:0 0 20px 0;
+	background-color:#F1E9D6;
+	}
+#rightPan1 p a{
+	text-decoration:underline; color:#453A1E; background-color:#F1E9D6;
+	}
+#rightPan1 p a:hover{
+	text-decoration:none;
+	}
+#rightPan1 h3{
+	font-size:11px; color:#453A1E; text-transform:uppercase; font-weight:bold; padding:0 0 8px 0 ; display:block;
+	line-height:16px; background-color:#F1E9D6;
+	}
+#rightPan1 ul.nti{
+	width:191px; display:block; font-size:0; padding:0; margin:0 0 18px 0;
+	}
+#rightPan1 ul.nti li{
+	background:url(images/nti_arrow.gif) no-repeat 0 5px; padding:0 0 0 10px; display:block; 
+	}
+#rightPan1 ul.nti li a{
+	font-size:12px; line-height:16px; color:#453A1E; background-color:#F1E9D6; text-decoration:none; background-image:none;
+	font-weight:normal; padding:0; margin:0; 
+	}
+#rightPan1 ul.nti li a:hover{
+	color:#453A1E; background-color:#E5DBC2; background-image:none; padding:0; margin:0;
+	}
+#rightPan1 a.more{
+	background:url(images/read_more.gif) no-repeat 0 0; padding:0; margin:0; float:right; height:11px; width:71px; display:block;
+	font-size:0;
+	}
+#rightPan1 a.more:hover{
+	background:url(images/read_more_h.gif) no-repeat 0 0; padding:0; margin:0; height:11px;
+	}
+/*-----------------------footer------------------*/
+#footer{
+	background:url(images/footer_bg.gif) no-repeat 0 0 #2B2517; width:732px; margin:0 auto 0px auto;  color:#FAF8F2;
+	font-family:Arial, Helvetica, sans-serif; font-size:0; height:121px; padding:24px 0 0 0;
+	}
+#footer ul{
+	width:550px; display:block; margin:0 0 0 101px; font-size:0;
+	}
+#footer ul li{
+	float:left; display:block; font:12px/22px Arial, Helvetica, sans-serif; color:#F1E9D6; height:22px;
+	background-color:#2B2517; 
+	}
+#footer ul li a{
+	font:bold 12px/22px Arial, Helvetica, sans-serif; color:#F1E9D6;  padding:0 5px 0 5px;
+	background-color:#2B2517; text-decoration:none; 
+	}
+#footer ul li a:hover{
+	background-color:#403722; color:#F1E9D6;
+	}
+#footer p{
+	width:350px; display:block; font-size:11px; line-height:22px; margin:0 0 0 272px; 
+	}
+#footer ul.vali{
+	width:79px; display:block; margin:11px 0 0 0px; font-size:0; float:left; padding:0 0 0 246px;
+	}
+#footer ul.vali li{
+	float:left; display:block; margin:0 4px 0 0px; padding:0
+	}
+#footer ul.vali li a{
+	text-indent:-2000px; height:9px; display:block; padding:0; margin:0;
+	}
+#footer ul.vali li a.css{
+	background:url(images/css.gif) no-repeat 0 0; width:27px; height:9px; 
+	}
+#footer ul.vali li a.css:hover{
+	background:url(images/css_h.gif) no-repeat 0 0; width:27px; height:9px; text-indent:-2000px;
+	}
+#footer ul.vali li a.xhtml{
+	background:url(images/xhtml.gif) no-repeat 0 0; width:42px; height:9px; text-indent:-2000px;
+	}
+#footer ul.vali li a.xhtml:hover{
+	background:url(images/xhtml_h.gif) no-repeat 0 0; width:42px; height:9px; text-indent:-2000px;
+	}
+#footer p.text{
+	width:166px; display:block;  text-transform:uppercase; margin:8px 0 0 0; color:#E9DFC6; background-color:#2B2517; 
+	font:bold 10px/14px "Trebuchet MS", Arial, Helvetica, sans-serif;  float:left; padding:0 0 0 12px; 
+	}
+#footer p.text a{
+	text-decoration:none; color:#FFFFFF; background-color:#2B2517; padding:0 0 0 5px;
+	}
+#footer p.text a:hover{
+	background-color:#403722; color:#F1E9D6;
+	}

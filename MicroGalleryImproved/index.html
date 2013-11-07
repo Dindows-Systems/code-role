@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>Improved Micro Image Gallery jQuery Plugin</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="description" content="Micro Image Gallery jQuery Plugin with Preview" />
+        <meta name="keywords" content="jquery,image gallery, plugin, thumnails, preview, slideshow, pause, play"/>
+        <link rel="stylesheet" href="css/style.css" type="text/css" media="screen"/>
+        <style>
+            *{
+                margin:0;
+                padding:0;
+            }
+            body{
+                font-family:Verdana;
+                padding:50px;
+                background:#f0f0f0 url(title.png) no-repeat top left;
+            }
+            a.back{
+                background:transparent url(back.png) no-repeat top left;
+                position:fixed;
+                width:150px;
+                height:27px;
+                outline:none;
+                top:0px;
+                right:0px;
+            }
+            #content{
+                width:700px;
+                height:350px;
+                margin:120px auto 0px auto;
+            }
+            h1{
+                color:#363C85;
+                text-shadow:1px 1px 1px #fff;
+                font-weight:normal;
+                letter-spacing:-2px;
+
+            }
+            p{
+                text-transform:uppercase;
+                text-shadow:-1px 1px 1px #fff;
+                color:#666;
+                text-decoration:none;
+                font-size:13px;
+                line-height:20px;
+                padding-top:4px;
+                margin-left:10px;
+                
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="content">
+            <a class="back" href="http://tympanus.net/codrops/2010/04/19/micro-image-gallery-a-jquery-plugin"></a>
+            <div id="mG1" class="microGallery">
+                <img src="Gallery1/1.JPG" alt="Horse on meadow"/>
+                <img src="Gallery1/2.JPG" alt="Another horse"/>
+                <img src="Gallery1/3.JPG" alt="Horse"/>
+                <img src="Gallery1/4.JPG" alt="Horse"/>
+                <img src="Gallery1/5.JPG" alt="Horse"/>
+                <img src="Gallery1/6.JPG" alt="Another horse"/>
+                <img src="Gallery1/7.JPG" alt="Another horse"/>
+                <img src="Gallery1/8.JPG" alt="Another horse"/>
+                <img src="Gallery1/9.JPG" alt="Another horse"/>
+                <img src="Gallery1/10.JPG" alt="Another horse"/>
+                <img src="Gallery1/11.JPG" alt="Another horse"/>
+                <img src="Gallery1/12.JPG" alt="Another horse"/>
+                <img src="Gallery1/13.JPG" alt="Another horse"/>
+                <img src="Gallery1/14.JPG" alt="Another horse"/>
+                <img src="Gallery1/15.JPG" alt="Another horse"/>
+                <img src="Gallery1/16.JPG" alt="Another horse"/>
+                <img src="Gallery1/17.JPG" alt="Another horse"/>
+                <img src="Gallery1/18.JPG" alt="Another horse"/>
+                <img src="Gallery1/19.JPG" alt="Another horse"/>
+                <img src="Gallery1/20.JPG" alt="Another horse"/>
+                <img src="Gallery1/21.JPG" alt="Another horse"/>
+                <img src="Gallery1/22.JPG" alt="Last horse in the collection"/>
+            </div>
+            <div id="mG2" class="microGallery">
+                <img src="Gallery2/1.JPG" alt="A beautiful red flower"/>
+                <img src="Gallery2/2.JPG" alt="Here Kitty!"/>
+                <img src="Gallery2/3.JPG" alt="Singing bird"/>
+                <img src="Gallery2/4.JPG" alt="Still singing"/>
+                <img src="Gallery2/5.JPG" alt="Beautiful blossoms"/>
+                <img src="Gallery2/6.JPG" alt="These two are in love"/>
+                <img src="Gallery2/7.JPG" alt="Black raven"/>
+                <img src="Gallery2/8.JPG" alt="How to serve a real Caipirinha"/>
+                <img src="Gallery2/9.JPG" alt="Beautiful flowers"/>
+                <img src="Gallery2/10.JPG" alt="A fly"/>
+                <img src="Gallery2/11.JPG" alt="Jummy!"/>
+                <img src="Gallery2/12.JPG" alt="The moon"/>
+            </div>
+            <div id="mG3" class="microGallery">
+                <img src="Gallery3/1.JPG" alt="The Atlantic!"/>
+                <img src="Gallery3/2.JPG" alt="Almost White Sand!"/>
+                <img src="Gallery3/3.JPG" alt="Empty Beach"/>
+                <img src="Gallery3/4.JPG" alt="A Boat"/>
+                <img src="Gallery3/5.JPG" alt="The Rocks"/>
+                <img src="Gallery3/6.JPG" alt="Nice!"/>
+                <img src="Gallery3/7.JPG" alt="What's that?"/>
+                <img src="Gallery3/8.JPG" alt="Weird Color"/>
+                <img src="Gallery3/9.JPG" alt="I'am falling..."/>
+                <img src="Gallery3/10.JPG" alt="Water"/>
+                <img src="Gallery3/11.JPG" alt="Nice beach"/>
+                <img src="Gallery3/12.JPG" alt="More water"/>
+                <img src="Gallery3/13.JPG" alt="Bye!"/>
+            </div>			
+        </div>
+        <div class="dd">
+            <h1>Micro Image Gallery Features</h1>
+            <p>3 Sizes</p>
+            <p>Hidden or shown navigation menu</p>
+            <p>Optional slide out description</p>
+            <p>Slideshow with pause/play</p>
+            <p>Cycle option</p>
+        </div>
+        <!-- The JavaScript -->
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <script type="text/javascript" src="jquery.microgallery.js"></script>
+        <script type="text/javascript">
+            $(function() {
+				
+                $("#mG1").microgallery({
+                    menu		:true,
+                    size		:'small',
+                    mode		:'single'
+                });
+                $("#mG2").microgallery({
+                    menu		:false,
+                    size		:'medium',
+                    mode		:'thumbs',
+                    cycle       :true
+                });
+                $("#mG3").microgallery({
+                    menu		:true,
+                    size		:'large',
+                    mode		:'single',
+                    cycle       :true,
+                    autoplay    :true,	/* the autoplay can only exist if circular is true */
+                    autoplayTime:2000
+                });
+                
+            });
+        </script>
+    </body>
+</html>

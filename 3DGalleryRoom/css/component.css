@@ -1,0 +1,225 @@
+body {
+	background: #f0f0f0;
+	background: -moz-linear-gradient(top, #f0f0f0 0%, #f0f0f0 85%, #3d3737 85%, #3d3737 100%);
+	background: -webkit-linear-gradient(top, #f0f0f0 0%,#f0f0f0 85%,#3d3737 85%,#3d3737 100%);
+	background: -o-linear-gradient(top, #f0f0f0 0%,#f0f0f0 85%,#3d3737 85%,#3d3737 100%);
+	background: -ms-linear-gradient(top, #f0f0f0 0%,#f0f0f0 85%,#3d3737 85%,#3d3737 100%);
+	background: linear-gradient(to bottom, #f0f0f0 0%,#f0f0f0 85%,#3d3737 85%,#3d3737 100%);
+}
+
+.no-js body {
+	overflow: auto;
+	background: #f0f0f0;
+}
+
+.js .gr-gallery {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.gr-room {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 85%;
+	text-align: center;
+	-webkit-perspective: 1200px;
+	-moz-perspective: 1200px;
+	perspective: 1200px;
+}
+
+.gr-wall-main,
+.gr-wall-other {
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	background: #f0f0f0 url(../images/wall.jpg) repeat 0px 0px;
+}
+
+.gr-wall-main {
+	left: 0;
+}
+
+.gr-floor {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	height: 30%;
+	width: 100%;
+	background: url(../images/floor.jpg) repeat 0px 0px;
+}
+
+.gr-gallery figure {
+	position: absolute;
+	-webkit-transform-style: preserve-3d;
+}
+
+.no-js .gr-gallery figure {
+	display: inline-block;
+	position: relative;
+	margin: 20px;
+}
+
+.gr-gallery figure::before {
+	content: '';
+	position: absolute;
+	width: 180%;
+	height: 150%;
+	top: -45%;
+	left: -40%;
+	background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,0.7) 23%, rgba(255,255,255,0) 66%);
+	background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,0.7) 23%, rgba(255,255,255,0) 66%);
+	background: -o-radial-gradient(center, ellipse cover, rgba(255,255,255,0.7) 23%, rgba(255,255,255,0) 66%);
+	background: radial-gradient(center, ellipse cover, rgba(255,255,255,0.7) 23%, rgba(255,255,255,0) 66%);
+	pointer-events: none;
+	opacity: 0.5;
+}
+
+.gr-gallery figure div,
+.gr-gallery figure img,
+.gr-gallery figcaption {
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+}
+
+.gr-gallery figure div {
+	position: relative;
+	border: 10px solid #000;
+	box-shadow: 0 10px 7px -5px rgba(0,0,0,0.3);
+}
+
+.gr-gallery figure img {
+	display: block;
+	margin: 0 auto;
+	border: 20px solid #fff;
+}
+
+.gr-gallery figcaption {
+	width: 80px;
+	display: block;
+	font-size: 5px;
+	background: #fff;
+	color: #444;
+	padding: 5px;
+	margin-top: 20px;
+	position: relative;
+	text-align: left;
+	cursor: -webkit-zoom-in; 
+	cursor: -moz-zoom-in;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.gr-gallery figcaption h2 span {
+	display: inline-block;
+	margin: 0 2px;
+}
+
+.gr-gallery figcaption div {
+	display: none;
+}
+
+.gr-gallery nav {
+	position: absolute;
+	width: 300px;
+	height: 38px;
+	bottom: 6%;
+	left: 50%;
+	margin-left: -150px;
+	z-index: 0;
+	cursor: pointer;
+}
+
+.gr-gallery nav span {
+	width: 90px;
+	height: 100%;
+	background: url(../images/steps.png);
+	float: left;
+	text-indent: -100%;
+	overflow: hidden;
+	opacity: 0.6;
+}
+
+.gr-gallery nav span:hover {
+	opacity: 1;
+}
+
+.gr-gallery nav span.gr-next {
+	background-position: top right;
+	float: right;
+}
+
+.gr-caption {
+	position: absolute;
+	width: 400px;
+	height: 280px;
+	padding: 40px;
+	left: 50%;
+	margin-left: -200px;
+	bottom: 0;
+	background: #fff;
+	box-shadow: 0 -1px 3px rgba(0,0,0,0.3);
+	-webkit-transform: translateY(310px);
+	-webkit-transition: -webkit-transform .5s ease;
+	-moz-transform: translateY(310px);
+	-moz-transition: -moz-transform .5s ease;
+	-o-transform: translateY(310px);
+	-o-transition: -o-transform .5s ease;
+	-ms-transform: translateY(310px);
+	-ms-transition: -ms-transform .5s ease;
+	transform: translateY(310px);
+	transition: transform .5s ease;
+}
+
+.gr-caption-close {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	background: #fff;
+	color: #999;
+	width: 20px;
+	height: 20px;
+	font-weight: 400;
+	text-align: center;
+	cursor: pointer;
+	line-height: 16px;
+	font-size: 14px;
+	box-shadow: 0 0 6px -1px rgba(0,0,0,0.3);
+	-webkit-transition: all .2s linear;
+	-moz-transition: all .2s linear;
+	-o-transition: all .2s linear;
+	-ms-transition: all .2s linear;
+	transition: all .2s linear;
+}
+
+.gr-caption-close:hover {
+	color: #555;
+	box-shadow: 0 0 8px -1px rgba(0,0,0,0.6);
+}
+
+.gr-caption h2 {
+	border-bottom: 1px solid rgba(0,0,0,0.3);
+	padding: 0 0 10px 0;
+	margin: 0 0 20px 0;
+	font-family: 'Cutive Mono', cursive;
+}
+
+.gr-caption > div {
+	overflow: hidden;
+	overflow-y: auto;
+	max-height: 160px;
+}
+
+.gr-caption > div a {
+	font-weight: 700;
+}
+
+.gr-caption > div a:hover {
+	color: #d80066;
+}

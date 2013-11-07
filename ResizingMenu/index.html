@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>Resizing navigation menu with jQuery</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="description" content="Self-resizing navigation menu with jQuery" />
+        <meta name="keywords" content="jquery, fancy, navigation, menu" />
+        <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8"/>
+        <link rel="stylesheet" href="css/menu1.css" type="text/css" charset="utf-8"/>
+    </head>
+    <body>
+        <div class="content">
+            <h1>Self-resizing navigation</h1>
+            <div class="codropsmenu1" id="menu">
+                <ul>
+                    <li><a href="" class="first"><span>Home</span></a></li>
+                    <li><a href=""><span>About</span></a></li>
+                    <li><a href=""><span>Portfolio</span></a></li>
+                    <li><a href=""><span>Contact</span></a></li>
+                    <li><a href=""><span>Support</span></a></li>
+                    <li><a href="" class="last"><span>Login</span></a></li>
+                </ul>
+            </div>
+            <div class="descr">
+                <p>The item width of this navigation gets calculated automatically, all you need to
+                    provide is the width of the surrounding container. </p>
+                <p>The container has a padding of 3px, so when inserting a width, consider the 6 additional pixels
+                    from the sides.</p>
+                <p>The absolute height of the menu is 36px (30px + 3px padding from top and bottom).</p>
+            </div>
+             
+            <h3>Click to change the width:</h3>
+            <p id="buttons">
+                <input type="button" value="400"/>
+                <input type="button" value="500"/>
+                <input type="button" value="600"/>
+                <input type="button" value="700"/>
+                <input type="button" value="800"/>
+                <input type="button" value="900"/>
+            </p>
+          
+             <p class="back"><a href="http://tympanus.net/codrops/2010/01/12/self-resizing-navigation-menu-with-jquery/">Back to Codrops</a></p>
+        </div>
+       
+
+        <script type="text/javascript" src="jquery-1.3.2.js"></script>
+        <script type="text/javascript">
+$(function() {
+    changeWidth(500);
+
+    $('#buttons input').click(function(){
+        changeWidth($(this).val());
+    });
+
+    function changeWidth(menuWidth){
+        var menuItems = $('#menu li').size();
+        var itemWidth = (menuWidth/menuItems)-2;
+
+        $('#menu').css({'width': menuWidth +'px'});
+        $('#menu a').css({'width': itemWidth +'px'});
+    }
+});
+        </script>
+    </body>
+</html>

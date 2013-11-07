@@ -1,0 +1,14 @@
+span.twitter_search{
+	padding-right:20px;
+	background:transparent url(twitter.png) no-repeat center right;
+	cursor:pointer;
+}
+.twitterSearchClose{
+	position:absolute;
+	right:0px;
+	top:0px;
+	background:#aaa url(close.png) no-repeat center right;
+	width:13px;
+	height:13px;
+	cursor:pointer;
+}

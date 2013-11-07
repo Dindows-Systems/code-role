@@ -1,0 +1,817 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>Pull Out Content Panel with jQuery</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="description" content="Pull Out Content Panel with jQuery" />
+        <meta name="keywords" content="jquery, sliding, panel, content, related posts, related articles, slide out, bottom, end of page, animation, effect"/>
+		<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
+		<link type="text/css" href="css/jquery.ui.theme.css" rel="stylesheet" />
+		<link type="text/css" href="css/jquery.ui.core.css" rel="stylesheet" />
+        <link type="text/css" href="css/jquery.ui.slider.css" rel="stylesheet" />
+        <link rel="stylesheet" href="css/style.css" type="text/css" media="screen"/>
+		<script src="js/cufon-yui.js" type="text/javascript"></script>
+		<script src="js/Liberation_Sans.font.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			Cufon.replace('#content h1, #content h2,#content span, .pc_item h2');
+		</script>
+        <style>
+            *{
+                margin:0;
+                padding:0;
+            }
+            body{
+                font-family:"Myriad Pro",Georgia,Times,serif;
+                background:#fff;
+            }
+            #content{
+                width:580px;
+                padding:40px 40px 240px 40px;
+				color:#fff;
+				margin:0 auto;
+            }
+            .head, .meta a{
+                font-family:Helvetica,Arial,Verdana;
+                text-transform:uppercase;
+                font-weight:bold;
+                font-size:10px;
+                letter-spacing:2px;
+                color:#333;
+                padding-bottom:10px;
+                margin-bottom:10px;
+				text-decoration: none;
+            }
+			.line{
+				background-color:#ddd;
+				border-bottom:1px solid #fff;
+				height:1px;
+				margin:0px 0px 15px 0px;
+			}
+            #content h1{
+                color:#222;
+                font-weight:normal;
+                font-size:56px;
+            }
+			#content h2{
+				color:#777;
+                font-weight:normal;
+                font-size:30px;
+				padding-bottom:5px;
+				margin:30px 0px 0px 0px;
+			}
+            .subline{
+                font-size:22px;
+                margin:20px 0px;
+                color:#999;
+            }
+			.meta{
+				text-align:right;
+			}
+
+			.meta a:hover{
+				color:#89AA97;
+
+			}
+            .article p{
+                margin:5px 0px 20px 0px;
+                line-height:26px;
+                text-align:justify;
+				color:#666;
+				font-family:Arial,Helvetica,sans-serif;
+            }
+			.article p.intro{
+				font-style:italic;
+				margin-top:20px;
+			}
+			.article a{
+				color:#aaa;
+				text-transform: uppercase;
+				text-decoration: none;
+				font-weight: bold;
+			}
+			.article a:hover{
+				color:#89AA97;
+			}
+		</style>
+    </head>
+    <body>
+		<div id="content">
+            <span class="scroll"></span>
+            <p class="head">Codrops Tutorial Demo</p>
+			<div class="line"></div>
+            <h1>Pull Out Content Panel with jQuery</h1>
+            <p class="subline">Scroll to the end of the page to show the panel</p>
+			<div class="line"></div>
+            <p class="meta"><a href="http://tympanus.net/codrops/2010/11/01/pull-out-content-panel/">Back to the Codrops Tutorial</a></p>
+            <div id="article" class="article">
+				<p class="intro">In one part of this cellar we kept wines, liquors and provisions. From
+					the rapidity of their disappearance we acquired the superstitious belief
+					that the spirits of the persons buried there came at dead of night and
+					held a festival.
+					It was at least certain that frequently of a morning we
+					would discover fragments of pickled meats, canned goods and such débris,
+					littering the place, although it had been securely locked and barred
+					against human intrusion. It was proposed to remove the provisions and
+					store them elsewhere, but our dear mother, always generous and
+					hospitable, said it was better to endure the loss than risk exposure: if
+					the ghosts were denied this trifling gratification they might set on
+					foot an investigation, which would overthrow
+					our scheme of the division
+					of labor, by diverting the energies of the whole family into the single
+					industry pursued by me--we might all decorate the cross-beams of
+					gibbets. We accepted her decision with filial submission, due to our
+					reverence for her wordly wisdom and the purity of her character.
+				</p>
+				<h2>Beautiful Article</h2>
+				<div class="line"></div>
+                <p>In one part of this cellar we kept wines, liquors and provisions. From
+					the rapidity of their disappearance we acquired the superstitious belief
+					that the spirits of the persons buried there came at dead of night and
+					held a festival.
+					It was at least certain that frequently of a morning we
+					would discover fragments of pickled meats, canned goods and such débris,
+					littering the place, although it had been securely locked and barred
+					against human intrusion. It was proposed to remove the provisions and
+					store them elsewhere, but our dear mother, always generous and
+					hospitable, said it was better to endure the loss than risk exposure: if
+					the ghosts were denied this trifling gratification they might set on
+					foot an investigation, which would overthrow
+					our scheme of the division
+					of labor, by diverting the energies of the whole family into the single
+					industry pursued by me--we might all decorate the cross-beams of
+					gibbets. We accepted her decision with filial submission, due to our
+					reverence for her wordly wisdom and the purity of her character.
+
+				</p>
+				<p>It was at least certain that frequently of a morning we
+					would discover fragments of pickled meats, canned goods and such débris,
+					littering the place, although it had been securely locked and barred
+					against human intrusion. It was proposed to remove the provisions and
+					store them elsewhere, but our dear mother, always generous and
+					hospitable, said it was better to endure the loss than risk exposure: if
+					the ghosts were denied this trifling gratification they might set on
+					foot an investigation, which would overthrow
+					our scheme of the division
+					of labor, by diverting the energies of the whole family into the single
+					industry pursued by me--we might all decorate the cross-beams of
+					gibbets. We accepted her decision with filial submission, due to our
+					reverence for her wordly wisdom and the purity of her character.
+
+				</p>
+				<p>It was at least certain that frequently of a morning we
+					would discover fragments of pickled meats, canned goods and such débris,
+					littering the place, although it had been securely locked and barred
+					against human intrusion. It was proposed to remove the provisions and
+					store them elsewhere, but our dear mother, always generous and
+					hospitable, said it was better to endure the loss than risk exposure: if
+					the ghosts were denied this trifling gratification they might set on
+					foot an investigation, which would overthrow
+					our scheme of the division
+					of labor, by diverting the energies of the whole family into the single
+					industry pursued by me--we might all decorate the cross-beams of
+					gibbets. We accepted her decision with filial submission, due to our
+					reverence for her wordly wisdom and the purity of her character.
+				</p>
+				<h2>Lots of information</h2>
+				<div class="line"></div>
+				<p>
+					On the incidents of our precipitate flight from that horrible place--on
+					the extinction of all human sentiment in that tumultuous, mad scramble
+					up the damp and mouldy stairs--slipping, falling, pulling one another
+					down and clambering over one another's back--the lights extinguished,
+					babes trampled beneath the feet of their strong brothers and hurled
+					backward to death by a mother's arm!--on all this I do not dare to
+					dwell.
+				</p>
+				<p>
+					My mother, my eldest brother and sister and I escaped; the others
+					remained below, to perish of their wounds, or of their terror--some,
+					perhaps, by flame. For within an hour we four, hastily gathering
+					together what money and jewels we had and what clothing we could carry,
+					fired the dwelling and fled by its light into the hills.
+					We did not even
+					pause to collect the insurance, and my dear mother said on her
+					death-bed, years afterward in a distant land, that this was the only sin
+					of omission that lay upon her conscience. Her confessor, a holy man,
+					assured her that under the circumstances Heaven would pardon the
+					neglect.
+				</p>
+				<p>In one part of this cellar we kept wines, liquors and provisions. From
+					the rapidity of their disappearance we acquired the superstitious belief
+					that the spirits of the persons buried there came at dead of night and
+					held a festival.
+					It was at least certain that frequently of a morning we
+					would discover fragments of pickled meats, canned goods and such débris,
+					littering the place, although it had been securely locked and barred
+					against human intrusion. It was proposed to remove the provisions and
+					store them elsewhere, but our dear mother, always generous and
+					hospitable, said it was better to endure the loss than risk exposure: if
+					the ghosts were denied this trifling gratification they might set on
+					foot an investigation, which would overthrow
+					our scheme of the division
+					of labor, by diverting the energies of the whole family into the single
+					industry pursued by me--we might all decorate the cross-beams of
+					gibbets. We accepted her decision with filial submission, due to our
+					reverence for her wordly wisdom and the purity of her character.
+				</p>
+
+				<p>
+					All was clear. My father, whatever had caused him to be "taken bad" at
+					his meal (and I think my sainted mother could have thrown some light
+					upon that matter) had indubitably been buried alive. The grave having
+					been accidentally dug above the forgotten drain, and down almost to the
+					crown of its arch, and no coffin having been used, his struggles on
+					reviving had broken the rotten masonry and he had fallen through,
+					escaping finally into the cellar. Feeling that he was not welcome in his
+					own house, yet having no other, he had lived in subterranean seclusion,
+					a witness to our thrift and a pensioner on our providence.
+
+					It was he who
+					had eaten our food; it was he who had drunk our wine--he was no better
+					than a thief! In a moment of intoxication, and feeling, no doubt, that
+					need of companionship which is the one sympathetic link between a
+					drunken man and his race, he had left his place of concealment at a
+					strangely inopportune time, entailing the most deplorable consequences
+					upon those nearest and dearest to him--a blunder that had almost the
+					dignity of crime.
+				</p>
+				<p>
+					All was clear. My father, whatever had caused him to be "taken bad" at
+					his meal (and I think my sainted mother could have thrown some light
+					upon that matter) had indubitably been buried alive. The grave having
+					been accidentally dug above the forgotten drain, and down almost to the
+					crown of its arch, and no coffin having been used, his struggles on
+					reviving had broken the rotten masonry and he had fallen through,
+					escaping finally into the cellar. Feeling that he was not welcome in his
+					own house, yet having no other, he had lived in subterranean seclusion,
+					a witness to our thrift and a pensioner on our providence.
+
+					It was he who
+					had eaten our food; it was he who had drunk our wine--he was no better
+					than a thief! In a moment of intoxication, and feeling, no doubt, that
+					need of companionship which is the one sympathetic link between a
+					drunken man and his race, he had left his place of concealment at a
+					strangely inopportune time, entailing the most deplorable consequences
+					upon those nearest and dearest to him--a blunder that had almost the
+					dignity of crime.
+				</p>
+				<div class="line"></div>
+				<p id="pc_reference" class="meta"><a href="">Back to the Codrops Tutorial</a></p>
+            </div>
+        </div>
+
+		<div class="pc_panel" id="pc_panel">
+			<div class="pc_label expand"></div>
+			<div class="pc_label close"></div>
+			<div class="pc_title">More on this topic</div>
+			<div id="pc_wrapper" class="pc_wrapper">
+				<div id="pc_content">
+					<div class="pc_item">
+						<h2>Annotation Overlay Effect with jQuery</h2>
+						<img src="images/22.jpg" alt=""/>
+						<p>A slick overlay effect that let's you show notes on a portfolio item</p>
+						<div class="pc_more">http://tympanus.net/codrops/2010/10/12/annotation-overlay-effect/</div>
+					</div>
+					<div class="pc_item">
+						<h2>Slider Gallery with jQuery</h2>
+						<img src="images/21.jpg" alt=""/>
+						<p>Slide through an album and enlarge images to full view them when clicked</p>
+						<div class="pc_more">http://tympanus.net/codrops/2010/10/07/slider-gallery/</div>
+					</div>
+					<div class="pc_item">
+						<h2>Compact News Previewer with jQuery</h2>
+						<img src="images/23.jpg" alt=""/>
+						<p>A small and compact news previewer for your latest posts or news</p>
+						<div class="pc_more">http://tympanus.net/codrops/2010/10/03/compact-news-previewer/</div>
+					</div>
+					<div class="pc_item">
+						<h2>Polaroid Photobar Gallery</h2>
+						<img src="images/24.jpg" alt=""/>
+						<p>Show you images in a polaroid photobar with randomly rotated thumbnails</p>
+						<div class="pc_more">http://tympanus.net/codrops/2010/09/28/polaroid-photobar-gallery/</div>
+					</div>
+					<div class="pc_item">
+						<h2>Full Page Image Gallery with jQuery</h2>
+						<img src="images/25.jpg" alt=""/>
+						<p>A full page image gallery with a auto sliding thumbnails view</p>
+						<div class="pc_more">http://tympanus.net/codrops/2010/09/08/full-page-image-gallery/</div>
+					</div>
+					<div class="pc_item">
+						<h2>Collapsing Site Navigation with jQuery</h2>
+						<img src="images/26.jpg" alt=""/>
+						<p>A navigation with content panels that slide some image out on hover</p>
+						<div class="pc_more">http://tympanus.net/codrops/2010/09/06/collapsing-site-navigation/</div>
+					</div>
+					<div class="pc_item">
+						<h2>Thumbnails Navigation Gallery with jQuery</h2>
+						<img src="images/27.jpg" alt=""/>
+						<p>A menu like gallery that shows its thumbnails in each item by auto scrolling</p>
+						<div class="pc_more">http://tympanus.net/codrops/2010/07/29/thumbnails-navigation-gallery/</div>
+					</div>
+					<div class="pc_item">
+						<h2>Music Portfolio Template</h2>
+						<img src="images/28.jpg" alt=""/>
+						<p>A compact template for music albums and an audio player on HTML5 basis</p>
+						<div class="pc_more">http://tympanus.net/codrops/2010/07/26/music-portfolio-template/</div>
+					</div>
+					<div class="pc_item">
+						<h2>Related Posts Slide Out Boxes</h2>
+						<img src="images/29.jpg" alt=""/>
+						<p>Slide out related posts on the right side of you page and shuffle from a set</p>
+						<div class="pc_more">http://tympanus.net/codrops/2010/07/21/related-posts-slide-out-boxes/</div>
+					</div>
+					<div class="pc_item">
+						<h2>Interactive Image Vamp up</h2>
+						<img src="images/30.jpg" alt=""/>
+						<p>Vamp up you photos with this little experiment some drag and drop functionality</p>
+						<div class="pc_more">http://tympanus.net/codrops/2010/03/22/interactive-image-vamp-up-with-jquery-css3-and-php/</div>
+					</div>
+					<div class="pc_item">
+						<h2>Grungy Random Rotation Menu</h2>
+						<img src="images/31.jpg" alt=""/>
+						<p>Randomly rotate page elements on every refresh in a grundgy way</p>
+						<div class="pc_more">http://tympanus.net/codrops/2010/02/24/grungy-random-rotation-menu-with-jquery-and-css3/</div>
+					</div>
+
+					<div class="pc_item">
+						<h2>Sliding Panel Photo Wall Gallery</h2>
+						<img src="images/18.jpg" alt=""/>
+						<p>This tutorial is about creating a creative gallery with a slider for the thumbnails.</p>
+						<div class="pc_more">http://tympanus.net/codrops/2010/05/14/sliding-panel-photo-wall-gallery-with-jquery/</div>
+					</div>
+					<div class="pc_item">
+						<h2>Beautiful Background Image Navigation</h2>
+						<img src="images/1.jpg" alt=""/>
+						<p>Menu with a twist: background images are slided when hovering over the menu items </p>
+						<div class="pc_more">http://tympanus.net/codrops/2010/05/05/beautiful-background-image-navigation-with-jquery/</div>
+					</div>
+					<div class="pc_item">
+						<h2>Awesome Bubble Navigation with jQuery</h2>
+						<img src="images/2.jpg" alt=""/>
+						<p>In this tutorial we will create menu with expanding bubbly navigation items</p>
+						<div class="pc_more">http://tympanus.net/codrops/2010/04/29/awesome-bubble-navigation-with-jquery/</div>
+					</div>
+					<div class="pc_item">
+						<h2>Stunning Circular Motion Effect with jQuery</h2>
+						<img src="images/3.jpg" alt=""/>
+						<p>This menu consits of circles fading in and out while moving on a circular path</p>
+						<div class="pc_more">http://tympanus.net/codrops/2010/05/07/stunning-circular-motion-effect/</div>
+					</div>
+					<div class="pc_item">
+						<h2>Fresh Set of CSS-only Menus</h2>
+						<img src="images/4.jpg" alt=""/>
+						<p>This is a set of CSS-only menus for cut and paste use on your website</p>
+						<div class="pc_more">http://tympanus.net/codrops/2010/01/31/fresh-set-of-css-only-menus/</div>
+					</div>
+					<div class="pc_item">
+						<h2>Fresh Sliding Thumbnails Gallery</h2>
+						<img src="images/5.jpg" alt=""/>
+						<p>This image gallery will make your photos be in the sportlight of attention</p>
+						<div class="pc_more">http://tympanus.net/codrops/2010/05/23/fresh-sliding-thumbnails-gallery-with-jquery-php/</div>
+					</div>
+					<div class="pc_item">
+						<h2>A jQuery Heat Map</h2>
+						<img src="images/6.jpg" alt=""/>
+						<p>A little heat map script with jQuery: mark the spots clicked with the mouse</p>
+						<div class="pc_more">http://tympanus.net/codrops/2010/02/08/a-jquery-heat-map/</div>
+					</div>
+					<div class="pc_item">
+						<h2>jTextTranslate: A jQuery Translation Plugin</h2>
+						<img src="images/7.jpg" alt=""/>
+						<p>Use the Google Translation API to translate your content with this jQuery Plugin</p>
+						<div class="pc_more">http://tympanus.net/codrops/2009/11/30/jtexttranslate-a-jquery-translation-plugin/</div>
+					</div>
+					<div class="pc_item">
+						<h2>Awesome Mobile Image Gallery Web App</h2>
+						<img src="images/8.jpg" alt=""/>
+						<p>An image gallery web app for a beautiful display of your images made with jQTouch</p>
+						<div class="pc_more">http://tympanus.net/codrops/2010/05/27/awesome-mobile-image-gallery-web-app/</div>
+					</div>
+					<div class="pc_item">
+						<h2>Awesome CSS3 & jQuery Slide Out Button</h2>
+						<img src="images/13.jpg" alt=""/>
+						<p>How to make a neat slide out button using jQuery? We will show you in this tutorial</p>
+						<div class="pc_more">http://tympanus.net/codrops/2010/02/08/awesome-css3-jquery-slide-out-button/</div>
+					</div>
+					<div class="pc_item">
+						<h2>Beautiful Slide Out Navigation</h2>
+						<img src="images/14.jpg" alt=""/>
+						<p>The menu items in this tutorial slide out when hovering over them. Sweet effect indeed</p>
+						<div class="pc_more">http://tympanus.net/codrops/2009/11/30/beautiful-slide-out-navigation-a-css-and-jquery-tutorial/</div>
+					</div>
+					<div class="pc_item">
+						<h2>Neat Photo Hover Effect with CSS Sprites</h2>
+						<img src="images/9.jpg" alt=""/>
+						<p>A very simple way to create a very neat effect with images</p>
+						<div class="pc_more">http://tympanus.net/codrops/2010/02/22/neat-photo-hover-effect-with-css-sprites-and-jquery/</div>
+					</div>
+					<div class="pc_item">
+						<h2>Beautiful Photo Stack Gallery</h2>
+						<img src="images/10.jpg" alt=""/>
+						<p>Two great effects: show you albums in a slider and show a stack when viewing each album</p>
+						<div class="pc_more">http://tympanus.net/codrops/2010/06/27/beautiful-photo-stack-gallery-with-jquery-and-css3/</div>
+					</div>
+					<div class="pc_item">
+						<h2>Pimp Your Tables with CSS3</h2>
+						<img src="images/11.jpg" alt=""/>
+						<p>In this tutorial we show how to use some CSS3 to create some nice effects on tables</p>
+						<div class="pc_more">http://tympanus.net/codrops/2010/05/03/pimp-your-tables-with-css3/</div>
+					</div>
+					<div class="pc_item">
+						<h2>Scrolling to the Top and Bottom with jQuery</h2>
+						<img src="images/12.jpg" alt=""/>
+						<p>Use jQuery to simply scroll to the top or bottom of a web page</p>
+						<div class="pc_more">http://tympanus.net/codrops/2010/01/03/scrolling-to-the-top-and-bottom-with-jquery/</div>
+					</div>
+					<div class="pc_item">
+						<h2>Awesome Cufonized Fly-out Menu</h2>
+						<img src="images/15.jpg" alt=""/>
+						<p>A menu with two sides that meet when hovering over an item</p>
+						<div class="pc_more">http://tympanus.net/codrops/2010/06/28/awesome-cufonized-fly-out-menu/</div>
+					</div>
+					<div class="pc_item">
+						<h2>Minimalistic Slideshow Gallery with jQuery</h2>
+						<img src="images/16.jpg" alt=""/>
+						<p>An easy to integrate slideshow gallery with an elegant style</p>
+						<div class="pc_more">http://tympanus.net/codrops/2010/07/05/minimalistic-slideshow-gallery/</div>
+					</div>
+					<div class="pc_item">
+						<h2>Interactive Photo Desk with jQuery and CSS3</h2>
+						<img src="images/17.jpg" alt=""/>
+						<p>A jQuery experiment: Show an image gallery with all the real world interaction possibilities</p>
+						<div class="pc_more">http://tympanus.net/codrops/2010/07/01/interactive-photo-desk/</div>
+					</div>
+					<div class="pc_item">
+						<h2>Slide Down Box Menu with jQuery and CSS3</h2>
+						<img src="images/19.jpg" alt=""/>
+						<p>In this tutorial we will create a box menu with images that slide out on hover</p>
+						<div class="pc_more">http://tympanus.net/codrops/2010/07/16/slide-down-box-menu/</div>
+					</div>
+					<div class="pc_item">
+						<h2>Multimedia Gallery for Images, Video and Audio</h2>
+						<img src="images/20.jpg" alt=""/>
+						<p>A mutlimedia Gallery that let's you display images, video and audio in a grid like way</p>
+						<div class="pc_more">http://tympanus.net/codrops/2010/06/24/multimedia-gallery/</div>
+					</div>
+					<div class="pc_item">
+						<h2>Annotation Overlay Effect with jQuery</h2>
+						<img src="images/22.jpg" alt=""/>
+						<p>A slick overlay effect that let's you show notes on a portfolio item</p>
+						<div class="pc_more">http://tympanus.net/codrops/2010/10/12/annotation-overlay-effect/</div>
+					</div>
+					<div class="pc_item">
+						<h2>Slider Gallery with jQuery</h2>
+						<img src="images/21.jpg" alt=""/>
+						<p>Slide through an album and enlarge images to full view them when clicked</p>
+						<div class="pc_more">http://tympanus.net/codrops/2010/10/07/slider-gallery/</div>
+					</div>
+					<div class="pc_item">
+						<h2>Compact News Previewer with jQuery</h2>
+						<img src="images/23.jpg" alt=""/>
+						<p>A small and compact news previewer for your latest posts or news</p>
+						<div class="pc_more">http://tympanus.net/codrops/2010/10/03/compact-news-previewer/</div>
+					</div>
+					<div class="pc_item">
+						<h2>Polaroid Photobar Gallery</h2>
+						<img src="images/24.jpg" alt=""/>
+						<p>Show you images in a polaroid photobar with randomly rotated thumbnails</p>
+						<div class="pc_more">http://tympanus.net/codrops/2010/09/28/polaroid-photobar-gallery/</div>
+					</div>
+					<div class="pc_item">
+						<h2>Full Page Image Gallery with jQuery</h2>
+						<img src="images/25.jpg" alt=""/>
+						<p>A full page image gallery with a auto sliding thumbnails view</p>
+						<div class="pc_more">http://tympanus.net/codrops/2010/09/08/full-page-image-gallery/</div>
+					</div>
+					<div class="pc_item">
+						<h2>Collapsing Site Navigation with jQuery</h2>
+						<img src="images/26.jpg" alt=""/>
+						<p>A navigation with content panels that slide some image out on hover</p>
+						<div class="pc_more">http://tympanus.net/codrops/2010/09/06/collapsing-site-navigation/</div>
+					</div>
+					<div class="pc_item">
+						<h2>Thumbnails Navigation Gallery with jQuery</h2>
+						<img src="images/27.jpg" alt=""/>
+						<p>A menu like gallery that shows its thumbnails in each item by auto scrolling</p>
+						<div class="pc_more">http://tympanus.net/codrops/2010/07/29/thumbnails-navigation-gallery/</div>
+					</div>
+					<div class="pc_item">
+						<h2>Music Portfolio Template</h2>
+						<img src="images/28.jpg" alt=""/>
+						<p>A compact template for music albums and an audio player on HTML5 basis</p>
+						<div class="pc_more">http://tympanus.net/codrops/2010/07/26/music-portfolio-template/</div>
+					</div>
+					<div class="pc_item">
+						<h2>Related Posts Slide Out Boxes</h2>
+						<img src="images/29.jpg" alt=""/>
+						<p>Slide out related posts on the right side of you page and shuffle from a set</p>
+						<div class="pc_more">http://tympanus.net/codrops/2010/07/21/related-posts-slide-out-boxes/</div>
+					</div>
+					<div class="pc_item">
+						<h2>Interactive Image Vamp up</h2>
+						<img src="images/30.jpg" alt=""/>
+						<p>Vamp up you photos with this little experiment some drag and drop functionality</p>
+						<div class="pc_more">http://tympanus.net/codrops/2010/03/22/interactive-image-vamp-up-with-jquery-css3-and-php/</div>
+					</div>
+					<div class="pc_item">
+						<h2>Grungy Random Rotation Menu</h2>
+						<img src="images/31.jpg" alt=""/>
+						<p>Randomly rotate page elements on every refresh in a grundgy way</p>
+						<div class="pc_more">http://tympanus.net/codrops/2010/02/24/grungy-random-rotation-menu-with-jquery-and-css3/</div>
+					</div>
+
+					<div class="pc_item">
+						<h2>Sliding Panel Photo Wall Gallery</h2>
+						<img src="images/18.jpg" alt=""/>
+						<p>This tutorial is about creating a creative gallery with a slider for the thumbnails.</p>
+						<div class="pc_more">http://tympanus.net/codrops/2010/05/14/sliding-panel-photo-wall-gallery-with-jquery/</div>
+					</div>
+					<div class="pc_item">
+						<h2>Beautiful Background Image Navigation</h2>
+						<img src="images/1.jpg" alt=""/>
+						<p>Menu with a twist: background images are slided when hovering over the menu items </p>
+						<div class="pc_more">http://tympanus.net/codrops/2010/05/05/beautiful-background-image-navigation-with-jquery/</div>
+					</div>
+					<div class="pc_item">
+						<h2>Awesome Bubble Navigation with jQuery</h2>
+						<img src="images/2.jpg" alt=""/>
+						<p>In this tutorial we will create menu with expanding bubbly navigation items</p>
+						<div class="pc_more">http://tympanus.net/codrops/2010/04/29/awesome-bubble-navigation-with-jquery/</div>
+					</div>
+					<div class="pc_item">
+						<h2>Stunning Circular Motion Effect with jQuery</h2>
+						<img src="images/3.jpg" alt=""/>
+						<p>This menu consits of circles fading in and out while moving on a circular path</p>
+						<div class="pc_more">http://tympanus.net/codrops/2010/05/07/stunning-circular-motion-effect/</div>
+					</div>
+					<div class="pc_item">
+						<h2>Fresh Set of CSS-only Menus</h2>
+						<img src="images/4.jpg" alt=""/>
+						<p>This is a set of CSS-only menus for cut and paste use on your website</p>
+						<div class="pc_more">http://tympanus.net/codrops/2010/01/31/fresh-set-of-css-only-menus/</div>
+					</div>
+					<div class="pc_item">
+						<h2>Fresh Sliding Thumbnails Gallery</h2>
+						<img src="images/5.jpg" alt=""/>
+						<p>This image gallery will make your photos be in the sportlight of attention</p>
+						<div class="pc_more">http://tympanus.net/codrops/2010/05/23/fresh-sliding-thumbnails-gallery-with-jquery-php/</div>
+					</div>
+					<div class="pc_item">
+						<h2>A jQuery Heat Map</h2>
+						<img src="images/6.jpg" alt=""/>
+						<p>A little heat map script with jQuery: mark the spots clicked with the mouse</p>
+						<div class="pc_more">http://tympanus.net/codrops/2010/02/08/a-jquery-heat-map/</div>
+					</div>
+					<div class="pc_item">
+						<h2>jTextTranslate: A jQuery Translation Plugin</h2>
+						<img src="images/7.jpg" alt=""/>
+						<p>Use the Google Translation API to translate your content with this jQuery Plugin</p>
+						<div class="pc_more">http://tympanus.net/codrops/2009/11/30/jtexttranslate-a-jquery-translation-plugin/</div>
+					</div>
+					<div class="pc_item">
+						<h2>Awesome Mobile Image Gallery Web App</h2>
+						<img src="images/8.jpg" alt=""/>
+						<p>An image gallery web app for a beautiful display of your images made with jQTouch</p>
+						<div class="pc_more">http://tympanus.net/codrops/2010/05/27/awesome-mobile-image-gallery-web-app/</div>
+					</div>
+					<div class="pc_item">
+						<h2>Awesome CSS3 & jQuery Slide Out Button</h2>
+						<img src="images/13.jpg" alt=""/>
+						<p>How to make a neat slide out button using jQuery? We will show you in this tutorial</p>
+						<div class="pc_more">http://tympanus.net/codrops/2010/02/08/awesome-css3-jquery-slide-out-button/</div>
+					</div>
+					<div class="pc_item">
+						<h2>Beautiful Slide Out Navigation</h2>
+						<img src="images/14.jpg" alt=""/>
+						<p>The menu items in this tutorial slide out when hovering over them. Sweet effect indeed</p>
+						<div class="pc_more">http://tympanus.net/codrops/2009/11/30/beautiful-slide-out-navigation-a-css-and-jquery-tutorial/</div>
+					</div>
+					<div class="pc_item">
+						<h2>Neat Photo Hover Effect with CSS Sprites</h2>
+						<img src="images/9.jpg" alt=""/>
+						<p>A very simple way to create a very neat effect with images</p>
+						<div class="pc_more">http://tympanus.net/codrops/2010/02/22/neat-photo-hover-effect-with-css-sprites-and-jquery/</div>
+					</div>
+					<div class="pc_item">
+						<h2>Beautiful Photo Stack Gallery</h2>
+						<img src="images/10.jpg" alt=""/>
+						<p>Two great effects: show you albums in a slider and show a stack when viewing each album</p>
+						<div class="pc_more">http://tympanus.net/codrops/2010/06/27/beautiful-photo-stack-gallery-with-jquery-and-css3/</div>
+					</div>
+					<div class="pc_item">
+						<h2>Pimp Your Tables with CSS3</h2>
+						<img src="images/11.jpg" alt=""/>
+						<p>In this tutorial we show how to use some CSS3 to create some nice effects on tables</p>
+						<div class="pc_more">http://tympanus.net/codrops/2010/05/03/pimp-your-tables-with-css3/</div>
+					</div>
+					<div class="pc_item">
+						<h2>Scrolling to the Top and Bottom with jQuery</h2>
+						<img src="images/12.jpg" alt=""/>
+						<p>Use jQuery to simply scroll to the top or bottom of a web page</p>
+						<div class="pc_more">http://tympanus.net/codrops/2010/01/03/scrolling-to-the-top-and-bottom-with-jquery/</div>
+					</div>
+					<div class="pc_item">
+						<h2>Awesome Cufonized Fly-out Menu</h2>
+						<img src="images/15.jpg" alt=""/>
+						<p>A menu with two sides that meet when hovering over an item</p>
+						<div class="pc_more">http://tympanus.net/codrops/2010/06/28/awesome-cufonized-fly-out-menu/</div>
+					</div>
+					<div class="pc_item">
+						<h2>Minimalistic Slideshow Gallery with jQuery</h2>
+						<img src="images/16.jpg" alt=""/>
+						<p>An easy to integrate slideshow gallery with an elegant style</p>
+						<div class="pc_more">http://tympanus.net/codrops/2010/07/05/minimalistic-slideshow-gallery/</div>
+					</div>
+					<div class="pc_item">
+						<h2>Interactive Photo Desk with jQuery and CSS3</h2>
+						<img src="images/17.jpg" alt=""/>
+						<p>A jQuery experiment: Show an image gallery with all the real world interaction possibilities</p>
+						<div class="pc_more">http://tympanus.net/codrops/2010/07/01/interactive-photo-desk/</div>
+					</div>
+					<div class="pc_item">
+						<h2>Slide Down Box Menu with jQuery and CSS3</h2>
+						<img src="images/19.jpg" alt=""/>
+						<p>In this tutorial we will create a box menu with images that slide out on hover</p>
+						<div class="pc_more">http://tympanus.net/codrops/2010/07/16/slide-down-box-menu/</div>
+					</div>
+					<div class="pc_item">
+						<h2>Multimedia Gallery for Images, Video and Audio</h2>
+						<img src="images/20.jpg" alt=""/>
+						<p>A mutlimedia Gallery that let's you display images, video and audio in a grid like way</p>
+						<div class="pc_more">http://tympanus.net/codrops/2010/06/24/multimedia-gallery/</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+			<div id="pc_slider" class="pc_slider"></div>
+		</div>
+        <!-- The JavaScript -->
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+        <script type="text/javascript">
+            $(function() {
+				//window width and height
+				var window_w 					= $(window).width();
+				var window_h 					= $(window).height();
+				//the main panel div
+				var $pc_panel = $('#pc_panel');
+				//the wrapper and the content divs
+				var $pc_wrapper					= $('#pc_wrapper');
+				var $pc_content					= $('#pc_content');
+				//the slider / slider div
+				var $pc_slider					= $('#pc_slider');
+				//the element reference - reaching this element
+				//activates the panel
+				var $pc_reference 				= $('#pc_reference');
+				
+				var maxWidth,maxHeight,marginL;
+				
+				buildPanel();
+				
+				function buildPanel(){
+					$pc_panel.css({'height': window_h + 'px'});
+					hidePanel();
+					//we want to display the items in a grid.
+					//we need to calculate how much width and height
+					//the wrapper should have.
+					//we also want to display it centered, so we need to calculate
+					//the margin left of the wrapper
+					
+					//First, lets see how much of height:
+					//maxHeight = Math.floor((window_h-20)/135)*135;
+					//20 => pc_titles height
+					//135 => 125 of each items height plus its margin (10)
+					maxHeight 		= Math.floor((window_h-20)/135)*135;
+					//maxWidth = Math.floor((window_w-35)/220)*220;
+					//220 = item width + margins (left and right)
+					maxWidth 		= Math.floor((window_w-35)/220)*220;
+					marginL  		= (window_w - maxWidth)/2;
+					$pc_wrapper.css({
+						'width' 		: maxWidth + 20 + 'px',
+						'height'		: maxHeight +'px',
+						'margin-left' 	: marginL + 'px'
+					});
+				
+					//innitialize the slider
+					try{
+						$pc_slider.slider('destroy');
+					}catch(e){}
+					//total_scroll is the number of how much we can scroll
+					var total_scroll = $pc_content.height()-maxHeight;
+					//add a slider to scroll the content div
+					//hidden until the panel is expanded
+					if(total_scroll > 0){
+						$pc_slider.slider({
+							orientation	: 'vertical',
+							max			: total_scroll,
+							min			: 0,
+							value		: total_scroll,
+							slide		: function(event, ui) {
+								$pc_wrapper.scrollTop(Math.abs(ui.value-total_scroll));
+							}
+						}).css({
+							'height'	: maxHeight -40 + 'px',//40 extra
+							'left'		: maxWidth + 20 + marginL + 'px',
+							'top'		: 30 + 20 + 'px',
+							//30 = 20 of title + 10 margin, 20 extra
+							'display'	: 'none'
+						});
+					}
+				}
+
+				//the panel gets positioned out of the viewport,
+				//and ready to be slided out!
+				function hidePanel(){
+					//165 => 20 pc_title + 120 item + margins
+					$pc_panel.css({
+						'right'	: -window_w + 'px',
+						'top'	: window_h - 165 + 'px'
+					}).show();
+					try{
+						//position the slider in the beginning
+						slideTop();
+					}catch(e){}
+					$pc_slider.hide();
+					$pc_panel.find('.collapse')
+					.addClass('expand')
+					.removeClass('collapse');
+				}
+				
+				//resets the slider by sliding it to the top
+				function slideTop(){
+					var total_scroll 	= $pc_content.height()-maxHeight;
+					$pc_wrapper.scrollTop(0);
+					$pc_slider.slider('option', 'value', total_scroll );
+				}
+				
+				$(window).bind('scroll',function(){
+					/*
+					When we reach the element pc_reference, we want to show the panel.
+					Let's get the distance from the top to the element
+					 */
+					var distanceTop = $pc_reference.offset().top - window_h;
+					if($(window).scrollTop() > distanceTop){
+						if(parseInt($pc_panel.css('right'),10) == -window_w)
+							$pc_panel.stop().animate({'right':'0px'},300);
+					}
+					else{
+						if(parseInt($pc_panel.css('right'),10) == 0)
+							$pc_panel.stop().animate({'right': -window_w + 'px'},300,function(){
+								hidePanel();
+							});
+					}
+				}).bind('resize',function(){
+					//on resize calculate the windows dimentions again,
+					//and build the panel accordingly
+					window_w 			= $(window).width();
+					window_h 			= $(window).height();
+					buildPanel();
+				});
+
+				//when clicking on the expand button,
+				//we animate the panel to the size of the window,
+				//reset the slider and show it
+				$pc_panel.find('.expand').bind('click',function(){
+					var $this = $(this);
+					$pc_wrapper.hide();
+					$pc_panel.stop().animate({'top':'0px'},500,function(){
+						$pc_wrapper.show();
+						slideTop();
+						$pc_slider.show();
+						$this.addClass('collapse').removeClass('expand');
+					});
+				})
+
+				//clicking collapse will hide the slider,
+				//and minimize the panel
+				$pc_panel.find('.collapse').live('click',function(){
+					var $this = $(this);
+					$pc_wrapper.hide();
+					$pc_slider.hide();
+					$pc_panel.stop().animate({'top':window_h - 165 + 'px'},500,function(){
+						$pc_wrapper.show();
+						$this.addClass('expand').removeClass('collapse');
+					});
+				});
+			
+				//clicking close will make the panel disappear
+				$pc_panel.find('.close').bind('click',function(){
+					$pc_panel.remove();
+					$(window).unbind('scroll').unbind('resize');
+				});
+			
+				//mouse over the items add class "selected"
+                $pc_wrapper.find('.pc_item').hover(
+				function(){
+					$(this).addClass('selected');
+				},
+				function(){
+					$(this).removeClass('selected');
+				}
+			).bind('click',function(){
+					window.open($(this).find('.pc_more').html());
+				});
+			});
+        </script>
+    </body>
+</html>

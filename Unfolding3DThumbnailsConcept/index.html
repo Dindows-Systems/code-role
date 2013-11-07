@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Unfolding 3D Thumbnails Concept</title>
+        <meta name="description" content="A 3D thumbnail view concept for image slideshows: the current image gets opened up and a thumbnail view unfolds in 3d." />
+        <meta name="keywords" content="3d, css3, concept, thumbnails, transition, effect, folding" />
+        <meta name="author" content="Codrops" />
+        <link rel="shortcut icon" href="../favicon.ico"> 
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300' rel='stylesheet' type='text/css' />
+		<script type="text/javascript" src="js/modernizr.custom.79639.js"></script> 
+		<!--[if lte IE 7]><style>.main{display:none;} .support-note .note-ie{display:block;}</style><![endif]-->
+    </head>
+    <body>
+        <div class="container">
+		
+			<!-- Codrops top bar -->
+            <div class="codrops-top">
+                <a href="http://tympanus.net/Tutorials/TriplePanelImageSlider/">
+                    <strong>&laquo; Previous Demo: </strong>Triple Panel Image Slider
+                </a>
+                <span class="right">
+					<a href="http://www.flickr.com/photos/ag2r/">Images by Angelo González</a>
+                    <a href=" http://tympanus.net/codrops/2012/08/23/unfolding-3d-thumbnails-concept/">
+                        <strong>Back to the Codrops Article</strong>
+                    </a>
+                </span>
+                <div class="clr"></div>
+            </div><!--/ Codrops top bar -->
+			
+			<header>
+			
+				<h1><strong>Unfolding 3D Thumbnails</strong> Concept</h1>
+				<h2>Click on the thumbnail toggle to see the effect. <strong>This is a concept, the slider is a dummy.</strong></h2>
+				<h2 class="special">Best viewed in WebKit browsers.</h2>
+				
+				<div class="support-note"><!-- let's check browser support with modernizr -->
+					<!--span class="no-cssanimations">CSS animations are not supported in your browser</span-->
+					<span class="no-csstransforms">CSS transforms are not supported in your browser</span>
+					<span class="no-csstransforms3d">CSS 3D transforms are not supported in your browser</span>
+					<span class="no-csstransitions">CSS transitions are not supported in your browser</span>
+					<span class="note-ie">Sorry, only modern browsers.</span>
+				</div>
+				
+			</header>
+			
+			<section class="main">
+				
+				<div id="th-wrap" class="th-wrap">
+					<img src="images/1.jpg"/>	
+					<div class="th-inner">
+						<ul>
+							<li><a target="_blank" href="http://www.flickr.com/photos/ag2r/7804955466/in/set-72157622516717030"><img src="images/thumbs/1.jpg" /></a></li>
+							<li><a target="_blank" href="http://www.flickr.com/photos/ag2r/4542051328/in/set-72157622516717030"><img src="images/thumbs/2.jpg" /></a></li>
+							<li><a target="_blank" href="http://www.flickr.com/photos/ag2r/4556217376/in/set-72157622516717030"><img src="images/thumbs/3.jpg" /></a></li>
+							<li><a target="_blank" href="http://www.flickr.com/photos/ag2r/4558854995/in/set-72157622516717030"><img src="images/thumbs/4.jpg" /></a></li>
+							<li><a target="_blank" href="http://www.flickr.com/photos/ag2r/4572081755/in/set-72157622516717030"><img src="images/thumbs/5.jpg" /></a></li>
+							<li><a target="_blank" href="http://www.flickr.com/photos/ag2r/4626290179/in/set-72157622516717030"><img src="images/thumbs/6.jpg" /></a></li>
+							<li><a target="_blank" href="http://www.flickr.com/photos/ag2r/4675384219/in/set-72157622516717030"><img src="images/thumbs/7.jpg" /></a></li>
+							<li><a target="_blank" href="http://www.flickr.com/photos/ag2r/4999622010/in/set-72157622516717030"><img src="images/thumbs/8.jpg" /></a></li>
+							<li><a target="_blank" href="http://www.flickr.com/photos/ag2r/7073410555/in/set-72157622516717030"><img src="images/thumbs/9.jpg" /></a></li>
+							<li><a target="_blank" href="http://www.flickr.com/photos/ag2r/7730175960/in/set-72157622516717030"><img src="images/thumbs/10.jpg" /></a></li>
+							<li class="th-thumb-current"><a target="_blank" href="http://www.flickr.com/photos/ag2r/5573079225/in/set-72157622516717030"><img src="images/thumbs/11.jpg" /></a></li>
+							<li><a target="_blank" href="http://www.flickr.com/photos/ag2r/7736460500/in/set-72157622516717030"><img src="images/thumbs/12.jpg" /></a></li>
+							<li><a target="_blank" href="http://www.flickr.com/photos/ag2r/5271697131/in/set-72157622516717030"><img src="images/thumbs/13.jpg" /></a></li>
+							<li><a target="_blank" href="http://www.flickr.com/photos/ag2r/5264745534/in/set-72157622516717030"><img src="images/thumbs/14.jpg" /></a></li>
+							<li><a target="_blank" href="http://www.flickr.com/photos/ag2r/5503929309/in/set-72157622516717030"><img src="images/thumbs/15.jpg" /></a></li>
+						</ul>
+					</div>
+				</div>
+
+				<span id="th-view" class="th-toggle">Toggle Thumbs</span>
+				
+				<!-- Dummy slider elements -->
+				<nav class="th-nav">
+					<span class="th-prev">Previous</span>
+					<span class="th-next">Next</span>
+					<div class="th-navdots"></div>	
+				</nav>
+				
+				<div class="th-click"></div>
+				
+			</section>
+			
+			<section class="description">
+				<p>
+					This demo shows a concept for toggling a thumbnail view for an image slider. 
+					The idea is to reveal some thumbs using a 3D effect and indicate the switch 
+					in navigation functionility.
+					<span>This is a concept, the slider functionlity is not implemented.</span>
+					The fallback will simply show the thumbs view without any effect.
+				</p>
+			</section>
+			
+        </div>
+		<!-- jQuery if needed -->
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+    </body>
+</html>

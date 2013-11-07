@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>Awesome Slide Out Button</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<meta name="description" content="Awesome Slide Out Button with CSS3 and jQuery" />
+        <meta name="keywords" content="jquery, fancy, slide out, button, css3" />
+        <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8"/>
+    </head>
+    <style>
+        body{
+            background:#f0f0f0 url(title.png) no-repeat top left;
+            font-family:Arial;
+        }
+		.back{
+			position:absolute;
+			top:400px;
+			left:20px;
+			background:#f0f0f0 url(back.png) no-repeat top left;
+			width:165px;
+			height:31px;
+		}
+    </style>
+    <body>
+        <div class="button_wrap">
+            <a class="button_aLeft" id="button_aLeft"><span>Use your Twitter ID</span></a>
+            <a class="button_bLeft slidebttn" id="button_bLeft">Sign <span>in</span></a>
+        </div>
+        <div class="button_wrap">
+            <a class="button_aRight" id="button_aRight"><span>Use your Twitter ID</span></a>
+            <a class="button_bRight slidebttn" id="button_bRight">Sign <span>in</span></a>
+        </div>
+		<div><a href="http://tympanus.net/codrops/2010/02/08/awesome-css3-jquery-slide-out-button" class="back"></a></div>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                $('.slidebttn').hover(
+					function () {
+						var $this 		= $(this);
+						var $slidelem 	= $this.prev();
+						$slidelem.stop().animate({'width':'225px'},300);
+						$slidelem.find('span').stop(true,true).fadeIn();
+						$this.addClass('button_c');
+					},
+					function () {
+						var $this 		= $(this);
+						var $slidelem 	= $this.prev();
+						$slidelem.stop().animate({'width':'70px'},200);
+						$slidelem.find('span').stop(true,true).fadeOut();
+						$this.removeClass('button_c');
+					}
+				);
+            });
+        </script>
+    </body>
+</html>

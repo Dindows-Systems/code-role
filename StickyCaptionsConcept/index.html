@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>Sticky Captions Concept</title>
+		<meta name="description" content="Sticky Captions Concept - Keep captions in the viewport" />
+		<meta name="keywords" content="sticky caption, scrolling, thumbnail, viewport, css, jquery, web design, grid" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="../favicon.ico"> 
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<script src="js/modernizr.custom.63321.js"></script>
+	</head>
+	<body>
+		<div class="container">	
+
+			<!-- Codrops top bar -->
+			<div class="codrops-top clearfix">
+				<a href="http://tympanus.net/Tutorials/FullscreenBookBlock/">
+					<strong>&laquo; Previous Demo: </strong>Fullscreen Pageflip Layout
+				</a>
+				<span class="right">
+					<a href="http://erikanoeldesign.com/">Dribbble Shots by Erika Mackley</a>
+					<a href="http://tympanus.net/codrops/?p=12813">
+						<strong>Back to the Codrops Article</strong>
+					</a>
+				</span>
+			</div><!--/ Codrops top bar -->
+			
+			<header class="clearfix">
+			
+				<h1>Sticky Captions Concept<span> Keep captions in the viewport</span></h1>
+				<p>Hover over a thumbnail to see the sticky caption</p>
+				
+			</header>
+	
+			<section class="main">
+
+				<div class="grid clearfix" id="grid">
+					<figure><img src="images/4.jpg"><figcaption><a href="http://drbl.in/fWMT">Fall 7 Times Stand Up 8</a> by Erika Mackley</figcaption></figure>
+					<figure><img src="images/7.jpg"><figcaption><a href="http://drbl.in/fLBG">Unashamed Optimism of Ambition</a> by Erika Mackley</figcaption></figure>
+					<figure><img src="images/1.jpg"><figcaption><a href="http://drbl.in/fWMM">Stay Hungry. Stay Foolish.</a> by Erika Mackley</figcaption></figure>
+					<figure><img src="images/3.jpg"><figcaption><a href="http://drbl.in/fWPV">Wild Hearts Cannot Be Tamed</a> by Erika Mackley</figcaption></figure>
+					<figure><img src="images/5.jpg"><figcaption><a href="http://drbl.in/fGhI">2012 Detroit Tigers</a> by Erika Mackley</figcaption></figure>
+					<figure><img src="images/6.jpg"><figcaption><a href="http://drbl.in/fKCf">Bad Hair Day</a> by Erika Mackley</figcaption></figure>
+					<figure><img src="images/2.jpg"><figcaption><a href="http://drbl.in/fQdt">Work Hard. Stay Humble.</a> by Erika Mackley</figcaption></figure>
+					<figure><img src="images/8.jpg"><figcaption><a href="http://drbl.in/fPEY">Everyone Deserves To Be Adored</a> by Erika Mackley</figcaption></figure>
+					<figure><img src="images/9.jpg"><figcaption><a href="http://drbl.in/fWwG">Sarah William's Quote</a> by Erika Mackley</figcaption></figure>
+				</div>
+				
+			</section>
+
+		</div><!-- /container -->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.masonry.min.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				
+				// checks if the bottom of an element is inside the viewport and if there's space for the description
+				// basically this returns false if the description should be shown with sticky trick..
+				// inspired by James Padolsey's snippet (http://remysharp.com/2009/01/26/element-in-view-event-plugin/#comment-127058)
+				$.extend( $.expr[':'], {
+					bottomInViewport : function( el ) {
+						var scrollTop = ( document.documentElement.scrollTop || document.body.scrollTop ),
+							elOffsetTop = $( el ).offset().top,
+							elH = $( el ).height(),
+							descrH = $( el ).find( 'figcaption' ).outerHeight(true),
+							winH = ( window.innerHeight && window.innerHeight < $( window ).height() ) ? window.innerHeight : $( window ).height();
+
+						return ( elOffsetTop + elH > scrollTop && elOffsetTop + elH < scrollTop + winH ) || ( scrollTop + winH - elOffsetTop < descrH );
+					}
+				});
+
+				var $grid = $('#grid'), $items = $grid.children('figure');
+
+				$grid.imagesLoaded( function() {
+					
+					// initialize the masonry plugin
+					$grid.masonry({
+						itemSelector: 'figure'
+					});
+
+					// bind the mouseenter and mouseleave events to the items
+					$items.on( 'mouseenter mouseleave', function( event ) {
+
+						var $item = $( this ), itemWidth = $item.width(),
+							// the figcaption/description element
+							$description = $item.find( 'figcaption' );
+
+						clearTimeout( $item.data( 'stickytime' ) );
+
+						switch( event.type ) {
+							case 'mouseenter' :
+
+								if( !$item.is( ':bottomInViewport' ) ) {
+									$item.data( 'sticky', true );
+									changeToFixed( $description, itemWidth );
+								}
+								// bind the scroll event to the window while hovering an item
+								// while scrolling, we check if the description should be rendered or not
+								$( window ).on( 'scroll', function () {
+									var inviewport = $item.is( ':bottomInViewport' );
+									if( !inviewport && !$item.data( 'sticky' ) ) {
+										$item.data( 'sticky', true );
+										changeToFixed( $description, itemWidth );
+									}
+									else if( inviewport && $item.data( 'sticky' ) ) {
+										$item.data( 'sticky', false );
+										resetStyle( $description );
+									}
+								} );
+								break;
+							
+							case 'mouseleave' :
+
+								// on mouse leave and if the description is sticky, we reset the style
+								if( $item.data( 'sticky' ) ) {
+									$item.data( 'sticky', false );
+									resetStyle( $( this ).find( 'figcaption' ), 200 );
+								}
+								$( window ).off( 'scroll' );
+								break;
+						}
+
+					} );
+
+				});
+
+				function changeToFixed( $description, itemWidth ) {
+					$description.css({ position: 'fixed', width: itemWidth });
+				}
+
+				function resetStyle( $description, delay ) {
+					var stickytime = setTimeout( function() { $description.css({ position: 'absolute', width: '100%'}); }, delay || 0 );
+					$description.parent().data( 'stickytime', stickytime );
+				}
+
+			});
+		</script>
+	</body>
+</html>

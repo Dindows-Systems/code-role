@@ -1,0 +1,189 @@
+* { margin: 0; padding: 0; }
+
+body {
+    background: #8B0000 url(../images/stripes2.png) repeat top left;
+    font: normal 70%/1.5em Arial;
+    color: #333; 
+    text-align: center;
+}
+
+h1 {
+    font-weight: bold; 		
+}
+h1 { font-size: 120%; }
+
+h1, p {
+    margin: 0;
+    padding: 10px;		
+}
+
+form.search {
+    padding: 0; margin: 0; 
+    vertical-align: bottom;
+    border: none;
+    background-color: transparent;
+}
+form.search input.textbox { 
+    margin-top: 4px; 
+    padding: 1px;
+    width: 120px;
+    border: 1px solid #CCC; 
+    background: #FFF;
+    color: #333; 
+}
+
+.wrap {
+    width: 833px;
+    background-color: #fff;
+    margin: 30px auto;
+    text-align: left;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+.content-wrap {
+    position: relative;
+    width: 91%;
+    margin: 0 auto;
+    padding: 0;	
+}
+/* header */
+.header {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background-color: #8B0000;
+    margin: 0; padding: 0;
+    font-size: 14px;
+    color: #FFF;
+    -moz-border-radius: 20px 20px 0px 0px;
+    -webkit-border-top-left-radius: 20px;
+    -webkit-border-top-right-radius:20px;
+    border-bottom:2px solid #fff;
+}
+.header h1.logo {
+    position: absolute;
+    margin: 0; padding: 0;
+    font: bold 42px Arial;
+    letter-spacing: -2px;
+    color: #FFF;
+    text-transform: none;
+
+    /* change the values of top and Left to adjust the position of the logo*/
+    top: 19px; left: 53px;	
+}
+.header h2.slogan {
+    position: absolute;
+    z-index: 9999999;
+    margin: 0; padding: 0;
+    font: bold 12px Arial;
+    text-transform: none;
+    color: #FFF;
+    top: 65px; left:75px;		
+    text-shadow: 0 -1px 1px rgba(0,0,0,0.25);	
+}
+.gray {
+    color: #CCC; 
+}
+
+.header .searchform {
+    float: right;
+    padding: 45px 40px 0 0;
+    display: inline;
+}
+/* menu */
+.menu {
+    clear: both;
+    width: 100%;
+    height: 26px;
+    background-color: #ccc;
+    margin: 0;
+    font: bolder 12px/26px Arial;			
+}
+.menu ul{
+    margin: 0; padding: 0 0 0 35px;
+}
+.menu ul li {
+    float: left;
+    list-style: none;		
+}
+.menu ul li a {
+    display: block;
+    text-decoration: none;	
+    padding: 0 10px;
+    background: inherit;
+    color: #FFF;
+}
+.menu ul li a:hover {
+    background: #8B0000; 
+    color: #FFF;  
+}
+
+/* Main */
+.main {
+    float: left;	
+    width: 72%;
+    padding: 0px 0px 10px 0px;	
+    margin: 0;	
+}
+.main h1 {
+    color: #8B0000; 
+    background: #F6F6F6 url(../images/bullet.gif) no-repeat 2px 51%;	
+    padding: 3px 0 3px 20px;	
+    margin: 10px 0 0 0;
+}
+.main p{
+    text-align:justify;
+}
+
+.post-footer {
+    background-color: #FAFAFA;
+    padding: 5px; margin: 20px 10px 0 10px;
+    border: 1px solid #f2f2f2;
+    font-size: 95%;	
+}
+.post-footer .date {
+    background: url(../images/clock.gif) no-repeat left center;
+    padding-left: 20px; margin: 0 10px 0 5px;
+}
+
+/* sidebar */
+.sidebar {
+    float: right;
+    width: 26%;
+    padding: 0; margin: 0;		
+}	
+.sidebar p{
+    text-align:left;
+    font-size: 80% ;
+    padding:1px;
+}	
+.sidebar h1 {
+    margin: 10px 0 0 0; 
+    padding: 3px 10px; 
+    font: bold 120% Arial;	
+    color: #8B0000;	
+    background: #F6F6F6;	
+}
+
+.footer {
+    clear: both;
+    color: #fff;
+    font: normal 90% Arial;
+    background-color: #8B0000;
+    width: 833px;
+    height: 60px;
+    text-align: center;
+    padding: 8px 0 0 0;
+    margin: 0 auto;	
+    -moz-border-radius: 0px 0px 20px 20px;
+    -webkit-border-bottom-left-radius: 20px;
+    -webkit-border-bottom-right-radius:20px;
+}
+.footer a { text-decoration: none; }
+
+
+
+
+

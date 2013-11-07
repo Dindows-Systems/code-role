@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+	<title>CSS Exchanger</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<link rel="stylesheet" href="styles/style1.css" title="css1" type="text/css" media="screen"/>
+	<link rel="stylesheet" href="styles/style2.css" title="css2" type="text/css" media="screen"/>
+	<link rel="stylesheet" href="styles/style3.css" title="css3" type="text/css" media="screen"/>
+	<link rel="stylesheet" href="styles/style4.css" title="css4" type="text/css" media="screen"/>
+	<link rel="stylesheet" href="styles/style5.css" title="css5" type="text/css" media="screen"/>
+	<link rel="stylesheet" href="styles/style6.css" title="css6" type="text/css" media="screen"/>
+	<link rel="stylesheet" href="styles/style7.css" title="css7" type="text/css" media="screen"/>
+	<link rel="stylesheet" href="styles/style8.css" title="css8" type="text/css" media="screen"/>
+	<link rel="stylesheet" href="styles/style9.css" title="css9" type="text/css" media="screen"/>
+	<link rel="stylesheet" href="styles/style10.css" title="css10" type="text/css" media="screen"/>
+	
+	<script type="text/javascript" src="jquery-1.3.2.js"></script>
+	<script src="jquery.exchange.js" type="text/javascript"></script> 
+	<script type="text/javascript">  
+	$().ready(function() {  
+		$('#exchanger').exchange();  
+	});  
+    </script> 
+</head>
+
+<body>
+		<div id="exchanger" class="selectbox" style="display:none;">
+		  <select id="sl" style="border:1px solid #ccc;margin-top:10px; padding:1px;">
+			<option id="op0" value="0">select stylesheet</option>
+			<option id="op1" value="css1">css1</option>
+			<option id="op2" value="css2">css2</option>
+			<option id="op3" value="css3">css3</option>
+			<option id="op4" value="css4">css4</option>
+			<option id="op5" value="css5">css5</option>
+			<option id="op6" value="css6">css6</option>
+			<option id="op7" value="css7">css7</option>
+			<option id="op8" value="css8">css8</option>
+			<option id="op9" value="css9">css9</option>
+			<option id="op10" value="css10">css10</option>
+		  </select>
+		</div>
+		
+        <div class="wrap">
+            <div class="header">
+                <h1 class="logo">CSS<span class="gray">Exchanger</span></h1>
+                <h2 class="slogan">Changing stylesheets dynamically with jQuery</h2>
+                <div class="searchform">
+                    <form method="post" class="search" action="#">
+                        <p>
+                            <input name="search_query" class="textbox" type="text" />
+                            <input name="search" class="button" type="submit" value="search" />
+                        </p>
+                    </form>
+                </div>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li class="current"><a href="#"><span>Home</span></a></li>
+                    <li><a href="#"><span>Tutorial</span></a></li>
+                    <li><a href="#"><span>Downloads</span></a></li>
+                    <li><a href="#"><span>Links</span></a></li>
+                    <li><a href="#"><span>FAQ</span></a></li>
+                    <li><a href="#"><span>Contact</span></a></li>
+                </ul>
+            </div>
+
+            <div class="content-wrap">
+                <div class="sidebar">
+                    <h1>Products</h1>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et augue quam, iaculis molestie quam. Integer diam sapien, dapibus id feugiat ut, tempus a arcu.</p>
+                    <h1>Help</h1>
+                      <p>The Tutorial will show how to test the ERASP system. See FAQ if something should be unclear.</p>
+                </div>
+
+                <div class="main">
+                    <h1>CSS Exhanger</h1>
+                    <p>Suspendisse in lorem enim, vitae suscipit elit. Pellentesque risus libero, sodales molestie dictum vitae, lobortis ac nibh. Maecenas malesuada facilisis ipsum, sit amet tincidunt nisl porttitor a. Nunc id mattis magna. Sed aliquet, nisi quis suscipit eleifend, augue diam sodales est, nec aliquam odio dolor quis odio. </p><p>Phasellus venenatis iaculis ligula, eget dapibus augue tincidunt sed. Phasellus sem nisi, luctus et ultrices quis, tempus ac purus. Morbi eros leo, bibendum et tempus non, gravida et turpis. Praesent blandit fringilla venenatis. Nulla vel risus mauris, at hendrerit eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tempor blandit ipsum vel congue. </p>
+
+                    <p class="post-footer">  <span class="date">September 09, 2009</span> </p>
+                    
+                </div>
+
+            </div>
+
+            <div class="footer">
+                <p> &copy; 2009 <strong>Codrops</strong> &nbsp;&nbsp;
+                   
+                </p>
+            </div>
+
+        </div>
+</body>
+</html>

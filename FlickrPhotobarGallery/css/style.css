@@ -1,0 +1,302 @@
+.flickr_photobar{
+	font-family:Arial,Helvetica,sans-serif;
+	text-transform:uppercase;
+	font-size:11px;
+}
+.flickr_photobar a{
+	outline:none;
+}
+.flickr_photobar a:hover{
+	outline:none;
+}
+.photobar{
+	position:fixed;
+	bottom:-96px;
+	left:0px;
+	width:100%;
+	height:95px;
+}
+.thumbs{
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	width:100%;
+	height:95px;
+	border-top:1px solid #222;
+	background-color:#3D3D3D;
+}
+.thumbs a.prev,
+.thumbs a.next{
+	width:20px;
+	height:83px;
+	position:absolute;
+	top:4px;
+	margin:0px;
+	z-index:10;
+	border:1px solid #222;
+	-moz-box-shadow:0px 0px 1px #777 inset;
+	-webkit-box-shadow:0px 0px 1px #777 inset;
+	box-shadow:0px 0px 1px #777 inset;
+}
+.thumbs a.prev:hover,
+.thumbs a.next:hover{
+	background-color:#404040;
+}
+.thumbs a.prev{
+	left:0px;
+	background:#333 url(../prev.png) no-repeat center center;
+}
+.thumbs a.next{
+	right:0px;
+	background:#333 url(../next.png) no-repeat center center;
+}
+.thumbs .thumbsWrapper{
+	height:95px;
+	left:22px;
+	right:22px;
+	overflow:hidden;
+	position:absolute;
+	top:0;
+}
+.thumbs ul{
+	list-style:none;
+	margin:0px;
+	padding:0px;
+	height:90px;
+	overflow:hidden;
+	position:absolute;
+	left:0px;
+	top:0px;
+}
+.thumbs ul li a{
+	position:relative;
+	float:left;
+	margin:6px 2px 0px 2px;
+	color:#fff;
+	text-shadow:1px 1px 1px #000;
+	text-decoration:none;
+	height:81px;
+	width:81px;
+}
+.albums ul li a img{
+	border:3px solid #111111;
+	-moz-box-shadow:1px 1px 3px #000;
+	-webkit-box-shadow:1px 1px 3px #000;
+	box-shadow:1px 1px 3px #000;
+}
+.images ul li a img{
+	border:3px solid #f9f9f9;
+	-moz-box-shadow:1px 1px 3px #000;
+	-webkit-box-shadow:1px 1px 3px #000;
+	box-shadow:1px 1px 3px #000;
+}
+.thumbs a span{
+	position:absolute;
+	bottom:3px;
+	left:3px;
+	right:3px;
+	background-color:#333;
+	font-size:9px;
+	padding:2px 2px;
+	border-top:1px solid #111;
+    display:none;	
+	text-align:center;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	max-height:70px;
+	opacity:0.8;
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=80);	
+}
+.thumbs a:hover span{
+	display:block;
+}
+span.images_toggle{
+	position:absolute;
+	top:-26px;
+	right:20px;
+	background-color:#3D3D3D;
+	border:1px solid #222;
+	color:#EEEEEE;
+	font-size:10px;
+	padding:0px 6px 0px 12px;
+	height:24px;
+	line-height:24px;
+	text-transform:uppercase;
+	text-shadow:1px 1px 2px #000;
+	-moz-box-shadow:0px -1px 3px #ccc;
+	-webkit-box-shadow:0px -1px 3px #ccc;
+	box-shadow:0px -1px 3px #ccc;
+	-moz-border-radius:5px 5px 0px 0px;
+	-webkit-border-top-left-radius:5px;
+	-webkit-border-top-right-radius:5px;
+	border-top-left-radius:5px;
+	border-top-right-radius:5px;
+}
+span.images_toggle a{
+	background-color:#222;
+	border:1px solid #000;
+	cursor:pointer;
+	line-height:16px;
+	padding:0px 5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+}
+span.images_toggle a:hover{
+	background-color:#000;
+}
+.photobar a.toggle{
+	position:absolute;
+	top:-26px;
+	left:20px;
+	background-color:#3D3D3D;
+	border:1px solid #222;
+	color:#EEEEEE;
+	font-size:10px;
+	padding:0px 36px 0px 36px;
+	line-height:24px;
+	height:24px;
+	text-transform:uppercase;
+	text-shadow:1px 1px 2px #000;
+	-moz-box-shadow:0px -1px 3px #ccc;
+	-webkit-box-shadow:0px -1px 3px #ccc;
+	box-shadow:0px -1px 3px #ccc;
+	-moz-border-radius:5px 5px 0px 0px;
+	-webkit-border-top-left-radius:5px;
+	-webkit-border-top-right-radius:5px;
+	border-top-left-radius:5px;
+	border-top-right-radius:5px;
+	cursor:pointer;
+}
+span.loading_small{
+	background:transparent url(../loading_small.gif) no-repeat center center;
+	position:absolute;
+	right:10px;
+	top:0px;
+	width:16px;
+	height:24px;
+}
+.photobar a.toggle:hover{
+	background-color:#111;
+}
+.photobar .images{
+	z-index:20;
+}
+.flickr_photobar .overlay{
+	z-index:90;
+	background-color:#000;
+	width:100%;
+	height:100%;
+	position:fixed;
+	top:0px;
+	left:0px;
+	opacity:0.9;
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=90);
+}
+.photopreview{
+	text-align:center;
+	position:fixed;
+	width:100%;
+	height:100%;
+	top:0px;
+	left:0px;
+	z-index:91;
+}
+.photopreview .preview_wrapper{
+	position:relative;
+	text-align:center;
+	margin:0 auto;
+}
+.photopreview .preview{
+	display:table-cell;
+	text-align:center;
+	width:0px;
+	height:0px;
+	padding-top:25px;
+	vertical-align:middle;
+}
+.photopreview .preview img{
+	vertical-align:middle;
+	background-color:#555;
+	padding:1px;
+	border:8px solid #f9f9f9;
+	-moz-box-shadow:1px 1px 5px #222;
+	-webkit-box-shadow:1px 1px 5px #222;
+	box-shadow:1px 1px 5px #222;
+}
+.photopreview .preview span{
+	background-color:#111111;
+	color:#FFFFFF;
+	height:20px;
+	left:0;
+	line-height:20px;
+	position:fixed;
+	text-align:center;
+	text-shadow:1px 1px 1px #000000;
+	top:0;
+	width:100%;
+	-moz-box-shadow:1px 1px 5px #000000;
+	-webkit-box-shadow:1px 1px 5px #000000;
+	box-shadow:1px 1px 5px #000000;
+}
+.loading{
+	width:50px;
+	height:50px;
+	position:fixed;
+	top:50%;
+	left:50%;
+	z-index:95;
+	margin:-25px 0px 0px -25px;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+	background:#000 url(../loading.gif) no-repeat center center;
+	opacity:0.8;
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=80);	
+}
+.close{
+	background:#000 url(../close.png) no-repeat center center;
+	cursor:pointer;
+	height:20px;
+	position:fixed;
+	right:-11px;
+	top:0;
+	width:90px;
+	z-index:1000;
+	cursor:pointer;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;	
+	opacity:0.8;
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=80);	
+
+}
+.photopreview a.img_next,
+.photopreview a.img_prev{
+	position:fixed;
+	top:50%;
+	height:60px;
+	width:50px;
+	margin-top:-30px;
+	background-color:#000;
+	background-repeat:no-repeat;
+	background-position:center center;
+}
+.photopreview a.img_next{
+	background-image:url(../next.png);
+	-moz-border-radius:20px 0px 0px 20px;
+	-webkit-border-top-left-radius:20px;
+	-webkit-border-bottom-left-radius:20px;
+	border-top-left-radius:20px;
+	border-bottom-left-radius:20px;
+	right:0px;
+}
+.photopreview a.img_prev{
+	background-image:url(../prev.png);
+	-moz-border-radius:0px 20px 20px 0px;
+	-webkit-border-top-right-radius:20px;
+	-webkit-border-bottom-right-radius:20px;
+	border-top-right-radius:20px;
+	border-bottom-right-radius:20px;
+	left:0px;
+}

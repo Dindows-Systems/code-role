@@ -1,0 +1,321 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>Thumbnails Preview Slider with jQuery</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="description" content="Thumbnails Preview Slider with jQuery" />
+        <meta name="keywords" content="slider, jquery, preview, thumbnails, animation, zoom, easing"/>
+		<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/thumbnail_slider.css" />
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Cantarell">
+    </head>
+    <body>
+		<div class="header">
+			<a class="left" href="http://tympanus.net/Tutorials/SweetThumbnails/"><<< Previous Demo: <strong>Sweet Thumbnails Image Gallery</strong></a>
+			<a href="http://tympanus.net/codrops/2011/01/27/thumbnails-preview-slider/" class="back">back to the Codrops tutorial >>></a>
+		</div>
+		<div class="container">
+			<div class="content">
+				<h1>Thumbnails Preview Slider with jQuery</h1>
+
+				<div id="demo1" class="demo">
+					<h2><span>Demo 1</span> with small thumbnails:</h2>
+					<ul class="ts_container">
+						<li><a href="#">Image 1</a></li>
+						<li><a href="#">Image 2</a></li>
+						<li><a href="#">Image 3</a></li>
+						<li><a href="#">Image 4</a></li>
+						<li><a href="#">Image 5</a></li>
+						<li><a href="#">Image 6</a></li>
+						<li><a href="#">Image 7</a></li>
+						<li><a href="#">Image 8</a></li>
+						<li><a href="#">Image 9</a></li>
+						<li><a href="#">Image 10</a></li>
+						<li class="ts_thumbnails"> <!-- animate to slide frame -->
+							<div class="ts_preview_wrapper">
+								<ul class="ts_preview"><!-- animate left to slide to the right thumb -->
+									<li><img src="images/thumbs1/1.jpg" alt="Thumb 1" /></li>
+									<li><img src="images/thumbs1/2.jpg" alt="Thumb 2" /></li>
+									<li><img src="images/thumbs1/3.jpg" alt="Thumb 3" /></li>
+									<li><img src="images/thumbs1/4.jpg" alt="Thumb 4" /></li>
+									<li><img src="images/thumbs1/5.jpg" alt="Thumb 5" /></li>
+									<li><img src="images/thumbs1/6.jpg" alt="Thumb 6" /></li>
+									<li><img src="images/thumbs1/7.jpg" alt="Thumb 7" /></li>
+									<li><img src="images/thumbs1/8.jpg" alt="Thumb 8" /></li>
+									<li><img src="images/thumbs1/9.jpg" alt="Thumb 9" /></li>
+									<li><img src="images/thumbs1/10.jpg" alt="Thumb 10" /></li>
+								</ul>
+							</div>
+							<span></span>
+						</li>
+					</ul>
+				</div>
+
+
+				<div id="demo2" class="demo">
+					<h2><span>Demo 2</span> with medium thumbnails and easing:</h2>
+					<ul class="ts_container">
+						<li><a href="">Image 1</a></li>
+						<li><a href="">Image 2</a></li>
+						<li><a href="">Image 3</a></li>
+						<li><a href="">Image 4</a></li>
+						<li><a href="">Image 5</a></li>
+						<li><a href="">Image 6</a></li>
+						<li><a href="">Image 7</a></li>
+						<li><a href="">Image 8</a></li>
+						<li><a href="">Image 9</a></li>
+						<li><a href="">Image 10</a></li>
+						<li class="ts_thumbnails">
+							<div class="ts_preview_wrapper">
+								<ul class="ts_preview">
+									<li><img src="images/thumbs2/1.jpg" alt="Thumb 1" /></li>
+									<li><img src="images/thumbs2/2.jpg" alt="Thumb 2" /></li>
+									<li><img src="images/thumbs2/3.jpg" alt="Thumb 3" /></li>
+									<li><img src="images/thumbs2/4.jpg" alt="Thumb 4" /></li>
+									<li><img src="images/thumbs2/5.jpg" alt="Thumb 5" /></li>
+									<li><img src="images/thumbs2/6.jpg" alt="Thumb 6" /></li>
+									<li><img src="images/thumbs2/7.jpg" alt="Thumb 7" /></li>
+									<li><img src="images/thumbs2/8.jpg" alt="Thumb 8" /></li>
+									<li><img src="images/thumbs2/9.jpg" alt="Thumb 9" /></li>
+									<li><img src="images/thumbs2/10.jpg" alt="Thumb 10" /></li>
+								</ul>
+							</div>
+							<span></span>
+						</li>
+					</ul>
+				</div>
+				
+				<div id="demo3" class="demo">
+					<h2><span>Demo 3</span> with large thumbnails:</h2>
+					<ul class="ts_container">
+						<li><a href="">Image 1</a></li>
+						<li><a href="">Image 2</a></li>
+						<li><a href="">Image 3</a></li>
+						<li><a href="">Image 4</a></li>
+						<li><a href="">Image 5</a></li>
+						<li><a href="">Image 6</a></li>
+						<li class="ts_thumbnails">
+							<div class="ts_preview_wrapper">
+								<ul class="ts_preview">
+									<li><img src="images/thumbs3/1.jpg" alt="Thumb 1" /></li>
+									<li><img src="images/thumbs3/2.jpg" alt="Thumb 2" /></li>
+									<li><img src="images/thumbs3/3.jpg" alt="Thumb 3" /></li>
+									<li><img src="images/thumbs3/4.jpg" alt="Thumb 4" /></li>
+									<li><img src="images/thumbs3/5.jpg" alt="Thumb 5" /></li>
+									<li><img src="images/thumbs3/6.jpg" alt="Thumb 6" /></li>
+								</ul>
+							</div>
+							<span></span>
+						</li>
+					</ul>
+				</div>
+				
+				<div id="demo4" class="demo">
+					<h2><span>Demo 4</span> with large thumbnails and zoom:</h2>
+					<ul class="ts_container">
+						<li><a href="">Image 1</a></li>
+						<li><a href="">Image 2</a></li>
+						<li><a href="">Image 3</a></li>
+						<li><a href="">Image 4</a></li>
+						<li><a href="">Image 5</a></li>
+						<li><a href="">Image 6</a></li>
+						<li class="ts_thumbnails">
+							<div class="ts_preview_wrapper">
+								<ul class="ts_preview">
+									<li><img src="images/thumbs3/1.jpg" alt="Thumb 1" /></li>
+									<li><img src="images/thumbs3/2.jpg" alt="Thumb 2" /></li>
+									<li><img src="images/thumbs3/3.jpg" alt="Thumb 3" /></li>
+									<li><img src="images/thumbs3/4.jpg" alt="Thumb 4" /></li>
+									<li><img src="images/thumbs3/5.jpg" alt="Thumb 5" /></li>
+									<li><img src="images/thumbs3/6.jpg" alt="Thumb 6" /></li>
+								</ul>
+							</div>
+							<span></span>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="footer">
+				Tutorials and Demos by Codrops 
+				<a href="http://tympanus.net/codrops/">Home</a>|
+				<a href="http://twitter.com/codrops" target="_blank">Twitter</a>|
+				<a href="http://www.facebook.com/pages/Codrops/159107397912" target="_blank">Facebook</a>|
+				<a href="http://feeds.feedburner.com/codrops" target="_blank">RSS</a>|
+				<a href="http://feedburner.google.com/fb/a/mailverify?uri=tympanus&loc=en_US" target="_blank">Email Subscription</a>|
+				<a href="mailto:codrops@googlemail.com">Contact</a>|
+				<a href="http://www.flickr.com/photos/arcticpuppy/" target="_blank">Images by tibchris</a>
+			</div>
+		</div>
+		<!-- The JavaScript -->
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
+		<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+        <script type="text/javascript">
+			(function($) {
+				$.fn.thumbnailSlider = function(options) {
+					var opts = $.extend({}, $.fn.thumbnailSlider.defaults, options);
+					return this.each(function() {
+						var $this 				= $(this),
+							o 					= $.meta ? $.extend({}, opts, $pxs_container.data()) : opts;
+						
+						var $ts_container		= $this.children('.ts_container'),
+							$ts_thumbnails		= $ts_container.children('.ts_thumbnails'),
+							$nav_elems			= $ts_container.children('li').not($ts_thumbnails),
+							total_elems			= $nav_elems.length,
+							$ts_preview_wrapper	= $ts_thumbnails.children('.ts_preview_wrapper'),
+							$arrow				= $ts_thumbnails.children('span'),
+							$ts_preview			= $ts_preview_wrapper.children('.ts_preview');
+						
+						/*
+						calculate sizes for $ts_thumbnails:
+						width 	-> width thumbnail + border (2*5)
+						height 	-> height thumbnail + border + triangle height(6)
+						top		-> -(height plus margin of 5)
+						left	-> leftDot - 0.5*width + 0.5*widthNavDot 
+							this will be set when hovering the nav,
+							and the default value will correspond to the first nav dot	
+						*/
+						var w_ts_thumbnails	= o.thumb_width + 2*5,
+							h_ts_thumbnails	= o.thumb_height + 2*5 + 6,
+							t_ts_thumbnails	= -(h_ts_thumbnails + 5),
+							$first_nav		= $nav_elems.eq(0),
+							l_ts_thumbnails	= $first_nav.position().left - 0.5*w_ts_thumbnails + 0.5*$first_nav.width();
+						
+						$ts_thumbnails.css({
+							width	: w_ts_thumbnails + 'px',
+							height	: h_ts_thumbnails + 'px',
+							top		: t_ts_thumbnails + 'px',
+							left	: l_ts_thumbnails + 'px'
+						});
+						
+						/*
+						calculate the top and left for the arrow of the tooltip
+						top		-> thumb height + border(2*5)
+						left	-> (thumb width + border)/2 -width/2
+						*/
+						var t_arrow	= o.thumb_height + 2*5,
+							l_arrow	= (o.thumb_width + 2*5) / 2 - $arrow.width() / 2;
+						$arrow.css({
+							left	: l_arrow + 'px',
+							top		: t_arrow + 'px'
+						});
+						
+						/*
+						calculate the $ts_preview width -> thumb width times number of thumbs
+						*/
+						$ts_preview.css('width' , total_elems*o.thumb_width + 'px');
+						
+						/*
+						set the $ts_preview_wrapper width and height -> thumb width / thumb height
+						*/
+						$ts_preview_wrapper.css({
+							width	: o.thumb_width + 'px',
+							height	: o.thumb_height + 'px'
+						});
+						
+						//hover the nav elems
+						$nav_elems.bind('mouseenter',function(){
+							var $nav_elem	= $(this),
+								idx			= $nav_elem.index();
+								
+							/*
+							calculate the new left
+							for $ts_thumbnails
+							*/
+							var new_left	= $nav_elem.position().left - 0.5*w_ts_thumbnails + 0.5*$nav_elem.width();
+							
+							$ts_thumbnails.stop(true)
+										  .show()	
+										  .animate({
+											left	: new_left + 'px'
+										  },o.speed,o.easing);				  
+							
+							/*
+							animate the left of the $ts_preview to show the right thumb 
+							*/
+							$ts_preview.stop(true)
+									   .animate({
+											left	: -idx*o.thumb_width + 'px'
+									   },o.speed,o.easing);
+							
+							//zoom in the thumb image if zoom is true
+							if(o.zoom && o.zoomratio > 1){
+								var new_width	= o.zoomratio * o.thumb_width,
+									new_height	= o.zoomratio * o.thumb_height;
+								
+								//increase the $ts_preview width in order to fit the zoomed image
+								var ts_preview_w	= $ts_preview.width();
+								$ts_preview.css('width' , (ts_preview_w - o.thumb_width + new_width)  + 'px');
+								
+								$ts_preview.children().eq(idx).find('img').stop().animate({
+									width		: new_width + 'px',
+									height		: new_height + 'px'
+								},o.zoomspeed);
+							}		
+							
+						}).bind('mouseleave',function(){
+							//if zoom set the width and height to defaults
+							if(o.zoom && o.zoomratio > 1){
+								var $nav_elem	= $(this),
+									idx			= $nav_elem.index();
+								$ts_preview.children().eq(idx).find('img').stop().css({
+									width	: o.thumb_width + 'px',
+									height	: o.thumb_height + 'px'	
+								});	
+							}
+							
+							$ts_thumbnails.stop(true)
+										  .hide();
+										  
+						}).bind('click',function(){
+							var $nav_elem	= $(this),
+								idx			= $nav_elem.index();
+							
+							o.onClick(idx);
+						});
+						
+					});
+				};
+				$.fn.thumbnailSlider.defaults = {
+					speed		: 100,//speed of each slide animation
+					easing		: 'jswing',//easing effect for the slide animation
+					thumb_width	: 75,//your photos width
+					thumb_height: 75,//your photos height
+					zoom		: false,//zoom animation for the thumbs
+					zoomratio	: 1.3,//multiplicator for zoom (must be > 1)
+					zoomspeed	: 15000,//speed of zoom animation
+					onClick		: function(){return false;}//click callback
+				};
+			})(jQuery);
+		</script>
+		<script type="text/javascript">
+			$(function() {
+				//demo1
+				$('#demo1').thumbnailSlider();
+				//demo2
+				$('#demo2').thumbnailSlider({
+					thumb_width	: 130,
+					thumb_height: 87,
+					easing		: 'easeOutExpo',//easeInBack
+					speed		: 600
+				});
+				//demo3
+				$('#demo3').thumbnailSlider({
+					thumb_width	: 174,
+					thumb_height: 260,
+					speed		: 200
+				});
+				//demo4
+				$('#demo4').thumbnailSlider({
+					thumb_width	: 174,
+					thumb_height: 260,
+					speed		: 200,
+					zoom		: true,
+					zoomspeed	: 3000,
+					zoomratio	: 1.7
+				});
+			});
+        </script>
+    </body>
+</html>

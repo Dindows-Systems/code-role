@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>Flickr Photobar Gallery</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="description" content="Flickr Photobar Gallery for your website" />
+        <meta name="keywords" content="flickr, photostream, website, integration, jquery"/>
+        <link rel="stylesheet" href="css/style.css" type="text/css" media="screen"/>
+
+    </head>
+    <style>
+		body{
+			background:#e8f6ff url(title.png) no-repeat top left;
+			font-family:Arial,Helvetica,sans-serif;
+		}
+        span.reference{
+            position:fixed;
+            right:20px;
+            top:10px;
+            font-size:10px;
+			text-transform:uppercase;
+        }
+        span.reference a{
+            color:#aaa;
+			text-decoration:none;
+			text-shadow:1px 1px 1px #fff;
+        }
+        span.reference a:hover{
+            color:#000;
+        }
+		.content{
+			margin: 100px auto 0px auto;
+			background-color:#3d3d3d;
+			color:#fff;
+			text-transform:uppercase;
+			font-size:10px;
+			border:1px solid #222;
+			padding:30px;
+			-moz-box-shadow:0px 0px 8px #444;
+			-webkit-box-shadow:0px 0px 8px #444;
+			box-shadow:0px 0px 8px #444;
+			-moz-border-radius:10px;
+			-webkit-border-radius:10px;
+			border-radius:10px;
+			text-shadow:1px 1px 1px #000;
+			opacity:0.9;
+		}
+		.content a{
+			color:#ddd;
+			font-weight:bold;
+			text-decoration:none;
+		}
+		.content a:hover{
+			color:#fff;
+		}
+		.content h2{
+			font-weight:normal;
+			text-shadow:0px 0px 1px #777;
+		}
+		.arrow{
+			width:311px;
+			height:200px;
+			position:fixed;
+			bottom:10px;
+			left:100px;
+			background:transparent url(arrow.png) no-repeat top left;
+		}
+    </style>
+    <body>
+        <div>
+            <span class="reference">
+                <a href="http://tympanus.net/codrops/2010/06/10/flickr-photobar-gallery/">© Codrops</a>
+            </span>
+		</div>
+		<div class="arrow"></div>
+		
+		<div class="content">
+			<h2>Show your Flickr Photostream on your website</h2>
+			<p>This gallery uses the Flickr API to pull photo sets from a user's photostream.</p>
+			<p>You need a flickr API key and the username for this to work. 
+				You can <a href="http://www.flickr.com/services/api/misc.api_keys.html">apply for a Flicker application key</a>.
+			</p>
+		</div>
+
+		<div class="flickr_photobar">
+		
+			<div id="flickr_overlay" class="overlay" style="display:none;"></div>
+		
+			<div id="flickr_photopreview" class="photopreview" style="display:none;">
+				<div class="preview_wrapper">
+					<div class="preview">
+						<div class="loading"></div>
+						<div id="preview_close" class="close"></div>
+						<span id="large_phototitle"></span>
+						<!--image-->
+						<a href="#" id="preview_img_next" class="img_next"></a>
+						<a href="#" id="preview_img_prev" class="img_prev"></a>
+					</div>
+				</div>
+			</div>
+			<div id="photobar" class="photobar">	
+				<div class="thumbs albums" id="sets">
+					<a href="#" class="prev"></a>
+					<div class="thumbsWrapper">
+						<ul></ul>
+					</div>
+					<a href="#" class="next"></a>
+				</div>
+				<div class="thumbs images" id="images" style="bottom:-125px;">
+					<a href="#" class="prev"></a>
+					<div class="thumbsWrapper">
+						<ul></ul>
+					</div>
+					<a href="#" class="next"></a>
+					<span class="images_toggle">
+						Set: 
+						<span id="setName"></span>
+						<a id="images_toggle">Back to Sets</a>
+					</span>
+				</div>
+				<a id="flickr_toggle" class="toggle">
+					Flickr Photostream
+					<span style="visibility:hidden;" class="loading_small"></span>
+				</a>
+			</div>
+			
+		</div>
+        <!-- The JavaScript -->
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+		<script src="jquery.viewport.js" type="text/javascript"></script>
+        <script src="jquery.FlickrPhotobar.js" type="text/javascript"></script>
+    </body>
+</html>

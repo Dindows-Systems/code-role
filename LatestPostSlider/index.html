@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>Latest Post Blogroll Slider with jQuery and PHP</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="description" content="Latest Post Blogroll Slider with jQuery and PHP" />
+        <meta name="keywords" content="jquery, latest post, friends, blogroll, slider, blog, ajax, css3, xml, xsl, cache"/>
+        <link rel="stylesheet" href="css/style.css" type="text/css" media="screen"/>
+    </head>
+    <style>
+        span.reference{
+            position:fixed;
+            left:10px;
+            bottom:10px;
+            font-size:11px;
+			font-weight:bold;
+        }
+        span.reference a{
+			text-decoration:none;
+			text-transform:uppercase;
+			color:#ddd;
+			text-shadow:1px 1px 1px #000;
+        }
+        span.reference a:hover{
+            color:#000;
+			text-shadow:1px 1px 1px #666;
+        }
+
+    </style>
+    <body>
+	
+		<div id="overlay" class="overlay" style="display:none;"></div>
+		
+		<div id="modal" class="modal" style="display:none;">
+			<a href="#" class="prev"></a>
+			<a href="#" class="next"></a>
+			<span class="close"></span>
+			<h2 id="blog_info"></h2>
+			<div id="latest_post" class="loading"></div>	
+		</div>
+		
+		<div class="content">
+			<h2>Latest Post Blogroll Slider</h2>
+			<ul id="friendsList" class="friendsList">
+				<li class="ourtuts"><a href="#"><em>Our Tuts</em><span>The Easy Way to Learn Photoshop</span></a></li>
+				<li class="devisefunction"><a href="#"><em>Devise Function</em><span>Tutorials and Resources</span></a></li>
+				<li class="bluefaqs"><a href="#"><em>Bluefaqs</em><span>Inspiration and Resources for Web Developers and Designers</span></a></li>
+				<li class="w3avenue"><a href="#"><em>W3Avenue</em><span>Advice and Resources for Rapid Web Development</span></a></li>
+				<li class="tzine"><a href="#"><em>Tutorialzine</em><span>PHP MySQL jQuery CSS Tutorials, Resources and Freebies</span></a></li>
+				<li class="fearlessflyer"><a href="#"><em>Fearless Flyer</em><span>Pure Web Design and Inspiration for Web Artists</span></a></li>
+				<li class="wordrom"><a href="#"><em>Wordrom</em><span>Great Articles, Tutorials and Inspiration</span></a></li>
+			</ul>
+		</div>
+	
+        <div>
+            <span class="reference">
+                <a href="http://tympanus.net/codrops/2010/06/16/latest-post-blogroll-slider/">© Codrops</a>
+            </span>
+		</div>
+
+        <!-- The JavaScript -->
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(function() {
+				/**
+				* solve IE AJAX cache problem
+				*/
+				$.ajaxSetup({cache: false});
+                
+				/**
+				* the index of the current element / blog selected
+				* and the total number of elements / blogs
+				*/
+				var current = -1;
+				var total	= $('#friendsList').children().length;
+				
+				/**
+				* when we click on a blog link,
+				* we get the latest post with an AJAX request
+				*/
+				$('#friendsList a').bind('click',function(e){
+					var $this = $(this);
+					show();
+					var $elem	= $this.parent();
+					current 	= $elem.index() + 1;
+					var source 	= $elem.attr('class');
+					/**
+					* add the title and image of the blog
+					*/
+					$('#blog_info').empty()
+								   .html('<img src="images/' + source + '.jpg"></img>' + $this.find('em').html());	
+					$.get('rss.class.php', {source:source} , function(data) {
+						$('#latest_post').removeClass('loading').html(data);
+					});
+					e.preventDefault();
+				});
+				
+				/**
+				* show the dialog with the post
+				*/
+				function show(){
+					$('#overlay').show();
+					if(!$('#modal').is(':visible'))
+					$('#modal').css('left','-260px')
+							   .show()
+							   .stop()
+								   .animate({'left':'50%'}, 500);
+				}
+				
+				/**
+				* hide the dialog
+				*/
+				function hide(){
+					$('#modal').stop()
+							   .animate({'left':'150%'}, 500, function(){
+									$(this).hide();
+									$('#overlay').hide();
+									$('#latest_post').empty();
+							   });
+				}
+				
+				/**
+				* clicking on the cross hides the dialog
+				*/
+				$('#modal .close').bind('click',function(){
+					hide();
+				});
+				
+				/**
+				* clicking on the next on the dialog
+				*/
+				$('#modal .next').bind('click',function(e){
+					if(current == total){ 
+						e.preventDefault();
+						return;
+					}	
+					$('#latest_post').empty().addClass('loading');
+					$('#friendsList li:nth-child('+ parseInt(current+1) +')').find('a').trigger('click');
+					e.preventDefault();
+				});
+				
+				/**
+				* clicking on the prev on the dialog
+				*/
+				$('#modal .prev').bind('click',function(e){										
+					if(current == 1){ 
+						e.preventDefault();
+						return;
+					}	
+					$('#latest_post').empty().addClass('loading');
+					$('#friendsList li:nth-child('+ parseInt(current-1) +')').find('a').trigger('click');
+					e.preventDefault();
+				});
+            });
+        </script>
+    </body>
+</html>

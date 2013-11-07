@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Sliding Letters with jQuery</title>
+		<meta charset="UTF-8" />
+        <meta name="description" content="Sliding Letters with jQuery" />
+        <meta name="keywords" content="jquery, letters, lettering, menu, navigation, sliding, animation, menu"/>
+		<meta name="author" content="Codrops" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Bevan' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Bigshot+One' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+		<div class="bg"><img src="images/bg.jpg" alt="background" /></div>
+		<h1>Sliding Letters with jQuery</h1>
+		<ul id="sl_menu" class="sl_menu">
+			<li>
+				<a href="#">Home</a>/
+			</li>
+			<li>
+				<a href="#">About</a>/
+			</li>
+			<li>
+				<a href="#">Portfolio</a>/
+			</li>
+			<li>
+				<a href="#">Contact</a>
+			</li>
+		</ul>
+		<div class="sl_examples">
+			<a href="#" id="example1" data-hover="Creativity">Illustrations</a>
+			<a href="#" id="example2" data-hover="Sharpness">Photography</a>
+			<a href="#" id="example3" data-hover="Inspiration">Writing</a>
+			<a href="#" id="example4">Collections</a>
+			<a href="#" id="example5" data-hover="Beauty">Design</a>
+		</div>
+	
+		<div class="footer">
+			<a class="left" href="http://tympanus.net/Tutorials/RotatingImageSlider/"><span>&laquo; Previous Demo:</span> Rotating Image Slider with jQuery</a>
+			<a href="http://tympanus.net/codrops/2011/05/09/sliding-letters-with-jquery/"><strong>back to the Codrops tutorial</strong></a>
+			<a target="_blank" href="http://www.flickr.com/photos/shandilee/5489333309/sizes/o/in/photostream/">Background Image by Shandi-lee</a>
+		</div>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.lettering.js"></script>
+		<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+		<script type="text/javascript" src="js/jquery.hoverwords.js"></script>
+		
+		<script type="text/javascript">
+			$(window).load(function(){
+				$('#sl_menu').find('li:not(:last) > a')
+							 .hoverwords({ overlay:true })
+							 .end()
+							 .find('li:last > a')
+							 .hoverwords({ overlay:true , dir:'rightleft' });
+				
+				$('#example1').hoverwords({ delay:50 });
+				$('#example2').hoverwords();
+				$('#example3').hoverwords();
+				$('#example4').hoverwords({ overlay:true});
+				$('#example5').hoverwords({ delay:60 });
+				
+			});
+		</script>
+    </body>
+</html>

@@ -1,0 +1,146 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background-color:#EEEEEE;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    text-transform:uppercase;
+    font-style: normal;
+    font-weight: bold;;
+    letter-spacing: -1px;
+    line-height: 1.2em;
+}
+#content{
+    position:relative;
+    width:1105px;
+    height:500px;
+    margin:40px auto 0px auto;
+    background-color:#F9F9F9;
+    -moz-border-radius:6px;
+    -webkit-border-radius:6px;
+    border-radius:6px;
+    -moz-box-shadow:0px 0px 8px #ccc;
+    -webkit-box-shadow:0px 0px 8px #ccc;
+    box-shadow:0px 0px 8px #ccc;
+}
+.background{
+    position:absolute;
+    width:640px;
+    height:480px;
+    top:10px;
+    left:215px;
+    -moz-box-shadow:0px 0px 3px #bbb;
+    -webkit-box-shadow:0px 0px 3px #bbb;
+    box-shadow:0px 0px 3px #bbb;
+}
+#objects{
+    width:210px;
+    height:486px;
+    top:10px;
+    left:10px;
+    position:absolute;
+}
+.obj_item{
+  width:70px;
+  height:70px;
+  float:left;
+}
+#tools{
+    width:230px;
+    top:8px;
+    right:10px;
+    position:absolute;
+    height:420px;
+    overflow-y:scroll;
+    overflow-x:hidden;
+}
+.item{
+    border:3px solid #fff;
+    background-color:#ddd;
+    height:60px;
+    position:relative;
+    margin:2px 5px 2px 2px;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+    border-radius:3px;
+    -moz-box-shadow:0px 0px 2px #999;
+    -webkit-box-shadow:0px 0px 2px #999;
+    box-shadow:0px 0px 2px #999;
+}
+.thumb{
+    width:50px;
+    height:50px;
+    margin:5px;
+    float:left;
+}
+a.remove{
+    width:16px;
+    height:16px;
+    position:absolute;
+    top:0px;
+    right:0px;
+    background:transparent url(../images/cancel.png) no-repeat top left;
+    opacity:0.5;
+    cursor:pointer;
+}
+a.remove:hover{
+    opacity:1.0;
+}
+.slider{
+    float: left;
+    width: 115px;
+    margin: 30px 0px 0px 5px;
+    background-color:#fff;
+    height:10px;
+    position:relative;
+}
+.slider span{
+    font-size:10px;
+    font-weight:normal;
+    margin-top:-25px;
+    float:left;
+}
+.slider span.degrees{
+    position:absolute;
+    right:-22px;
+    top:20px;
+    width:20px;
+    height:20px;
+}
+.slider .ui-slider-handle { 
+    width:10px;
+    height:20px;
+    outline:none;
+}
+
+a#submit{
+    position:absolute;
+    width:180px;
+    height:50px;
+    text-align:center;
+    line-height:60px;
+    color:#fff;
+    background-color:#555;
+    border:2px solid #fff;
+    bottom:15px;
+    right:40px;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    border-radius:10px;
+    cursor:pointer;
+    -moz-box-shadow:0px 0px 2px #aaa;
+    -webkit-box-shadow:0px 0px 2px #aaa;
+    box-shadow:0px 0px 2px #aaa;
+}
+a#submit:hover{
+    background-color:#333;
+}
+a#submit span{
+    width:134px;
+    height:33px;
+    float:left;
+    background:transparent url(../images/download.png) no-repeat top left;
+    margin:9px 0px 0px 24px;
+}

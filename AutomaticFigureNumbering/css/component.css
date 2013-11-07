@@ -1,0 +1,94 @@
+.article {
+	width: 100%;
+	max-width: 50em;
+	margin: 0 auto; 
+	padding: 1em;
+	counter-reset: figures;
+}
+
+.article h2 {
+	margin: 1em 0;
+	font-size: 2em;
+	border-bottom: 3px solid #f5bca8;
+	padding-bottom: .3em;
+	color: #f5bca8;
+}
+
+.article p {
+	margin-bottom: 1em;
+	font-size: 1.1em;
+	line-height: 1.6;
+	text-align: justify;
+}
+
+.article h2 + p,
+.article h2 + figure + p {
+	text-indent: 1em;
+}
+
+.article p:first-of-type:first-line {
+	font-weight: 700;
+}
+
+.figure {
+	padding: 0.9em;
+	border: 3px solid #f5bca8;
+	background: #fff;
+	margin: 0 auto 1em;
+}
+
+.figure img {
+	margin: 0 auto;
+	display: block;
+	max-width: 100%;
+}
+
+.figure figcaption {
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 0.8em;
+	padding: .5em;
+	text-align: center;
+	color: #fff;
+	background: #f5bca8;
+	counter-increment: figures;
+}
+
+.figure figcaption:before {
+	content: 'Fig. ' counter(figures) ' - ';
+}
+
+.figure-left {
+	float: left;
+	margin: 0 1.5em .5em 0;
+	width: -webkit-min-content;
+	width: -moz-min-content;
+	width: min-content;
+}
+
+.figure-right {
+	float: right;
+	margin: 0 0 .5em 1.5em;
+	width: -webkit-min-content;
+	width: -moz-min-content;
+	width: min-content;
+}
+
+.figure-right img,
+.figure-left img {
+	max-width: 300px;
+}
+
+@media (max-width: 767px) {
+	.figure-left,
+	.figure-right {
+		float: none;
+		margin: 0 0 1em 0;
+		width: 100%;
+	}
+
+	.figure img {
+		max-width: 100%;
+	}
+}

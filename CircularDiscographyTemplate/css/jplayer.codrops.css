@@ -1,0 +1,248 @@
+/*
+ * Skin for jPlayer Plugin (jQuery JavaScript Library)
+ * http://www.happyworm.com/jquery/jplayer
+ *
+ *
+ * Copyright (c) 2010 Happyworm Ltd
+ * Dual licensed under the MIT and GPL licenses.
+ *  - http://www.opensource.org/licenses/mit-license.php
+ *  - http://www.gnu.org/copyleft/gpl.html
+*/
+
+div.jp-audio,
+div.jp-video {
+	font-size:12px;
+	color: #666;
+}
+div.jp-audio a,
+div.jp-video a{
+	outline:none;
+}
+div.jp-audio {
+	width:215px;
+}
+div.jp-video-270p {
+	width:480px;
+}
+div.jp-video-360p {
+	width:640px;
+}
+div.jp-interface {
+	position: relative;
+	width:215px;
+	height:60px;
+}
+div.jp-audio div.jp-type-single div.jp-interface {
+	height:80px;
+	border-bottom:none;
+}
+div.jp-audio div.jp-type-playlist div.jp-interface {
+	height:55px;
+}
+div.jp-video div.jp-type-single div.jp-interface {
+	height:60px;
+	border-bottom:none;
+}
+div.jp-video div.jp-type-playlist div.jp-interface {
+	height:60px;
+}
+div.jp-interface ul.jp-controls {
+	list-style-type:none;
+	padding:0;
+	margin: 0;
+}
+div.jp-interface ul.jp-controls li {
+	position: absolute;
+}
+div.jp-interface ul.jp-controls a {
+	position: absolute;
+	overflow:hidden;
+	text-indent:-9999px;
+	opacity:0.9;
+}
+div.jp-interface ul.jp-controls a:hover{
+	opacity:1.0;
+}
+a.jp-previous {
+	left:0px;
+	top:0px;
+	width:20px;
+	height:20px;
+	background: url(icons/playback_prev.png) no-repeat center center;
+}
+div.jp-playlist-player a.jp-play,
+div.jp-playlist-player a.jp-pause {
+	left:24px;
+}
+a.jp-play {
+	background: url(icons/playback_play.png) no-repeat center center;
+	width:20px;
+	height:20px;
+	left:30px;
+}
+a.jp-pause {
+	background: url(icons/playback_pause.png) no-repeat center center;
+	display: none;
+	width:20px;
+	height:20px;
+	left:30px;
+}
+a.jp-next {
+	left:90px;
+	top:0px;
+	width:20px;
+	height:20px;
+	background: url(icons/playback_next.png) no-repeat center center;
+}
+a.jp-stop {
+	top:0px;
+	background: url(icons/playback_stop.png) no-repeat center center;
+	width:20px;
+	height:20px;
+	left:60px;
+}
+div.jp-playlist-player a.jp-stop {
+	left:72px;
+}
+div.jp-play-time,
+div.jp-total-time {
+	position: absolute;
+	top:42px;
+	width:200px;
+	font-size:10px;
+	color:#fff;
+}
+div.jp-total-time {
+	text-align: right;
+}
+div.jp-playlist-player div.jp-play-time,
+div.jp-playlist-player div.jp-total-time {
+	left:7px;
+}
+div.jp-progress {
+	position: absolute;
+	overflow:hidden;
+	top:25px;
+	border:1px solid #fff;
+	background:#fff;
+	width:200px;
+	height:7px;
+}
+div.jp-playlist-player div.jp-progress {
+	left:7px;
+}
+div.jp-load-bar {
+	background: url(jplayer.codrops.png) 0 0 repeat-x;
+	width:0px;
+	height:15px;
+	cursor: pointer;
+}
+div.jp-play-bar {
+	background: url(jplayer.codrops.png) 0 -15px repeat-x ;
+	width:0px;
+	height:15px;
+}
+a.jp-mute{
+	position:absolute;
+	top:2px;
+	background: url(icons/sound_mute.png) no-repeat center center;
+	width:18px;
+	height:15px;
+	left:180px;
+}
+a.jp-unmute{
+	position:absolute;
+	top:2px;
+	background: url(icons/sound_high.png) no-repeat center center;
+	width:18px;
+	height:15px;
+	left:180px;
+}
+div.jp-volume-bar {
+	position: absolute;
+	overflow:hidden;
+	top:7px;
+	background: url(jplayer.codrops.png) 0 0px repeat-x;
+	width:46px;
+	height:5px;
+	cursor: pointer;
+	left:123px;
+}
+div.jp-volume-bar-value {
+	background:#fff;
+	width:0px;
+	height:5px;
+}
+div.jp-current-time,
+div.jp-duration {
+	position: absolute;
+	font-size:13px;
+}
+div.jp-duration {
+	text-align: right;
+}
+div.jp-audio div.jp-type-playlist div.jp-current-time,
+div.jp-audio div.jp-type-playlist div.jp-duration {
+	top:35px;
+	left:0px;
+	width:201px;
+}
+div.jp-video div.jp-current-time,
+div.jp-video div.jp-duration {
+	top:10px;
+	left:0px;
+	width:98%;
+	padding:0 1%;
+}
+div.jp-playlist {
+	width:215px;
+	overflow-y:auto;
+	overflow-x:hidden;
+}
+div.jp-playlist ul{
+	list-style-type:none;
+	margin:10px 0px 0px 0px;
+	padding:0;
+}
+div.jp-type-playlist div.jp-playlist li {
+	padding:0;
+	display:block;
+	margin:0 0 3px 0;
+}
+div.jp-type-playlist div.jp-playlist a {
+	color: #000;
+	font-size:12px;
+	margin:0;
+	padding:0px 4px;
+	background:#fff;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	-transition: all 0.2s ease-in-out;
+}
+div.jp-type-playlist div.jp-playlist a:hover {
+	color:#fff;
+	background:#000;
+}
+div.jp-type-playlist div.jp-playlist a {
+	color: #666;
+	text-decoration: none;
+}
+div.jp-type-playlist div.jp-playlist a:hover {
+	color:#ffc000;
+}
+div.jp-type-playlist div.jp-playlist a.jp-playlist-current {
+	color:#ffc000;
+}
+div.jp-type-playlist div.jp-playlist a.jp-playlist-current:hover{
+	background:#fff;
+}
+div.jp-type-playlist div.jp-playlist div.jp-free-media {
+	display:inline;
+	margin-left:20px;
+}
+div.jp-jplayer {
+	width:0px;
+	height:0px;
+}
+
