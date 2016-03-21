@@ -1,0 +1,8 @@
+.slider .item .image {
+	background-image:none;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='css/images/slide-img.png', sizingMethod='image');
+}
+.slider .item .btn-more {
+	background-image:none;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='css/images/slide-btn-more.png', sizingMethod='image');
+}

@@ -1,0 +1,4 @@
+.navigation-corner {
+	background-image:none;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='css/images/corner.png', sizingMethod='image');
+}

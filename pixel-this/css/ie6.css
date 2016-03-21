@@ -1,0 +1,12 @@
+.latest-projects-list .image .overlay {
+	background-image:none;
+ 	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='css/images/overlay.png', sizingMethod='image');
+}
+#slider .jcarousel-next {
+	background-image:none;
+ 	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='css/images/slider-next.png', sizingMethod='image');
+}
+#slider .jcarousel-prev {
+	background-image:none;
+ 	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='css/images/slider-prev.png', sizingMethod='image');
+}

@@ -1,0 +1,49 @@
+.jcarousel-skin .jcarousel-container {
+	position:absolute;
+	top:385px;
+	left:0px;
+	background:transparent url(../images/bg.png) repeat top left;
+	-moz-border-radius:0px 0px 0px 10px;
+	-webkit-border-bottom-left-radius:10px;
+	border-bottom-left-radius:10px;
+}
+.jcarousel-skin .jcarousel-container-horizontal {
+    width: 500px;
+    padding: 12px 40px;
+}
+.jcarousel-skin .jcarousel-clip-horizontal {
+    width:  500px;
+    height: 117px;
+}
+.jcarousel-skin .jcarousel-item {
+    width: 110px;
+    height: 117px;
+}
+.jcarousel-skin .jcarousel-item-horizontal {
+    margin: 0px 19px 0px 0px;
+}
+
+.jcarousel-skin .jcarousel-item-placeholder {
+    background: #fff;
+    color: #000;
+}
+.jcarousel-skin .jcarousel-next-horizontal {
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    background: transparent url(../images/br_next.png) no-repeat center center;
+}
+.jcarousel-skin .jcarousel-prev-horizontal {
+    position: absolute;
+    top: 60px;
+    left: 10px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    background: transparent url(../images/br_prev.png) no-repeat center center;
+}
+
+

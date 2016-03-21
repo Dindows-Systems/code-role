@@ -1,0 +1,41 @@
+body{
+	padding:0px;
+	margin:0px;
+	text-align:center;
+}
+.wrapper{
+	width: 300px;
+	margin:60px auto;
+	padding:0px;
+	border:2px solid #fff;
+	border-bottom:none;
+}
+.wrapper div{
+	width:100%;
+	height:50px;
+	border-bottom:2px solid #fff;
+}
+input{
+	border:2px solid #666;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	-khtml-border-radius:10px;
+	padding:10px;
+	font-size:16px;
+	margin:20px auto;
+	width:300px;
+	color:#ccc;
+	font-weight:bold;
+}
+.ajaxload{
+	position:absolute;
+	z-index:999;
+	background:#fff url(ajax-loader.gif) no-repeat center center;
+	top:0px;
+	bottom:0px;
+	left:0px;
+	right:0px;
+	opacity:0.6;
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=60);
+
+}

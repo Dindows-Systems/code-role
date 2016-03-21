@@ -1,0 +1,237 @@
+body{
+	background:#272729 url(../images/bg.png) repeat-x top;
+	font:13px/1.4em "Helvetica", Arial, sans-serif;
+}
+/* Content */
+#wrapper{}
+#header{
+	height:101px;
+	margin:10px 10px 5px 10px;
+}
+#header-pages{
+	height:86px;
+	margin:10px 10px 5px 10px;
+}
+#content{
+	width:100%;
+	margin-top:-100px;
+	padding-bottom:10px;
+	min-height:200px;
+	background-color:#FFF;
+	padding-top:100px;
+}
+.shadow{
+	background:#FFF url(../images/content-bg.png) no-repeat top center;
+}
+#logo{
+	margin-top:10px;
+}
+#slider{
+	height:400px;
+	margin-bottom:40px;
+	position:relative;
+}
+.slider_text{
+	width:300px;
+}
+#footer{
+	width:100%;
+	color:#FFF;
+	padding:20px 0;
+}
+#footer h1{
+	text-shadow:0 1px 1px #000000;
+}
+#footer ul{
+	margin-top:10px;
+	list-style:none;
+}
+#footer ul li{
+	border-top:solid 1px #414141;
+	padding:3px 0;
+}
+#footer ul.social-icons li{
+	display:inline;
+	margin-right:5px;
+	border:none;
+}
+#footer ul.social-icons{
+	margin-bottom:20px;
+}
+#tail{
+	width:100%;
+	min-height:20px;
+	color:#000;
+	background-color:#FFF;
+	padding:15px 0;
+	text-align:center;
+}
+a{
+	color:#2DA8F8;
+}
+a:hover{
+	color:#FF0000;
+}
+spacer{
+	height:20px;
+}
+.main-section{
+	padding-top:20px;
+	background-color:#FFF;
+	margin:0 auto;
+}
+/* Headings */
+h1{
+	font-size:1.5em;
+}
+p{
+	margin:10px 0;
+}
+/* Testimonials section */
+div.testimonials{
+	font:20px/26px Georgia, Times, serif;
+	color:#3e4548;
+	text-align:center;
+	margin-top:20px;
+	margin-bottom:20px;
+}
+span.testimonial-message{
+	font:30px/36px Georgia, "Times New Roman", Times, serif;
+	color:#a4a4a4;
+}
+#submit-form input[type="text"]{
+	width:120px;
+}
+#submit-form input[type="submit"]{
+	background:url("../images/subscribe-single.png") no-repeat scroll 0 0 transparent;
+	border:medium none;
+	cursor:pointer;
+	height:27px;
+	position:relative;
+	top:2px;
+	text-indent:-9999px;
+	width:90px;
+}
+/* Menu */
+#menu{}
+#menu ul{
+	list-style:none;
+	float:right;
+	margin:20px 0 0 0;
+}
+#menu ul li ul{
+	list-style:none;
+	float:right;
+	margin:0;
+	background-color:#FFF;
+}
+#menu ul li ul li{
+	font:15px/21px "Helvetica", Arial, sans-serif;
+	color:#000000;
+	text-decoration:none;
+	padding:0 3px 1px 3px;
+}
+#menu ul li{
+	margin-right:15px;
+	display:inline;
+}
+#menu ul li a.active{
+	border-bottom:3px solid #2DA8F8;
+}
+#menu ul li{
+	font:25px/31px "Helvetica", Arial, sans-serif;
+	color:#D2D2D2;
+	text-shadow:0 1px 1px #000000;
+	text-decoration:none;
+	padding-bottom:3px;
+}
+#menu ul li a{
+	color:#D2D2D2;
+	text-shadow:0 1px 1px #000000;
+	text-decoration:none;
+	padding-bottom:3px;
+}
+ul li.dir:hover{
+	background-color:#FFF;
+	-moz-border-radius-topleft:5px;
+	-moz-border-radius-topright:5px;
+}
+#menu ul li.last{
+	margin-right:0;
+}
+/* Side menu */
+#sidebar ul{
+	list-style:none outside none;
+	margin-top:10px;
+	margin-bottom:20px;
+}
+#sidebar ul li{
+	padding:3px 0 0 10px;
+	background:url(../images/797.png) no-repeat center left;
+}
+/* frame for images */
+.frame{
+	float:left;
+	padding:3px;
+	border:1px solid #AAAAAA;
+	margin:0 10px 10px 0;
+	-moz-border-radius:3px;
+}
+/* gallery styles */
+#gallery .frame:hover{
+	-moz-transform:rotate(-4deg);
+	-webkit-transform:rotate(-4deg);
+}
+#gallery br{
+	margin-bottom:20px;
+}
+/*contact form */
+input[type="text"]{
+	height:22px;
+	border:1px solid #CCCCCC;
+	width:325px;
+}
+#contact_form{
+	margin:10px 0;
+	width:430px;
+}
+#contact_form textarea{
+	border:1px solid #CCCCCC;
+	width:325px;
+}
+#contact_form label{
+	float:left;
+	width:100px;
+}
+#contact_form input[type="submit"]{
+	float:right;
+}
+.map{
+	margin:10px 0;
+}
+/* bullets */
+.new-bullets ul{
+	list-style:none outside none;
+	margin-bottom:20px;
+	margin-top:10px;
+}
+.new-bullets ul li{
+	background:url("../images/797.png") no-repeat scroll left center transparent;
+	padding:3px 0 0 10px;
+}
+/* Icons on text homepge */
+h1.image-info{
+	background:url(../images/info_button_32.png) no-repeat left center;
+	padding:10px 0 0 40px;
+	height:32px;
+}
+h1.image-search{
+	background:url(../images/search_32.png) no-repeat left center;
+	padding:10px 0 0 40px;
+	height:32px;
+}
+h1.image-home{
+	background:url(../images/home_32.png) no-repeat left center;
+	padding:10px 0 0 40px;
+	height:32px;
+}

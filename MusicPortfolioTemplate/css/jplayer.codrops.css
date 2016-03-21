@@ -1,0 +1,192 @@
+/*
+ * Skin for jPlayer Plugin (jQuery JavaScript Library)
+ * http://www.happyworm.com/jquery/jplayer
+ *
+ *
+ * Copyright (c) 2010 Happyworm Ltd
+ * Dual licensed under the MIT and GPL licenses.
+ *  - http://www.opensource.org/licenses/mit-license.php
+ *  - http://www.gnu.org/copyleft/gpl.html
+*/
+
+div.jp-single-player,
+div.jp-playlist-player {
+
+	/* Edit the font-size to counteract inherited font sizing.
+	 * Eg. 1.25em = 1 / 0.8em
+	 */
+	font-size:1em; /* No parent CSS that can effect the size in these demos */
+	line-height:1.6;
+	color: #666;
+	margin-top:10px;
+}
+div.jp-interface {
+	position: relative;
+	width:215px;
+	height:60px;
+}
+div.jp-single-player div.jp-interface {
+	border-bottom:none;
+}
+div.jp-interface ul.jp-controls {
+	list-style-type:none;
+	padding:0;
+	margin: 0;
+}
+div.jp-interface ul.jp-controls li {
+	position: absolute;
+}
+div.jp-interface ul.jp-controls a {
+	position: absolute;
+	overflow:hidden;
+	text-indent:-9999px;
+	opacity:0.9;
+}
+div.jp-interface ul.jp-controls a:hover{
+	opacity:1.0;
+}
+a.jp-previous {
+	left:4px;
+	top:0px;
+	width:20px;
+	height:20px;
+	background: url(icons/playback_prev.png) no-repeat center center;
+}
+div.jp-playlist-player a.jp-play,
+div.jp-playlist-player a.jp-pause {
+	left:24px;
+}
+a.jp-play {
+	background: url(icons/playback_play.png) no-repeat center center;
+	width:20px;
+	height:20px;
+}
+a.jp-pause {
+	background: url(icons/playback_pause.png) no-repeat center center;
+	display: none;
+	width:20px;
+	height:20px;
+}
+a.jp-next {
+	left:45px;
+	top:0px;
+	width:20px;
+	height:20px;
+	background: url(icons/playback_next.png) no-repeat center center;
+}
+a.jp-stop {
+	top:0px;
+	background: url(icons/playback_stop.png) no-repeat center center;
+	width:20px;
+	height:20px;
+}
+div.jp-playlist-player a.jp-stop {
+	left:72px;
+}
+div.jp-play-time,
+div.jp-total-time {
+	position: absolute;
+	top:42px;
+	width:200px;
+	font-size:10px;
+	color:#fff;
+}
+div.jp-total-time {
+	text-align: right;
+}
+div.jp-playlist-player div.jp-play-time,
+div.jp-playlist-player div.jp-total-time {
+	left:7px;
+}
+div.jp-progress {
+	position: absolute;
+	overflow:hidden;
+	top:25px;
+	border:1px solid #000;
+	width:200px;
+	height:15px;
+}
+div.jp-playlist-player div.jp-progress {
+	left:7px;
+}
+div.jp-load-bar {
+	background: url("jplayer.codrops.png") 0 0 repeat-x;
+	width:0px;
+	height:15px;
+	cursor: pointer;
+}
+div.jp-play-bar {
+	background: url("jplayer.codrops.png") 0 -15px repeat-x ;
+	width:0px;
+	height:15px;
+}
+a.jp-volume-min {
+	top:2px;
+	background: url(icons/sound_mute.png) no-repeat center center;
+	width:18px;
+	height:15px;
+	left:100px;
+}
+a.jp-volume-max {
+	top:2px;
+	background: url(icons/sound_high.png) no-repeat center center;
+	width:18px;
+	height:15px;
+	left:174px;
+}
+div.jp-volume-bar {
+	position: absolute;
+	overflow:hidden;
+	top:7px;
+	background: url("jplayer.codrops.png") 0 0px repeat-x;
+	width:46px;
+	height:5px;
+	cursor: pointer;
+	left:123px;
+}
+div.jp-volume-bar-value {
+	background: url("jplayer.codrops.png") 0 -30px repeat-x;
+	width:0px;
+	height:5px;
+}
+div.jp-playlist {
+	width:215px;
+	height:435px;
+	overflow-y:auto;
+	overflow-x:hidden;
+}
+div.jp-playlist ul{
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	border-top:none;
+	width:202px;
+	font-size:10px;
+}
+div.jp-playlist-player div.jp-playlist li {
+	padding:3px;
+	margin:3px 6px;
+	background:transparent url(../images/bg.png) repeat top left;
+}
+div.jp-playlist-player div.jp-playlist li span{
+	width:16px;
+	height:16px;
+	float:right;
+	cursor: pointer;
+	background: url(icons/remove.png) no-repeat center center;
+}
+div.jp-playlist-player div.jp-playlist li.jplayer_playlist_current {
+
+}
+div.jp-playlist-player div.jp-playlist a {
+	color: #ccc;
+	text-shadow:1px 1px 1px #000;
+	text-transform:uppercase;
+	text-decoration: none;
+}
+div.jp-playlist-player div.jp-playlist a:hover {
+	color:#fff;
+}
+div.jp-playlist-player div.jp-playlist a.jplayer_playlist_current {
+	color:#c4000c;
+}

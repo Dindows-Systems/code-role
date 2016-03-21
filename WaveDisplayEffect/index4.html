@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Wave Display Effect with jQuery and CSS3 - Demo 4</title>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="Wave Display Effect with jQuery and CSS3" />
+        <meta name="keywords" content="sinusoid, sine curve, jquery, thumbnails, portfolio, wave, images, css3, rotation, transform" />
+        <meta name="author" content="Codrops" />
+        <link rel="shortcut icon" href="../favicon.ico"> 
+        <link rel="stylesheet" type="text/css" href="css/ui-lightness/jquery-ui-1.8.16.custom.css" />
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link href='http://fonts.googleapis.com/css?family=Terminal+Dosis' rel='stylesheet' type='text/css' />
+		<script id="fullscreenTmpl" type="text/x-jquery-tmpl">
+			<div id="wd-overlay" class="wd-overlay">
+				<div class="wd-element">
+					<span class="wd-close">x close</span>
+                    <div class="wd-nav">
+                        <span class="wd-nav-next">Next</span>
+                        <span class="wd-nav-prev">Previous</span>
+                    </div>
+					<img src="${source}" />
+					<div class="wd-info">
+						<div class="wd-info-title">
+							{{html title}}
+						</div>
+						<div class="wd-info-desc">
+							{{html description}}
+						</div>
+					</div>
+				</div>
+			</div>
+		</script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <a href="http://tympanus.net/Tutorials/FlexibleSlideToTopAccordion/">
+					<strong>&laquo; Previous Demo: </strong>Flexible Slide-to-top Accordion
+				</a>
+				<span class="right">
+                    <a href="http://www.wpzoom.com/wpzoom/new-freebie-wpzoom-developer-icon-set-154-free-icons/" target="_blank">Icons by WPZOOM</a>
+					<a href="http://www.flickr.com/photos/arcticpuppy/" target="_blank">Images by tibchris</a>
+					<a href="http://www.premiumpixels.com/freebies/slider-interface-metal-handle-psd/" target="_blank">Slider by Orman Clark</a>
+					<a href="http://tympanus.net/codrops/2011/10/17/wave-display-effect/">
+						<strong>Back to the Codrops Article</strong>
+					</a>
+				</span>
+				<div class="clr"></div>
+            </div>
+            <h1>Wave Display Effect <span>with jQuery and CSS3</span></h1>
+            <div class="more">
+				<a href="index.html">Default Demo</a>
+				<a href="index2.html">Demo 2</a>
+				<a href="index3.html">Demo 3</a>
+				<a href="index4.html" class="current">Demo 4</a>
+			</div>
+            <div id="wd-wrapper" class="wd-wrapper">
+				<div class="wd-slider"></div>
+				<div class="wd-scroll-wrapper">
+					<div class="wd-container">
+						<div class="wd-element">
+							<img src="images/1.jpg" />
+							<div class="wd-info">
+								<div class="wd-info-title">
+									<h2>Beautiful Serendipity</h2>
+								</div>
+								<div class="wd-info-desc">
+									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+									<p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+								</div>
+							</div>
+						</div>
+						<div class="wd-element">
+							<img src="images/2.jpg" />
+							<div class="wd-info">
+								<div class="wd-info-title">
+									<h2>Lovely Scenery</h2>
+								</div>
+								<div class="wd-info-desc">
+									<p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+                                    <p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents.</p>
+								</div>
+							</div>
+						</div>
+						<div class="wd-element">
+							<img src="images/3.jpg" />
+							<div class="wd-info">
+								<div class="wd-info-title">
+									<h2>Lucid Dream</h2>
+								</div>
+								<div class="wd-info-desc">
+									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+									<p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+								</div>
+							</div>
+						</div>
+						<div class="wd-element">
+							<img src="images/4.jpg" />
+							<div class="wd-info">
+								<div class="wd-info-title">
+									<h2>Unconditional Love</h2>
+								</div>
+								<div class="wd-info-desc">
+									<p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+                                    <p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents.</p>
+								</div>
+							</div>
+						</div>
+						<div class="wd-element">
+							<img src="images/5.jpg" />
+							<div class="wd-info">
+								<div class="wd-info-title">
+									<h2>Great Design</h2>
+								</div>
+								<div class="wd-info-desc">
+									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+									<p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+								</div>
+							</div>
+						</div>
+						<div class="wd-element">
+							<img src="images/6.jpg" />
+							<div class="wd-info">
+								<div class="wd-info-title">
+									<h2>Wicket Decision</h2>
+								</div>
+								<div class="wd-info-desc">
+									<p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+                                    <p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents.</p>
+								</div>
+							</div>
+						</div>
+						<div class="wd-element">
+							<img src="images/7.jpg" />
+							<div class="wd-info">
+								<div class="wd-info-title">
+									<h2>Unknown Future</h2>
+								</div>
+								<div class="wd-info-desc">
+									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+									<p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+								</div>
+							</div>
+						</div>
+						<div class="wd-element">
+							<img src="images/8.jpg" />
+							<div class="wd-info">
+								<div class="wd-info-title">
+									<h2>Flying Horses</h2>
+								</div>
+								<div class="wd-info-desc">
+									<p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+                                    <p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents.</p>
+								</div>
+							</div>
+						</div>
+						<div class="wd-element">
+							<img src="images/9.jpg" />
+							<div class="wd-info">
+								<div class="wd-info-title">
+									<h2>Winds of Change</h2>
+								</div>
+								<div class="wd-info-desc">
+									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+									<p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+								</div>
+							</div>
+						</div>
+						<div class="wd-element">
+							<img src="images/10.jpg" />
+							<div class="wd-info">
+								<div class="wd-info-title">
+									<h2>Blue Monday</h2>
+								</div>
+								<div class="wd-info-desc">
+									<p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+                                    <p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents.</p>
+								</div>
+							</div>
+						</div>
+						<div class="wd-element">
+							<img src="images/11.jpg" />
+							<div class="wd-info">
+								<div class="wd-info-title">
+									<h2>Warm Ocean</h2>
+								</div>
+								<div class="wd-info-desc">
+									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+									<p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+								</div>
+							</div>
+						</div>
+						<div class="wd-element">
+							<img src="images/12.jpg" />
+							<div class="wd-info">
+								<div class="wd-info-title">
+									<h2>White Snow</h2>
+								</div>
+								<div class="wd-info-desc">
+									<p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+                                    <p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents.</p>
+								</div>
+							</div>
+						</div>
+						<div class="wd-element">
+							<img src="images/13.jpg" />
+							<div class="wd-info">
+								<div class="wd-info-title">
+									<h2>Incredible Greatness</h2>
+								</div>
+								<div class="wd-info-desc">
+									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+									<p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+								</div>
+							</div>
+						</div>
+						<div class="wd-element">
+							<img src="images/14.jpg" />
+							<div class="wd-info">
+								<div class="wd-info-title">
+									<h2>Unlimited Wisdom</h2>
+								</div>
+								<div class="wd-info-desc">
+									<p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+                                    <p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents.</p>
+								</div>
+							</div>
+						</div>
+						<div class="wd-element">
+							<img src="images/15.jpg" />
+							<div class="wd-info">
+								<div class="wd-info-title">
+									<h2>Free Ride</h2>
+								</div>
+								<div class="wd-info-desc">
+									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+									<p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+								</div>
+							</div>
+						</div>
+						<div class="wd-element">
+							<img src="images/16.jpg" />
+							<div class="wd-info">
+								<div class="wd-info-title">
+									<h2>Nightingale</h2>
+								</div>
+								<div class="wd-info-desc">
+									<p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+                                    <p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents.</p>
+								</div>
+							</div>
+						</div>
+						<div class="wd-element">
+							<img src="images/17.jpg" />
+							<div class="wd-info">
+								<div class="wd-info-title">
+									<h2>Red Storm</h2>
+								</div>
+								<div class="wd-info-desc">
+									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+									<p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+								</div>
+							</div>
+						</div>
+						<div class="wd-element">
+							<img src="images/18.jpg" />
+							<div class="wd-info">
+								<div class="wd-info-title">
+									<h2>Strong Hope</h2>
+								</div>
+								<div class="wd-info-desc">
+									<p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+                                    <p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents.</p>
+								</div>
+							</div>
+						</div>
+						<div class="wd-element">
+							<img src="images/19.jpg" />
+							<div class="wd-info">
+								<div class="wd-info-title">
+									<h2>Touching Words</h2>
+								</div>
+								<div class="wd-info-desc">
+									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+									<p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+								</div>
+							</div>
+						</div>
+						<div class="wd-element">
+							<img src="images/20.jpg" />
+							<div class="wd-info">
+								<div class="wd-info-title">
+									<h2>Everlasting Truth</h2>
+								</div>
+								<div class="wd-info-desc">
+									<p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+                                    <p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents.</p>
+								</div>
+							</div>
+						</div>
+						<div class="wd-element">
+							<img src="images/21.jpg" />
+							<div class="wd-info">
+								<div class="wd-info-title">
+									<h2>Sinful Touch</h2>
+								</div>
+								<div class="wd-info-desc">
+									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+									<p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+								</div>
+							</div>
+						</div>
+						<div class="wd-element">
+							<img src="images/22.jpg" />
+							<div class="wd-info">
+								<div class="wd-info-title">
+									<h2>Black Day</h2>
+								</div>
+								<div class="wd-info-desc">
+									<p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+                                    <p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents.</p>
+								</div>
+							</div>
+						</div>
+						<div class="wd-element">
+							<img src="images/23.jpg" />
+							<div class="wd-info">
+								<div class="wd-info-title">
+									<h2>Lasting Friendship</h2>
+								</div>
+								<div class="wd-info-desc">
+									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+									<p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+								</div>
+							</div>
+						</div>
+						<div class="wd-element">
+							<img src="images/24.jpg" />
+							<div class="wd-info">
+								<div class="wd-info-title">
+									<h2>True Trust</h2>
+								</div>
+								<div class="wd-info-desc">
+									<p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+                                    <p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents.</p>
+								</div>
+							</div>
+						</div>
+						<div class="wd-element">
+							<img src="images/25.jpg" />
+							<div class="wd-info">
+								<div class="wd-info-title">
+									<h2>Silent Dawn</h2>
+								</div>
+								<div class="wd-info-desc">
+									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+									<p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+								</div>
+							</div>
+						</div>
+						<div class="wd-element">
+							<img src="images/26.jpg" />
+							<div class="wd-info">
+								<div class="wd-info-title">
+									<h2>Green Sunset</h2>
+								</div>
+								<div class="wd-info-desc">
+									<p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+                                    <p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents.</p>
+								</div>
+							</div>
+						</div>
+						<div class="wd-element">
+							<img src="images/27.jpg" />
+							<div class="wd-info">
+								<div class="wd-info-title">
+									<h2>Nice Shot</h2>
+								</div>
+								<div class="wd-info-desc">
+									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+									<p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+								</div>
+							</div>
+						</div>
+						<div class="wd-element">
+							<img src="images/28.jpg" />
+							<div class="wd-info">
+								<div class="wd-info-title">
+									<h2>Lovely Rain</h2>
+								</div>
+								<div class="wd-info-desc">
+									<p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+                                    <p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents.</p>
+								</div>
+							</div>
+						</div>
+						<div class="wd-element">
+							<img src="images/29.jpg" />
+							<div class="wd-info">
+								<div class="wd-info-title">
+									<h2>Romantic Scent</h2>
+								</div>
+								<div class="wd-info-desc">
+									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+									<p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+								</div>
+							</div>
+						</div>
+						<div class="wd-element">
+							<img src="images/30.jpg" />
+							<div class="wd-info">
+								<div class="wd-info-title">
+									<h2>Beautiful Serendipity</h2>
+								</div>
+								<div class="wd-info-desc">
+									<p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+                                    <p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents.</p>
+								</div>
+							</div>
+						</div>
+						<div class="wd-element">
+							<img src="images/1.jpg" />
+							<div class="wd-info">
+								<div class="wd-info-title">
+									<h2>Beautiful Serendipity</h2>
+								</div>
+								<div class="wd-info-desc">
+									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+									<p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+								</div>
+							</div>
+						</div>
+						<div class="wd-element">
+							<img src="images/2.jpg" />
+							<div class="wd-info">
+								<div class="wd-info-title">
+									<h2>Lovely Scenery</h2>
+								</div>
+								<div class="wd-info-desc">
+									<p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+                                    <p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents.</p>
+								</div>
+							</div>
+						</div>
+						<div class="wd-element">
+							<img src="images/3.jpg" />
+							<div class="wd-info">
+								<div class="wd-info-title">
+									<h2>Lucid Dream</h2>
+								</div>
+								<div class="wd-info-desc">
+									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+									<p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+								</div>
+							</div>
+						</div>
+						<div class="wd-element">
+							<img src="images/4.jpg" />
+							<div class="wd-info">
+								<div class="wd-info-title">
+									<h2>Unconditional Love</h2>
+								</div>
+								<div class="wd-info-desc">
+									<p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+                                    <p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents.</p>
+								</div>
+							</div>
+						</div>
+						<div class="wd-element">
+							<img src="images/5.jpg" />
+							<div class="wd-info">
+								<div class="wd-info-title">
+									<h2>Great Design</h2>
+								</div>
+								<div class="wd-info-desc">
+									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+									<p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+								</div>
+							</div>
+						</div>
+						<div class="wd-element">
+							<img src="images/6.jpg" />
+							<div class="wd-info">
+								<div class="wd-info-title">
+									<h2>Wicket Decision</h2>
+								</div>
+								<div class="wd-info-desc">
+									<p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+                                    <p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents.</p>
+								</div>
+							</div>
+						</div>
+						<div class="wd-element">
+							<img src="images/7.jpg" />
+							<div class="wd-info">
+								<div class="wd-info-title">
+									<h2>Unknown Future</h2>
+								</div>
+								<div class="wd-info-desc">
+									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+									<p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+								</div>
+							</div>
+						</div>
+						<div class="wd-element">
+							<img src="images/8.jpg" />
+							<div class="wd-info">
+								<div class="wd-info-title">
+									<h2>Flying Horses</h2>
+								</div>
+								<div class="wd-info-desc">
+									<p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+                                    <p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents.</p>
+								</div>
+							</div>
+						</div>
+						<div class="wd-element">
+							<img src="images/9.jpg" />
+							<div class="wd-info">
+								<div class="wd-info-title">
+									<h2>Winds of Change</h2>
+								</div>
+								<div class="wd-info-desc">
+									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+									<p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+								</div>
+							</div>
+						</div>
+						<div class="wd-element">
+							<img src="images/10.jpg" />
+							<div class="wd-info">
+								<div class="wd-info-title">
+									<h2>Blue Monday</h2>
+								</div>
+								<div class="wd-info-desc">
+									<p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+                                    <p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents.</p>
+								</div>
+							</div>
+						</div>
+						<div class="wd-element">
+							<img src="images/11.jpg" />
+							<div class="wd-info">
+								<div class="wd-info-title">
+									<h2>Warm Ocean</h2>
+								</div>
+								<div class="wd-info-desc">
+									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+									<p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+								</div>
+							</div>
+						</div>
+						<div class="wd-element">
+							<img src="images/12.jpg" />
+							<div class="wd-info">
+								<div class="wd-info-title">
+									<h2>White Snow</h2>
+								</div>
+								<div class="wd-info-desc">
+									<p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+                                    <p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents.</p>
+								</div>
+							</div>
+						</div>
+						<div class="wd-element">
+							<img src="images/13.jpg" />
+							<div class="wd-info">
+								<div class="wd-info-title">
+									<h2>Incredible Greatness</h2>
+								</div>
+								<div class="wd-info-desc">
+									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+									<p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+								</div>
+							</div>
+						</div>
+                        
+					</div>
+				</div>
+			</div>
+        </div>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery-ui-1.8.16.custom.min.js"></script>
+		<script type="text/javascript" src="js/jquery.tmpl.min.js"></script>
+		<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+		<script type="text/javascript" src="js/jquery.sinusoid.js"></script>
+        <script type="text/javascript">
+			$(function() {
+			
+				$('#wd-wrapper').sinusoid({
+					minImgW				: 45,
+					maxImgW				: 55,
+					minImgAngle			: -40,
+					maxImgAngle			: 40,
+					leftFactor			: 30,
+					startFactor			: 2,
+					sinusoidFunction 	: {
+						A	: 155,
+						T 	: 1600,
+						P	: 4
+					}
+				});
+			
+			});
+		</script>
+    </body>
+</html>	

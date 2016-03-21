@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Vertical Sliding Accordion with jQuery</title>
+		<meta charset="UTF-8" />
+        <meta name="description" content="Vertical Sliding Accordion with jQuery" />
+        <meta name="keywords" content="jquery, accordion, sliding, vertical, css3, hover, animation, slide, navigation" />
+		<meta name="author" content="Codrops" />
+		<!-- Style for the demo page -->
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<!-- Style of the component -->
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<noscript>
+			<link rel="stylesheet" type="text/css" href="css/styleNoJS.css" />
+		</noscript>
+		<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow&v1' rel='stylesheet' type='text/css' />
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&v2' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+		<div class="header">
+			<a href="http://tympanus.net/Tutorials/AnimatedTextIconMenu/example1.html">
+				<span>&laquo; Previous Demo: </span>Animated Text and Icon Menu
+			</a>
+			<span class="right_ab">
+				<span>The names of the people depicted in this demo are fictitious</span>
+				<a href="http://www.flickr.com/people/aturkus/" target="_blank">Images by Alan Turkus</a>
+				<a href="http://tympanus.net/codrops/2011/07/22/vertical-sliding-accordion/"><strong>back to the Codrops post</strong></a>
+			</span>
+		</div>
+		<div class="container">
+			<h1>Vertical Sliding Accordion<span> with jQuery</span></h1>
+			<div id="va-accordion" class="va-container">
+				<div class="va-nav">
+					<span class="va-nav-prev">Previous</span>
+					<span class="va-nav-next">Next</span>
+				</div>
+				<div class="va-wrapper">
+					<div class="va-slice va-slice-1">
+						<h3 class="va-title">Marketing</h3>
+						<div class="va-content">
+							<p>Henry Watson</p>
+							<ul>
+								<li><a href="#">About</a></li>
+								<li><a href="#">Portfolio</a></li>
+								<li><a href="#">Contact</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="va-slice va-slice-2">
+						<h3 class="va-title">Management</h3>
+						<div class="va-content">
+							<p>Keith Johnson</p>
+							<ul>
+								<li><a href="#">About</a></li>
+								<li><a href="#">Portfolio</a></li>
+								<li><a href="#">Contact</a></li>
+							</ul>
+						</div>	
+					</div>
+					<div class="va-slice va-slice-3">
+						<h3 class="va-title">Visual Design</h3>
+						<div class="va-content">
+							<p>Andrew Alaniz</p>
+							<ul>
+								<li><a href="#">About</a></li>
+								<li><a href="#">Portfolio</a></li>
+								<li><a href="#">Contact</a></li>
+							</ul>
+						</div>	
+					</div>
+					<div class="va-slice va-slice-4">
+						<h3 class="va-title">Quality Control</h3>
+						<div class="va-content">
+							<p>Ben Freeman</p>
+							<ul>
+								<li><a href="#">About</a></li>
+								<li><a href="#">Portfolio</a></li>
+								<li><a href="#">Contact</a></li>
+							</ul>
+						</div>	
+					</div>
+					<div class="va-slice va-slice-5">
+						<h3 class="va-title">Web development</h3>
+						<div class="va-content">
+							<p>Alex Schuman</p>
+							<ul>
+								<li><a href="#">About</a></li>
+								<li><a href="#">Portfolio</a></li>
+								<li><a href="#">Contact</a></li>
+							</ul>
+						</div>	
+					</div>
+					<div class="va-slice va-slice-6">
+						<h3 class="va-title">Customer Support</h3>
+						<div class="va-content">
+							<p>Maria Wales</p>
+							<ul>
+								<li><a href="#">About</a></li>
+								<li><a href="#">Portfolio</a></li>
+								<li><a href="#">Contact</a></li>
+							</ul>
+						</div>	
+					</div>
+					<div class="va-slice va-slice-7">
+						<h3 class="va-title">Server Administration</h3>
+						<div class="va-content">
+							<p>Paul White</p>
+							<ul>
+								<li><a href="#">About</a></li>
+								<li><a href="#">Portfolio</a></li>
+								<li><a href="#">Contact</a></li>
+							</ul>
+						</div>	
+					</div>
+				</div>
+			</div>
+			<div class="more">
+				<ul>
+					<li>More examples:</li>
+					<li class="selected"><a href="example1.html">Example 1</a></li>
+					<li><a href="example2.html">Example 2</a></li>
+					<li><a href="example3.html">Example 3</a></li>
+					<li><a href="example4.html">Example 4</a></li>
+					<li><a href="example5.html">Example 5</a></li>
+				</ul>
+			</div>
+		</div>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+		<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+		<script type="text/javascript" src="js/jquery.vaccordion.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('#va-accordion').vaccordion();
+			});
+		</script>
+    </body>
+</html>

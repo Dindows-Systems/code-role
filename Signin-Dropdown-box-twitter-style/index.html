@@ -1,0 +1,262 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Signin Dropdown Box with jQuery</title>
+<style type="text/css">
+* {
+	margin:0;
+	padding:0;
+}
+
+body {
+	background:#fff;
+	position:relative;
+	font:13px Arial, Helvetica, sans-serif;
+}
+
+a { 
+	text-decoration:none; 
+	color:#00c6ff;
+}
+
+h1 {
+	font: 4em normal Arial, Helvetica, sans-serif;
+	padding: 20px;	margin-top: 100px;
+	text-align:center;
+}
+
+h1 small{
+	font: 0.2em normal  Arial, Helvetica, sans-serif;
+	text-transform:uppercase; letter-spacing: 0.2em; line-height: 5em;
+	display: block;
+}
+
+.content {width: 960px; margin: 0 auto; overflow: hidden;}
+
+#top-stuff {
+	left:0;
+	position:fixed;
+	top:0;
+	width:100%;
+	z-index:12;
+}
+
+#top-bar-out {
+	display:block;
+	position:relative;
+	width:100%;
+	height:40px;
+	background: -moz-linear-gradient(center top, #333333, #111111);
+	background: -webkit-gradient(linear, left top, left bottom, from(#333333), to(#111111));
+	background:  -o-linear-gradient(top, #333333, #111111);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#333333', EndColorStr='#111111');
+	box-shadow:0 1px 2px #666666;
+	-webkit-box-shadow: 0 1px 2px #666666;
+}
+
+.active-links {
+	position:absolute;
+	right:8px;
+	top:0;
+}
+#container {
+    width:780px;
+    margin:0 auto;
+    position: relative;
+}
+
+#topnav {
+    text-align:right;
+}
+
+#session {
+	cursor:pointer;
+	display:inline-block;
+	height:20px;
+	padding:10px 12px;
+	vertical-align: top;
+	white-space: nowrap;
+}
+
+#session.active, #session:hover {
+	background:rgba(255,255,255,0.1);
+	color:fff;
+}
+
+
+a#signin-link {
+	color:#bababa;
+	position:relative;
+}
+
+a#signin-link em {
+	font-size:10px;
+	font-style:normal;
+	margin-right:4px;
+}
+
+a#signin-link strong {
+	color:#fff;
+}
+
+#signin-dropdown {
+	background-color:#202020;
+	border-bottom-left-radius:5px;
+	border-bottom-right-radius:5px;
+	box-shadow:0 1px 2px #666666;
+	-webkit-box-shadow: 0 1px 2px #666666;
+	min-height:200px;
+	min-width:160px;
+	position:absolute;
+	right:0;
+	display:none;
+}
+
+#signin-dropdown form{
+	cursor:pointer;
+	padding:10px;
+	text-align:left;
+}
+
+#signin-dropdown .textbox span { color:#BABABA;}
+#signin-dropdown .textbox input { width:200px; }
+
+fieldset { 
+	border:none; 
+}
+
+form.signin .textbox label { 
+	display:block; 
+	padding-bottom:7px; 
+}
+
+form.signin .textbox span { 
+	display:block;
+}
+
+form.signin p, form.signin span { 
+	color:#999; 
+	font-size:11px; 
+	line-height:18px;
+} 
+
+form.signin .textbox input { 
+	background:#666666; 
+	border-bottom:1px solid #333;
+	border-left:1px solid #000;
+	border-right:1px solid #333;
+	border-top:1px solid #000;
+	color:#fff; 
+	-moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+	font:13px Arial, Helvetica, sans-serif;
+	padding:6px 6px 4px;
+}
+
+form.signin .remb { 
+	padding:9px 0; 
+	position:relative; 
+	text-align:right;
+}
+
+form.signin .remb .remember { 
+	text-align:left; 
+	position:absolute; 
+	left:0;
+}
+
+.button { 
+	background: -moz-linear-gradient(center top, #f3f3f3, #dddddd);
+	background: -webkit-gradient(linear, left top, left bottom, from(#f3f3f3), to(#dddddd));
+	background:  -o-linear-gradient(top, #f3f3f3, #dddddd);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#f3f3f3', EndColorStr='#dddddd');
+	border-color:#000; 
+	border-width:1px;
+	-moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+	color:#333;
+	cursor:pointer;
+	display:inline-block;
+	padding:4px 7px;
+	margin:0;
+	font:12px; 
+}
+
+.button:hover { background:#ddd; }
+
+</style>
+<link rel="canonical" href="http://www.alessioatzeni.com/wp-content/tutorials/jquery/Signin-Dropdown-box-twitter-style/index.html" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+$('.active-links').click(function () {
+        if ($('#signin-dropdown').is(":visible")) {
+            $('#signin-dropdown').hide()
+			$('#session').removeClass('active');
+        } else {
+            $('#signin-dropdown').show()
+			$('#session').addClass('active');
+        }
+		return false;
+    });
+	$('#signin-dropdown').click(function(e) {
+        e.stopPropagation();
+    });
+    $(document).click(function() {
+        $('#signin-dropdown').hide();
+		$('#session').removeClass('active');
+    });
+});     
+</script>
+</head>
+<body>
+<div id="top-stuff">
+	<div id="top-bar-out">
+    	<div id="container">
+    	<div id="topnav">
+        <div class="active-links">
+            <div id="session">
+            <a id="signin-link" href="#">
+            <em>Have an account?</em>
+            <strong>Sign in</strong>
+            </a>
+            </div>
+            	<div id="signin-dropdown">
+        		<form method="post" class="signin" action="#">
+                <fieldset class="textbox">
+            	<label class="username">
+                <span>Username or email</span>
+                <input id="username" name="username" value="" type="text" autocomplete="on">
+                </label>
+                
+                <label class="password">
+                <span>Password</span>
+                <input id="password" name="password" value="" type="password">
+                </label>
+                </fieldset>
+                
+                <fieldset class="remb">
+                <label class="remember">
+                <input type="checkbox" value="1" name="remember_me" />
+                <span>Remember me</span>
+                </label>
+                <button class="submit button" type="button">Sign in</button>
+                </fieldset>
+                <p>
+                <a class="forgot" href="#">Forgot your password</a>
+                <br>
+                <a class="mobile" href="#">Already using Twitter via SMS?</a>
+                </p>
+                </form>
+         		</div>
+        		</div>
+               	</div>
+    	</div>
+    </div>
+</div>
+<div class="content">
+<h1>Signin Dropdown Box with jQuery<small>Tutorial by Alessio Atzeni | <a href="http://www.alessioatzeni.com/blog/signin-dropdown-box-like-twitter-with-jquery/">View Tutorial</a></small></h1>
+</div>
+</body>
+</html>

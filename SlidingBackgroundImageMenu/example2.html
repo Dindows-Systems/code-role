@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Sliding Background Image Menu with jQuery</title>
+		<meta charset="UTF-8" />
+        <meta name="description" content="Sliding Background Image Menu with jQuery" />
+        <meta name="keywords" content="jquery, background image, image, menu, navigation, panels" />
+		<meta name="author" content="Codrops" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/sbimenu.css" />
+		<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css' />
+		<link href='http://fonts.googleapis.com/css?family=News+Cycle&v1' rel='stylesheet' type='text/css' />
+
+    </head>
+    <body>
+		<div class="container">
+			<div class="header">
+				<h1>Sliding Background Image Menu<span>with jQuery</span></h1>
+				<h2>Fade</h2>
+			</div>
+			<div class="content">
+				<div id="sbi_container" class="sbi_container">
+					<div class="sbi_panel" data-bg="images/5.jpg">
+						<a href="#" class="sbi_label">About</a>
+						<div class="sbi_content">
+							<ul>
+								<li><a href="#">Subitem</a></li>
+								<li><a href="#">Subitem</a></li>
+								<li><a href="#">Subitem</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="sbi_panel" data-bg="images/2.jpg">
+						<a href="#" class="sbi_label">Menu</a>
+						<div class="sbi_content">
+							<ul>
+								<li><a href="#">Subitem</a></li>
+								<li><a href="#">Subitem</a></li>
+								<li><a href="#">Subitem</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="sbi_panel" data-bg="images/3.jpg">
+						<a href="#" class="sbi_label">Location</a>
+						<div class="sbi_content">
+							<ul>
+								<li><a href="#">Subitem</a></li>
+								<li><a href="#">Subitem</a></li>
+								<li><a href="#">Subitem</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="more">
+				<ul>
+					<li>More examples:</li>
+					<li><a href="example1.html">Show/hide</a></li>
+					<li class="selected"><a href="example2.html">Fade</a></li>
+					<li><a href="example3.html">Sequential fade</a></li>
+					<li><a href="example4.html">Side slide</a></li>
+					<li><a href="example4_1.html">Side slide (bounce)</a></li>
+					<li><a href="example5.html">Sequential slide</a></li>
+					<li><a href="example6.html">Up/down</a></li>
+					<li><a href="example7.html">Sequential up/down</a></li>
+					<li><a href="example8.html">Alternating up/down</a></li>
+					<li><a href="example8_1.html">Alternating up/down (2)</a></li>
+					<li><a href="example9.html">Seq. alt. up/down</a></li>
+				</ul>
+			</div>
+			<div class="topbar">
+				<a href="http://tympanus.net/Development/GridNavigationEffects/example5.html"><span>&laquo; Previous Demo: </span>Grid Navigation Effects</a>
+				<span class="right_ab">
+					<a href="http://www.flickr.com/people/manoelpetry/" target="_blank">Photos by Manoel Petry</a>
+					<a href="http://tympanus.net/codrops/2011/07/03/sliding-background-image-menu/"><strong>back to the Codrops tutorial</strong></a>
+				</span>
+			</div>
+		</div>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+		<script type="text/javascript" src="js/jquery.bgImageMenu.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('#sbi_container').bgImageMenu({
+					defaultBg	: 'images/default.jpg',
+					border		: 1,
+					type		: {
+						mode		: 'fade',
+						speed		: 250,
+						easing		: 'jswing'
+					}
+				});
+			});
+		</script>
+    </body>
+</html>

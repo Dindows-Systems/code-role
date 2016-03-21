@@ -1,0 +1,66 @@
+/*
+Template Name: News Magazine
+File: Featured Slider CSS
+Author: OS Templates
+Author URI: http://www.os-templates.com/
+Licence: <a href="http://www.os-templates.com/template-terms">Website Template Licence</a>
+*/
+
+#featured_slide{
+	display:block;
+	width:630px;
+	height:385px;
+	margin:0;
+	padding:0;
+	overflow:hidden;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	}
+
+#featured_slide a{
+	color:#FFFFFF;
+	background-color:transparent;
+	}
+
+#featured_slide a, #featured_slide ul, #featured_slide img{
+	margin:0;
+	padding:0;
+	border:none;
+	outline:none;
+	list-style:none;
+	text-decoration:none;
+	}
+
+#featured_slide ul{margin:15px 0 0 0;}
+
+#featured_slide h1, #featured_slide h2, #featured_slide h3, #featured_slide h4, #featured_slide h5, #featured_slide h6, #featured_slide p{
+	margin:0 0 4px 0;
+	padding:0;
+	line-height:normal;
+	font-size:20px;
+	font-weight:normal;
+	}
+
+#featured_slide a{color:#059AD8; background-color:transparent; font-weight:normal;}
+
+#featured_slide p{margin:0; font-size:14px;}
+
+.gallery{color:#000; background: #EFEFEF; padding:15px;}
+
+.loader{background:url("../images/galleryviewthemes/loader.gif") center center no-repeat;}
+
+.panel .panel-overlay, .panel .overlay-background{height: 60px; padding:10px;}
+.panel .overlay-background{background: #222;}
+.panel .panel-overlay{color: white; font-size: 0.7em;}
+.panel .panel-overlay a{color: white; text-decoration: underline; font-weight: bold;}
+
+.filmstrip{margin:15px 0 0 0; padding:0;}
+.filmstrip .img_wrap{margin:0; padding:0;}
+
+.frame{}
+.frame .img_wrap{border: 1px solid #aaa;}
+.frame.current .img_wrap{border-color: #000;}
+.frame img{border: none;}
+.frame .caption{text-align: center; color: #888;}
+.frame.current .caption{color: #000;}
+
+.pointer{border-color: #000;}

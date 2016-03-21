@@ -1,0 +1,26 @@
+.jcarousel-container {
+	position:relative;
+}
+.jcarousel-clip {
+	padding:0;
+	margin:0;
+	overflow:hidden;
+	position:relative;
+	width:932px;
+	height:257px;
+}
+.jcarousel-list {
+	overflow:hidden;
+	position:relative;
+	top:0;
+	left:0;
+	margin:0;
+	padding:0;
+}
+.jcarousel-list li, .jcarousel-item {
+	float:left;
+	list-style:none;
+	width:932px;
+	height:257px;
+	position:relative;
+}

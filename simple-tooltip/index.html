@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Simple Tooltip with jQuery (only text) by Alessio Atzeni </title>
+<link rel="canonical" href="http://www.alessioatzeni.com/wp-content/tutorials/jquery/simple-tooltip/index.html" />
+<style type="text/css">
+body{
+	 background:#202020;
+	 font:bold 12px Arial, Helvetica, sans-serif;
+	 margin:0;
+	 padding:0;
+	 min-width:960px;
+	 color:#bbbbbb; 
+}
+
+a { 
+	text-decoration:none; 
+	color:#00c6ff;
+}
+
+h1 {
+	font: 4em normal Arial, Helvetica, sans-serif;
+	padding: 20px;	margin: 0;
+	text-align:center;
+}
+
+h1 small{
+	font: 0.2em normal  Arial, Helvetica, sans-serif;
+	text-transform:uppercase; letter-spacing: 0.2em; line-height: 5em;
+	display: block;
+}
+
+h2 {
+    font-weight:700;
+    color:#bbb;
+    font-size:20px;
+}
+
+h2, p {
+	margin-bottom:10px;
+}
+
+.container {width: 960px; margin: 0 auto; overflow: hidden; height:910px;}
+
+.tooltip {
+	display:none;
+	position:absolute;
+	border:1px solid #333;
+	background-color:#161616;
+	border-radius:5px;
+	padding:10px;
+	color:#fff;
+	font-size:12px Arial;
+}
+</style>
+<!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script> -->
+<script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+        // Tooltip only Text
+        $('.masterTooltip').hover(function(){
+                // Hover over code
+                var title = $(this).attr('title');
+                $(this).data('tipText', title).removeAttr('title');
+                $('<p class="tooltip"></p>')
+                .text(title)
+                .appendTo('body')
+                .fadeIn('slow');
+        }, function() {
+                // Hover out code
+                $(this).attr('title', $(this).data('tipText'));
+                $('.tooltip').remove();
+        }).mousemove(function(e) {
+                var mousex = e.pageX + 20; //Get X coordinates
+                var mousey = e.pageY + 10; //Get Y coordinates
+                $('.tooltip')
+                .css({ top: mousey, left: mousex })
+        });
+});
+</script>
+</head>
+<body>
+<div class="container">
+<h1>Simple Tooltip with jQuery<small>Tutorial by Alessio Atzeni | <a href="http://www.alessioatzeni.com/blog/simple-tooltip-with-jquery-only-text/">View Tutorial</a></small></h1>
+<div class="container">
+<h2>Applied to a link</h2>
+<p><a href="#" title="Here is a very nice link." class="masterTooltip">Pellentesque habitant</a></p>
+
+<h2>Applied to an entire paragraph</h2>
+<p title="This is a p tag. There are many like it but this one is mine!" class="masterTooltip">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin purus odio, elementum quis eleifend nec, accumsan et leo. Mauris tellus tellus, vehicula id pulvinar ut, egestas molestie odio. Suspendisse potenti.</p>
+
+<h2 title="One tooltipped heading!" class="masterTooltip">Applied to an entire heading tag</h2>
+<p title="Mouse over the heading above to view the tooltip." class="masterTooltip">Mouse over the heading text above to view it's tooltip.</p>
+
+<h2>Applied to an image</h2>
+<img src="image.jpg" class="masterTooltip" title="Tooltip on image" />
+
+<h2>Applied to a button</h2>
+<button type="button" class="masterTooltip" title="Click this button to submit">Submit</button>
+
+<h2>Applied to a input field</h2>
+<input type="text" placeholder="Your Name" class="masterTooltip" title="Enter your Name"/>
+</div>
+</body>
+</html>

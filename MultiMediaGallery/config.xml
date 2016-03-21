@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<MultimediaGallery>
+	<file type="video">
+		<thumb>media/videos/thumbs/html5.png</thumb>
+		<source>http://www.youtube.com/watch?v=siOHh0uzcuY</source>
+		<description>Youtube Video: Introduction to HTML5</description>
+	</file>
+	<file type="audio">
+		<thumb>media/audio/thumbs/audio1.jpg</thumb>
+		<source>media/audio/audio1.ogg</source>
+		<source>media/audio/audio1.mp3</source>
+		<description>Audio Example</description>
+	</file>
+	<file type="video">
+		<thumb>media/videos/thumbs/video1.png</thumb>
+		<source>http://www.youtube.com/watch?v=irF02LNZLpE</source>
+		<description>Youtube Video: San Francisco Carnaval Grand Parade 2010</description>
+	</file>
+	<file type="video">
+		<thumb>media/videos/thumbs/video2.png</thumb>
+		<source>http://www.youtube.com/watch?v=dD1H4fvdnyI</source>
+		<description>Youtube Video: San Francisco Carnival Parade 2010 Best Video</description>
+	</file>
+	<file type="video">
+		<thumb>media/videos/thumbs/video3.png</thumb>
+		<source>http://www.youtube.com/watch?v=x4zjT-lfoXw</source>
+		<description>Youtube Video: Sambamora with Loco Bloco at the San Francisco Pride Parade</description>
+	</file>
+	<file type="photo">
+		<thumb>media/photos/thumbs/1.jpg</thumb>
+		<source>media/photos/1.jpg</source>
+		<description>this is a description</description>
+	</file>
+	<file type="photo">
+		<thumb>media/photos/thumbs/2.jpg</thumb>
+		<source>media/photos/2.jpg</source>
+		<description>this is a description</description>
+	</file>
+	<file type="photo">
+		<thumb>media/photos/thumbs/3.jpg</thumb>
+		<source>media/photos/3.jpg</source>
+		<description>this is a description</description>
+	</file>
+	<file type="photo">
+		<thumb>media/photos/thumbs/4.jpg</thumb>
+		<source>media/photos/4.jpg</source>
+		<description>this is a description</description>
+	</file>
+	<file type="photo">
+		<thumb>media/photos/thumbs/5.jpg</thumb>
+		<source>media/photos/5.jpg</source>
+		<description>this is a description</description>
+	</file>
+</MultimediaGallery>

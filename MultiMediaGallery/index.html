@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="description" content="" />
+        <meta name="keywords" content=""/>
+        <link rel="stylesheet" href="css/style.css" type="text/css" media="screen"/>
+		<link class="ui-theme" rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/themes/vader/jquery-ui.css"/>
+		<link rel="stylesheet" href="jMediaelement/css/styles.css" />
+		<link rel="stylesheet" href="jMediaelement/css/player-controls.css" />
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+		<!-- ui-components -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/jquery-ui.min.js"></script>
+		<!-- END:  ui-components -->
+		<!-- optional for a11y-slider -->
+		<script src="jMediaelement/utils/a11y-slider.ext.js"></script>
+		<!-- END: for a11y-slider -->
+		<!-- jMediaelement -->
+		<script src="jMediaelement/packages/mm.full.min.js"></script>
+		<!-- jMediaelement -->
+		<!-- fullwindow plugin -->
+		<script src="jMediaelement/plugins/fullwindow.js"></script>
+		<!-- fullwindow plugin -->
+		<!-- useractivity -->
+		<script src="jMediaelement/utils/useractivity.js"></script>
+		<!-- jmeEmbedControls is a very simple plugin, that you should use as a starting point for your own theme -->
+		<script src="jMediaelement/utils/jmeEmbedControls.js"></script>
+        <style>
+			h1.title{
+				position:absolute;
+				top:5px;
+				left:-1px;
+				background-color:#000;
+				border:1px solid #111;
+				color:#666;
+				font-size:15px;
+				text-shadow:1px 1px 1px #000;
+				padding:10px;
+				background-color:#121212;
+				border:1px solid #292929;
+				-moz-border-radius:0px 5px 5px 0px;
+				-webkit-border-bottom-right-radius:5px;
+				-webkit-border-top-right-radius:5px;
+				border-bottom-right-radius:5px;
+				border-top-right-radius:5px;
+				-moz-box-shadow:0px 0px 3px #000 inset;
+				-webkit-box-shadow:0px 0px 3px #000 inset;
+				box-shadow:0px 0px 3px #000 inset;
+			}
+            span.reference{
+                position:absolute;
+                right:5px;
+                top:5px;
+                font-size:12px;
+            }
+            span.reference a{
+                color:#aaa;
+                text-decoration:none;
+				margin-left:10px;
+            }
+            span.reference a:hover{
+                color:#ddd;
+            }
+			
+			/* position the fullscreen-button */
+			._video .media-controls-wrapper {
+				position: absolute;
+				bottom:0px;
+				width:100%
+			}
+			div.volume-slider {
+				right: 46px;
+				width: 60px;
+			}
+			.fullscreen {
+				right: 8px;
+			}
+        </style>
+    </head>
+    <body>
+        <div>
+			<h1 class="title">Multimedia Gallery</h1>
+            <span class="reference">
+                <a href="http://tympanus.net/codrops/2010/06/24/multimedia-gallery/">© Codrops</a>
+				<a href="http://www.flickr.com/photos/arcticpuppy/">Photos by tibchris</a>
+            </span>
+        </div>
+        <div id="mmg_media_wrapper" class="media_wrapper">
+            <ul></ul>
+			<div class="more" style="display:none">
+				<a id="mmg_more" href="#">Load More...</a>
+			</div>
+        </div>
+		<div id="mmg_overlay" class="overlay"></div>
+		<div id="mmg_preview" class="preview">
+			<div id="mmg_preview_loading" class="preview_loading"></div>
+            <div class="preview_wrap"></div>
+			<div id="mmg_nav" class="nav">
+				<a href="#" class="prev"></a>
+				<a href="#" class="next"></a>
+			</div>
+        </div>
+        <div id="mmg_description" class="description"></div>
+        <script type="text/javascript" src="json2.js"></script>
+		<script src="jquery.viewport.js" type="text/javascript"></script>
+		<script src="jquery.multimediagallery.js" type="text/javascript"></script>
+    </body>
+</html>
