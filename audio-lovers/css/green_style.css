@@ -1,0 +1,10 @@
+@charset "utf-8";
+body {
+	background: #1c8c2b url(../img/green/bkg_body.png) repeat-x;
+}
+#content {
+	background: #14621e url(../img/bkg_text.png);
+}
+.version_img {
+	background: url(../img/green/img_version.png);
+}

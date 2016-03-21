@@ -1,0 +1,10 @@
+@charset "utf-8";
+body {
+	background: #1c8c84 url(../img/cyan/bkg_body.png) repeat-x;
+}
+#content {
+	background: #14615c url(../img/bkg_text.png);
+}
+.version_img {
+	background: url(../img/cyan/img_version.png);
+}

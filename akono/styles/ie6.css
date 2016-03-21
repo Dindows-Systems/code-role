@@ -1,0 +1,50 @@
+.menu{
+	position:relative;
+	z-index:5;
+}
+.menu ul{
+	background:#eee;
+	display:none;
+	margin:0;
+	padding:0;
+	width:250px;
+	position:absolute;
+	top:35px;
+	left:20px;
+	border:solid 1px #ddd;
+}
+.menu li:hover ul{
+	display:block;
+}
+.jcarousel-skin-tango .jcarousel-container-horizontal{
+	height:180px !important;
+	padding-left:15px !important;
+	padding-right:30px !important;
+	width:800px;
+}
+.jcarousel-skin-tango .jcarousel-clip-horizontal{
+	height:225px !important;
+}
+#image-slider #mycarousel{
+	margin-left:-50px;
+}
+.jcarousel-skin-tango .jcarousel-prev-horizontal{
+	margin-left:-45px !important;
+}
+.jcarousel-skin-tango .jcarousel-next-horizontal{
+	margin-right:-15px !important;
+}
+#footer{
+	margin-right:-3px;
+}
+#content{
+	padding-right:150px;
+}
+.menu ul li{
+	float:none;
+	margin:-4px 0 -20px 0;
+	padding:0;
+}
+#porfolio-content{
+	width:965px;
+}

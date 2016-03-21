@@ -1,0 +1,10 @@
+@charset "utf-8";
+body {
+	background: #911d80 url(../img/fuschia/bkg_body.png) repeat-x;
+}
+#content {
+	background: #611456 url(../img/bkg_text.png);
+}
+.version_img {
+	background: url(../img/fuschia/img_version.png);
+}

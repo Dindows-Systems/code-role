@@ -1,0 +1,129 @@
+/*
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+*/
+
+body {
+	margin: 0;
+	padding: 0;
+	background: #000000;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #707070;
+}
+
+h1, h2, h3 {
+	text-transform: lowercase;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-weight: normal;
+	font-style: italic;
+	color: #FF941D;
+}
+
+h2 { font-size: 24px; }
+h3 { font-size: 18px; }
+
+p, ol, ul, blockquote {
+	line-height: 22px;
+}
+
+a {
+	border-bottom: 1px dotted #707070;
+	text-decoration: none;
+	color: #BFBFBF;
+}
+
+a:hover {
+	border: none;
+}
+
+strong {
+	color: #8D8C8C;
+}
+
+/* Posts */
+
+.post {
+	margin-bottom: 9px;
+	padding: 20px 40px 20px 60px;
+	background: #131313;
+	border-top: 1px solid #1F1F1F;
+	border-right: 1px solid #1F1F1F;
+	border-bottom: 1px solid #1F1F1F;
+	border-left: 1px solid #1F1F1F;
+}
+
+.post h2, .post h3 {
+	margin-left: -40px;
+}
+
+/* Header */
+
+#header {
+	width: 600px;
+	height: 280px;
+	margin: 0 auto;
+	background: url(images/img2.jpg);
+}
+
+#header h1 {
+	margin: 0;
+	padding: 180px 0 0 20px;
+	font-size: 36px;
+}
+
+#header h2 {
+	margin: 0;
+	padding: 0 0 0 92px;
+	font-size: 16px;
+}
+
+#header a {
+	border: none;
+	letter-spacing: -1px;
+	color: #FF941D;
+}
+
+/* Content */
+
+#content {
+	width: 580px;
+	margin: 0 auto;
+	padding: 10px;
+}
+
+#colOne {
+	float: left;
+	width: 180px;
+}
+
+#colOne ul {
+	margin-left: 0;
+	padding-left: 0;
+	list-style: none;
+}
+
+#colTwo {
+	float: right;
+	width: 390px;
+}
+
+/* Footer */
+
+#footer {
+	clear: both;
+	width: 580px;
+	margin: 0 auto;
+	padding-top: 20px;
+}
+
+#footer p {
+	margin: 0;
+	text-align: center;
+	font-size: 9px;
+}
+
+#footer * {
+	color: #333333;
+}

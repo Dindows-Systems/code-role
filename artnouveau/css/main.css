@@ -1,0 +1,261 @@
+/*
+Company:	
+File:		main.css - This contains all the main styles for the website.
+
+All the styles are separted into the following groups:
+Global Browser Reset - this is handled by the reset-fonts.css file from YUI
+HTML, Body - for the html and body tags
+Layout - any style that defines how the site is laid out (position and size of objects)
+Nav - navigation bar
+Headings - headings like h1, h2, etc
+Text Styles - Styles for text
+Lists - unordered and ordered lists
+Forms - html forms
+Links - links
+Misc - anything that doesn't fit elsewhere
+*/
+
+* {margin: 0; padding: 0;}
+
+/* @group HTML, Body */
+body {
+	background: #9ba082 url(../img/bg.gif) repeat 0 0;
+	color: #364c1d;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .75em;
+	line-height: 1.2em;
+	text-align: center;
+}
+/* @end */
+
+/* @group Layout */
+#wrap {
+	margin: auto;
+	text-align: left;
+	width: 930px;
+	position: relative;
+}
+
+#header {
+	background: url(../img/bg_header.gif) no-repeat 0 0;
+	display: inline;
+	height: 140px; width: 930px;
+	margin-top: 21px;
+	position: relative;
+}
+
+#menu {
+	height: 30px;
+	position: absolute;
+	left: 73px; top: 111px;
+}
+
+#body {
+	background: #c9c5a8 url(../img/bg_body.gif) repeat-y 0 0;
+	font-size: .92em;
+	padding: 4px 0 0 0;
+	width: 930px;
+}
+	#bg-rust {
+		background: transparent url(../img/bg_rust.gif) repeat-y 0 0;
+		width: 930px;
+	}
+
+	#col-l {
+		display: inline;
+		margin: 0 11px 0 32px;
+		width: 480px;
+	}
+		ul#artists-list {
+			float: left;
+			width: 480px;
+		}
+			ul#artists-list li {
+				float: left;
+				display: inline;
+				margin-bottom: 12px;
+			}
+			.artist-data {
+				float: left;
+				display: inline;
+				background: #d3d0b9;
+				margin-left: 12px;
+				padding: 10px;
+				width: 336px;
+			}
+			.artist-data h3 {
+				border-bottom: 1px solid #9e986a;
+				margin-bottom: 4px;
+				text-transform: uppercase;
+			}
+			.artist-years {
+				display: block;
+				float: left;
+				font: 1.5em Georgia, "Times New Roman", Times, serif;
+				width: 48px;
+				overflow: hidden;
+			}
+			.artist-desc {
+				float: left;
+				border-left: 1px solid #9BA082;
+				padding-left: 7px;
+				width: 280px;
+			}
+			div.artist-desc p {
+				margin-bottom: 1em;
+			}
+	#col-r {
+		background: #d3d0b9 url(../img/bg_col-r-b.gif) no-repeat right bottom;
+		width: 367px;
+	}
+		#col-r .artist-data {
+			margin: 0;
+			width: 347px;
+		}
+		#col-r #main-content.artist-data {
+			background: transparent url(../img/bg_col-r-t.gif) no-repeat right top;
+		}
+	
+#footer {
+	background: transparent url(../img/bg_footer.gif) no-repeat 0 0;
+	height: 265px; width: 930px;
+	position: relative;
+}
+	.box-art-nouveau {
+		position: absolute;
+		left: 39px; top: 62px;
+	}
+	.box-art-architecture {
+		position: absolute;
+		left: 215px; top: 0;
+	}
+	.box-murals-mosaics {
+		position: absolute;
+		left: 454px; top: 32px;
+	}
+	.box-glass-ware {
+		position: absolute;
+		left: 684px; top: 34px;
+	}
+	.box-fine-arts {
+		position: absolute;
+		left: 230px; top: 100px;
+	}
+	.box-furniture {
+		position: absolute;
+		left: 467px; top: 134px;
+	}
+#footer p.footer-text {
+	text-align: right;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: .8em;
+	margin-top: 245px;
+	color: #C9C5A8;
+	margin-right: 20px;
+}
+#footer p.footer-text a:link, #footer p.footer-text a:visited {
+	color: #C9C5A8; 
+	text-decoration:none;
+}
+#footer p.footer-text a:hover {
+	color: #666;
+}
+/* @end */
+
+/* @group Nav */
+#menu ul, #menu ul li, #menu ul li a {float: left;}
+#menu ul li a {
+	background: transparent no-repeat 0 0;
+	height: 28px;
+	display: inline;
+}
+
+#menu ul li a#menu-01, #menu ul li a#menu-01:link, #menu ul li a#menu-01:visited {background-image: url(../img/bt_home.gif); width: 53px;}
+#menu ul li a#menu-01:hover, #menu ul li a#menu-01:active, #menu ul li a#menu-01.active {background-position: 0 -28px;}
+
+#menu ul li a#menu-02, #menu ul li a#menu-02:link, #menu ul li a#menu-02:visited {background-image: url(../img/bt_about.gif); width: 72px;}
+#menu ul li a#menu-02:hover, #menu ul li a#menu-02:active, #menu ul li a#menu-02.active {background-position: 0 -28px;}
+
+#menu ul li a#menu-03, #menu ul li a#menu-03:link, #menu ul li a#menu-03:visited {background-image: url(../img/bt_fineart.gif); width: 63px;}
+#menu ul li a#menu-03:hover, #menu ul li a#menu-03:active, #menu ul li a#menu-03.active {background-position: 0 -28px;}
+
+#menu ul li a#menu-04, #menu ul li a#menu-04:link, #menu ul li a#menu-04:visited {background-image: url(../img/bt_architecture.gif); width: 92px;}
+#menu ul li a#menu-04:hover, #menu ul li a#menu-04:active, #menu ul li a#menu-04.active {background-position: 0 -28px;}
+
+#menu ul li a#menu-05, #menu ul li a#menu-05:link, #menu ul li a#menu-05:visited {background-image: url(../img/bt_sitemap.gif); width: 62px; margin-left: 205px;}
+#menu ul li a#menu-05:hover, #menu ul li a#menu-05:active, #menu ul li a#menu-05.active {background-position: 0 -28px;}
+
+#menu ul li a#menu-06, #menu ul li a#menu-06:link, #menu ul li a#menu-06:visited {background-image: url(../img/bt_testimonials.gif); width: 91px;}
+#menu ul li a#menu-06:hover, #menu ul li a#menu-06:active, #menu ul li a#menu-06.active {background-position: 0 -28px;}
+
+#menu ul li a#menu-07, #menu ul li a#menu-07:link, #menu ul li a#menu-07:visited {background-image: url(../img/bt_order.gif); width: 59px;}
+#menu ul li a#menu-07:hover, #menu ul li a#menu-07:active, #menu ul li a#menu-07.active {background-position: 0 -28px;}
+
+#menu ul li a#menu-08, #menu ul li a#menu-08:link, #menu ul li a#menu-08:visited {background-image: url(../img/bt_contact.gif); width:85px;}
+#menu ul li a#menu-08:hover, #menu ul li a#menu-08:active, #menu ul li a#menu-08.active {background-position: 0 -28px;}
+/* @end */
+
+/* @group Headings */
+h1, h2, h3, h4, h5, h6 {line-height: 1.2em; font-family: Georgia, "Times New Roman", Times, serif;}
+h1 {font-size: 2em;}
+h2 {font-size: 1.6em;}
+h3 {font-size: 1.2em;}
+h4 {font-size: 1em;}
+/* @end */
+
+/* @group Text Styles */
+	
+/* @end */
+
+/* @group Lists */
+	
+/* @end */
+
+/* @group Forms */
+	
+/* @end */
+
+/* @group Links - link visited hover active */
+a:link{ }
+a:visited{ }
+a:hover{ }
+a:active{ }
+/* @end */
+
+/* @group Misc */
+.clear {
+	clear: both;
+}
+.clearfix:after {
+    content: "."; 
+    display: block; 
+    height: 0; 
+    clear: both; 
+    visibility: hidden;
+}
+
+.clearfix {display: inline-block;}
+
+/* Hides from IE-mac \*/
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+/* End hide from IE-mac */
+
+/* COMMON CLASSES */
+
+.hidden {display: none;}
+.replace {display: block; text-indent: -10000px; line-height: 0;}
+
+.col-l, .float {float: left;}
+.col-r {float: right;}
+
+.center {text-align: center;}
+.right {text-align: right;}
+
+.hr-ornament {
+	background: url(../img/ornament.gif) no-repeat center 0;
+	clear: both;
+	height: 42px; width: 100%;
+}
+
+/* @end */

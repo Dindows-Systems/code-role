@@ -1,0 +1,12 @@
+#big-slider .jcarousel-next {
+	background-image: none;
+filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='css/images/big-slider-next.png', sizingMethod='image');
+}
+#big-slider .jcarousel-prev {
+	background-image: none;
+filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='css/images/big-slider-prev.png', sizingMethod='image');
+}
+#big-slider .slider-link {
+	background-image: none;
+filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='css/images/slider-link.png', sizingMethod='image');
+}

@@ -1,0 +1,24 @@
+span.promo {
+	background-image: none;
+filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='css/images/promo.png', sizingMethod='image');
+}
+span.button1 {
+	background-image: none;
+filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='css/images/button1.png', sizingMethod='image');
+}
+span.button2 {
+	background-image: none;
+filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='css/images/button2.png', sizingMethod='image');
+}
+span.button3 {
+	background-image: none;
+filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='css/images/button3.png', sizingMethod='image');
+}
+span.button4 {
+	background-image: none;
+filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='css/images/button4.png', sizingMethod='image');
+}
+.box .best-deals {
+	background-image: none;
+filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='css/images/best-deal.png', sizingMethod='image');
+}

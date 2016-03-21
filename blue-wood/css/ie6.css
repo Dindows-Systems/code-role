@@ -1,0 +1,20 @@
+.site-link .bubble {
+	background-image:none;
+ 	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='css/images/site-link-bubble.png', sizingMethod='image');
+}
+h3 {
+	background-image:none;
+ 	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='css/images/bubble.png', sizingMethod='crop');
+}
+.jcarousel-prev {
+	background-image:none;
+ 	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='css/images/slider-arrow-prev.png', sizingMethod='image');
+}
+.jcarousel-next {
+	background-image:none;
+ 	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='css/images/slider-arrow-next.png', sizingMethod='image');
+}
+.button-live {
+	background-image:none;
+ 	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='css/images/visitlive.png', sizingMethod='image');
+}

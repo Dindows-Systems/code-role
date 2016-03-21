@@ -1,0 +1,81 @@
+#theme-options #left-column .postbox, #theme-options #right-column .postbox{
+	width:380px;
+	margin:0 30px 30px 0;
+	height:auto;
+	padding-bottom:15px;
+}
+#theme-options{
+	width:900px;
+	margin:20px 0 0 0;
+}
+#theme-options #left-column{
+	float:left;
+}
+#theme-options #right-column{
+	float:left;
+}
+/* -- General Styles -- */
+.postbox-content{
+	padding:14px 14px 0 14px;
+	font-size:12px;
+}
+.option-row{
+	float:left;
+	width:100%;
+	padding:0 0 8px 0;
+	margin:0 0 8px 0;
+	border-bottom:1px #ddd dotted;
+}
+.option-name{
+	float:left;
+}
+.option-value{
+	float:right;
+}
+.title-valign{
+	margin:5px 0 0 0;
+}
+.subtitle-valign{
+	margin:7px 0 0 0;
+}
+.button{
+	margin:6px 0 0 -2px;
+}
+.option-name label{
+	float:left;
+	margin-top:6px;
+}
+.postbox p{
+	margin:15px 0 0 15px;
+}
+.no-line{
+	border-bottom:none;
+}
+.option-row p{
+	margin:0
+}
+/* -- Custom Color Schemes -- */
+#color_scheme_configuration{
+	height:auto;
+}
+#theme-options #left-column #color_scheme_options{
+	display:none;
+	padding:0 18px 0 0;
+	font-size:11px
+}
+#theme-options #left-column #color_scheme_options input{
+	font-size:11px;
+}
+.postbox .input-box{
+	float:left;
+	width:200px;
+	margin:1px 0 0 0;
+	border:1px #e5e5e5 solid;
+}
+#theme-options .background_pattern_button{
+	border:1px #ccc solid;
+	background-color:#eee;
+}
+#message{
+	margin:20px 0 -20px 0;
+}

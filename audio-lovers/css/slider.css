@@ -1,0 +1,103 @@
+/*
+    anythingSlider v1.2
+    
+    By Chris Coyier: http://css-tricks.com
+    with major improvements by Doug Neiner: http://pixelgraphics.us/
+    based on work by Remy Sharp: http://jqueryfordesigners.com/
+*/
+
+
+.anythingSlider {
+	width: 760px;
+	height: 360px;
+	position: relative;
+	margin: 0 auto 15px;
+}
+.anythingSlider .wrapper {
+	width: 749px;
+	overflow: auto;
+	height: 290px;
+	margin: 20px 0 0 5px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+/* Width below is max for Opera */
+.anythingSlider .wrapper ul {
+	width: 32700px;
+	list-style: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #eee;
+	margin: 0;
+}
+.anythingSlider ul li {
+	display: block;
+	float: left;
+	padding: 0;
+	height: 317px;
+	width: 749px;
+	margin: 0;
+}
+.anythingSlider .arrow {
+	display: block;
+	height: 150px;
+	width: 67px;
+	background:no-repeat 0 0;
+	text-indent: -9999px;
+	position: absolute;
+	top: 65px;
+	cursor: pointer;
+}
+.anythingSlider .forward {
+	background-position: 0 0;
+	right: -61px;
+}
+.anythingSlider .back {
+	background-position: -67px 0;
+	left: -62px;
+}
+.anythingSlider .forward:hover {
+	background-position: 0 -200px;
+}
+.anythingSlider .back:hover {
+	background-position: -67px -200px;
+}
+#thumbNav {
+	position: relative;
+	top: 383px;
+	text-align: center;
+}
+#thumbNav a {
+	color: transparent;
+	font:0px Verdana, Geneva, sans-serif;
+	text-decoration:none;
+	padding-top: 11px;
+	display: inline-block;
+	margin-left: 8px;
+	width:15px;
+	height: 15px;
+	background:no-repeat;
+	text-align: bottom;
+}
+#thumbNav a:hover, #thumbNav a.cur {
+	background:no-repeat;
+}
+/*
+  Prevents
+*/
+.anythingSlider .wrapper ul ul {
+	position: static;
+	margin: 0;
+	background: none;
+	overflow: visible;
+	width: auto;
+	border: 0;
+}
+.anythingSlider .wrapper ul ul li {
+	float: none;
+	height: auto;
+	width: auto;
+	background: none;
+}

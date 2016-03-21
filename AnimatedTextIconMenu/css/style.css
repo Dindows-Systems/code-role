@@ -1,0 +1,107 @@
+@import url('reset.css');
+body{
+	background:#f7f7f7 url(../images/pattern.png) repeat top left;
+	color:#000;
+	font-family:'Georgia', 'Trebuchet MS', serif;
+	font-size:12px;
+}
+a{
+	color:#000;
+	text-decoration:none;
+}
+.clr{
+	clear:both;
+}
+.container {
+	width:100%;
+	position:relative;
+	z-index:100;
+	margin:0 auto;
+}
+.header{
+	padding-top:40px;
+}
+.content {
+	width:1000px;
+	margin:0 auto;
+}
+h1{
+	margin:10px 0 0px 20px;
+	font-size:80px;
+	color:#000;
+	text-shadow:1px 1px 1px #fff;
+	font-family: 'Wire One', arial, serif; 
+}
+h1 span{
+	font-size:22px;
+	text-transform:uppercase;
+}
+.more ul{
+	text-transform:uppercase;
+	font-size:13px;
+	padding:50px 0px 30px 20px;
+	height:30px;
+	clear:both;
+	font-family: 'PT Sans Narrow', Arial, sans-serif;
+	width:830px;
+	margin:0 auto;
+}
+.more ul li{
+	float:left;
+	margin:0px 2px;
+}
+.more ul li.selected a,
+.more ul li.selected a:hover{
+	background:#000;
+	color:#fff;
+	text-shadow:none;
+}
+.more ul li a{
+	text-shadow:1px 1px 1px #fff;
+	color:#555;
+	background:#f7f7f7;
+	padding:3px 6px;
+	-moz-box-shadow:1px 1px 2px #aaa;
+	-webkit-box-shadow:1px 1px 2px #aaa;
+	box-shadow:1px 1px 2px #aaa;
+}
+.more ul li a:hover{
+	background:#000;
+	color:#fff;
+	text-shadow:none;
+}
+.content{
+	width:100%;
+	position:relative;
+}
+/* Footer Style */
+.footer{
+	position:fixed;
+	width:100%;
+	height:25px;
+	line-height:24px;
+	bottom:0;
+	font-size:13px;
+	background:#000;
+	opacity:0.9;
+	text-transform:uppercase;
+	font-family: 'PT Sans Narrow', Arial, sans-serif;
+	z-index:4;
+}
+.footer a{
+	padding:5px 10px;
+	letter-spacing:1px;
+	text-shadow:1px 1px 1px #000;
+	color:#ddd;
+	text-align:right;
+}
+.footer a:hover{
+	color:#fff;
+}
+.footer a span{
+	font-weight:bold;
+}
+.footer span.right_ab{
+	position:absolute;
+	right:4px;
+}
