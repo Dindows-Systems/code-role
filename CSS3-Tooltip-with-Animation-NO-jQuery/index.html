@@ -1,0 +1,143 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>CSS3 Tooltip with Animation NO jQuery</title>
+<style type="text/css">
+body {
+	background: #161616 url(pattern_40.gif) top left repeat;
+	margin: 0;
+	padding: 0;
+	font: 12px normal Verdana, Arial, Helvetica, sans-serif;
+	height: 100%;
+}
+
+* {margin: 0; padding: 0; outline: none;}
+
+img {border: none;}
+
+h1 {
+	font: 4em normal Arial, Helvetica, sans-serif;
+	padding: 20px;	margin: 0;
+	text-align:center;
+	color:#bbb;
+}
+
+h1 a { color:#00c6ff; text-decoration:none; }
+
+h1 small{
+	font: 0.2em normal  Arial, Helvetica, sans-serif;
+	text-transform:uppercase; letter-spacing: 0.2em; line-height: 5em;
+	display: block;
+	color:#fff;
+}
+
+#masterpanel {
+	background-color:#161616;
+	background: -moz-linear-gradient(top, rgba(22,22,22,.7) 0%, rgba(51,51,51,.7) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(22,22,22,.7)), color-stop(100%,rgba(51,51,51,.7)));
+    background: -webkit-linear-gradient(top, rgba(22,22,22,.7) 0%,rgba(51,51,51,.7) 100%);
+    background: -o-linear-gradient(top, rgba(22,22,22,.7) 0%,rgba(51,51,51,.7) 100%);
+    background: linear-gradient(top, rgba(22,22,22,.7) 0%,rgba(51,51,51,.7) 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#B2161616,endColorstr=#B2333333);
+	-moz-box-shadow:0 1px 10px #00c6ff;
+	-webkit-box-shadow: 0 1px 10px #00c6ff;
+	box-shadow:0 1px 10px #00c6ff;
+	position:fixed;
+	bottom:0;
+	left:0;
+	z-index:999;
+	width:100%;
+}
+
+#masterpanel ul {
+	padding:0;
+	margin:0;
+	float:left;
+	width:80%;
+	margin:0 10%;
+	list-style:none;
+	font-size:1em;
+}
+#masterpanel ul li {
+	padding:0;
+	margin:0;
+	float:left;
+	position:relative;
+	border-right:1px solid #555;
+}
+#masterpanel ul li:first-child { border-left:1px solid #555; }
+
+#masterpanel ul li a {
+	margin:5px;
+	margin-left:20px;
+	margin-right:20px;
+	float:left;
+	height:26px;
+	width:26px;
+	text-decoration:none;
+	color:#333;
+	position:relative;
+}
+
+a.dribble   {background:url(_0050_Dribbble.png) no-repeat; width:26px;}
+a.forrst 	{ background:url(_0049_Forrst.png) no-repeat; }
+a.facebook  { background:url(_0048_Facebook.png) no-repeat;}
+a.twitter 	{ background:url(_0046_Twitter.png) no-repeat;}
+a.google 	{ background:url(google.png) no-repeat;}
+a.linked	{ background:url(_0018_Linkedin.png) no-repeat;}
+
+#masterpanel a small { 
+	background:#000; 
+	text-align:center; 
+	width:70px; 
+	padding:5px; 
+	border-left:1px solid #111; border-top:1px solid #111; border-right:1px solid #333; border-bottom:1px solid #333; 
+	border-radius:3px; 
+	display:none; 
+	color:#fff; 
+	font-size:0.8em; 
+	text-indent:0;
+}
+
+#masterpanel a:hover small { 
+	display:block; 
+	position:absolute; 
+	top:0px; 
+	left:50%; 
+	margin:-40px; 
+	z-index:9999; 
+	-moz-animation:mymove .25s linear;  
+	-webkit-animation:mymove .25s linear; 
+} 
+
+@-moz-keyframes mymove {
+	0%{ -moz-transform:scale(0,0); opacity:0;}
+	50%{ -moz-transform:scale(1.2,1.2); opacity:0.3; }
+	75%{ -moz-transform:scale(0.9,0.9); opacity:0.7;}
+	100%{ -moz-transform:scale(1,1); opacity:1;}
+}
+
+@-webkit-keyframes mymove {
+	0%{ -webkit-transform:scale(0,0); opacity:0;}
+	50%{ -webkit-transform:scale(1.2,1.2); opacity:0.3;}
+	75%{ -webkit-transform:scale(0.9,0.9); opacity:0.7;}
+	100%{ -webkit-transform:scale(1,1); opacity:1;}
+}
+</style>
+<link rel="canonical" href="http://www.alessioatzeni.com/wp-content/tutorials/html-css/CSS3-Tooltip-with-Animation-NO-jQuery/index.html" />
+</head>
+<body>
+<h1>CSS3 Tooltip with Animation No jQuery<small>Tutorial by Alessio Atzeni | <a href="http://www.alessioatzeni.com/blog/css3-tooltip-with-animation-no-jquery/">View Tutorial</a></small></h1>
+<footer id="masterpanel">
+	<ul id="mainpanel">
+    <li><a href="#" class="dribble"><small>Dribble</small></a></li>
+    <li><a href="#" class="forrst"><small>Forrst</small></a></li>
+    <li><a href="#" class="facebook"><small>Facebook</small></a></li>
+    <li><a href="#" class="twitter"><small>Twitter</small></a></li>
+    <li><a href="#" class="google"><small>Google+</small></a></li>
+    <li><a href="#" class="linked"><small>LinkedIn</small></a></li>
+    </ul>
+</footer>
+</body>
+</html>

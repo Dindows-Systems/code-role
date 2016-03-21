@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>CSS3 Navigation with Transitions | CSS Experiment by Alessio Atzeni</title>
+<link rel="canonical" href="http://www.alessioatzeni.com/wp-content/tutorials/html-css/CSS3-Nav/index.html" />
+<style type="text/css">
+body{
+	 background:#202020;
+	 font:bold 12px Arial, Helvetica, sans-serif;
+	 margin:0;
+	 padding:0;
+	 min-width:960px;
+	 color:#bbbbbb; 
+}
+
+a { 
+	text-decoration:none; 
+	color:#fff;
+}
+
+h1 {
+	font: 4em normal Arial, Helvetica, sans-serif;
+	padding: 20px;	margin: 0;
+	text-align:center;
+}
+
+h1 small{
+	font: 0.2em normal  Arial, Helvetica, sans-serif;
+	text-transform:uppercase; letter-spacing: 0.2em; line-height: 5em;
+	display: block;
+}
+
+header { 
+		padding:0 40px; 
+		margin:0 auto; 
+		position:relative; 
+		width:915px; 
+		height:145px;
+}
+
+header nav ul{ 
+	list-style:none;
+	padding-top:50px;
+}
+
+header nav li {
+	position:relative;
+	float: left;
+	width:150px;
+	text-align:center;
+	padding-top:35px;
+	padding-bottom:35px;
+	color:#fff;
+	margin-right:20px;
+	border-radius:5px;
+	background:#161616;
+	border-bottom:1px solid #333;
+	border-left:1px solid #000;
+	border-right:1px solid #333;
+	border-top:1px solid #000;
+	cursor:pointer;
+}
+
+.effects:after, .effects:before {
+	-moz-transition:width 0.5s ease 0s;
+	height: 0px;
+    width: 0px;
+    position: absolute;
+    content: ' ';
+    display: block;
+    opacity:0;
+	box-shadow: 0px 0px 5px #00c6ff;
+}
+
+.effects:after {
+	background: -moz-linear-gradient(left, #0ad, #08b);
+    top: 84px;
+	left: 75px;
+}
+
+.effects:before {
+	background: -moz-linear-gradient(right, #0ad, #08b);
+    top: 84px;
+	right:75px;
+}
+
+.effects:hover:after, .effects:hover:before{
+    width: 72px;
+	height: 1px;
+    opacity:1;
+} 
+
+</style>
+</head>
+<body>
+<h1>CSS3 Navigation with Transitions<small>Tutorial by Alessio Atzeni | <a href="http://www.alessioatzeni.com/blog/css3-navigation-with-transitions/">View Tutorial</a></small></h1>
+<header>
+<nav>
+	<ul>
+    	<li class="effects"><a href="#">HOME</a></li>
+        <li class="effects"><a href="#">ABOUT</a></li>
+        <li class="effects"><a href="#">PORTFOLIO</a></li>
+        <li class="effects"><a href="#">BLOG</a></li>
+        <li class="effects"><a href="#">CONTACT</a></li>
+    </ul>
+</nav>
+</header>
+</body>
+</html>

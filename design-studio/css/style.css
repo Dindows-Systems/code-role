@@ -1,0 +1,436 @@
+.spacer {
+	line-height:0;
+	font-size:0;
+	clear:both;
+}
+div, h1, h2, h3, h4, span, li, ul, img, p, textarea, input, form, a, lable {
+	margin:0;
+	padding:0;
+}
+body {
+	background:#fff url(../images/bgback.jpg) 0 0 repeat-x;
+	font:normal 11px/18px Tahoma, Arial, Helvetica, sans-serif;
+	margin:0;
+	padding:0;
+}
+/*------------ Main css ------------*/
+
+#main {
+	width:1000px;
+	margin:0 auto;
+	background:#fff1b7 url(../images/mainbg.jpg) 0 0 no-repeat;
+}
+/*------------ Header & Logo css ------------*/
+
+#logoarea {
+	width:404px;
+	height:210px;
+	float:left;
+	padding:0 72px 0 12px;
+}
+.logo {
+	width:272px;
+	height:44px;
+	margin-top:39px;
+	float:left;
+}
+.logoicon {
+	width:132px;
+	height:210px;
+	float:left;
+}
+/*------------Navigation css ------------*/
+
+#menuarea {
+	width:492px;
+	height:50px;
+	float:left;
+	margin-top:70px;
+}
+.menu ul {
+	margin:0;
+	padding:0;
+	list-style:none;
+	float:left;
+	font-family: Trajan Pro, Helvetica, Arial, sans-serif;
+}
+.menu li {
+	float:left;
+	padding:0;
+	margin:0;
+}
+a.nav1:link, a.nav1:visited {
+	background:url(../images/navnormal.jpg) 0 0 no-repeat;
+	width:120px;
+	height:50px;
+	color:#fff;
+	float:left;
+	font:normal 18px/50px Trajan Pro, Arial, Helvetica, Tahoma, sans-serif;
+	text-decoration:none;
+	text-align:center;
+}
+a.nav1:hover, a.nav1active {
+	background:url(../images/navhover.jpg) 0 0 no-repeat;
+	color:#004356;
+	width:120px;
+	height:50px;
+	float:left;
+	font:bold 18px/50px Trajan Pro, Arial, Helvetica, Tahoma, sans-serif;
+	text-decoration:none;
+	text-align:center;
+}
+a.nav2:link, a.nav2:visited {
+	background:url(../images/navnormal.jpg) 0 0 no-repeat;
+	width:120px;
+	height:50px;
+	color:#fff;
+	float:left;
+	font:normal 18px/50px Trajan Pro, Arial, Helvetica, Tahoma, sans-serif;
+	text-decoration:none;
+	text-align:center;
+	margin:0 0 0 4px;
+}
+a.nav2:hover, a.nav2active {
+	background:url(../images/navhover.jpg) 0 0 no-repeat;
+	color:#004356;
+	width:120px;
+	height:50px;
+	float:left;
+	font:bold 18px/50px Trajan Pro, Arial, Helvetica, Tahoma, sans-serif;
+	text-decoration:none;
+	text-align:center;
+	margin:0 0 0 4px;
+}
+/*------------ Body Content Area css ------------*/
+
+.welcomearea {
+	width:660px;
+	height:298px;
+	float:left;
+	margin-top:50px;
+}
+.welcometext {
+	width:660px;
+	height:60px;
+	float:left;
+	color:#fff;
+	font:normal 40px/60px Rockwell, Arial, Helvetica, sans-serif;
+}
+.yellowtext {
+	color:#ffea00;
+	text-transform:uppercase;
+}
+.welcomecontent {
+	width:630px;
+	float:left;
+	color:#004356;
+	padding:26px 0 0 30px;
+	font:normal 14px/20px Arial, Helvetica, sans-serif;
+}
+.readmorearea {
+	width:120px;
+	height:30px;
+	float:left;
+	margin-top:46px;
+}
+a.readmore:link, a.readmore:visited {
+	background:url(../images/morebg.jpg) 0 0 no-repeat;
+	width:120px;
+	height:30px;
+	text-decoration:none;
+	text-align:center;
+	font:normal 18px/28px Lucida Sans, Arial, Helvetica, sans-serif;
+	display:block;
+	color:#fff;
+}
+a.readmore:hover {
+	color:#ffea00;
+}
+.bodycontainer1 {
+	width:940px;
+	float:left;
+	padding:130px 30px 0 30px;
+	color:#5a4300;
+}
+.headingtext {
+	width:940px;
+	float:left;
+	text-align:center;
+	font:normal 40px/40px Rockwell, Arial, Helvetica, sans-serif;
+	margin-bottom:48px;
+	text-transform:uppercase;
+	color:#fff;
+}
+.icon1 {
+	width:158px;
+	height:152px;
+	float:left;
+	margin-right:20px;
+}
+.bodycontent {
+	width:760px;
+	float:left;
+	margin-bottom:30px;
+}
+.bluetext {
+	color:#003747;
+	font-size:12px;
+	font-weight:bold;
+	margin-bottom:4px;
+}
+.readmorearea1 {
+	width:120px;
+	height:39px;
+	float:left;
+}
+a.readmore1:link, a.readmore1:visited {
+	background:url(../images/morebg1.jpg) 0 0 no-repeat;
+	width:120px;
+	height:39px;
+	text-decoration:none;
+	text-align:center;
+	font:bold 14px/34px Lucida Sans, Arial, Helvetica, sans-serif;
+	display:block;
+	color:#ffea04;
+}
+a.readmore1:hover {
+	color:#fff;
+}
+.bottomcon {
+	background:#fff url(../images/bottombg.jpg) 0 0 repeat-x;
+	width:1000px;
+	float:left;
+}
+.bodycontainer2 {
+	width:940px;
+	float:left;
+	padding:0 30px 0 30px;
+	color:#5a4300;
+}
+.postarea {
+	width:300px;
+	float:left;
+	margin-right:30px;
+}
+.postarea_bg {
+	background:#ffe68f url(../images/postbg.jpg) 0 0 no-repeat;
+	width:300px;
+}
+.postarea_bottom {
+	width:300px;
+	height:82px;
+	float:left;
+}
+.posttext {
+	font:bold 28px/60px Chaparral Pro, Arial, Helvetica, sans-serif;
+	width:300px;
+	height:60px;
+	float:left;
+	color:#fff;
+	text-transform:uppercase;
+	margin-top:11px;
+}
+.postcontent_area {
+	width:270px;
+	float:left;
+	padding:8px 0 0 12px;
+}
+.postcontent {
+	font:normal 11px/18px Tahoma, Arial, Helvetica, sans-serif;
+	color:#5a4300;
+	margin:15px 0 0 0;
+	float:left;
+	width:270px;
+}
+.postheadtext {
+	color:#121212;
+	font-weight:bold;
+	font-size:12px;
+}
+.more {
+	font:bold 12px/18px Tahoma, Arial, Helvetica, sans-serif;
+	color:#cc7d00;
+	text-decoration:none;
+	float:left;
+	display:block;
+}
+.more:hover {
+	color:#007191;
+}
+.bottom_right_container {
+	width:610px;
+	float:left;
+}
+.didyoutext {
+	font:normal 30px/30px Rockwell, Arial, Helvetica, sans-serif;
+	color:#004356;
+	float:left;
+	width:610px;
+	margin:10px 0 20px 0;
+}
+.bottom_right_content {
+	width:610px;
+	float:left;
+	color:#3f4040;
+	margin-bottom:15px;
+}
+.readmorearea2 {
+	width:120px;
+	height:39px;
+	float:left;
+}
+a.readmore2:link, a.readmore2:visited {
+	background:url(../images/morebg2.jpg) 0 0 no-repeat;
+	width:120px;
+	height:39px;
+	text-decoration:none;
+	text-align:center;
+	font:bold 14px/34px Lucida Sans, Arial, Helvetica, sans-serif;
+	display:block;
+	color:#ffea04;
+}
+a.readmore2:hover {
+	color:#fff;
+}
+.bottomsec_area {
+	width:610px;
+	float:left;
+	margin-top:14px;
+}
+.solutionarea {
+	background:url(../images/solutionbg.jpg) 0 0 no-repeat;
+	width:300px;
+	height:190px;
+	margin-right:10px;
+	float:left;
+}
+.solutiontext {
+	width:300px;
+	height:24px;
+	float:left;
+	color:#004356;
+	font:bold 24px/24px Lucida sans, Arial, Helvetica, sans-serif;
+	margin:16px 0 5px 0;
+}
+.solutioncon {
+	width:198px;
+	color:#3e3000;
+	float:left;
+	margin-bottom:10px;
+	padding-left:12px;
+}
+.article {
+	font:bold 12px/18px Tahoma, Arial, Helvetica, sans-serif;
+	color:#fff;
+	text-decoration:none;
+	float:left;
+	display:block;
+	width:112px;
+	padding-left:12px;
+}
+.article:hover {
+	color:#b50100;
+}
+.signup_area {
+	background:url(../images/signupbg.jpg) 0 0 no-repeat;
+	width:300px;
+	height:190px;
+	float:left;
+}
+.signuptext {
+	width:300px;
+	height:22px;
+	float:left;
+	color:#fff;
+	font:bold 22px/22px Lucida sans, Arial, Helvetica, sans-serif;
+	margin:16px 0 2px 0;
+}
+.signup_subtext {
+	width:280px;
+	float:left;
+	color:#a2e9fd;
+	font:bold 11px Tahoma, Arial, Helvetica, sans-serif;
+}
+.selectarea {
+	width:180px;
+	height:90px;
+	float:left;
+	margin:14px 0 0 0;
+	padding-left:12px;
+}
+.emailtext {
+	font:bold 11px/18px Tahoma, Arial, Helvetica, sans-serif;
+	color:#fff;
+	width:160px;
+	float:left;
+}
+.textfeild {
+	width:154px;
+	height:20px;
+	float:left;
+	margin-top:5px;
+	border:1px #d5f4ff solid;
+	background:#8ac6eb;
+	padding:0 0 0 2px;
+	font:normal 11px Tahoma, Arial, Helvetica, sans-serif;
+	color:#074a5d;
+}
+.signupbtn_area {
+	width:160px;
+	height:24px;
+	float:left;
+	margin-top:10px;
+}
+.signup {
+	background:url(../images/signupbtn.jpg) 0 0 no-repeat;
+	width:63px;
+	height:24px;
+	display:block;
+	color:#004356;
+	font:bold 11px/20px tahoma, Arial, Helvetica, sans-serif;
+	text-decoration:none;
+	text-align:center;
+}
+.signup:hover {
+	color:#b50100;
+}
+/*--------------- Footer Area css ---------------*/
+
+.footerback {
+	width:100%;
+	height:131px;
+	float:left;
+	margin-top:30px;
+	background:url(../images/footerbg.jpg) 0 0 repeat-x;
+}
+.footerarea {
+	width:1000px;
+	margin:0 auto;
+	height:131px;
+}
+.footertext_area {
+	width:660px;
+	color:#ffa604;
+	font:bold 12px/20px Tahoma, Arial, Helvetica, sans-serif;
+	padding:60px 0 0 30px;
+}
+a.navf:link, a.navf:visited {
+	color:#787878;
+	text-decoration:none;
+	padding:0 12px 0 12px;
+}
+a.navf:hover, a.navfactive {
+	color:#ffa604;
+	text-decoration:none;
+	padding:0 12px 0 12px;
+}
+.copyright_text {
+	float:left;
+	color:#b7b7b7;
+	padding-left:12px;
+	font:normal 11px /30px Tahoma, Arial, Helvetica, sans-serif;
+}
+.copyright_text a {
+	color:#b7b7b7;
+	text-decoration:none;
+}

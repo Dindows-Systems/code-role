@@ -1,0 +1,327 @@
+﻿body {
+	color: #696969;
+	background: #fff url(../images/bg.jpg) repeat-x top center;
+	font-size: 12px;
+	line-height: 17px;
+	font-family: Verdana;
+	padding: 0;
+}
+a {
+	text-decoration: none;
+}
+a:active {
+	outline:none;
+}
+:focus {
+	-moz-outline-style:none;
+}
+img {
+	border: 0;
+}
+.header {
+	height: 101px;
+	overflow: hidden;
+}
+.header .grid_4 h1 a {
+	text-indent: -10000px;
+	display: block;
+	width: 234px;
+	height: 45px;
+	background: url(../images/logo_menu_bg.png) no-repeat;
+	background-position: 0 -38px;
+	margin: 36px 0 0 0;
+}
+.header .grid_8 a {
+	text-indent: -10000px;
+	display: block;
+	height: 36px;
+	background: url(../images/logo_menu_bg.png) no-repeat;
+	margin: 33px 30px 0 0;
+	float: left;
+}
+.header .grid_8 a.home {
+	background-position: -264px -11px;
+	width: 35px;
+	margin-left: 250px;
+}
+.header .grid_8 a.home:hover, .header .grid_8 a.home.active {
+	background-position: -264px -56px;
+}
+.header .grid_8 a.about {
+	background-position: -329px -11px;
+	width: 63px;
+}
+.header .grid_8 a.about:hover, .header .grid_8 a.about.active {
+	background-position: -329px -56px;
+}
+.header .grid_8 a.services {
+	background-position: -422px -11px;
+	width: 61px;
+}
+.header .grid_8 a.services:hover, .header .grid_8 a.services.active {
+	background-position: -422px -56px;
+}
+.header .grid_8 a.blog {
+	background-position: -513px -11px;
+	width: 33px;
+}
+.header .grid_8 a.blog:hover, .header .grid_8 a.blog.active {
+	background-position: -513px -56px;
+}
+.header .grid_8 a.contact {
+	background-position: -572px -11px;
+	width: 57px;
+	margin-right: 0px;
+}
+.header .grid_8 a.contact:hover, .header .grid_8 a.contact.active {
+	background-position: -572px -56px;
+}
+.slideshow {
+	padding: 30px 0 0 0;
+	height: 475px;
+	overflow: hidden;
+	background: url(../images/message_bg.png) no-repeat;
+	background-position: center 348px;
+}
+.slideshow .message {
+	color: #fff;
+	font-size: 18px;
+	line-height: 24px;
+	text-align: center;
+	text-shadow: 0px -1px 0 #000;
+	margin-top: 30px;
+}
+.slideshow .message .grid_12 div {
+	padding: 0 78px 0 78px;
+}
+.slideshow .message .grid_12 div span {
+	color: #f3ff00;
+}
+/*------ SlideShow Script Styles ------*/
+#scroll {
+	position: relative;
+	height: 316px;
+	overflow: hidden;
+	border: 0px none;
+	width: 960px;
+	padding: 0;
+	margin: 0 auto;
+	background: url(../images/slideshow_bg.jpg) repeat-x top center;
+}
+#tools {
+	width: 9999em;
+	position: absolute;
+	height: 258px;
+}
+.tool {
+	float: left;
+	width: 960px;
+	height: 258px;
+	text-align: left;
+	overflow: hidden;
+}
+.tool img {
+	float: right;
+}
+.details {
+	float: left;
+	color: #252525;
+	width: 350px;
+	margin: 33px 0 0 70px
+}
+.details h2 {
+	font-family: Verdana;
+	font-size: 24px;
+	line-height: 28px;
+	font-weight: normal;
+	margin: 0 0 40px 0;
+}
+.details p {
+	font-family: Verdana;
+	font-size: 12px;
+	line-height: 18px;
+	font-weight: normal;
+}
+#thumbs {
+	height: 60px;
+	position: absolute;
+	top: 258px;
+	width: 960px;
+	left: 0px;
+	overflow: hidden;
+	background: url(../images/thumbs_bg.jpg) repeat-x top center;
+}
+.navi {
+	width: 960px;
+	height: 58px;
+}
+.t {
+	padding: 0 !important;
+}
+.t a {
+	display: block;
+	float: left;
+	height: 34px;
+	cursor: pointer;
+	border-left: 1px solid #b9b9b9;
+	border-right: 1px solid #fff;
+	border-top: 1px solid #b9b9b9;
+	border-bottom: 1px solid #b9b9b9;
+	font-family: Arial;
+	font-size: 18px;
+	line-height: 20px;
+	padding: 8px 15px 14px 10px;
+	color: #252525;
+}
+.t a span {
+	font-size: 12px;
+	line-height: 14px;
+}
+.t a.active {
+	cursor: default !important;
+	background: url(../images/thumbs_bg_h.jpg) repeat-x top center;
+	color: #fff;
+	border-left: 1px solid #2d2d2d;
+	border-right: 1px solid #2d2d2d;
+	border-top: 1px solid #2d2d2d;
+	border-bottom: 1px solid #2d2d2d;
+}
+ t. a:hover {
+ background: url(../images/thumbs_bg_h.jpg) repeat-x top center;
+ color: #fff;
+ border-left: 1px solid #2d2d2d;
+ border-right: 1px solid #2d2d2d;
+ border-top: 1px solid #2d2d2d;
+ border-bottom: 1px solid #2d2d2d;
+}
+#t0 {
+	width: 145px;
+}
+#t1 {
+	width: 145px;
+}
+#t2 {
+	width: 145px;
+}
+#t3 {
+	width: 145px;
+}
+#t4 {
+	width: 245px;
+}
+.navigation_buttons {
+	width: 960px;
+	height: 75px;
+	position: absolute;
+	top: 102px;
+}
+.navigation_buttons .prev {
+	float: left;
+	background: url(../images/prev.png) no-repeat center center;
+	height: 75px;
+	width: 36px;
+	border: 0px none;
+	text-indent: -10000px;
+	cursor: pointer;
+}
+.navigation_buttons .next {
+	float: right;
+	background: url(../images/next.png) no-repeat center center;
+	height: 75px;
+	width: 36px;
+	border: 0px none;
+	text-indent: -10000px;
+	cursor: pointer;
+	margin: 0 -1px 0 0;
+}
+/*------ End of SlideShow Script Styles ------*/
+
+    .services h2 {
+	font-family: Myriad Pro;
+	font-size: 23px;
+	font-weight: normal;
+	line-height: 30px;
+	color: #0b070b;
+	margin: 0 0 30px 0;
+}
+.services h2 img {
+	float: left;
+	display: block;
+	width: 50px;
+	height: 50px;
+	overflow: hidden;
+	margin: 0 12px 0 0;
+}
+.services h2 span {
+	font-size: 14px;
+	line-height: 16px;
+}
+.services .grid_4 p {
+	text-align: justify;
+	text-indent: 38px;
+	margin: 0 0 56px 0;
+}
+.information {
+	width: 100%;
+	height: 318px;
+	display: block;
+	overflow: hidden;
+	background: url(../images/information_footer_bg.jpg) repeat-x top center;
+}
+.information .container_12 {
+	padding: 36px 0 30px 0;
+}
+.information .grid_4 h2 {
+	font-family: Myriad Pro;
+	font-size: 18px;
+	font-weight: normal;
+	line-height: 20px;
+	color: #0b070b;
+	margin: 0 0 30px 0;
+}
+.information .grid_4 p {
+	text-align: justify;
+	text-indent: 38px;
+}
+.information .grid_4 .subscribe {
+	display: block;
+	height: 37px;
+	width: 299px;
+	background: url(../images/subscribe.png) no-repeat top center;
+	overflow: hidden;
+	margin: 0 0 15px 0;
+}
+.information .grid_4 .subscribe input[type=text] {
+	background: transparent;
+	border: 0px none;
+	line-height: 30px;
+	height: 30px;
+	width: 210px;
+	margin: 5px 0 0 5px;
+	float: left;
+}
+.information .grid_4 .subscribe input[type=submit] {
+	background: transparent;
+	border: 0px none;
+	text-indent: -10000px;
+	height: 31px;
+	width: 60px;
+	float: right;
+	cursor: pointer;
+	padding: 0px;
+	margin: 0 11px 0 0;
+}
+.footer {
+	width: 100%;
+	height: 59px;
+	display: block;
+	overflow: hidden;
+	background: url(../images/information_footer_bg.jpg) repeat-x bottom center;
+	text-align: center;
+	font-size: 12px;
+	line-height: 59px;
+	color: #fff;
+}
+.footer a{
+	color: #fff;
+}

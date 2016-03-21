@@ -1,0 +1,86 @@
+@import url("demo.css");
+
+body { 
+  -webkit-animation: bugfix infinite 1s; 
+}
+
+@-webkit-keyframes bugfix { 
+  from {padding:0;} 
+  to {padding:0;} 
+}
+
+.block-demo {
+	width: 100%;
+	max-width: 720px;
+	margin: 25px auto;
+	background: white;
+	padding: 20px;
+	border-radius: 4px;
+	box-shadow: 0 0 5px rgba(0,0,0,0.25);
+	font-size: 1.3em;
+}
+
+.block-demo h3 {
+	color: #333;
+	border-bottom: 1px solid silver;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+}
+
+.block-demo p {
+	padding: 10px 0;
+}
+
+.to-be-changed {
+	font-weight: bold;
+}
+
+.demo-1 input[type=checkbox] {
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+}
+
+.demo-1 label,
+.demo-2 a,
+.demo-3 span,
+.demo-4 span {
+	display: block;
+	cursor: pointer;
+	margin-bottom: 20px;
+	padding: 10px;
+	text-align: center;
+	background: #08C;
+	color: white;
+	font-weight: 900;
+	border-radius: 3px;
+}
+
+.demo-1 input[type=checkbox]:checked ~ .to-be-changed {
+	color: red;
+}
+
+.demo-2 .to-be-changed:target {
+	color: red;
+}
+
+.demo-3 span:focus ~ .to-be-changed {
+	color: red;
+}
+
+.demo-4 .to-be-changed {
+    -webkit-transition: all 0s 9999999s;
+    -moz-transition: all 0s 9999999s;
+    -ms-transition: all 0s 9999999s;
+    -o-transition: all 0s 9999999s;
+    transition: all 0s 9999999s;
+}
+ 
+.demo-4 span:active ~ .to-be-changed {
+    -webkit-transition: all 0s;
+    -moz-transition: all 0s;
+    -ms-transition: all 0s;
+    -o-transition: all 0s;
+    transition: all 0s;
+    color: red;
+}

@@ -1,0 +1,17 @@
+@charset "utf-8";
+.banner {
+	background: url(../img/green/bkg_banner.jpg) center no-repeat;
+}
+#header li a:hover {
+	color: #2db021;
+	font-size: 16px;
+}
+.top_content {
+	background: url(../img/green/head_content.png) no-repeat;
+}
+.ul_content li input[type='button'] {
+	background:url(../img/green/btn_content.png) no-repeat;
+}
+.ul2_content input[type='button'], .info_banner input[type='button'] {
+	background: transparent url(../img/green/btn_2.png);
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>CSS Click events - Checkbox hack</title>
+		<meta name="description" content="CSS Click events - Checkbox hack" />
+		<meta name="keywords" content="css click event, checkbox hack, css-only, web development" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="../favicon.ico"> 
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<script src="js/modernizr.custom.63321.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<!-- Codrops top bar -->
+			<div class="codrops-top clearfix">
+				<a href="http://tympanus.net/Development/StickyCaptionsConcept/"><strong>&laquo; Previous Demo: </strong>Sticky Captions Concept</a>
+				<span class="right"><a href="http://tympanus.net/codrops/?p=12849"><strong>Back to the Codrops Article</strong></a></span>
+			</div><!--/ Codrops top bar -->
+			<header class="clearfix">
+				<h1>CSS Click Events <span>Checkbox Hack</span></h1>
+				<nav class="codrops-demos">
+					<a class="current-demo" href="index.html">Checkbox hack</a>
+					<a href="index2.html">:target way</a>
+					<a href="index3.html">:focus way</a>
+					<a href="index4.html">Transition hack</a>
+				</nav>
+			</header>
+			<section class="main demo-1">
+				<!-- the component -->
+				<div class="block-demo">
+					<h3>The Checkbox hack</h3>
+					<p>Clicking on the label will check a hidden checkbox. Once checked, the elements with the .to-be-changed class will become red.</p>
+					<p>Re-clicking the label will uncheck the checkbox, restoring the default color of the .to-be-changed elements.</p>
+				</div>
+				<div class="block-demo">
+					<h3>Demo</h3>
+					<input type="checkbox" id="toggle">
+					<label for="toggle" onclick>Click me!</label>
+					<p class="to-be-changed">I’m going to be red! It’s gonna be legen... Wait for it...</p>
+				</div>
+			</section>
+		</div>
+	</body>
+</html>

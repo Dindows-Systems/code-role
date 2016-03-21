@@ -1,0 +1,204 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>Who followed me first?</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8"/>
+    </head>
+    <style>
+        body{
+            margin:0px;
+            padding:0px;
+            background-color:#ddeef6;
+            height:1000px;
+            font-family:Arial;
+        }
+        .info{
+            position:absolute;
+            top:10px;
+            left:10px;
+        }
+        .info a{
+            text-decoration:none;
+            color:#999;
+            font-weight:bold;
+        }
+        .info a:hover{
+            color:#fff;
+        }
+        .header{
+            width:600px;
+            height:86px;
+            background:transparent url(images/title.png) no-repeat top left;
+            margin:0 auto;
+        }
+        .content{
+            width:550px;
+            height:150px;
+            -moz-border-radius: 20px;
+            -webkit-border-radius:20px;
+            -khtml-border-radius:20px;
+            background-color:#fff;
+            position:absolute;
+            padding:20px;
+            top:90px;
+            margin-left:-295px;
+            left:50%;
+        }
+        .result{
+            width:550px;
+            height:150px;
+            -moz-border-radius: 20px;
+            -webkit-border-radius:20px;
+            -khtml-border-radius:20px;
+            background-color:#9FC8DD;
+            position:absolute;
+            padding:20px;
+            top:250px;
+            margin-left:-295px;
+            margin-top:40px;
+            left:50%;
+        }
+        .result p{
+            background-color:#002233;
+            padding:5px;
+            color:#fff;
+            font-size:40px;
+            -moz-border-radius: 10px;
+            -webkit-border-radius:10px;
+            -khtml-border-radius:10px;
+            float:left;
+            line-height:50px;
+            padding:20px;
+            margin:0px;
+            width:510px;
+            
+        }
+        .result a{
+            color:#f0f0f0;
+            text-decoration:none;
+        }
+        .result a:hover{
+            color:#f0f0f0;
+        }
+        .result p img{
+            padding:3px;
+            background-color:#f0f0f0;
+            border:1px solid #fff;
+            -moz-border-radius: 5px;
+            -webkit-border-radius:5px;
+            -khtml-border-radius:5px;
+            float:left;
+            margin:0px 10px;
+       
+        }
+        .result h1{
+            color:#fff;
+            margin-top:0px;
+        }
+        .overlay{
+            opacity:0.6;
+            filter:progid:DXImageTransform.Microsoft.Alpha(opacity=60);
+            background:#fff url(images/ajax-loader.gif) no-repeat center center;
+        }
+        .content p{
+            font-size:16px;
+            color:#999;
+            font-weight:bold;
+            
+        }
+        .content input{
+            font-size:36px;
+            padding:4px;
+            color:#33CCFF;
+            float:left;
+        }
+        .content input:focus{
+            background-color:#f6fcff;
+        }
+        a.button{
+            display: inline-block;
+            padding: 5px 10px 6px;
+            color: #fff;
+            text-decoration: none;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+            -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+            text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+            border-bottom: 1px solid rgba(0,0,0,0.25);
+            position: relative;
+            cursor: pointer;
+            float:left;
+            font-size:30px;
+            margin-left:20px;
+            background-color:#33CCFF;
+            font-weight:normal;
+            border:2px solid #fff;
+        }
+        a.button:hover{
+            background-color:#239ABF;
+        }
+    </style>
+    <body>
+        <div class="header"></div>
+
+
+        <div class="content">
+            <p>Type your Twitter username:</p>
+            <p><input id="username" type="text"/><a id="find" class="button">Find</a></p>
+        </div>
+		<div id="ajax_load" class="content overlay" style="display:none;"></div>
+		<div id="result" class="result" style="display:none;">
+           
+           
+		</div>
+        <div class="info">
+            <a class="back" href="http://tympanus.net/">Back to Codrops</a>
+        </div>
+
+        <script type="text/javascript" src="jquery-1.3.2.js"></script>
+        <script>
+		$(function() {
+			$('#find').click(function(){
+				get1follower();
+				return false;  
+			});
+			$("#username").focus(function (e) {
+				$(this).val('');
+				$('#result').fadeOut();
+			});
+			$("#username").click(function (e) {
+				$(this).val('');
+				$('#result').fadeOut();
+			});
+			$("#username").keypress(function (e) {
+				 if ((e.which && e.which == 13) || (e.keyCode && e.keyCode == 13)) {
+					get1follower();
+					return false;  
+				 } 
+			});
+         	function get1follower(){
+				var screen_name = $('#username').val();
+				if(screen_name == '') return false;
+				$('#ajax_load').show();
+				$.ajax({
+					method: 'get',
+					url : 'callTwitter.php?screen_name=' + screen_name,
+					dataType: "json",
+					success: function (data,textStatus) { 
+							if(data.res == 1){
+								$('#ajax_load').hide();
+								$('#result').html(data.output).fadeIn();
+							}
+							else if(data.res == -1){
+								$('#ajax_load').hide();
+								$('#result').html(data.output).fadeIn();
+							}
+					}
+				});
+			}
+		});	
+		</script>	
+    </body>
+</html>

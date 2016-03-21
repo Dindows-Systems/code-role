@@ -1,0 +1,410 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>CSS3 Menu Navigation Effect</title>
+<style type="text/css">
+body {
+	background: #161616 url(pattern_40.gif) top left repeat;
+	margin: 0;
+	padding: 0;
+	font: 12px normal Verdana, Arial, Helvetica, sans-serif;
+	height: 100%;
+	color:#fff;
+}
+
+* {margin: 0; padding: 0; outline: none;}
+
+img {border: none;}
+
+a { 
+	text-decoration:none; 
+	color:#00c6ff;
+}
+
+h1 {
+	font: 4em normal Arial, Helvetica, sans-serif;
+	padding: 20px;	margin: 0;
+	text-align:center;
+	color:#bbb;
+}
+
+h1 small{
+	font: 0.2em normal  Arial, Helvetica, sans-serif;
+	text-transform:uppercase; letter-spacing: 0.2em; line-height: 5em;
+	display: block;
+}
+
+h2 {
+	font: 2em normal Arial, Helvetica, sans-serif;
+	padding-bottom:30px;
+	color:#fff;
+	display:block;
+}
+
+h3 {
+	font: 1em Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	color:#fff;
+	display:block;
+	padding:10px;
+}
+
+.container {
+	width: 960px;
+	margin: 0 auto; 
+	overflow: hidden;
+	position:relative;
+	padding-bottom:50px;
+}
+
+/* FIRST EXAMPLE */
+#panel { 
+	width:300px;
+	list-style:none; 
+	padding-top:30px;
+	display:inline-block;
+}
+
+#panel li {  
+	border-radius:3px 3px 3px 3px; 
+	margin-top:5px;
+	width:150px;
+	background: #000000;
+	background: -moz-linear-gradient(top, #161616 0%, #000000 100%);
+	background: -webkit-linear-gradient(top, #161616 0%,#000000 100%);
+	background: -o-linear-gradient(top, #161616 0%,#000000 100%);
+	border-left:1px solid #111; border-top:1px solid #111; border-right:1px solid #333; border-bottom:1px solid #333;
+}
+
+#panel li.animation { 
+	-moz-transition: all 0.4s ease-in-out; 
+	-moz-transform:translateX(0px); 
+	-o-transition: all 0.4s ease-in-out; 
+	-o-transform:translateX(0px); 
+	-webkit-transition: all 0.4s ease-in-out; 
+	-webkit-transform:translateX(0px); 
+}
+
+#panel li.animation:hover { 
+	-moz-transform:translateX(25px);
+	-o-transform:translateX(25px);
+	-webkit-transform:translateX(25px);
+}
+
+#panel li a { 
+	color:#fff; 
+	display:block; 
+	padding:10px;
+}
+
+#panel li a:hover { 
+	color:#00c6ff;
+}
+
+/* SECOND EXAMPLE */
+
+#paneltwo { 
+	width:300px;
+	list-style:none; 
+	position:relative;
+	display:inline;
+}
+
+#paneltwo li {  
+	border-radius:3px 3px 3px 3px; 
+	margin-top:5px;
+	width:150px;
+	float:left;
+	overflow:hidden;
+	position:relative;
+	background: #000000;
+	background: -moz-linear-gradient(top, #161616 0%, #000000 100%);
+	background: -webkit-linear-gradient(top, #161616 0%,#000000 100%);
+	background: -o-linear-gradient(top, #161616 0%,#000000 100%);
+	border-left:1px solid #111; border-top:1px solid #111; border-right:1px solid #333; border-bottom:1px solid #333;
+}
+
+#paneltwo li.mask { /* It allows us to hide the link behind it */
+	z-index:10; 
+	overflow:hidden;
+}
+
+#paneltwo li.linkOne, #paneltwo li.linkTwo, #paneltwo li.linkThree, #paneltwo li.linkFour, #paneltwo li.linkFive 
+{   -moz-transition: all 1s ease-in-out;
+	-webkit-transition: all 1s ease-in-out;
+	-o-transition: all 1s ease-in-out;
+}
+
+#paneltwo:hover li.linkOne, #paneltwo:hover li.linkTwo, #paneltwo:hover li.linkThree, #paneltwo:hover li.linkFour, #paneltwo:hover li.linkFive 
+{ 	-moz-transform:translateX(0px);
+	-moz-transition: all 1s ease-in-out; 
+	-webkit-transform:translateX(0px);
+	-webkit-transition: all 1s ease-in-out; 
+	-o-transform:translateX(0px);
+	-o-transition: all 1s ease-in-out; 
+}
+
+#paneltwo li.linkOne {
+	-moz-transform:translateX(-90%); 
+	-moz-transition-delay:0.6s; 
+	
+	-webkit-transform:translateX(-90%); 
+	-webkit-transition-delay:0.6s; 
+	
+	-o-transform:translateX(-90%); 
+	-o-transition-delay:0.6s; 
+	
+	z-index:5; 
+}
+#paneltwo li.linkTwo { 
+	-moz-transform:translateX(-180%); 
+	-moz-transition-delay:0.5s; 
+	
+	-webkit-transform:translateX(-180%); 
+	-webkit-transition-delay:0.5s; 
+	
+	-o-transform:translateX(-180%); 
+	-o-transition-delay:0.5s; 
+	
+	z-index:4;
+}
+#paneltwo li.linkThree { 
+	-moz-transform:translateX(-270%); 
+	-moz-transition-delay:0.4s; 
+	
+	-webkit-transform:translateX(-270%); 
+	-webkit-transition-delay:0.4s; 
+	
+	-o-transform:translateX(-270%); 
+	-o-transition-delay:0.4s;
+	
+	z-index:3;
+}
+#paneltwo li.linkFour { 
+	-moz-transform:translateX(-360%); 
+	-moz-transition-delay:0.3s;
+	
+	-webkit-transform:translateX(-360%); 
+	-webkit-transition-delay:0.3s;
+	
+	-o-transform:translateX(-360%); 
+	-o-transition-delay:0.3s; 
+	z-index:2;
+}
+
+#paneltwo li.linkFive { 
+	-moz-transform:translateX(-450%); 
+	-moz-transition-delay:0.2s;
+	
+	-webkit-transform:translateX(-450%); 
+	-webkit-transition-delay:0.2s;
+	
+	-o-transform:translateX(-450%); 
+	-o-transition-delay:0.2s;
+	 
+	z-index:1;
+}
+
+#paneltwo:hover li.linkOne { 
+	-moz-transition-delay:0s; 
+	-webkit-transition-delay:0s; 
+	-o-transition-delay:0s; 
+	z-index:5;
+}
+#paneltwo:hover li.linkTwo { 
+	-moz-transition-delay:0.2s;
+	-webkit-transition-delay:0.2s;
+	-o-transition-delay:0.2s; 
+	z-index:4;
+}
+#paneltwo:hover li.linkThree { 
+	-moz-transition-delay:0.4s;
+	-webkit-transition-delay:0.4s;
+	-o-transition-delay:0.4s; 
+	z-index:3;
+}
+#paneltwo:hover li.linkFour { 
+	-moz-transition-delay:0.6s;
+	-webkit-transition-delay:0.6s;
+	-o-transition-delay:0.6s; 
+	z-index:2;
+}
+#paneltwo:hover li.linkFive { 
+	-moz-transition-delay:0.8s;
+	-webkit-transition-delay:0.8s;
+	-o-transition-delay:0.8s; 
+	z-index:1;
+}
+
+#paneltwo li a { 
+	color:#fff; 
+	display:block; 
+	padding:10px;
+}
+
+#paneltwo li a:hover { 
+	color:#00c6ff;
+}
+
+/* THIRD EXAMPLE */
+
+#panelthree { 
+	width:300px;
+	list-style:none; 
+	position:relative;
+	display:inline;
+}
+
+#panelthree li {  
+	border-radius:3px 3px 3px 3px; 
+	margin-top:5px;
+	width:150px;
+	float:left;
+	overflow:hidden;
+	position:relative;
+	background: #000000;
+	background: -moz-linear-gradient(top, #161616 0%, #000000 100%);
+	background: -webkit-linear-gradient(top, #161616 0%,#000000 100%);
+	background: -o-linear-gradient(top, #161616 0%,#000000 100%);
+	border-left:1px solid #111; border-top:1px solid #111; border-right:1px solid #333; border-bottom:1px solid #333;
+}
+
+#panelthree li.mask { /* It allows us to hide the link behind it */
+	z-index:10; 
+	overflow:hidden;
+}
+
+#panelthree li a { 
+	color:#fff; 
+	display:block; 
+	padding:10px;
+}
+
+#panelthree li a:hover { 
+	color:#00c6ff;
+}
+
+#panelthree li.linkAnimationOne, #panelthree li.linkAnimationTwo, #panelthree li.linkAnimationThree, #panelthree li.linkAnimationFour, #panelthree li.linkAnimationFive
+{   -moz-transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+}
+
+#panelthree:hover li.linkAnimationOne, #panelthree:hover li.linkAnimationTwo, #panelthree:hover li.linkAnimationThree, #panelthree:hover li.linkAnimationFour, #panelthree:hover li.linkAnimationFive
+{ 	-moz-animation:bounceX 0.5s linear forwards;
+	-webkit-animation:bounceX 0.5s linear forwards;
+}
+
+#panelthree:hover li.linkAnimationTwo { 	
+	-moz-animation-delay:0.5s;
+	-webkit-animation-delay:0.5s; 
+}
+#panelthree:hover li.linkAnimationThree { 
+	-moz-animation-delay:1s;
+	-webkit-animation-delay:1s; 
+}
+#panelthree:hover li.linkAnimationFour{ 
+	-moz-animation-delay:1.5s;
+	-webkit-animation-delay:1.5s; 
+}
+#panelthree:hover li.linkAnimationFive 
+{ 	-moz-animation-delay:2s;
+	-webkit-animation-delay:2s;
+}
+
+#panelthree li.linkAnimationOne {
+	-moz-transform:translateX(-100%); 
+	-webkit-transform:translateX(-100%); 
+
+	z-index:5; 
+}
+#panelthree li.linkAnimationTwo {
+	-moz-transform:translateX(-200%); 
+	-webkit-transform:translateX(-200%); 
+	
+	z-index:4; 
+}
+#panelthree li.linkAnimationThree {
+	-moz-transform:translateX(-300%); 
+	-webkit-transform:translateX(-300%); 
+	
+	z-index:3; 
+}
+#panelthree li.linkAnimationFour {
+	-moz-transform:translateX(-400%); 
+	-webkit-transform:translateX(-400%); 
+	
+	z-index:2; 
+}
+#panelthree li.linkAnimationFive {
+	-moz-transform:translateX(-500%); 
+	-webkit-transform:translateX(-500%); 
+	
+	z-index:1; 
+}
+
+@-moz-keyframes bounceX {
+			0% { -moz-transform: translateX(-205px); -moz-animation-timing-function: ease-in; }
+			
+			40% { -moz-transform: translateX(-100px); -moz-animation-timing-function: ease-in; }
+			65% { -moz-transform: translateX(-52px); -moz-animation-timing-function: ease-in; }
+			82% { -moz-transform: translateX(-25px); -moz-animation-timing-function: ease-in; }
+			92% { -moz-transform: translateX(-12px); -moz-animation-timing-function: ease-in; }
+			
+			55%, 75%, 87%, 97%, 100% { -moz-transform: translateX(0px); -moz-animation-timing-function: ease-out; }
+}
+
+@-webkit-keyframes bounceX {
+			0% { -webkit-transform: translateX(-205px); -webkit-animation-timing-function: ease-in; }
+			
+			40% { -webkit-transform: translateX(-100px); -webkit-animation-timing-function: ease-in; }
+			65% { -webkit-transform: translateX(-52px); -webkit-animation-timing-function: ease-in; }
+			82% { -webkit-transform: translateX(-25px); -webkit-animation-timing-function: ease-in; }
+			92% { -webkit-transform: translateX(-12px); -webkit-animation-timing-function: ease-in; }
+			
+			55%, 75%, 87%, 97%, 100% { -webkit-transform: translateX(0px); -webkit-animation-timing-function: ease-out; }
+}
+
+</style>
+<link rel="canonical" href="http://www.alessioatzeni.com/wp-content/tutorials/html-css/CSS3-Menu-Navigation-Effect/index.html" />
+</head>
+<body>
+<h1>CSS3 Menu Navigation Effect<small>Tutorial by Alessio Atzeni | <a href="http://www.alessioatzeni.com/blog/css3-menu-navigation-effect/">View Tutorial</a></small></h1>
+<div class="container">
+	<!-- FIRST EXAMPLE -->
+	<ul id="panel">
+        <li><h3>MENU</h3></li>
+        <li class="animation"><a href="#">Link 1</a></li>
+        <li class="animation"><a href="#">Link 2</a></li>
+        <li class="animation"><a href="#">Link 3</a></li>
+        <li class="animation"><a href="#">Link 4</a></li>
+        <li class="animation"><a href="#">Link 5</a></li>
+    </ul>
+</div>
+
+<div class="container">   
+    <!-- SECOND EXAMPLE -->
+    <ul id="paneltwo">
+        <li class="mask"><h3>MENU ></h3></li>
+        <li class="linkOne"><a href="#">Link 1</a></li>
+        <li class="linkTwo"><a href="#">Link 2</a></li>
+        <li class="linkThree"><a href="#">Link 3</a></li>
+        <li class="linkFour"><a href="#">Link 4</a></li>
+        <li class="linkFive"><a href="#">Link 5</a></li>
+    </ul>
+</div>
+
+<div class="container">   
+    <!-- THIRD EXAMPLE -->
+    <ul id="panelthree">
+        <li class="mask"><h3>MENU ></h3></li>
+        <li class="linkAnimationOne"><a href="#">Link 1</a></li>
+        <li class="linkAnimationTwo"><a href="#">Link 2</a></li>
+        <li class="linkAnimationThree"><a href="#">Link 3</a></li>
+        <li class="linkAnimationFour"><a href="#">Link 4</a></li>
+        <li class="linkAnimationFive"><a href="#">Link 5</a></li>
+    </ul>
+</div>
+</body>
+</html>
