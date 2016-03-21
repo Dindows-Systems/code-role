@@ -1,0 +1,200 @@
+/* Layout */
+html, body {
+	background:#eaeaea url(fancy_deboss.png) repeat;
+	font-size:12px;
+	font-family:"Open Sans", serif;
+	min-width:960px;
+	margin:0;
+	padding:0;
+	color:rgba(255,255,255,0.6);
+}
+
+a {
+	-moz-transition:color 0.3s ease-out;
+	-webkit-transition:color 0.3s ease-out;
+	-o-transition:color 0.3s ease-out;
+	transition:color 0.3s ease-out;
+}
+
+h1 {
+	font-size:60px;
+	font-weight:400;
+	padding-top: 300px;	margin: 0;
+	text-align:center;
+	color:#333;
+	text-shadow:1px 1px 5px rgba(0,0,0,0.2);
+}
+
+h1 small{
+	font: 0.2em normal  Arial, Helvetica, sans-serif;
+	text-transform:uppercase; letter-spacing: 0.2em; line-height: 50px;
+	display: block;
+}
+
+h1 span{
+	font-size:24px;
+	font-weight:400;
+	font-style:italic;
+	text-transform:uppercase; letter-spacing: 0.2em; line-height: 30px;
+	display: block;
+}
+
+
+h1 a {
+	text-decoration:none; 
+	color:#00c6ff;
+	font-style:italic;
+}
+
+/* HEADER MENU */
+header {
+	width:100%;
+}
+header #top {
+	background:#222;
+	float:left;
+	height:30px;
+	line-height:30px;
+	width:100%;
+}
+header nav#topmenu {
+	margin:0 auto;
+	padding:0 15px;
+	position:relative;
+	width:960px;
+}
+header nav#topmenu ul {
+	margin:0;
+	padding:0;
+}
+header nav#topmenu ul li {
+	float:left;
+	position:relative;
+	font-size:10px;
+	list-style:none;
+	margin:0;
+	padding:0;
+	width:90px;
+	text-align:center;
+	text-transform:uppercase;
+	border-right:1px solid #ccc;	
+}
+header nav#topmenu ul li:first-child {
+	border-left:1px solid #ccc;
+}
+header nav#topmenu ul li a {
+	color:rgba(255,255,255,0.6);
+	text-decoration:none;
+	display:block;
+}
+header nav#topmenu ul li a:hover {
+	color:#fff;
+}
+header nav#topmenu ul li:hover > a {
+	color:#fff;
+}
+header nav#topmenu ul li span {
+	background:url(arrow.png) center no-repeat;
+	height:10px;
+	position:absolute;
+	text-indent:-9999px;
+	top:10px;
+	right:5px;
+	width:10px;
+}
+header nav#topmenu ul li span.arrow {
+	background-position:0 2px;
+}
+header nav#topmenu ul li span.arrow-right {
+	background-position:-10px 2px;
+}
+header nav#topmenu ul li ul.sublist {
+	float:left;
+	list-style:none;
+	margin:0;
+	padding:0;
+	position:absolute;
+	left:0px;
+	top:31px;
+	background:#222;
+	width:90px;
+	opacity:0;
+	visibility:hidden;
+	-moz-transition:opacity 0.2s 0.1s ease-out, visibility 0.1s 0.1s linear;
+	-webkit-transition:opacity 0.3s ease-out, visibility 0.1s 0.1s linear;
+	-o-transition:opacity 0.3s ease-out, visibility 0.1s 0.1s linear;
+	transition:opacity 0.3s ease-out, visibility 0.1s 0.1s linear;
+}
+header nav#topmenu ul li ul.sublist li {
+	border:none;
+	border-bottom:1px solid #ccc;
+	clear:both;
+	margin-top:-15px;
+	padding:0;
+	width:90px;
+	-moz-transition:opacity 0.1s 0.15s ease-out, margin 0.3s 0.1s ease-out;
+	-webkit-transition:opacity 0.1s 0.15s ease-out, margin 0.3s 0.1s ease-out;
+	-o-transition:opacity 0.15s 0.15s ease-out, margin 0.3s 0.1s ease-out;
+	transition:opacity 0.15s 0.15s ease-out, margin 0.3s 0.1s ease-out;
+}
+
+header nav#topmenu ul li ul.sublist li a {
+	color:rgba(255,255,255,0);
+}
+header nav#topmenu ul li:hover ul.sublist {
+	opacity:1;
+	visibility:visible;
+}
+header nav#topmenu ul li:hover ul.sublist li {
+	margin-top:0;
+	opacity:1;
+}
+header nav#topmenu ul li:hover ul.sublist li a {
+	color:rgba(255,255,255,0.6);	
+	-moz-transition:color 0.1s ease-out;
+	-webkit-transition:color 0.1s ease-out;
+	-o-transition:color 0.1s ease-out;
+	transition:color 0.1s ease-out;
+}
+header nav#topmenu ul li:hover ul.sublist li a:hover {
+	color:rgba(255,255,255,1);	
+	-moz-transition:color 0.3s ease-out;
+	-webkit-transition:color 0.3s ease-out;
+	-o-transition:color 0.3s ease-out;
+	transition:color 0.3s ease-out;
+}
+header nav#topmenu ul li:hover ul.sublist li:hover > a {
+	color:#fff;
+}
+/* SUB SUB LIST */
+header nav#topmenu ul li ul.sublist li ul.subsublist {
+	float:left;
+	list-style:none;
+	margin:0;
+	padding:0;
+	position:absolute;
+	left:61px;
+	top:0px;
+	background:#222;
+	width:90px;
+	opacity:0;
+	visibility:hidden;
+	-moz-transition:opacity 0.2s 0.01s ease-in-out, left 0.2s 0.1s ease-out, visibility 0.1s 0.1s linear;
+	-webkit-transition:opacity 0.2s 0.01s ease-in-out, left 0.2s 0.1s ease-out, visibility 0.1s 0.1s linear;
+	-o-transition:opacity 0.2s 0.01s ease-in-out, left 0.2s 0.1s ease-out, visibility 0.1s 0.1s linear;
+	transition:opacity 0.2s 0.01s ease-in-out, left 0.2s 0.1s ease-out, visibility 0.1s 0.1s linear;
+}
+header nav#topmenu ul li ul.sublist li ul.subsublist li{
+	border:none;
+	border-bottom:1px solid #ccc;
+	clear:both;
+	margin:0;
+	padding:0;
+	width:90px;
+	opacity:1;
+}
+header nav#topmenu ul li ul.sublist li:hover ul.subsublist {
+	opacity:1;
+	left:91px;
+	visibility:visible;
+}

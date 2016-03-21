@@ -1,0 +1,95 @@
+@import url('reset.css');
+body{
+	background:#f7f7f7 url(../images/pattern.png) repeat top left;
+	color:#000;
+	font-family: 'PT Sans Narrow', Arial, sans-serif;
+	font-size:12px;
+}
+a{
+	color:#000;
+	text-decoration:none;
+}
+.clr{
+	clear:both;
+}
+.container {
+	width:100%;
+	position:relative;
+	z-index:100;
+	margin:0 auto 50px auto;
+}
+.content{
+	width:1060px;
+	margin:0 auto;
+	position:relative;
+}
+.wrapper{
+	float:left;
+	width:620px;
+	padding:0px 10px;
+	position:relative;
+}
+.column{
+	float:left;
+	width:186px;
+	line-height:18px;
+	opacity:0.3;
+	padding:0px 10px;
+	text-align:justify;
+}
+.wrapper .column{
+	margin-top:440px;
+}
+.column p{
+	padding-bottom:4px;
+}
+
+h1{
+	margin:15px 0px 8px 0px;
+	font-size:32px;
+	color:#000;
+	font-family: 'Holtwood One SC', serif;
+	text-shadow:1px 1px 1px #fff;
+}
+h1 span{
+	font-size:14px;
+}
+.examples{
+	float:right;
+	font-size:12px;
+	color:#555;
+	margin: 23px 20px 0px 0px;
+}
+.examples a{
+	color:#5fbcaa;
+}
+.examples a.selected, .examples a:hover{
+	color:#555;
+}
+/* Header Style */
+.header{
+	height:25px;
+	line-height:24px;
+	font-size:13px;
+	background:#000;
+	opacity:0.9;
+	text-transform:uppercase;
+	z-index:4;
+}
+.header a{
+	padding:5px 10px;
+	letter-spacing:1px;
+	text-shadow:1px 1px 1px #000;
+	color:#ddd;
+	text-align:right;
+}
+.header a:hover{
+	color:#fff;
+}
+.header a span{
+	font-weight:bold;
+}
+.header span.right_ab{
+	position:absolute;
+	right:4px;
+}

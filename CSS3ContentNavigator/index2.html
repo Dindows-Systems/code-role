@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <title>Content Navigator with CSS3</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="Content Navigator with CSS3" />
+        <meta name="keywords" content="content, navigation, css3, html5, sliding, content" />
+        <meta name="author" content="Codrops" />
+        <link rel="shortcut icon" href="../favicon.ico"> 
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/style2.css" />
+    </head>
+    <body>
+        <div class="container">
+			<!-- Codrops top bar -->
+            <div class="codrops-top">
+                <a href="http://tympanus.net/Development/ParallaxContentSlider/">
+                    <strong>&laquo; Previous Demo: </strong>Parallax Content Slider
+                </a>
+                <span class="right">
+					<a href="http://slipsum.com">Placeholder text by SAMUEL L. IPSUM</a>
+					<a href="http://www.flickr.com/photos/karrienodalo/">Images by Karrie Nodalo</a>
+                    <a href="http://tympanus.net/codrops/2012/03/23/responsive-content-navigator-with-css3/">
+                        <strong>Back to the Codrops Article</strong>
+                    </a>
+                </span>
+                <div class="clr"></div>
+            </div><!--/ Codrops top bar -->
+			<header>
+				<h1>Content Navigator <span>with CSS3</span></h1>
+				<h2>Responsive content navigation using CSS3 transitions and :target pseudo-class</h2>
+				<nav class="codrops-demos">
+					<a href="index.html#slide-main">Demo 1</a>
+					<a class="current-demo" href="index2.html#slide-main">Demo 2</a>
+					<a href="index3.html#slide-main">Demo 3</a>
+					<a href="index4.html#slide-main">Demo 4</a>
+					<a href="index5.html#slide-main">Demo 5</a>
+				</nav>
+			</header>
+			<!--[if lte IE 9]>
+			<p style="font-size: 20px; padding: 50px;">Sorry, this only works in modern browsers...</p>
+			<![endif]-->
+			<section class="cn-container">
+				<div class="cn-slide" id="slide-main">
+					<h2>Explore this</h2>
+					<nav>
+						<a href="#slide-1">Philosophy</a>							
+						<a href="#slide-2">Science</a>						
+						<a href="#slide-3">Literature</a>
+					</nav>
+				</div>
+				
+				<!-- Slide 1 and Sub-slides -->
+				<div class="cn-slide cn-slide-sub" id="slide-1">
+					<h2>Philosophy</h2>
+					<a href="#slide-main" class="cn-back">Back</a>
+					<nav>
+						<a href="#slide-1-1">Epistemology</a>							
+						<a href="#slide-1-2">Metaphysics</a>
+						<a href="#slide-1-3">Aesthetics</a>
+						<a href="#slide-1-4">Ethics</a>
+					</nav>
+				</div>
+				
+				<div class="cn-slide" id="slide-1-1">
+					<h2>Epistemology</h2>
+					<a href="#slide-1" class="cn-back">Back</a>
+					<div class="cn-content">
+						<p>The lysine contingency - it's intended to prevent the spread of the animals is case they ever got off the island. Dr. Wu inserted a gene that makes a single faulty enzyme in protein metabolism. The animals can't manufacture the amino acid lysine. Unless they're continually supplied with lysine by us, they'll slip into a coma and die. </p>
+						<p>Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing. </p>
+					</div>
+					<span class="cn-note">Keep clicked to show image</span>
+				</div>
+				
+				<div class="cn-slide" id="slide-1-2">
+					<h2>Metaphysics</h2>
+					<a href="#slide-1" class="cn-back">Back</a>
+					<div class="cn-content">
+						<p>You see? It's curious. Ted did figure it out - time travel. And when we get back, we gonna tell everyone. How it's possible, how it's done, what the dangers are. But then why fifty years in the future when the spacecraft encounters a black hole does the computer call it an 'unknown entry event'? Why don't they know? If they don't know, that means we never told anyone. And if we never told anyone it means we never made it back. Hence we die down here. Just as a matter of deductive logic. </p>
+						<p>Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing. </p>
+					</div>
+					<span class="cn-note">Keep clicked to show image</span>
+				</div>
+				
+				<div class="cn-slide" id="slide-1-3">
+					<h2>Aesthetics</h2>
+					<a href="#slide-1" class="cn-back">Back</a>
+					<div class="cn-content">
+						<p>You see? It's curious. Ted did figure it out - time travel. And when we get back, we gonna tell everyone. How it's possible, how it's done, what the dangers are. But then why fifty years in the future when the spacecraft encounters a black hole does the computer call it an 'unknown entry event'? Why don't they know? If they don't know, that means we never told anyone. And if we never told anyone it means we never made it back. Hence we die down here. Just as a matter of deductive logic. </p>
+						<p>Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing. </p>
+					</div>
+					<span class="cn-note">Keep clicked to show image</span>
+				</div>
+				
+				<div class="cn-slide" id="slide-1-4">
+					<h2>Ethics</h2>
+					<a href="#slide-1" class="cn-back">Back</a>
+					<div class="cn-content">
+						<p>You see? It's curious. Ted did figure it out - time travel. And when we get back, we gonna tell everyone. How it's possible, how it's done, what the dangers are. But then why fifty years in the future when the spacecraft encounters a black hole does the computer call it an 'unknown entry event'? Why don't they know? If they don't know, that means we never told anyone. And if we never told anyone it means we never made it back. Hence we die down here. Just as a matter of deductive logic. </p>
+						<p>Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing. </p>
+					</div>
+					<span class="cn-note">Keep clicked to show image</span>
+				</div>
+				
+				<!-- Slide 2 and Sub-slides -->
+				<div class="cn-slide cn-slide-sub" id="slide-2">
+					<h2>Science</h2>
+					<a href="#slide-main" class="cn-back">Back</a>
+					<nav>
+						<a href="#slide-2-1">Physics</a>							
+						<a href="#slide-2-2">Biology</a>
+						<a href="#slide-2-3">Anthropology</a>
+						<a href="#slide-2-4">Chemistry</a>
+					</nav>
+				</div>
+				
+				<div class="cn-slide" id="slide-2-1">
+					<h2>Physics</h2>
+					<a href="#slide-2" class="cn-back">Back</a>
+					<div class="cn-content">
+						<p>The lysine contingency - it's intended to prevent the spread of the animals is case they ever got off the island. Dr. Wu inserted a gene that makes a single faulty enzyme in protein metabolism. The animals can't manufacture the amino acid lysine. Unless they're continually supplied with lysine by us, they'll slip into a coma and die. </p>
+						<p>Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing. </p>
+					</div>
+					<span class="cn-note">Keep clicked to show image</span>
+				</div>
+				
+				<div class="cn-slide" id="slide-2-2">
+					<h2>Biology</h2>
+					<a href="#slide-2" class="cn-back">Back</a>
+					<div class="cn-content">
+						<p>You see? It's curious. Ted did figure it out - time travel. And when we get back, we gonna tell everyone. How it's possible, how it's done, what the dangers are. But then why fifty years in the future when the spacecraft encounters a black hole does the computer call it an 'unknown entry event'? Why don't they know? If they don't know, that means we never told anyone. And if we never told anyone it means we never made it back. Hence we die down here. Just as a matter of deductive logic. </p>
+						<p>Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing. </p>
+					</div>
+					<span class="cn-note">Keep clicked to show image</span>
+				</div>
+				
+				<div class="cn-slide" id="slide-2-3">
+					<h2>Anthropology</h2>
+					<a href="#slide-2" class="cn-back">Back</a>
+					<div class="cn-content">
+						<p>You see? It's curious. Ted did figure it out - time travel. And when we get back, we gonna tell everyone. How it's possible, how it's done, what the dangers are. But then why fifty years in the future when the spacecraft encounters a black hole does the computer call it an 'unknown entry event'? Why don't they know? If they don't know, that means we never told anyone. And if we never told anyone it means we never made it back. Hence we die down here. Just as a matter of deductive logic. </p>
+						<p>Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing. </p>
+					</div>
+					<span class="cn-note">Keep clicked to show image</span>
+				</div>
+				
+				<div class="cn-slide" id="slide-2-4">
+					<h2>Chemistry</h2>
+					<a href="#slide-2" class="cn-back">Back</a>
+					<div class="cn-content">
+						<p>You see? It's curious. Ted did figure it out - time travel. And when we get back, we gonna tell everyone. How it's possible, how it's done, what the dangers are. But then why fifty years in the future when the spacecraft encounters a black hole does the computer call it an 'unknown entry event'? Why don't they know? If they don't know, that means we never told anyone. And if we never told anyone it means we never made it back. Hence we die down here. Just as a matter of deductive logic. </p>
+						<p>Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing. </p>
+					</div>
+					<span class="cn-note">Keep clicked to show image</span>
+				</div>
+				
+				<!-- Slide 3 and Sub-slides -->
+				<div class="cn-slide cn-slide-sub" id="slide-3">
+					<h2>Literature</h2>
+					<a href="#slide-main" class="cn-back">Back</a>
+					<nav>
+						<a href="#slide-3-1">Poetry</a>							
+						<a href="#slide-3-2">Prose</a>
+						<a href="#slide-3-3">Fiction</a>
+						<a href="#slide-3-4">Non-fiction</a>
+					</nav>
+				</div>
+				
+				<div class="cn-slide" id="slide-3-1">
+					<h2>Poetry</h2>
+					<a href="#slide-3" class="cn-back">Back</a>
+					<div class="cn-content">
+						<p>The lysine contingency - it's intended to prevent the spread of the animals is case they ever got off the island. Dr. Wu inserted a gene that makes a single faulty enzyme in protein metabolism. The animals can't manufacture the amino acid lysine. Unless they're continually supplied with lysine by us, they'll slip into a coma and die. </p>
+						<p>Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing. </p>
+					</div>
+					<span class="cn-note">Keep clicked to show image</span>
+				</div>
+				
+				<div class="cn-slide" id="slide-3-2">
+					<h2>Prose</h2>
+					<a href="#slide-3" class="cn-back">Back</a>
+					<div class="cn-content">
+						<p>You see? It's curious. Ted did figure it out - time travel. And when we get back, we gonna tell everyone. How it's possible, how it's done, what the dangers are. But then why fifty years in the future when the spacecraft encounters a black hole does the computer call it an 'unknown entry event'? Why don't they know? If they don't know, that means we never told anyone. And if we never told anyone it means we never made it back. Hence we die down here. Just as a matter of deductive logic. </p>
+						<p>Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing. </p>
+					</div>
+					<span class="cn-note">Keep clicked to show image</span>
+				</div>
+				
+				<div class="cn-slide" id="slide-3-3">
+					<h2>Fiction</h2>
+					<a href="#slide-3" class="cn-back">Back</a>
+					<div class="cn-content">
+						<p>You see? It's curious. Ted did figure it out - time travel. And when we get back, we gonna tell everyone. How it's possible, how it's done, what the dangers are. But then why fifty years in the future when the spacecraft encounters a black hole does the computer call it an 'unknown entry event'? Why don't they know? If they don't know, that means we never told anyone. And if we never told anyone it means we never made it back. Hence we die down here. Just as a matter of deductive logic. </p>
+						<p>Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing. </p>
+					</div>
+					<span class="cn-note">Keep clicked to show image</span>
+				</div>
+				
+				<div class="cn-slide" id="slide-3-4">
+					<h2>Non-fiction</h2>
+					<a href="#slide-3" class="cn-back">Back</a>
+					<div class="cn-content">
+						<p>You see? It's curious. Ted did figure it out - time travel. And when we get back, we gonna tell everyone. How it's possible, how it's done, what the dangers are. But then why fifty years in the future when the spacecraft encounters a black hole does the computer call it an 'unknown entry event'? Why don't they know? If they don't know, that means we never told anyone. And if we never told anyone it means we never made it back. Hence we die down here. Just as a matter of deductive logic. </p>
+						<p>Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing. </p>
+					</div>
+					<span class="cn-note">Keep clicked to show image</span>
+				</div>
+
+			</section>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body{
+	 background:#202020;
+	 font:bold 12px Arial, Helvetica, sans-serif;
+	 margin:0;
+	 padding:0;
+	 min-width:960px;
+	 color:#bbbbbb; 
+}
+
+a { 
+	text-decoration:none; 
+	color:#00c6ff;
+}
+
+h1 {
+	font: 4em normal Arial, Helvetica, sans-serif;
+	padding: 20px;	margin: 0;
+	text-align:center;
+}
+
+h1 small{
+	font: 0.2em normal  Arial, Helvetica, sans-serif;
+	text-transform:uppercase; letter-spacing: 0.2em; line-height: 5em;
+	display: block;
+}
+
+h2 {
+    font-weight:700;
+    color:#bbb;
+    font-size:20px;
+}
+
+h2, p {
+	margin-bottom:10px;
+}
+
+.container {width: 960px; margin: 0 auto; overflow: hidden;}
+
+.box { width:960px; background:#fff; height:300px; }
+
+.ball {
+	width: 50px;
+	height: 50px;
+	background: #00c6ff;
+	border-radius: 50px;
+	position:relative;
+	-moz-animation:mymove 3s linear 2 alternate;
+	-webkit-animation:mymove 3s linear 2 alternate;
+}
+
+
+@-moz-keyframes mymove /* Firefox */
+{
+0%   {-moz-transform:translate(0px,0px);}
+10%  {-moz-transform:translate(150px,250px);}
+20% {-moz-transform:translate(450px,0px);}
+30% {-moz-transform:translate(700px,250px);}
+40% {-moz-transform:translate(910px,75px);}
+50% {-moz-transform:translate(800px,0px);}
+60% {-moz-transform:translate(500px,250px);}
+70% {-moz-transform:translate(400px,0px);}
+80% {-moz-transform:translate(300px,250px);}
+90% {-moz-transform:translate(150px,0px);}
+95% {-moz-transform:translate(100px,250px);}
+100% {-moz-transform:translate(0px,0px);}
+}
+
+@-webkit-keyframes mymove /* Safari & Chrome */
+{
+0%   {-webkit-transform:translate(0px,0px);}
+10%  {-webkit-transform:translate(150px,250px);}
+20% {-webkit-transform:translate(450px,0px);}
+30% {-webkit-transform:translate(700px,250px);}
+40% {-webkit-transform:translate(910px,75px);}
+50% {-webkit-transform:translate(800px,0px);}
+60% {-webkit-transform:translate(500px,250px);}
+70% {-webkit-transform:translate(400px,0px);}
+80% {-webkit-transform:translate(300px,250px);}
+90% {-webkit-transform:translate(150px,0px);}
+95% {-webkit-transform:translate(100px,250px);}
+100% {-webkit-transform:translate(0px,0px);}
+}
+</style>
+<title>CSS3 Basic Animation</title>
+<link rel="canonical" href="http://www.alessioatzeni.com/wp-content/tutorials/html-css/CSS3-Basic-Animation/index.html" />
+</head>
+<body>
+<h1>CSS3 Basic Animation<small>Tutorial by Alessio Atzeni | <a href="http://www.alessioatzeni.com/blog/css3-basic-animation/">View Tutorial</a></small></h1>
+<div class="container">
+<div class="box">
+<div class="ball"></div>
+</div>
+</div>
+</body>
+</html>
