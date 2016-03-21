@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<album>
+	<name>Thailand 2011</name>
+	<description>A wonderful trip</description>
+	<places>
+		<place>
+			<name>Bangkok</name>		
+			<location>
+				<lat>13.696693336737654</lat>
+				<lng>100.57159423828125</lng>
+			</location>
+			<photos>
+				<photo>
+					<thumb>photos/Bangkok/thumbs/1.jpg</thumb>
+					<source>photos/Bangkok/1.jpg</source>
+					<description>Some image description</description>
+					<location>
+						<lat>13.710035342476681</lat>
+						<lng>100.52043914794922</lng>
+					</location>
+				</photo>
+				<photo>
+					<thumb>photos/Bangkok/thumbs/2.jpg</thumb>					
+					<source>photos/Bangkok/2.jpg</source>
+					<description>Some image description</description>
+					<location>
+						<lat>13.693357716960653</lat>
+						<lng>100.53314208984375</lng>
+					</location>
+				</photo>
+				<photo>
+					<thumb>photos/Bangkok/thumbs/3.jpg</thumb>					
+					<source>photos/Bangkok/3.jpg</source>
+					<description>Some image description</description>
+					<location>
+						<lat>13.678013256725489</lat>
+						<lng>100.59185028076172</lng>
+					</location>
+				</photo>	
+			</photos>
+		</place>
+		<place>
+			<name>Phuket</name>
+			<location>
+				<lat>7.965397563771541</lat>
+				<lng>98.33999633789062</lng>
+			</location>
+			<photos>
+				<photo>
+					<thumb>photos/Phuket/thumbs/1.jpg</thumb>
+					<source>photos/Phuket/1.jpg</source>
+					<description>Some image description3</description>
+					<location>
+						<lat>7.893989181999725</lat>
+						<lng>98.3001708984375</lng>
+					</location>
+				</photo>
+				<photo>
+					<thumb>photos/Phuket/thumbs/2.jpg</thumb>					
+					<source>photos/Phuket/2.jpg</source>
+					<description>Some image description</description>
+					<location>
+						<lat>8.077586</lat>
+						<lng>98.274765</lng>
+					</location>
+				</photo>
+				<photo>
+					<thumb>photos/Phuket/thumbs/3.jpg</thumb>					
+					<source>photos/Phuket/3.jpg</source>
+					<description>Some image description</description>
+					<location>
+						<lat>8.043592</lat>
+						<lng>98.276138</lng>
+					</location>
+				</photo>
+			</photos>
+		</place>
+		<place>
+			<name>Myeik</name>
+			<location>
+				<lat>12.43844</lat>
+				<lng>98.60878</lng>
+			</location>
+			<photos>
+				<photo>
+					<thumb>photos/Myeik/thumbs/1.jpg</thumb>
+					<source>photos/Myeik/1.jpg</source>
+					<description>Some image description3</description>
+					<location>
+						<lat>12.461385</lat>
+						<lng>98.575516</lng>
+					</location>
+				</photo>
+				<photo>
+					<thumb>photos/Myeik/thumbs/2.jpg</thumb>					
+					<source>photos/Myeik/2.jpg</source>
+					<description>Some image description</description>
+					<location>
+						<lat>12.436074</lat>
+						<lng>98.586674</lng>
+					</location>
+				</photo>
+				<photo>
+					<thumb>photos/Myeik/thumbs/3.jpg</thumb>					
+					<source>photos/Myeik/3.jpg</source>
+					<description>Some image description</description>
+					<location>
+						<lat>12.417801</lat>
+						<lng>98.609505</lng>
+					</location>
+				</photo>
+			</photos>
+		</place>
+	</places>
+</album>

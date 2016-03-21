@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+    <head>
+        <title>tagdrop</title>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+        <script>
+            (function($){
+                $.fn.extend({
+                    tagdrop: function(options) {
+                        var defaults = {
+                            tagPaddingTop: '90px',
+                            tagDefaultPaddingTop: '30px',
+                            bgColor: '#B1CCED',
+                            bgMoverColor: '#7FB0F0',
+							textColor: '#e0e0e0',
+							textDefaultColor: '#fff'
+                        };
+                        var options = $.extend(defaults, options);
+
+                        return this.each(function() {
+                            var obj = $(this);
+                            var li_items = $("li", obj);
+                            $("li", obj).css('background-color', options.bgColor);
+                            
+                            li_items.mouseover(function(){
+                                $(this).animate({paddingTop: options.tagPaddingTop}, 300);
+                                $(this).css('background-color', options.bgMoverColor);
+                                $(this).css('color', options.textColor);
+                            }).mouseout(function() {
+                                $(this).animate({paddingTop: options.tagDefaultPaddingTop}, 500);
+                                $("li",$(this).parent()).css('background-color', options.bgColor);
+                                $("li",$(this).parent()).css('color', options.textDefaultColor);
+                            });
+                        });
+                    }
+                });
+            })(jQuery);
+        </script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('.menu').tagdrop({tagPaddingTop: '60px',bgColor: '#B1CCED',bgMoverColor: '#7FB0F0',textColor: '#e0e0e0'});
+            });
+        </script>
+        <style>
+            body {
+                margin:0;
+                padding:0;
+            }
+         
+            #nav li {margin: 0; padding: 0;display: inline;list-style-type: none;font-size: 12px;}
+            #nav a:link, #nav a:visited {
+               
+            }
+            #nav a:hover {color: #fff;	background:#FF6A00;}
+            #nav a:visited.active, #nav a:link.active {background-color: #fff;color: #FF6A00;}
+
+            .menu {
+                list-style:none;
+                margin: 0;
+				float:right;
+            }
+            .menu li {
+                float:left;
+                margin:0 auto;
+                cursor:pointer;
+                height:30px;
+                padding:30px 5px 5px 5px;
+                margin:0px 3px 0px 3px;
+                -moz-border-radius: 0px 0px 10px 10px;
+                -webkit-border-radius:0px 0px 10px 10px;
+                -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+                -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+                
+                color: #FFF;
+                text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+                font-family: "Lucida Grande",Lucida,Verdana,sans-serif;
+                font-size:13px;
+                font-weight:bold;
+                text-transform:uppercase;
+
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <ul class="menu">
+            <li>About us</li>
+            <li>Contacts</li>
+            <li>Others</li>
+            <li>Products</li>
+			<li>Portfolio</li>
+			<li>Testemonies</li>
+        </ul>
+    </body>
+</html>
+
+
+

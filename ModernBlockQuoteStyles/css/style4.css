@@ -1,0 +1,82 @@
+
+
+.mb-style-4 {
+	width: 600px;
+	padding: 20px 240px 50px 20px;
+	background: #444 url(../images/dickens.jpg) no-repeat 140% 25%;
+	overflow: hidden;
+	box-shadow: inset 0 0 10px rgba(0,0,0,0.6);
+}
+
+.mb-style-4 blockquote p {
+	color: rgba(255,255,255,0.95);
+	font-size: 21px;
+	line-height: 26px;
+	text-align: right;
+	color: #999;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.mb-style-4 blockquote p span {
+	font-weight: 700;
+	color: #fcf779;
+	font-size: 58px;
+	line-height: 58px;
+	display: block;
+	padding: 10px;
+	text-shadow: 7px 7px 2px rgba(0,0,0,0.2);
+	-webkit-transform: rotate(-7deg) translateY(10px);
+	-moz-transform: rotate(-7deg) translateY(10px);
+	-o-transform: rotate(-7deg) translateY(10px);
+	-ms-transform: rotate(-7deg) translateY(10px);
+	transform: rotate(-7deg) translateY(10px);
+}
+.mb-style-4 blockquote p span:before {
+	font-family: 'icons';
+	content: '\275d'; 
+	font-weight: normal;
+	opacity: 0.1;
+	font-size: 136px;
+	position: absolute;
+	color: #fff;
+	top: -50px;
+	left: -25px;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.mb-style-4 .mb-attribution {
+	text-align: right;
+	text-transform: uppercase;
+	font-weight: bold;
+	background: #222;
+	position: absolute;
+	width: 100%;
+	left: 0px;
+	bottom: 0px;
+	text-align: center;
+	padding: 30px;
+	-webkit-transform: rotate(-40deg) translate(175px, 110px);
+	-moz-transform: rotate(-40deg) translate(175px, 110px);
+	-o-transform: rotate(-40deg) translate(175px, 110px);
+	-ms-transform: rotate(-40deg) translate(175px, 110px);
+	transform: rotate(-40deg) translate(175px, 110px);
+	-webkit-backface-visibility: hidden;
+}
+
+.mb-style-4 .mb-author:before {
+	content: '\2014';
+	padding-right: 4px;
+}
+
+.mb-style-4 .mb-attribution cite a{
+	color: #777;
+}
+
+.mb-style-4 .mb-attribution cite a:hover{
+	color: #fcf779;
+}

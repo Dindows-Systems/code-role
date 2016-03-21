@@ -1,0 +1,86 @@
+body { 
+	background: #ddd url(../images/blur.jpg) no-repeat fixed center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+}
+
+.mb-style-6 {
+	width: 350px;
+	height: 400px;
+	background: #fff;
+	border-radius: 4px;
+}
+
+/* Shadow style from Nicolas Gallagher: http://nicolasgallagher.com/css-drop-shadows-without-images/demo/ */
+.mb-style-6:before, .mb-style-6:after {
+	content: "";
+    position: absolute;
+    z-index: -2;
+    -moz-transform: rotate(-3deg);
+	-webkit-transform: rotate(-3deg);
+	-o-transform: rotate(-3deg);
+	-ms-transform: rotate(-3deg);
+	transform: rotate(-3deg);
+    bottom: 15px;
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+    height: 20%;
+    left: 10px;
+    max-height: 100px;
+    max-width: 300px;
+    width: 50%;
+}
+.mb-style-6:after {
+    -moz-transform: rotate(3deg);
+	-webkit-transform: rotate(3deg);
+	-o-transform: rotate(3deg);
+	-ms-transform: rotate(3deg);
+	transform: rotate(3deg);
+    left: auto;
+    right: 10px;
+}
+
+.mb-style-6 blockquote{
+	background: #333;
+	height: 75%;
+	padding: 30px;
+	text-align: center;
+}
+
+.mb-style-6 blockquote:before{
+	color: rgba(255,255,255,0.2);
+	position: absolute;
+	content: '\0022';
+	font-size: 150px;
+	line-height: 130px;
+	font-style: italic;
+	top: 0px;
+	right: 20px;
+	font-family: Cambria, Georgia, serif;
+}
+
+.mb-style-6 blockquote p {
+	color: #fff;
+	font-family: 'Abril Fatface', sans-serif;
+	font-size: 24px;
+	text-shadow: 1px 1px 1px #000;
+}
+.mb-style-6 .mb-attribution {
+	padding: 20px;
+}
+
+.mb-style-6 .mb-author {
+	font-size: 24px;
+	font-family: 'Dr Sugiyama', cursive;
+	-moz-transform: rotate(-4deg);
+	color: #070d5f;
+}
+.mb-style-6 cite a{
+	color: #999;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	font-size: 12px;
+}
+.mb-style-6 cite a:hover{
+	color: #000;
+}

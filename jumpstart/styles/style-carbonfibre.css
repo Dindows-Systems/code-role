@@ -1,0 +1,59 @@
+body.home{
+	font:14px/24px Arial, sans-serif;
+	background:url(../images/styles/carbonfibre/topbackground.png) repeat-x;
+	color:#666666;
+}
+body{
+	font:14px/24px Arial, sans-serif;
+	background:url(../images/styles/carbonfibre/single-blogbg.png) repeat-x;
+	color:#666666;
+}
+/*****************/
+/**outer-footer**/
+/***************/
+#outer-footer{
+	background:url(../images/styles/carbonfibre/footer.png) repeat-x;
+	width:100%;
+	height:49px;
+	position:relative;
+	bottom:0;
+}
+#recent-posts a{
+	font-family:Arial;
+	font-size:12px;
+	color:#333!important;
+	text-decoration:none;
+}
+.quick-submit{
+	border:none;
+	width:190px;
+	height:28px;
+	background:url(../images/styles/carbonfibre/button.png);
+	color:#FFF;
+}
+#catergories li a:hover{
+	color:#333!important;
+}
+.selected{
+	background:url("../images/styles/carbonfibre/menu-left.png") no-repeat scroll 0 0 transparent;
+	float:left;
+	height:48px;
+	margin-top:-12px;
+	padding:0 0 0 9px;
+}
+.selected a{
+	background:url("../images/styles/carbonfibre/menu-middle.png") repeat-x scroll left top transparent;
+	float:left;
+	line-height:48px;
+	padding:0 10px;
+}
+.selected span{
+	background:transparent url(../images/styles/carbonfibre/menu-right.png) no-repeat;
+	float:left;
+	width:9px;
+	height:48px;
+	padding:0;
+}
+.vSlider{
+	-moz-box-shadow:0 0 41px #555555;
+}

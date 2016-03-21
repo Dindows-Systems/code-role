@@ -1,0 +1,71 @@
+body {
+	background: #ddd url(../images/bg_reddish.jpg) repeat top left;
+}
+
+.mb-style-2 blockquote{
+	padding-top: 150px;
+}
+
+.mb-style-2 blockquote:after {
+	font-family: 'icons';
+	background: rgba(235,150,108,0.8);
+	width: 130px;
+	height: 130px;
+	border-radius: 50%;
+	content: '\275e'; 
+	position: absolute;
+	font-size: 70px;
+	line-height: 130px;
+	text-align: center;
+	top: 0px;
+	left: 50%;
+	margin-left: -65px;
+	color: rgba(255,255,255,0.5);
+	text-shadow: 0 1px 1px rgba(255,255,255,0.1);
+}
+
+.mb-style-2 blockquote:before{
+	content: '';
+	width: 500px;
+	height: 500px;
+	border-radius: 50%;
+	border-left: 5px solid rgba(235,150,108,0.1);
+	position: absolute;
+	top: 0px;
+	left: -50px;
+	z-index: -1;
+}
+
+.mb-style-2 blockquote p {
+	font-family: Baskerville, Georgia, serif;
+	font-size: 28px;
+	font-style: italic;
+	background: rgba(255,255,255,0.5);
+	display: inline;
+	color: rgba(235,150,108,0.8);
+	text-shadow: 0 1px 1px rgba(255,255,255,0.5);
+	line-height: 46px;
+	box-shadow: 0 -6px 0 rgba(235,150,108,0.2);
+}
+
+.mb-style-2 .mb-attribution {
+	text-align: right;
+}
+
+.mb-style-2 .mb-author{
+	text-transform: uppercase;
+	font-size: 18px;
+	padding-top: 10px;
+	font-weight: bold;
+	color: #d48158;
+	text-shadow: 0 1px 1px rgba(255,255,255,0.1);
+}
+
+.mb-style-2 cite a{
+	color: #d7aa94;
+	font-style: italic;
+}
+
+.mb-style-2 cite a:hover{
+	color: #d48158;
+}

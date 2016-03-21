@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Image Zoom Tour with jQuery</title>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="Image Zoom Tour with jQuery" />
+        <meta name="keywords" content="jquery, zoom, tour, images, zoom in, zoom out, plugin, css3" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="../favicon.ico"> 
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<noscript>
+			<link rel="stylesheet" type="text/css" href="css/styleNoJS.css" />
+		</noscript>
+		<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow&v1' rel='stylesheet' type='text/css' />
+		<link href='http://fonts.googleapis.com/css?family=Ultra' rel='stylesheet' type='text/css' />
+    </head>
+    <body>
+		<div class="container">
+			<div class="header">
+				<a href="http://tympanus.net/Development/CircularContentCarousel/"><span>&laquo; Previous Demo: </span>Circular Content Carousel</a>
+				<span class="right_ab">
+					<a href="http://tympanus.net/codrops/2011/08/23/image-zoom-tour/"><strong>back to the Codrops post</strong></a>
+				</span>
+			</div>
+			<h1>Image Zoom Tour<span> with jQuery</span></h1>
+			<div id="zt-container" class="zt-container">
+				<div class="zt-item" data-id="zt-item-1">
+					<img class="zt-current" src="images/image2.jpg" />
+					<div class="zt-tag" data-link="zt-item-2" style="top:138px;left:151px;"></div>
+					<div class="zt-tag" data-link="zt-item-3" style="top:253px;left:520px;"></div>
+					<div class="zt-tag" data-link="zt-item-4" style="top:161px;left:321px;"></div>
+					<div class="zt-tag" data-link="zt-item-5" style="top:74px;left:267px;"></div>
+					<div class="zt-tag" data-link="zt-item-6" style="top:109px;left:387px;"></div>
+				</div>
+				<div class="zt-item" data-id="zt-item-2">
+					<img class="zt-current" src="images/image2_1.jpg" />
+					<div class="zt-tag zt-tag-back" data-link="zt-item-1"></div>
+				</div>		
+				<div class="zt-item" data-id="zt-item-3">
+					<img class="zt-current" src="images/image2_2.jpg" />
+					<div class="zt-tag zt-tag-back" data-link="zt-item-1"></div>
+				</div>			
+				<div class="zt-item" data-id="zt-item-4">
+					<img class="zt-current" src="images/image2_3.jpg" />
+					<div class="zt-tag zt-tag-back" data-link="zt-item-1"></div>
+				</div>
+				<div class="zt-item" data-id="zt-item-5">
+					<img class="zt-current" src="images/image2_4.jpg" />
+					<div class="zt-tag zt-tag-back" data-link="zt-item-1"></div>
+				</div>
+				<div class="zt-item" data-id="zt-item-6">
+					<img class="zt-current" src="images/image2_5.jpg" />
+					<div class="zt-tag zt-tag-back" data-link="zt-item-1"></div>
+				</div>
+			</div>
+			<div class="more">
+				<ul>
+					<li>More examples:</li>
+					<li><a href="index.html">Example 1</a></li>
+					<li><a href="index2.html">Example 2</a></li>
+					<li><a href="index3.html">Example 3</a></li>
+					<li class="selected"><a href="index4.html">Example 4</a></li>
+					<li><a href="index5.html">Example 5</a></li>
+				</ul>
+			</div>
+		</div>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.transform-0.9.3.min_.js"></script>
+		<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+		<script type="text/javascript" src="js/jquery.zoomtour.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('#zt-container').zoomtour({
+					rotation:false
+				});
+			});
+		</script>
+    </body>
+</html>

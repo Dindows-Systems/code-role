@@ -1,0 +1,53 @@
+body {
+	background-color:#003b8b;
+	color:#badeff;
+}
+a {
+	color:#badeff;
+}
+a:hover, a:active, a:focus {
+	color:#FFF;
+}
+h2, h3, h4, h5 {
+	color:#FFF;
+}
+ul.ul li.active a {
+	color:#FFF;
+}
+table.table th, table.table td {
+	border:1px solid #003071;
+}
+table.table th {
+	border-bottom:3px solid #003071;
+	background-color:#0046A4;
+	color:#FFF;
+}
+fieldset {
+	border:1px solid #003071;
+}
+fieldset legend {
+	color:#FFF;
+}
+#header h1 {
+	color:#FFF;
+}
+#header h2 {
+	color:#badeff;
+}
+#content .boxes li h3 {
+	color:#FFF;
+}
+#content .twitter .twitter-desc ul {
+	color:#FFF;
+}
+.high, .high a {
+	color:#fff;
+}
+.input-text {
+	background-color:#002558;
+	color:#FFF;
+}
+.input-submit {
+	background-color:#001A3E;
+	color:#FFF;
+}

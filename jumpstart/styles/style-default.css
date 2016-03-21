@@ -1,0 +1,56 @@
+body.home{
+	font:14px/24px Arial, sans-serif;
+	background:url(../images/styles/default/topbackground.png) repeat-x;
+	color:#666666;
+}
+body{
+	font:14px/24px Arial, sans-serif;
+	background:url(../images/styles/default/single-blogbg.png) repeat-x;
+	color:#666666;
+}
+/*****************/
+/**outer-footer**/
+/***************/
+#outer-footer{
+	background:url(../images/styles/default/footer.png) repeat-x;
+	width:100%;
+	height:49px;
+	position:relative;
+	bottom:0;
+}
+#recent-posts a{
+	font-family:Arial;
+	font-size:12px;
+	color:#12949e;
+	text-decoration:none;
+}
+.quick-submit{
+	border:none;
+	width:190px;
+	height:28px;
+	background:url(../images/styles/default/button.png);
+	color:#FFF;
+}
+#catergories li a:hover{
+	color:#148f99;
+}
+.selected{
+	background:url("../images/styles/default/menu-left.png") no-repeat scroll 0 0 transparent;
+	float:left;
+	height:40px;
+	margin-top:-7px;
+	padding:0 0 0 6px;
+}
+.selected a{
+	background:url("../images/styles/default/menu-middle.png") repeat-x scroll left top transparent;
+	float:left;
+	line-height:40px;
+	padding:0 7px;
+}
+.selected span{
+	background:transparent url(../images/styles/default/menu-right.png) no-repeat;
+	float:left;
+	width:6px;
+	height:40px;
+	padding:0;
+}

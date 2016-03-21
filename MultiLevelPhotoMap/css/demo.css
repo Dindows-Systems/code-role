@@ -1,0 +1,68 @@
+@import url('reset.css');
+/* General Demo Style */
+body{
+	background:#f3f0e5 url(../images/cubes.png) repeat top left;
+	color:#000;
+	font-family: 'PT Sans Narrow', Arial, sans-serif;
+	font-size:12px;
+}
+a{
+	color:#000;
+	text-decoration:none;
+}
+.clr{
+	clear:both;
+}
+h1{
+	margin:20px 20px 40px 20px;
+	font-size:56px;
+	color:#495366;
+	font-family: 'Rokkitt', sans-serif;
+	text-align:center;
+	font-weight:700;
+	text-shadow:1px 1px 3px #b7b9be;
+	text-shadow:0px 1px 1px #fff;
+}
+h1 span{
+	font-size:20px;
+	display:block;
+	color:#7685ac;
+	font-weight:400;
+	text-shadow:0px 1px 1px #fff;
+}
+/* Header Style */
+.header{
+	height:25px;
+	line-height:24px;
+	font-size:13px;
+	background:#000;
+	opacity:0.9;
+	text-transform:uppercase;
+	z-index:4;
+	-moz-box-shadow:1px 0px 2px #000;
+	-webkit-box-shadow:1px 0px 2px #000;
+	box-shadow:1px 0px 2px #000;
+}
+.header a{
+	padding:5px 10px;
+	letter-spacing:1px;
+	color:#ddd;
+	text-align:right;
+}
+.header a:hover{
+	color:#fff;
+}
+.header a span{
+	font-weight:bold;
+}
+.header span.right_ab{
+	position:absolute;
+	right:4px;
+}
+p.note{
+	text-align:center;
+	font-size:14px;
+	padding:20px 10px 10px 10px;
+	font-weight:normal;
+	color:#999;
+}

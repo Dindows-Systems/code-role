@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Multi-level Photo Map - A location based image gallery app</title>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+        <meta name="description" content="Multi-level Photo Map - A location based image gallery app" />
+        <meta name="keywords" content="jquery, google maps, map, photos, album, images, multi-level, gallery, fullscreen" />
+		<meta name="author" content="Pedro Botelho for Codrops" />
+		<link rel="shortcut icon" href="../favicon.ico"> 
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/jquery.jscrollpane.css" />
+		<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow&v1' rel='stylesheet' type='text/css' />
+		<link href='http://fonts.googleapis.com/css?family=Rokkitt:400,700' rel='stylesheet' type='text/css' />
+		<script id="galleryTmpl" type="text/x-jquery-tmpl">
+			<div class="mp-album-outer">
+			<div class="mp-album">
+						{{each(i, option) tmplPhotosData}}
+							<a href="${tmplPhotosData[i]}"><img src="${tmplPhotosData[i]}"/></img></a>
+					{{/each}}
+				</div>
+			</div>			
+		</script>
+		<script id="galleryAlbumTmpl" type="text/x-jquery-tmpl">
+			<div id="mp-album-overlay" class="mp-album-overlay">
+					<div class="mp-album-nav">
+						<span class="mp-album-nav-prev">Previous</span>
+						<span class="mp-album-nav-next">Next</span>
+					</div>
+					<div class="mp-image-loading-small">Loading...</div>
+					<div class="mp-album-image-wrapper">
+						<div class="mp-album-image">
+						<img src="${tmplPhotoData.source}"/>
+							<a href="#" class="mp-album-image-zoom">Real size</a>
+						</div>
+					</div>
+					<span class="mp-album-overlay-close">Close overlay</span>
+				</div>
+		</script>
+		<script id="galleryFullscreenTmpl" type="text/x-jquery-tmpl">
+			<div id="mp-image-overlay" class="mp-image-overlay">
+				<div class="mp-loading">Loading...</div>
+				<img src="${tmplPhotoData.source}" style="display:none;"/>
+				<div class="mp-image-overlay-desc">
+					<h2 class="mp-label">${tmplPhotoData.description}</h2>
+				</div>
+				<span class="mp-image-overlay-close">Close overlay</span>
+			</div>
+		</script>
+    </head>
+    <body>
+		<div class="container">
+			<div class="header">
+				<a href="http://tympanus.net/Tutorials/ResponsiveImageGallery/"><span>&laquo; Previous Demo: </span>Responsive Image Gallery</a>
+				<span class="right_ab">
+					<a target="_blank" href="http://www.flickr.com/people/puuikibeach/">Images by <strong>Davidd</strong></a>
+					<a target="_blank" href="http://creativecommons.org/licenses/by/2.0/deed.en_GB"><strong>CC BY 2.0</strong></a>
+					<a href="http://tympanus.net/codrops/2011/09/27/multi-level-photo-map/"><strong>Back to the Codrops Article</strong></a>
+				</span>
+				</div>
+			<h1>Multi-level Photo Map<span>A location based image gallery app</span></h1>
+			<div class="mp-container" id="mp-container">
+				<div class="mp-map-wrapper" id="map"></div>
+				<div class="mp-album-wrapper" id="mp-album-wrapper"></div>
+			</div>
+			<p class="note">Demo images with exemplary locations, might not depict the real location.</p>
+		</div>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.tmpl.min.js"></script>
+		<script src="http://maps.google.com/maps/api/js?sensor=true" type="text/javascript"></script>
+		<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+		<script type="text/javascript" src="js/jquery.jscrollpane.min.js"></script>
+		<script type="text/javascript" src="js/mapalbum.js"></script>
+    </body>
+</html>

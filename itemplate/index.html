@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>iTemplate</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" media="screen,projection" type="text/css" href="css/reset.css" />
+<link rel="stylesheet" media="screen,projection" type="text/css" href="css/main.css" />
+<link rel="stylesheet" media="screen,projection" type="text/css" href="css/skin.css" />
+<link rel="stylesheet" media="screen,projection" type="text/css" href="js/jquery.fancybox.css" />
+<!--[if IE 6]>
+<script src="js/pngfix.js"></script>
+<script>DD_belatedPNG.fix('#appstore img, #device, .boxes-img img, .twitter, ul.ul li, .gallery li img, #footer');</script>
+<![endif]-->
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.fancybox.js"></script>
+<script type="text/javascript" src="js/cufon.js"></script>
+<script type="text/javascript" src="js/museosans.font.js"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+    $(".lightbox").fancybox();
+});
+Cufon.replace('.cufon', {
+    fontFamily: 'Museo Sans 500'
+});
+</script>
+</head>
+<body>
+<!-- START PAGE SOURCE -->
+<div id="bg">
+  <div id="main" class="box">
+    <div id="header" class="box">
+      <p id="appstore"><a href="#"><img src="design/appstore.png" alt="" /></a></p>
+      <div id="device" class="pngfix">
+        <p> <a href="tmp/img.jpg" id="screen-01" class="lightbox"><img src="images/screen-01.png" alt="" /></a> <a href="tmp/img.jpg" id="screen-02" class="lightbox"><img src="images/screen-02.png" alt="" /></a> <a href="tmp/img.jpg" id="screen-03" class="lightbox"><img src="images/screen-03.png" alt="" /></a> </p>
+      </div>
+      <h1 class="cufon">Amazing iPhone Application</h1>
+      <h2 class="cufon">Vestibulum lacus nunc, tincidunt suscipit vestibulum ege</h2>
+    </div>
+    <div id="content" class="box">
+      <ul class="boxes box">
+        <li class="box">
+          <div class="boxes-img"><img src="images/img-01.png" alt="" /></div>
+          <div class="boxes-desc">
+            <h3>Some feature</h3>
+            <p><a href="subpage.html">Lorem ipsum dolor sit amet</a>, consecteiu adipiscing elit. Pellentesque id lorem eri varius porta. Nam nulla leo, cursus fau ullamcorper eget, aliquet quis turpis.</p>
+          </div>
+        </li>
+        <li class="box">
+          <div class="boxes-img"><img src="images/img-02.png" alt="" /></div>
+          <div class="boxes-desc">
+            <h3>Another feature</h3>
+            <p>Lorem ipsum dolor sit amet, consecteiu adipiscing elit. Pellentesque id lorem eri varius porta. Nam nulla leo, cursus fau ullamcorper eget, aliquet quis turpis.</p>
+          </div>
+        </li>
+        <li class="box last">
+          <div class="boxes-img"><img src="images/img-03.png" alt="" /></div>
+          <div class="boxes-desc">
+            <h3>Last feature</h3>
+            <p>Lorem ipsum dolor sit amet, consecteiu adipiscing elit. Pellentesque id lorem eri varius porta. Nam nulla leo, cursus fau ullamcorper eget, aliquet quis turpis.</p>
+          </div>
+        </li>
+      </ul>
+      <div class="twitter box">
+        <div class="twitter-img"><a href="#"><img src="design/twitter.png" alt="" /></a></div>
+        <div class="twitter-desc">
+          <ul id="twitter_update_list">
+            <li><span>Our web site was updated today. 9 iPhone 4 web templates were added. Check them out! <a href="#">http://domain.com</a> #iphone #templates #design</span> <a style="font-size: 85%;" href="#">12 days ago</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-left">
+        <h3 class="nomt">Features</h3>
+        <ul class="ul nom">
+          <li>Lorem ipsum dolor sit amet consectetur</li>
+          <li>Adipiscing elit, pellentesque et augue</li>
+          <li>Fusce sed quam eget urna vehicula</li>
+          <li>Venenatis vitae vehicula erat</li>
+          <li>Morbi vel purus in orci semper molestie</li>
+          <li>Quisque luctus dictum lorem</li>
+        </ul>
+      </div>
+      <div class="col-right">
+        <h3 class="nomt">Screenshots</h3>
+        <ul class="gallery box">
+          <li><a href="tmp/img.jpg" class="lightbox"><img src="images/thumb-01.png" alt="" /></a></li>
+          <li><a href="tmp/img.jpg" class="lightbox"><img src="images/thumb-02.png" alt="" /></a></li>
+          <li><a href="tmp/img.jpg" class="lightbox"><img src="images/thumb-03.png" alt="" /></a></li>
+          <li><a href="tmp/img.jpg" class="lightbox"><img src="images/thumb-04.png" alt="" /></a></li>
+          <li class="last"><a href="tmp/img.jpg" class="lightbox"><img src="images/thumb-05.png" alt="" /></a></li>
+        </ul>
+        <p class="nom smaller">Click for enlarge selected thumbnail</p>
+      </div>
+    </div>
+    <div id="footer" class="box">
+      <p class="f-right"><br />
+        <a href="http://www.css-free.com">Free CSS Templates</a> by <a href="http://www.css-free.com">TemplatesDock</a></p>
+      <p class="f-left"><span class="high">Apple, the logo and iPhone are trademarks of Apple Inc., registered in U.S. and other countries.</span><br />
+        &copy; 2010 <a href="#">Lorem ipsum</a>, All Rights Reserved</p>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">Cufon.now();</script>
+<!-- END PAGE SOURCE -->
+</body>
+</html>

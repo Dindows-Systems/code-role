@@ -1,0 +1,222 @@
+/* ------ buttons
+-----------------------------------------------*/
+
+.btn {
+float:left;
+display:inline-block;
+height:44px;
+line-height:44px;
+padding:0 10px 0 50px;
+background:url(../images/white.jpg) repeat-x;
+color:#999;
+font-weight:bold;
+font-size:13px;
+text-shadow:0 1px 0 #fff;
+position:relative;
+border:1px solid #DFDFDF;
+margin:0 10px 10px 0;
+-moz-border-radius:8px;
+-webkit-border-radius:8px;
+border-radius:8px;
+}
+
+.btn:hover {
+border-color:#cacaca;
+background:#F8F8F8;
+}
+
+.btn span {
+display:block;
+position:absolute;
+top:6px;
+left:9px;
+width:32px;
+height:32px;
+background-repeat:no-repeat;
+background-position:center;
+}
+
+.btn.activity span {
+background-image:url(../images/icons/activity.png);
+}
+
+.btn.activitya span {
+background-image:url(../images/icons/activityadd.png);
+}
+
+.btn.activityd span {
+background-image:url(../images/icons/activitydelete.png);
+}
+
+.btn.activityw span {
+background-image:url(../images/icons/activitywarn.png);
+}
+
+.btn.add span {
+background-image:url(../images/icons/add.png);
+}
+
+.btn.address span {
+background-image:url(../images/icons/activity.png);
+}
+
+.btn.addressd span {
+background-image:url(../images/icons/addressdelete.png);
+}
+
+.btn.addressa span {
+background-image:url(../images/icons/adressadd.png);
+}
+
+.btn.addresss span {
+background-image:url(../images/icons/addresssearch.png);
+}
+
+.btn.book span {
+background-image:url(../images/icons/book.png);
+}
+
+.btn.booka span {
+background-image:url(../images/icons/bookadd.png);
+}
+
+.btn.bookd span {
+background-image:url(../images/icons/bookdelete.png);
+}
+
+.btn.books span {
+background-image:url(../images/icons/booksearch.png);
+}
+
+.btn.activity span {
+background-image:url(../images/icons/activity.png);
+}
+
+.btn.bulb span {
+background-image:url(../images/icons/bulb.png);
+}
+
+.btn.fav span {
+background-image:url(../images/icons/fav.png);
+}
+
+.btn.chart span {
+background-image:url(../images/icons/chart.png);
+}
+
+.btn.activity span {
+background-image:url(../images/icons/activity.png);
+}
+
+.btn.comment span {
+background-image:url(../images/icons/comment.png);
+}
+
+.btn.commenta span {
+background-image:url(../images/icons/commentadd.png);
+}
+
+.btn.commentua span {
+background-image:url(../images/icons/commentuseradd.png);
+}
+
+.btn.commentud span {
+background-image:url(../images/icons/commentuserdelete.png);
+}
+
+.btn.commentus span {
+background-image:url(../images/icons/commentusersearch.png);
+}
+
+.btn.delete span {
+background-image:url(../images/icons/delete.png);
+}
+
+.btn.edit span {
+background-image:url(../images/icons/edit.png);
+}
+
+.btn.email span {
+background-image:url(../images/icons/email.png);
+}
+
+.btn.emaila span {
+background-image:url(../images/icons/emailadd.png);
+}
+
+.btn.emaild span {
+background-image:url(../images/icons/emaildelete.png);
+}
+
+.btn.folder span {
+background-image:url(../images/icons/folder.png);
+}
+
+.btn.foldera span {
+background-image:url(../images/icons/folderadd.png);
+}
+
+.btn.folderd span {
+background-image:url(../images/icons/folderdelete.png);
+}
+
+.btn.info span {
+background-image:url(../images/icons/info.png);
+}
+
+.btn.lock span {
+background-image:url(../images/icons/lock.png);
+}
+
+.btn.unlock span {
+background-image:url(../images/icons/lockopen.png);
+}
+
+.btn.page span {
+background-image:url(../images/icons/page.png);
+}
+
+.btn.pagea span {
+background-image:url(../images/icons/pageadd.png);
+}
+
+.btn.paged span {
+background-image:url(../images/icons/pagedelete.png);
+}
+
+.btn.rss span {
+background-image:url(../images/icons/rss.png);
+}
+
+.btn.search span {
+background-image:url(../images/icons/search.png);
+}
+
+.btn.time span {
+background-image:url(../images/icons/time.png);
+}
+
+.btn.user span {
+background-image:url(../images/icons/user.png);
+}
+
+.btn.usera span {
+background-image:url(../images/icons/useradd.png);
+}
+
+.btn.userd span {
+background-image:url(../images/icons/userdelete.png);
+}
+
+.btn.users span {
+background-image:url(../images/icons/usersearch.png);
+}
+
+
+.btn.useri span {
+background-image:url(../images/icons/userinfo.png);
+}
+
+.btn.warn span {
+background-image:url(../images/icons/warning.png);
+}

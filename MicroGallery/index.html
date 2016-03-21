@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>Micro Image Gallery jQuery Plugin</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="description" content="Micro Image Gallery jQuery Plugin with Preview" />
+        <meta name="keywords" content="jquery,image gallery, plugin, thumnails, preview"/>
+        <link rel="stylesheet" href="css/style.css" type="text/css" media="screen"/>
+        <style>
+            *{
+                margin:0;
+                padding:0;
+            }
+            body{
+                font-family:Georgia,Times,serif;
+                padding:50px;
+                background:#f0f0f0 url(title.png) no-repeat top left;
+            }
+            a.back{
+                background:transparent url(back.png) no-repeat top left;
+                position:fixed;
+                width:150px;
+                height:27px;
+                outline:none;
+                top:0px;
+                right:0px;
+            }
+            #content{
+                width:700px;
+                height:450px;
+                margin:120px auto 0px auto;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="content">
+            <a class="back" href="http://tympanus.net/codrops/2010/04/19/micro-image-gallery-a-jquery-plugin"></a>
+
+
+            <div id="mG1" class="microGallery">
+                <img src="Gallery1/1.JPG" alt=""/>
+                <img src="Gallery1/2.JPG" alt=""/>
+                <img src="Gallery1/3.JPG" alt=""/>
+                <img src="Gallery1/4.JPG" alt=""/>
+                <img src="Gallery1/5.JPG" alt=""/>
+                <img src="Gallery1/6.JPG" alt=""/>
+                <img src="Gallery1/7.JPG" alt=""/>
+                <img src="Gallery1/8.JPG" alt=""/>
+                <img src="Gallery1/9.JPG" alt=""/>
+                <img src="Gallery1/10.JPG" alt=""/>
+                <img src="Gallery1/11.JPG" alt=""/>
+                <img src="Gallery1/12.JPG" alt=""/>
+                <img src="Gallery1/13.JPG" alt=""/>
+                <img src="Gallery1/14.JPG" alt=""/>
+                <img src="Gallery1/15.JPG" alt=""/>
+                <img src="Gallery1/16.JPG" alt=""/>
+                <img src="Gallery1/17.JPG" alt=""/>
+                <img src="Gallery1/18.JPG" alt=""/>
+                <img src="Gallery1/19.JPG" alt=""/>
+                <img src="Gallery1/20.JPG" alt=""/>
+                <img src="Gallery1/21.JPG" alt=""/>
+                <img src="Gallery1/22.JPG" alt=""/>
+            </div>
+            
+        </div>
+        <!-- The JavaScript -->
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <script type="text/javascript" src="jquery.microgallery.js"></script>
+        <script type="text/javascript">
+            $(function() {
+				
+                $("#mG1").microgallery({
+                    menu:true,
+                    size:'small',
+                    mode:'single'
+                });
+                
+            });
+        </script>
+    </body>
+</html>

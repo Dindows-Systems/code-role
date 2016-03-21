@@ -1,0 +1,387 @@
+/* -------------------------------------------------------
+
+	Description: iPhone App HTML Template
+	Version: 1.0
+	Coded by: Anli Zaimi, http://azmind.com
+	Designed by: Rafi, http://www.graphicsfuel.com
+
+------------------------------------------------------- */
+
+
+/* ------- This is the CSS Reset ------- */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* ------- HTML5 display-role reset for older browsers ------- */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* --------------------------------------------------------------- */
+
+/* ------- Body ------- */
+
+body {
+	background: #ffffff;
+	font-family: Arial, Verdana;
+	font-weight: normal;
+	color: #727272;
+}
+/* ------- Container ------- */
+
+#container {
+	margin: auto;
+	min-width: 1000px;
+	text-align: center;
+}
+/* ------- Header ------- */
+
+#header {
+	margin: auto;
+	background: url(../images/header-bg.jpg) top left repeat;
+	padding-top: 1px;
+}
+.menu {
+	margin: auto;
+	margin-top: 40px;
+	width: 950px;
+	height: 70px;
+}
+.logo {
+	float: left;
+	display: block;
+	margin-left: 0;
+	width: 174px;
+	height: 67px;
+	background: url(../images/logo.png) top left no-repeat;
+	border: 0;
+}
+.logo:hover {
+	background: url(../images/logo-hover.png) top left no-repeat;
+}
+.pages {
+	float: left;
+	margin-left: 330px;
+	margin-top: 25px;
+	font-size: 15px;
+	font-weight: bold;
+}
+.pages a {
+	margin-left: 40px;
+	color: #727272;
+	text-decoration: none;
+}
+.pages a:hover {
+	color: #f03e24;
+	text-decoration: none;
+}
+.iphone {
+	margin: auto;
+	width: 950px;
+	height: 360px;
+	background: url(../images/iphone-img.png) 360px 21px no-repeat;
+}
+.iphone-app-text {
+	float: left;
+	margin-left: 0;
+	margin-top: 90px;
+	padding-top: 90px;
+	width: 415px;
+	background: url(../images/iphone-app-text.png) top left no-repeat;
+	font-size: 15px;
+	line-height: 30px;
+	text-align: left;
+}
+/* ------- Header Bottom ------- */
+
+#header-bottom {
+	margin: auto;
+	background: url(../images/header-bottom-bg.jpg) top left repeat-x;
+}
+.buy {
+	margin: auto;
+	width: 950px;
+	height: 133px;
+	background: url(../images/arrow-iphone-img.png) 328px 0px no-repeat;
+}
+.buy-button {
+	float: left;
+	display: block;
+	margin-left: 0;
+	margin-top: 30px;
+	width: 280px;
+	height: 76px;
+	background: url(../images/buy-button.png) top left no-repeat;
+	border: 0;
+}
+.buy-button:hover {
+	background: url(../images/buy-button-hover.png) top left no-repeat;
+}
+/* ------- Title 1 ------- */
+
+#title1 {
+	margin: auto;
+	height: 93px;
+	background: url(../images/title1-bg.jpg) top left repeat-x;
+}
+.title1-text {
+	margin: auto;
+	padding-top: 60px;
+	width: 950px;
+	height: 33px;
+	background: url(../images/title1-img.jpg) 341px 0px no-repeat;
+	text-align: center;
+	font-size: 20px;
+	color: #d9d9d9;
+	font-weight: bold;
+}
+/* ------- Screenshots ------- */
+
+#screenshots {
+	margin: auto;
+	padding-top: 1px;
+	min-height: 310px;
+	background: url(../images/screenshots-bg.jpg) top left repeat;
+}
+.screenshot-images {
+	margin: auto;
+	margin-top: 45px;
+	width: 1000px;
+	text-align: center;
+}
+.screenshot-images ul li {
+	display: inline;
+}
+/* ------- Title 2 -------*/
+
+#title2 {
+	margin: auto;
+	height: 255px;
+	background: #ffffff url(../images/title2-bg.jpg) bottom left repeat-x;
+}
+.title2-text {
+	margin: auto;
+	padding-top: 8px;
+	width: 950px;
+	height: 40px;
+	background: url(../images/title2-img.jpg) 341px 0px no-repeat;
+	text-align: center;
+	font-size: 20px;
+	color: #666666;
+	font-weight: bold;
+}
+.features {
+	margin: auto;
+	margin-top: 31px;
+	width: 950px;
+	font-size: 13px;
+	color: #727272;
+	text-align: left;
+	line-height: 23px;
+}
+.features img {
+	float: left;
+	margin-left: 25px;
+}
+.features p {
+	float: left;
+	margin-left: 18px;
+	width: 220px;
+}
+/* ------- Above Footer ------- */
+
+#above-footer {
+	margin: auto;
+	width: 960px;
+	height: 300px;
+}
+.testimonial {
+	float: left;
+	margin-left: 0;
+	margin-top: 25px;
+	padding-top: 25px;
+	width: 539px;
+	min-height: 162px;
+	background: url(../images/testimonial.png) top left no-repeat;
+	text-align: left;
+}
+.testimonial p {
+	margin-left: 35px;
+	width: 450px;
+	font-size: 18px;
+	font-style: italic;
+	color: #727272;
+	line-height: 22px;
+}
+.testimonial p.graphicsfuel {
+	color: #c23323;
+}
+.testimonial-site {
+	margin-top: 60px;
+	margin-left: 27px;
+}
+.testimonial-site img {
+	float: left;
+}
+.testimonial-site p {
+	float: left;
+	margin-top: 15px;
+	margin-left: 12px;
+	font-size: 13px;
+	color: #000000;
+	font-style: normal;
+	line-height: 13px;
+}
+.as-seen-on {
+	float: left;
+	margin-left: 40px;
+	margin-top: 25px;
+	width: 380px;
+	font-size: 20px;
+	font-weight: bold;
+	color: #343435;
+	text-align: left;
+}
+.as-seen-on p {
+	margin-bottom: 30px;
+}
+.as-seen-on img {
+	float: left;
+	margin-right: 12px;
+	margin-bottom: 25px;
+}
+/* ------- Footer ------- */
+
+#footer {
+	margin: auto;
+	background: #666666 url(../images/footer-bg.jpg) top left repeat-x;
+}
+.footer-credits {
+	margin: auto;
+	width: 960px;
+	height: 120px;
+	background: url(../images/footer-credits-bg.png) top left no-repeat;
+}
+.footer-credits p {
+	float: left;
+	margin-top: 55px;
+	font-size: 13px;
+	color: #dfdfdf;
+}
+.footer-credits p a {
+	color: #dfdfdf;
+	text-decoration: none;
+}
+.footer-credits p a:hover {
+	color: #dfdfdf;
+	text-decoration: underline;
+}
+.twitter {
+	float: left;
+	display: block;
+	margin-left: 110px;
+	margin-top: 38px;
+	width: 389px;
+	height: 82px;
+	background: url(../images/twitter.png) bottom left no-repeat;
+	border: 0;
+}
+.twitter:hover {
+	background: url(../images/twitter-hover.png) bottom left no-repeat;
+}
+/* ------- Title 3 ------- */
+
+#title3 {
+	margin: auto;
+	background: url(../images/title3-bg.jpg) top left repeat-x;
+}
+.title3-title {
+	margin: auto;
+	padding-top: 60px;
+	width: 950px;
+	height: 33px;
+	background: url(../images/title3-img.jpg) 341px 0px no-repeat;
+	text-align: center;
+	font-size: 20px;
+	color: #d9d9d9;
+	font-weight: bold;
+}
+.title3-content {
+	margin: auto;
+	width: 950px;
+	padding: 40px 0;
+	font-size: 15px;
+	line-height: 30px;
+	text-align: left;
+}
+.title3-content img {
+	float: left;
+	margin: 0 15px;
+}
+.title3-content p {
+	margin-bottom: 20px;
+}
+.title3-content h2 {
+	margin-bottom: 10px;
+	font-size: 18px;
+	font-style: italic;
+	color: #c23323;
+}
+.title3-content form {
+	margin: auto;
+	padding-top: 10px;
+	width: 600px;
+}
+.title3-content input[type="text"] {
+	width: 597px;
+	height: 25px;
+	margin-bottom: 20px;
+	border: 1px solid #d9d9d9;
+	font-family: Arial, Verdana;
+	font-size: 15px;
+	color: #727272;
+}
+.title3-content textarea {
+	margin-bottom: 20px;
+	border: 1px solid #d9d9d9;
+	font-family: Arial, Verdana;
+	font-size: 15px;
+	color: #727272;
+}
+.title3-content input[type="submit"] {
+	padding: 10px 20px;
+	margin-bottom: 20px;
+	background: #d9d9d9;
+	border: 0;
+	font-family: Arial, Verdana;
+	font-size: 15px;
+	color: #727272;
+}
+.title3-content form p {
+	line-height: 15px;
+	color: #343435;
+	font-style: italic;
+}

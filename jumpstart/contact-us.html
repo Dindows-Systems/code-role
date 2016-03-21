@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>jumpstart | Contact Us</title>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<link type="text/css" rel="stylesheet" href="styles/reset.css" />
+<link type="text/css" rel="stylesheet" href="styles/960.css" />
+<link type="text/css" rel="stylesheet" href="styles/style.css" />
+<link type="text/css" rel="stylesheet" href="styles/style-default.css" id="style-switcher" />
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript">
+function initialize() {
+    // initialize with jhb
+    var latlng = new google.maps.LatLng(-26.199, 28.048);
+    var myOptions = {
+        zoom: 15,
+        center: latlng,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    map = new google.maps.Map(document.getElementById("map-canvas"), myOptions);
+    var pos = latlng = new google.maps.LatLng(-26.200, 28.048);
+    var marker = new google.maps.Marker({
+        position: pos,
+        map: map
+    });
+}
+</script>
+</head>
+<body onload="initialize()">
+<div id="content" class="container_12">
+  <div id=top-content class="container_12">
+    <div id="logo" class="left"> <a href="index.html"><img src="images/logo.png" alt="" /></a> </div>
+    <div id="menu" class=" right shadow"> <img src="images/menu-square.png" alt="" class="menu-square" />
+      <ul class="left">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="single.html">Styles</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="single-blog.html">Single Page</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact-us.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="clear"></div>
+    <div id="top-body" >
+      <h1 class="shadow">A free web template to jumpstart your business.</h1>
+    </div>
+  </div>
+  <div id="primary-content" class="container_12">
+    <div id="map-left-content" class="grid_7 alpha">
+      <h2 class="dotted grey-shadow" ><span>Contact form</span></h2>
+      <div id="message" style="display:none;"></div>
+      <div class="clear"></div>
+      <form action="#" id="contact-form" method="post">
+        <label for="user-name">Name:*</label>
+        <input type="text" maxlength="150"  name="user-name" class="left text-area-styling required" size="73"/>
+        <div class="clear"></div>
+        <label for="user-email">Email:*</label>
+        <input type="text" maxlength="150"  name="user-email" class="left text-area-styling required email" size="73" />
+        <div class="clear"></div>
+        <label for="user-message">Message:*</label>
+        <textarea name="user-message" cols="55" rows="10" class="left text-area-styling required"></textarea>
+        <div class="clear"></div>
+        <input type="image" src="images/send.png" class="right" id="send-button" />
+        <img src="images/loading.gif" alt="" class="loading right" />
+      </form>
+    </div>
+    <div id="map-right-content" class="grid_4 omega">
+      <h2 class="dotted grey-shadow"><span>Information</span></h2>
+      <div id="outer-right">
+        <div class="map-image left">
+          <div id="map-canvas"></div>
+          <div class="map-shadow"></div>
+        </div>
+        <p class="left">Address:</p>
+        <div id="addresses">
+          <p> Addressline1 </p>
+          <div class="clear"></div>
+          <p > Addressline2 </p>
+          <div class="clear"></div>
+          <p > Addressline3 </p>
+        </div>
+        <div class="clear"></div>
+        <div id="left-info">
+          <p>Phone:</p>
+          <p>Mobile:</p>
+          <p>Email:</p>
+        </div>
+        <div id="right-info">
+          <div class="clear"></div>
+          <p > +2711 123 1234 </p>
+          <div class="clear"></div>
+          <p > +2711 123 1234 </p>
+          <div class="clear"></div>
+          <p > test@company.com </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+</div>
+<div class="clear"></div>
+<div id="outer-footer" >
+  <div id="footer" class="container_12">
+    <p class="left">Copyright &copy; <a href="#">Domain Name</a> - All Rights Reserved</p>
+    <ul id="links" class="right">
+      <li> <a href="#"> <img src="images/icons/16/facebook.png" alt="" /> </a> </li>
+      <li> <a href="#"> <img src="images/icons/16/linkedin.png" alt="" /> </a> </li>
+      <li> <a href="#"> <img src="images/icons/16/twitter.png" alt="" /> </a> </li>
+      <li> <a href="#"> <img src="images/icons/16/rss.png" alt="" /> </a> </li>
+      <li> <a href="#"> <img src="images/icons/16/flickr.png" alt="" /> </a> </li>
+      <li> <a href="#"> <img src="images/icons/16/delicious.png" alt="" /> </a> </li>
+    </ul>
+    <p class="right">Design By <a target="_blank" href="http://www.codeplay.co.za">Code Play Studios</a></p>
+  </div>
+</div>
+</body>
+</html>
